@@ -19,5 +19,9 @@ body {
     min-height: calc(100vh - 2 * 4vw);
 }
 
+.nav__container {
+    display: grid;
+    justify-content: center;
+}
 // .container {
 // }
