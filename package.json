@@ -1,0 +1,19 @@
+{
+  "name": "website_cheryl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Lorenzo Sallons",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0"
+  }
+}
