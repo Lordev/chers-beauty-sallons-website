@@ -1,8 +1,3 @@
 .header {
-    position: relative;
-    &__logo {
-        position: absolute;
-        bottom: 15;
-        left: 2rem;
-    }
+    display: block;
 }

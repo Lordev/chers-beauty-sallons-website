@@ -1,10 +1,11 @@
 .navigation {
     display: grid;
     grid: auto;
-    height: 5rem;
     width: 60vw; //* add mq
-    padding: 0 2rem;
+    padding: 1.5rem 0;
+
     &__nav {
+        padding: 1.5rem 0;
         grid-row: 2;
         &--top {
             grid-row: 1;
@@ -65,7 +66,8 @@
             text-transform: uppercase;
             font-weight: 600;
 
-            &:link {
+            &:link,
+            &:visited {
                 text-decoration: none;
             }
             &:hover {
@@ -93,6 +95,8 @@
     }
 }
 
+// social icons
+
 .fa-brands {
     filter: opacity(0.6) grayscale(100);
     transition: all 0.5s;
@@ -103,12 +107,16 @@
     }
 }
 
-.contacts {
-    opacity: 0.9;
-    text-decoration: none;
-    color: black;
-    transition: all 0.2s;
+// Contacts styling
 
+.contacts {
+    &:link,
+    &:visited {
+        opacity: 0.9;
+        text-decoration: none;
+        color: black;
+        transition: all 0.2s;
+    }
     &:hover {
         color: #cf6ea5;
     }
