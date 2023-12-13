@@ -6,8 +6,9 @@
 .glide {
     &__slides {
         display: block;
-        height: 90vh;
+        height: 95vh;
         width: 100vw;
+        transition: transform ease-in;
     }
 
     &__slide {

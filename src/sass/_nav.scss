@@ -73,12 +73,20 @@
             &:hover {
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                background-image: linear-gradient(to bottom, #fc7fb6, #cf6ea5);
+                background-image: linear-gradient(
+                    to bottom,
+                    $color-primary,
+                    $color-secondary
+                );
                 opacity: 0.7;
             }
         }
         &--active {
-            background-image: linear-gradient(to bottom, #fc7fb6, #cf6ea5);
+            background-image: linear-gradient(
+                to bottom,
+                $color-primary,
+                $color-secondary
+            );
             background-clip: text;
             -webkit-text-fill-color: transparent;
             &:link {
@@ -101,7 +109,7 @@
     filter: opacity(0.6) grayscale(100);
     transition: all 0.5s;
     &:hover {
-        fill: #cf6ea5;
+        fill: $color-secondary;
         transform: scale(1.2);
         filter: opacity(0.9) grayscale(0);
     }
@@ -118,6 +126,6 @@
         transition: all 0.2s;
     }
     &:hover {
-        color: #cf6ea5;
+        color: $color-secondary;
     }
 }
