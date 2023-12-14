@@ -32,7 +32,7 @@
             justify-content: start;
             display: grid;
             grid-row: 1;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             font-weight: 100;
             opacity: 0.7;
         }
@@ -46,6 +46,7 @@
     &__item {
         list-style: none;
         grid-row: 2;
+
         &--top {
             grid-row: 1;
             list-style: none;
@@ -54,7 +55,7 @@
             grid-row: 1;
             list-style: none;
             fill: gray;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
         &__home,
         &__About-me,
@@ -62,7 +63,7 @@
         &__Prijzen,
         &__Contact-me {
             color: black;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             text-transform: uppercase;
             font-weight: 600;
 
