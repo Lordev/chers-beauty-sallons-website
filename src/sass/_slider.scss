@@ -1,6 +1,29 @@
 .slider {
     height: 100%;
     width: 100%;
+    position: relative;
+    &__btn {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &--style {
+            font-size: 1.5rem;
+            padding: 2rem;
+            background: $color-primary;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: "Nunito";
+            transition: all 0.3s;
+            &:hover {
+                background: $color-white;
+                color: $color-primary;
+            }
+        }
+    }
 }
 
 .glide {
@@ -18,6 +41,7 @@
             display: block;
             background-position: 0% 25%;
             background-size: cover;
+            transition: all 0.2s;
         }
         &--1 {
             background-image: url(../../img/img_home1.jpg);
@@ -27,6 +51,9 @@
         }
         &--3 {
             background-image: url(../../img/img_header3.jpg);
+        }
+        &:hover {
+            filter: brightness(0.8) blur(10s);
         }
     }
 
