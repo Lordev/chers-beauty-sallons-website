@@ -41,18 +41,18 @@
     &__block-1 {
         &--header {
             padding-bottom: 3rem;
-            font-size: 3.2rem;
+            font-size: $header-font-size;
         }
         &--span {
-            font-size: 3.2rem;
+            font-size: $header-font-size;
             font-style: italic;
-            font-family: "playfair display";
+            font-family: $font-curly-style;
             font-weight: 200;
             color: $color-tertiary;
         }
 
         &--paragraph {
-            font-size: 1.3rem;
+            font-size: $default-font-size;
             padding: 5rem 0rem;
         }
     }
@@ -72,13 +72,13 @@
     &__block-3 {
         &--header {
             color: $color-white;
-            font-size: 2.2rem;
+            font-size: $header-font-size;
             padding: 3rem 0;
         }
         &--paragraph {
             padding-top: 5rem;
             color: $color-black;
-            font-size: 1.3rem;
+            font-size: $default-font-size;
         }
     }
 }

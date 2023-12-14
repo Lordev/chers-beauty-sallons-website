@@ -41,10 +41,10 @@
             background-image: url(../../img/img_home1_small.jpg);
         }
         &-3 {
-            background-image: url(../../img/img_home1_small.jpg);
+            background-image: url(../../img/img_header2.jpg);
         }
         &-4 {
-            background-image: url(../../img/img_home1_small.jpg);
+            background-image: url(../../img/img_header2.jpg);
         }
     }
 
@@ -53,16 +53,11 @@
         position: absolute;
         @include center-horizontal-vertical;
         color: $color-white;
-        opacity: 0.3;
+        opacity: 0.6;
         transition: all 1s ease;
-
-        &--header {
-            font-size: 3.2rem;
-        }
 
         &--paragraph {
             padding: 3rem 0;
-            font-size: 2rem;
         }
     }
 
