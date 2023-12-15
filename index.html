@@ -11,15 +11,15 @@
         />
         <link
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
             href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
         />
         <link
             rel="stylesheet"
             href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
         <link rel="stylesheet" href="src/sass/main.scss" />
         <title>Document</title>
@@ -98,206 +98,383 @@
                 </div>
             </nav>
         </div>
-        <div class="header">
-            <div class="slider">
-                <div class="glide">
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="glide__slide glide__slide--1">&nbsp;</li>
-                            <li class="glide__slide glide__slide--2">&nbsp;</li>
-                            <li class="glide__slide glide__slide--3">&nbsp;</li>
-                        </ul>
-                    </div>
-                    <!-- <div class="glide__arrows" data-glide-el="controls">
-                        <button
+        <div class="row">
+            <div class="header">
+                <div class="slider">
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide glide__slide--1">&nbsp;</li>
+                                <li class="glide__slide glide__slide--2">&nbsp;</li>
+                                <li class="glide__slide glide__slide--3">&nbsp;</li>
+                            </ul>
+                        </div>
+                        <!-- <div class="glide__arrows" data-glide-el="controls">
+                            <button
                             class="glide__arrow glide__arrow--left"
                             data-glide-dir="<"
-                        >
+                            >
                             &#11164;
                         </button>
                         <button
-                            class="glide__arrow glide__arrow--right"
-                            data-glide-dir=">"
+                        class="glide__arrow glide__arrow--right"
+                        data-glide-dir=">"
                         >
-                            &#11166;
-                        </button>
-                    </div> -->
-                    <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                        <button class="glide__bullet" data-glide-dir="=2"></button>
-                    </div> -->
-                </div>
-                <div class="slider__btn">
-                    <a href="#" class="slider__btn--style">Services</a>
-                </div>
-            </div>
-        </div>
-        <div class="call-to-action">
-            <div class="call-to-action__container">
-                <div class="call-to-action__block call-to-action__block--1">
-                    <h3 class="call-to-action__block-1--header heading-primary">
-                        Take your make-up
-                        <span class="call-to-action__block-1--span heading-primary--sub">
-                            to the next level</span
+                        &#11166;
+                    </button>
+                </div> -->
+                        <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div> -->
+                    </div>
+                    <div class="slider__box">
+                        <a href="#" class="btn slider__btn btn--style btn--pink"
+                            >Services</a
                         >
-                    </h3>
-                    <hr />
-                    <p class="call-to-action__block-1--paragraph">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-                        delectus consectetur dignissimos atque placeat sapiente dolor
-                        numquam blanditiis ipsam sint unde, odit provident ab qui officia,
-                        nesciunt praesentium deserunt distinctio, voluptatem quos odio
-                        facilis cumque! Dolore, officiis perferendis. Voluptatem
-                        perspiciatis recusandae libero sit est non officiis suscipit, vel
-                        odio nostrum.
-                    </p>
+                    </div>
                 </div>
-                <div class="call-to-action__block call-to-action__block--2">
-                    <div class="call-to-action__block-2">&nbsp;</div>
-                </div>
-                <div class="call-to-action__block call-to-action__block--3">
-                    <h3 class="call-to-action__block-3--header">Werktijden</h3>
-                    <hr />
-                    <p class="call-to-action__block-3--paragraph">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-                        delectus consectetur dignissimos atque placeat sapiente dolor
-                        numquam blanditiis ipsam sint unde, odit provident ab qui officia,
-                        nesciunt praesentium deserunt distinctio, voluptatem quos odio
-                        facilis cumque! Dolore, officiis perferendis. Voluptatem
-                        perspiciatis recusandae libero sit est non officiis suscipit, vel
-                        odio nostrum.
-                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="call-to-action">
+                <div class="grid-col-1-of-3">
+                    <div class="call-to-action__block call-to-action__block--1">
+                        <h3
+                            class="call-to-action__block-1--header heading-primary heading-primary--black"
+                        >
+                            Take your make-up
+                            <span
+                                class="call-to-action__block-1--span heading-primary--sub"
+                            >
+                                to the next level</span
+                            >
+                        </h3>
+                        <hr />
+                        <p class="call-to-action__block-1--paragraph">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Libero delectus consectetur dignissimos atque placeat sapiente
+                            dolor numquam blanditiis ipsam sint unde, odit provident ab
+                            qui officia, nesciunt praesentium deserunt distinctio,
+                            voluptatem quos odio facilis cumque! Dolore, officiis
+                            perferendis. Voluptatem perspiciatis recusandae libero sit est
+                            non officiis suscipit, vel odio nostrum.
+                        </p>
+                        <hr />
+
+                        <div class="story__btn btn-text__link">
+                            <a href="#" class="btn-text">learn more</a>
+                        </div>
+                    </div>
+                    <div class="call-to-action__block call-to-action__block--2">
+                        <div class="call-to-action__block-2">&nbsp;</div>
+                    </div>
+                    <div class="call-to-action__block call-to-action__block--3">
+                        <h3
+                            class="call-to-action__block-3--header heading-primary heading-primary--white"
+                        >
+                            Werktijden
+                        </h3>
+                        <hr />
+                        <p class="call-to-action__block-3--paragraph">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Libero delectus consectetur dignissimos atque placeat sapiente
+                            dolor numquam blanditiis ipsam sint unde, odit provident ab
+                            qui officia, nesciunt praesentium deserunt distinctio,
+                            voluptatem quos odio facilis cumque! Dolore, officiis
+                            perferendis. Voluptatem perspiciatis recusandae libero sit est
+                            non officiis suscipit, vel odio nostrum.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="services">
-            <div class="services__container">
-                <a href="#" class="services__link">
-                    <div class="services__block">
-                        <div class="services__img services__img-1">&nbsp;</div>
-                        <div class="services__text">
-                            <h3 class="services__text--header heading-primary">
-                                Bruidsmake-up
-                                <hr />
-                            </h3>
-                            <p class="services__text--paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Veritatis, eum!
-                            </p>
+        <div class="row">
+            <div class="services">
+                <div class="services__container">
+                    <a href="#" class="services__link">
+                        <div class="services__block">
+                            <div class="services__img services__img-1">&nbsp;</div>
+                            <div class="services__text">
+                                <h3
+                                    class="services__text--header heading-primary heading-primary--white"
+                                >
+                                    Bruidsmake-up
+                                    <hr />
+                                </h3>
+                                <p class="services__text--paragraph">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Veritatis, eum!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="#" class="services__link">
-                    <div class="services__block">
-                        <div class="services__img services__img-2"></div>
-                        <div class="services__text">
-                            <h3 class="services__text--header heading-primary">
-                                Visagie aan huis
-                                <hr />
-                            </h3>
-                            <p class="services__text--paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Veritatis, eum!
-                            </p>
+                    </a>
+                    <a href="#" class="services__link">
+                        <div class="services__block">
+                            <div class="services__img services__img-2"></div>
+                            <div class="services__text">
+                                <h3
+                                    class="services__text--header heading-primary heading-primary--white"
+                                >
+                                    Visagie aan huis
+                                    <hr />
+                                </h3>
+                                <p class="services__text--paragraph">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Veritatis, eum!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
 
-                <a href="#" class="services__link">
-                    <div class="services__block">
-                        <div class="services__img services__img-3"></div>
-                        <div class="services__text">
-                            <h3 class="services__text--header heading-primary">
-                                Lashes en brows
-                                <hr />
-                            </h3>
-                            <p class="services__text--paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Veritatis, eum!
-                            </p>
+                    <a href="#" class="services__link">
+                        <div class="services__block">
+                            <div class="services__img services__img-3"></div>
+                            <div class="services__text">
+                                <h3
+                                    class="services__text--header heading-primary heading-primary--white"
+                                >
+                                    Lashes en brows
+                                    <hr />
+                                </h3>
+                                <p class="services__text--paragraph">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Veritatis, eum!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="#" class="services__link">
-                    <div class="services__block">
-                        <div class="services__img services__img-4"></div>
-                        <div class="services__text">
-                            <h3 class="services__text--header heading-primary">
-                                Advies
-                                <hr />
-                            </h3>
-                            <p class="services__text--paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Veritatis, eum!
-                            </p>
+                    </a>
+                    <a href="#" class="services__link">
+                        <div class="services__block">
+                            <div class="services__img services__img-4"></div>
+                            <div class="services__text">
+                                <h3
+                                    class="services__text--header heading-primary heading-primary--white"
+                                >
+                                    Advies
+                                    <hr />
+                                </h3>
+                                <p class="services__text--paragraph">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Veritatis, eum!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="story">
-            <div class="story__container">
-                <div class="story__img">
-                    <div class="carousel">
-                        <div class="carousel_inner carousel__fade">
-                            <div class="carousel_item carousel_item__active">
-                                <img
-                                    src="./img/img_story_photo3.png"
-                                    alt=""
-                                    class="carousel_img"
-                                />
-                                <div class="carousel_caption">
-                                    <h1 class="carousel_title"></h1>
-                                    <p class="carousel_description"></p>
+        <div class="row">
+            <div class="story_container">
+                <div class="story">
+                    <div class="grid-col-1-of-2">
+                        <div class="story__img">
+                            <div class="carousel">
+                                <div class="carousel_inner carousel__fade">
+                                    <div class="carousel_item carousel_item__active">
+                                        <img
+                                            src="./img/img_story_photo3.jpg"
+                                            alt=""
+                                            class="carousel_img"
+                                        />
+                                        <div class="carousel_caption">
+                                            <h1 class="carousel_title"></h1>
+                                            <p class="carousel_description"></p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel_item">
+                                        <img
+                                            src="./img/img_story_photo2.jpg"
+                                            alt=""
+                                            class="carousel_img"
+                                        />
+                                    </div>
+                                    <div class="carousel_item">
+                                        <img
+                                            src="./img/img_story_photo1.jpg"
+                                            alt=""
+                                            class="carousel_img"
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel_item">
-                                <img
-                                    src="./img/img_story_photo2.jpg"
-                                    alt=""
-                                    class="carousel_img"
-                                />
-                            </div>
-                            <div class="carousel_item">
-                                <img
-                                    src="./img/img_story_photo.jpg"
-                                    alt=""
-                                    class="carousel_img"
-                                />
+                        </div>
+                        <div class="story__right">
+                            <h3
+                                class="story__right--header heading-primary heading-primary--black"
+                            >
+                                Look at me I put<span class="heading-primary--sub">
+                                    very goede make-up.</span
+                                >
+                            </h3>
+                            <hr />
+                            <p class="story__right--item story__right--paragraph">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dolore mollitia repellat deserunt at, maxime eius quasi
+                                sed! Consequuntur ipsa atque quae fuga eveniet ipsam
+                                adipisci, omnis eum, animi beatae rem? Accusamus corrupti
+                                voluptatibus omnis quisquam eveniet perferendis officiis
+                                adipisci recusandae maxime. Reprehenderit, voluptatibus
+                                neque maiores possimus quis ipsa maxime voluptatum
+                                recusandae odio accusantium impedit ad velit deleniti amet
+                                soluta dolorum! Expedita fuga fugit pariatur, ad cumque
+                                sint aliquid repellat enim dolorem esse aut optio corrupti
+                                dignissimos veniam illo eius ipsum ducimus possimus dolor
+                                iste quaerat minima facilis blanditiis! Dicta, natus?
+                                Temporibus architecto qui sed possimus iste nisi, minus
+                                dicta ullam voluptates molestias quidem dolor aut facere
+                                maxime aspernatur quibusdam,
+                            </p>
+                            <hr />
+                            <div class="story__btn btn-text__link">
+                                <a href="#" class="btn-text">learn more</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="story__right">
-                    <h3 class="story__right--header heading-primary">
-                        Look at me I put<span class="heading-primary--sub">
-                            very goede make-up.</span
-                        >
-                    </h3>
-                    <hr />
-                    <p class="story__right--paragraph">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-                        mollitia repellat deserunt at, maxime eius quasi sed! Consequuntur
-                        ipsa atque quae fuga eveniet ipsam adipisci, omnis eum, animi
-                        beatae rem? Accusamus corrupti voluptatibus omnis quisquam eveniet
-                        perferendis officiis adipisci recusandae maxime. Reprehenderit,
-                        voluptatibus neque maiores possimus quis ipsa maxime voluptatum
-                        recusandae odio accusantium impedit ad velit deleniti amet soluta
-                        dolorum! Expedita fuga fugit pariatur, ad cumque sint aliquid
-                        repellat enim dolorem esse aut optio corrupti dignissimos veniam
-                        illo eius ipsum ducimus possimus dolor iste quaerat minima facilis
-                        blanditiis! Dicta, natus? Temporibus architecto qui sed possimus
-                        iste nisi, minus dicta ullam voluptates molestias quidem dolor aut
-                        facere maxime aspernatur quibusdam, est neque laboriosam deserunt.
-                        Consequuntur tempora accusamus porro totam delectus consectetur!
-                    </p>
-                    <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="section-appointment">
+                <div class="appointment">
+                    <div class="grid-col-2-of-2">
+                        <div class="appointment__text">
+                            <div
+                                class="appointment__text--header heading-primary heading-primary--black"
+                            >
+                                Maak een
+                                <span
+                                    class="appointment__text--subheader heading-primary--sub"
+                                    >Afspraak
+                                </span>
+                            </div>
+                            <hr />
+                            <div class="appointment__text--paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Vitae quae consequuntur eligendi laboriosam
+                            </div>
+                        </div>
+                        <div class="appointment__socials">
+                            <a
+                                href="#0"
+                                class="btn appointment__btn btn--style btn--black"
+                                >Ik wil mooi afspraak Maak</a
+                            >
+                            <ul class="appointment__socials__list">
+                                <li class="appointment__item--socials">
+                                    <a href="#" class="facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="appointment__item--socials">
+                                    <a href="#" class="instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="appointment__item--socials">
+                                    <a href="#" class="whatsapp">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="reviews"></div>
+        <div class="row">
+            <div class="footer">
+                <div class="grid-col-1-of-4">
+                    <div class="footer-section">
+                        <ul class="footer__list">
+                            <a href="#" class="|">
+                                <li class="footer__list__item">
+                                    <a href="#" class="footer__link">lorem</a>
+                                </li>
+                                <li class="footer__list__item">
+                                    <a href="#" class="footer__link">lorem</a>
+                                </li>
+                                <li class="footer__list__item">
+                                    <a href="#" class="footer__link">lorem</a>
+                                </li>
+                                <li class="footer__list__item">
+                                    <a href="#" class="footer__link">lorem</a>
+                                </li>
+                                <li class="footer__list__item">
+                                    <a href="#" class="footer__link">lorem</a>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <ul class="footer__list">
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <ul class="footer__list">
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <ul class="footer__list">
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="#" class="footer__link">lorem</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+                <p class="footer__copyright">
+                    &copy; 2024 Cheryl Sallons | All Rights Reserved
+                </p>
+            </div>
+        </div>
+
         <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
         <script type="module" src="./src/js/script.js"></script>
     </body>

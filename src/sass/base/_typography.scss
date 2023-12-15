@@ -7,7 +7,16 @@ body {
 
 .heading-primary {
     font-size: $header-font-size;
+    padding-bottom: 3rem;
+    font-weight: 700;
 
+    &--black {
+        color: $color-black;
+    }
+
+    &--white {
+        color: $color-white;
+    }
     &--sub {
         font-style: italic;
         font-family: $font-curly-style;

@@ -1,12 +1,12 @@
 .story {
-    height: 50rem;
+    height: 50vh;
     display: block;
     background-image: linear-gradient(
-        to left,
-        ($color-primary-light 70%, $color-primary-dark 80%)
+        to top left,
+        ($color-primary-light 78%, $color-primary-dark 95%)
     );
     overflow: clip;
-    overflow-clip-margin: 5rem;
+    overflow-clip-margin: 2rem;
     // &__video {
     //     margin-top: -10rem;
     //     object-fit: cover;
@@ -15,27 +15,30 @@
     //
 
     &__img {
-        transform: translateY(-5rem);
+        transform: translateY(-15rem);
     }
 
     &__right {
         padding: 3rem;
         color: $color-primary-dark;
         text-align: center;
-
-        &--header {
-            color: $color-black;
-            font-size: $header-font-size;
-            padding-bottom: 3rem;
-        }
+        display: inline-block;
+        margin: 0 auto;
 
         &--paragraph {
             padding: 4rem 0;
             color: #6d6d6d;
         }
     }
+
+    &__btn {
+        display: block;
+        width: fit-content;
+        margin: 2rem auto;
+    }
 }
 
 .images {
+    border-radius: 2px;
     background-size: cover;
 }

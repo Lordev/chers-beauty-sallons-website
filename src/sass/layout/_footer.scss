@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    background-color: $color-black;
+    display: block;
+    text-align: center;
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        &:hover {
+            color: $color-primary-dark2;
+        }
+        width: max-content;
+    }
+    &__section {
+    }
+
+    &__list {
+        text-align: start;
+        margin: 5rem 0rem;
+        &__item {
+            list-style: none;
+        }
+    }
+    &__copyright {
+        font-size: 1.2rem;
+        color: $color-gray;
+        padding: 2rem 0;
+        display: inline-block;
+    }
+}

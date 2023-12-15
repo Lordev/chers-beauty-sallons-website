@@ -1,7 +1,11 @@
 .appointment {
-    height: 25rem;
-    background-color: $color-primary-light;
+    height: 25vh;
+    background-image: linear-gradient(
+        to bottom right,
+        ($color-primary-light 78%, $color-primary-dark 95%)
+    );
     display: grid;
+    // align-items: center;
 
     &__text {
         width: 70%;
@@ -9,16 +13,15 @@
         text-align: center;
         justify-self: center;
         align-self: center;
-        &--header {
-            color: $color-black;
-        }
 
         &--paragraph {
+            padding: 2rem 0;
             color: $color-black;
         }
     }
 
     &__socials {
+        padding: 3rem;
         display: grid;
         text-align: center;
         align-items: end;
@@ -40,5 +43,6 @@
     }
 
     &__btn {
+        align-self: center;
     }
 }

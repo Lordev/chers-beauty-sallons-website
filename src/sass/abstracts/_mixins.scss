@@ -12,3 +12,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin button-3d {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+}

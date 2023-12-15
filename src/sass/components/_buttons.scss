@@ -14,14 +14,11 @@
         border: none;
     }
 
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-    }
     &--pink {
         background: $color-primary;
         color: $color-white;
         &:hover {
+            @include button-3d;
             background: $color-white;
             color: $color-primary;
         }
@@ -38,8 +35,57 @@
         background: $color-black;
         color: $color-white;
         &:hover {
+            @include button-3d;
             background: $color-primary-dark2;
             color: $color-white;
         }
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-family: "Nunito";
+        font-weight: 400;
+        font-size: $default-font-size;
+        color: $color-primary-dark;
+        display: inline-block;
+        text-decoration: none;
+        padding: 3px;
+        transition: all 0.2s;
+    }
+
+    &__link {
+        position: relative;
+    }
+
+    &__link::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        bottom: 0;
+        width: 1px;
+        background-color: $color-black;
+        transform: scaleX(0);
+        // transform-origin: bottom
+        transition:
+            transform 0.2s,
+            width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+            background-color 0.1s;
+    }
+
+    &__link:hover::before {
+        transform: scaleX(1);
+        width: 100%;
+        // border-bottom: 1px solid $color-primary;
+        // background-color: $color-primary;
+        // color: $color-white;
+        // box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        // transform: translateY(-2px)
+    }
+
+    &:active {
+        // box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+        // transform: translateY(0);
     }
 }

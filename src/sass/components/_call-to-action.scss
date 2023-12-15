@@ -1,7 +1,7 @@
 .call-to-action {
     display: block;
     // justify-content: center;
-    height: 50rem;
+    // height: 50rem;
     background-color: white;
 
     &__block {
@@ -27,20 +27,7 @@
 
     //* content/text inside blocks
     &__block-1 {
-        &--header {
-            padding-bottom: 3rem;
-            font-size: $header-font-size;
-        }
-        &--span {
-            font-size: $header-font-size;
-            font-style: italic;
-            font-family: $font-curly-style;
-            font-weight: 200;
-            color: $color-tertiary;
-        }
-
         &--paragraph {
-            font-size: $default-font-size;
             padding: 5rem 0rem;
         }
     }
@@ -59,14 +46,10 @@
 
     &__block-3 {
         &--header {
-            color: $color-white;
-            font-size: $header-font-size;
             padding: 3rem 0;
         }
         &--paragraph {
             padding-top: 5rem;
-            color: $color-black;
-            font-size: $default-font-size;
         }
     }
 }
