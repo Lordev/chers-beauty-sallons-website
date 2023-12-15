@@ -1,0 +1,44 @@
+.appointment {
+    height: 25rem;
+    background-color: $color-primary-light;
+    display: grid;
+
+    &__text {
+        width: 70%;
+        display: block;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        &--header {
+            color: $color-black;
+        }
+
+        &--paragraph {
+            color: $color-black;
+        }
+    }
+
+    &__socials {
+        display: grid;
+        text-align: center;
+        align-items: end;
+        justify-content: center;
+        &__list {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3, 1fr);
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__item {
+        height: 100%;
+        &--socials {
+            // padding: 0 4px;
+            list-style: none;
+        }
+    }
+
+    &__btn {
+    }
+}

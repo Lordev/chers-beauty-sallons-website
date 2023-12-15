@@ -2,27 +2,11 @@
     height: 100%;
     width: 100%;
     position: relative;
-    &__btn {
+    &__box {
         position: absolute;
         top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
-
-        &--style {
-            font-size: 1.5rem;
-            padding: 2rem;
-            background: $color-primary;
-            color: $color-white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 400;
-            font-family: "Nunito";
-            transition: all 0.3s;
-            &:hover {
-                background: $color-white;
-                color: $color-primary;
-            }
-        }
     }
 }
 

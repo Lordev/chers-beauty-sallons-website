@@ -104,18 +104,6 @@
     }
 }
 
-// social icons
-
-.fa-brands {
-    filter: opacity(0.6) grayscale(100);
-    transition: all 0.5s;
-    &:hover {
-        fill: $color-secondary;
-        transform: scale(1.2);
-        filter: opacity(0.9) grayscale(0);
-    }
-}
-
 // Contacts styling
 
 .contacts {

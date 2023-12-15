@@ -1,7 +1,10 @@
 .story {
     height: 50rem;
     display: block;
-    background-color: #f7d9ec;
+    background-image: linear-gradient(
+        to left,
+        ($color-primary-light 70%, $color-primary-dark 80%)
+    );
     overflow: clip;
     overflow-clip-margin: 5rem;
     // &__video {
@@ -17,7 +20,7 @@
 
     &__right {
         padding: 3rem;
-        color: #d43198;
+        color: $color-primary-dark;
         text-align: center;
 
         &--header {
@@ -28,7 +31,7 @@
 
         &--paragraph {
             padding: 4rem 0;
-            color: rgb(109, 109, 109);
+            color: #6d6d6d;
         }
     }
 }

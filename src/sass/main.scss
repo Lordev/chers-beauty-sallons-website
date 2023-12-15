@@ -8,11 +8,14 @@
 @import "base/typography";
 
 // components
+@import "components/buttons";
+@import "components/social-btns";
 @import "components/carousel";
 @import "components/slider";
 @import "components/call-to-action";
 @import "components/services";
 @import "components/story";
+@import "components/appointment";
 
 //layout
 @import "layout/header";
