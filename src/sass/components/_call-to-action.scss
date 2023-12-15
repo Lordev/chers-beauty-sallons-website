@@ -1,20 +1,8 @@
 .call-to-action {
-    padding: 10rem 0rem;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-
-    &__container {
-        width: 70%;
-        height: 50rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        background-color: white;
-        bottom: 0;
-        gap: 2rem;
-        justify-content: center;
-    }
+    display: block;
+    // justify-content: center;
+    height: 50rem;
+    background-color: white;
 
     &__block {
         text-align: center;

@@ -1,33 +1,21 @@
 .story {
     height: 50rem;
-    width: 100%;
-    padding: 10rem 0rem;
     display: block;
     background-color: #f7d9ec;
-
-    &__container {
-        height: 100%;
-        width: 70%;
-        display: grid;
-        margin: 0 auto;
-        grid-template-columns: 1fr 2fr;
-        overflow: hidden;
-    }
-
+    overflow: clip;
+    overflow-clip-margin: 5rem;
     // &__video {
     //     margin-top: -10rem;
     //     object-fit: cover;
     //     background-position: center;
     //     filter: grayscale(100);
-    // }
+    //
 
     &__img {
-        height: 100%;
-        width: 100%;
+        transform: translateY(-5rem);
     }
 
     &__right {
-        justify-content: end;
         padding: 3rem;
         color: #d43198;
         text-align: center;

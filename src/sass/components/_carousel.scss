@@ -37,12 +37,15 @@
 .carousel__fade .carousel_item__pos_next {
     left: 0;
     opacity: 0;
+    // transform: scale(1.02);
+    // filter: blur(1);
 }
 
 .carousel__fade .carousel_item__next {
     transform: none;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    // transform: scale(1);
+    transition: all 0.5s ease-in-out;
 }
 
 .carousel__fade .carousel_item__active.carousel_item__next {
