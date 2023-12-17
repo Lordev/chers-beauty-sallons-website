@@ -1,31 +1,35 @@
 .footer {
     width: 100%;
-    background-color: $color-black;
+    // background-color: $color-black;
     display: block;
     text-align: center;
 
     &__link {
         text-decoration: none;
-        color: $color-white;
+        color: $color-black;
         &:hover {
             color: $color-primary-dark2;
         }
-        width: max-content;
     }
-    &__section {
+    &__section:not(:last-of-type) {
+        border-right: 2px double $color-tertiary;
     }
 
     &__list {
         text-align: start;
-        margin: 5rem 0rem;
+        padding: 2rem 2rem;
         &__item {
             list-style: none;
         }
     }
-    &__copyright {
+
+    &__autograph {
         font-size: 1.2rem;
         color: $color-gray;
-        padding: 2rem 0;
-        display: inline-block;
+        padding: 4rem;
+    }
+
+    &__copyright {
+        margin-right: 2rem;
     }
 }
