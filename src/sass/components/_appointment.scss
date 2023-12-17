@@ -1,5 +1,4 @@
 .appointment {
-    height: 25vh;
     background-image: linear-gradient(
         to bottom right,
         ($color-primary-light 78%, $color-primary-dark 95%)
@@ -8,6 +7,7 @@
     // align-items: center;
 
     &__text {
+        padding: 3rem;
         width: 70%;
         display: block;
         text-align: center;

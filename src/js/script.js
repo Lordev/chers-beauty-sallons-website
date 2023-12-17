@@ -57,3 +57,24 @@ function getItemActiveIndex() {
     const itemActiveIndex = itemsArray.indexOf(itemActive);
     return itemActiveIndex;
 }
+
+//review slider
+var swiper = new Swiper(".mySwiper", {
+    // effect: "fade",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 6000,
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+        clickable: true,
+        // renderBullet: function (index, className) {
+        //     return '<span class="' + className + '">' + (index + 1) + "</span>";
+        // },
+    },
+});

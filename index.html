@@ -21,6 +21,10 @@
             rel="stylesheet"
             href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="src/sass/main.scss" />
         <title>Document</title>
     </head>
@@ -268,73 +272,61 @@
         </div>
 
         <div class="row">
-            <div class="story_container">
-                <div class="story">
-                    <div class="grid-col-1-of-2">
-                        <div class="story__img">
-                            <div class="carousel">
-                                <div class="carousel_inner carousel__fade">
-                                    <div class="carousel_item carousel_item__active">
-                                        <img
-                                            src="./img/img_story_photo3.jpg"
-                                            alt=""
-                                            class="carousel_img"
-                                        />
-                                        <div class="carousel_caption">
-                                            <h1 class="carousel_title"></h1>
-                                            <p class="carousel_description"></p>
-                                        </div>
+            <div class="story">
+                <div class="grid-col-1-of-2 grid-col-1-of-2--with-row">
+                    <div class="story__img">
+                        <div class="carousel">
+                            <div class="carousel_inner carousel__fade">
+                                <div class="carousel_item carousel_item__active">
+                                    <img
+                                        src="img\img_story_photo1.jpg"
+                                        alt=""
+                                        class="carousel_img"
+                                    />
+                                    <div class="carousel_caption">
+                                        <h1 class="carousel_title"></h1>
+                                        <p class="carousel_description"></p>
                                     </div>
-                                    <div class="carousel_item">
-                                        <img
-                                            src="./img/img_story_photo2.jpg"
-                                            alt=""
-                                            class="carousel_img"
-                                        />
-                                    </div>
-                                    <div class="carousel_item">
-                                        <img
-                                            src="./img/img_story_photo1.jpg"
-                                            alt=""
-                                            class="carousel_img"
-                                        />
-                                    </div>
+                                </div>
+                                <div class="carousel_item">
+                                    <img
+                                        src="img\img_story_photo2.jpg"
+                                        alt=""
+                                        class="carousel_img"
+                                    />
+                                </div>
+                                <div class="carousel_item">
+                                    <img
+                                        src="https://placehold.co/621x621"
+                                        alt=""
+                                        class="carousel_img"
+                                    />
                                 </div>
                             </div>
                         </div>
-                        <div class="story__right">
-                            <h3
-                                class="story__right--header heading-primary heading-primary--black"
+                    </div>
+                    <div class="story__right">
+                        <h3
+                            class="story__right--header heading-primary heading-primary--black"
+                        >
+                            Look at me I put<span class="heading-primary--sub">
+                                very goede make-up.</span
                             >
-                                Look at me I put<span class="heading-primary--sub">
-                                    very goede make-up.</span
-                                >
-                            </h3>
-                            <hr />
-                            <p class="story__right--item story__right--paragraph">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dolore mollitia repellat deserunt at, maxime eius quasi
-                                sed! Consequuntur ipsa atque quae fuga eveniet ipsam
-                                adipisci, omnis eum, animi beatae rem? Accusamus corrupti
-                                voluptatibus omnis quisquam eveniet perferendis officiis
-                                adipisci recusandae maxime. Reprehenderit, voluptatibus
-                                neque maiores possimus quis ipsa maxime voluptatum
-                                recusandae odio accusantium impedit ad velit deleniti amet
-                                soluta dolorum! Expedita fuga fugit pariatur, ad cumque
-                                sint aliquid repellat enim dolorem esse aut optio corrupti
-                                dignissimos veniam illo eius ipsum ducimus possimus dolor
-                                iste quaerat minima facilis blanditiis! Dicta, natus?
-                                Temporibus architecto qui sed possimus iste nisi, minus
-                                dicta ullam voluptates molestias quidem dolor aut facere
-                                maxime aspernatur quibusdam,
-                            </p>
-                            <hr />
-                            <div class="story__btn btn-text__link">
-                                <a href="#" class="btn-text">learn more</a>
-                            </div>
+                        </h3>
+                        <hr />
+                        <p class="story__right--item story__right--paragraph">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Dolore mollitia repellat deserunt at, maxime eius quasi sed!
+                            Consequuntur ipsa atque quae fuga eveniet ipsam adipisci,
+                            omnis eum, animi beatae rem? Accusamus corrupti voluptatibus
+                        </p>
+                        <hr />
+                        <div class="story__btn btn-text__link">
+                            <a href="#" class="btn-text">learn more</a>
                         </div>
                     </div>
                 </div>
+                <div class="story__second-row"></div>
             </div>
         </div>
         <div class="row">
@@ -385,7 +377,103 @@
                 </div>
             </div>
         </div>
-        <div class="reviews"></div>
+        <div class="row">
+            <div class="reviews">
+                <div class="grid-col-1-of-1">
+                    <!-- Slider main container -->
+                    <div class="reviews__container">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Eum aspernatur mollitia repellendus ipsa
+                                        ullam tempora quam, alias minus in, dolorum, dicta
+                                        quisquam veritatis veniam facere minima
+                                        perferendis? Neque, totam maiores. elit. Eum
+                                        aspernatur mollitia repellendus ipsa ullam tempora
+                                        quam, alias minus in, dolorum, dicta quisquam
+                                        veritatis veniam facere minima perferendis? Neque,
+                                        totam maiores. elit. Eum aspernatur mollitia
+                                        repellendus ipsa ullam tempora quam, alias minus
+                                        in, dolorum, dicta quisquam veritatis veniam
+                                        facere minima perferendis? Neque, totam maiores.
+                                    </div>
+                                    <div class="reviews__reviewer">
+                                        <img
+                                            class="img"
+                                            src="https://placehold.co/150x150/jpg"
+                                            alt="slide-img"
+                                        />
+                                        <p class="reviews__reviewer__name">
+                                            Cheryl Ballons
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Eum aspernatur mollitia repellendus ipsa
+                                        ullam tempora quam, alias minus in, dolorum, dicta
+                                        quisquam veritatis veniam facere minima
+                                        perferendis? Neques, totam maiores. elit. Eum
+                                        aspernatur mollitia repellendus ipsa ullam tempora
+                                        quam, alias minus in, dolorum, dicta quisquam
+                                        veritatis veniam facere minima perferendis? Neque,
+                                        totam maiores. elit. Eum aspernatur mollitia
+                                        repellendus ipsa ullam tempora quam, alias minus
+                                        in, dolorum, dicta quisquam veritatis veniam
+                                        facere minima perferendis? Neque, totam maiores.
+                                    </div>
+                                    <div class="reviews__reviewer">
+                                        <img
+                                            class="img"
+                                            src="https://placehold.co/150x150/jpg"
+                                            alt="slide-img"
+                                        />
+                                        <p class="reviews__reviewer__name">
+                                            Cheryl Ballons
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Eum aspernatur mollitia repellendus ipsa
+                                        ullam tempora quam, alias minus in, dolorum, dicta
+                                        quisquam veritatis veniam facere minima
+                                        perferendis? Neques, totam maiores. Lorem ipsum
+                                        dolor sit amet consectetur adipisicing elit. Eum
+                                        aspernatur mollitia repellendus ipsa ullam tempora
+                                        quam, alias minus in, dolorum, dicta quisquam
+                                        veritatis veniam facere minima perferendis?
+                                        Neques, totam maiores. Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Eum aspernatur
+                                        mollitia repellendus ipsa ullam tempora quam,
+                                        alias minus in, dolorum, dicta quisquam veritatis
+                                        veniam facere minima perferendis? Neques, totam
+                                        maiores.
+                                    </div>
+                                    <div class="reviews__reviewer">
+                                        <img
+                                            class="img"
+                                            src="https://placehold.co/150x150/jpg"
+                                            alt="slide-img"
+                                        />
+                                        <p class="reviews__reviewer__name">
+                                            Cheryl Ballons
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="footer">
                 <div class="grid-col-1-of-4">
@@ -476,6 +564,7 @@
         </div>
 
         <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script type="module" src="./src/js/script.js"></script>
     </body>
 </html>

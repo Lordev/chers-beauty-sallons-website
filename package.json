@@ -14,6 +14,7 @@
     "parcel": "^2.10.3"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.6.0"
+    "@glidejs/glide": "^3.6.0",
+    "swiper": "^11.0.5"
   }
 }

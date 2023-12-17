@@ -1,33 +1,38 @@
 .story {
-    height: 50vh;
-    display: block;
     background-image: linear-gradient(
         to top left,
         ($color-primary-light 78%, $color-primary-dark 95%)
     );
     overflow: clip;
-    overflow-clip-margin: 2rem;
+    // overflow-clip-margin: 5rem;
     // &__video {
-    //     margin-top: -10rem;
-    //     object-fit: cover;
-    //     background-position: center;
+    //     margin-top: -10rem;s
+    //     background-position: center;zz
     //     filter: grayscale(100);
     //
-
     &__img {
-        transform: translateY(-15rem);
+        grid-row: 1;
+        transform: translateY(2rem);
+        border-radius: 2px;
+        height: 100%;
+        background-size: cover;
+        box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
     }
 
     &__right {
-        padding: 3rem;
+        grid-row: 1;
+        padding: 4rem;
         color: $color-primary-dark;
         text-align: center;
-        display: inline-block;
-        margin: 0 auto;
+        display: block;
+        align-self: center;
 
         &--paragraph {
             padding: 4rem 0;
             color: #6d6d6d;
+            // overflow: scroll;
+            // overflow-wrap: break-word;
+            hyphens: auto;
         }
     }
 
@@ -36,9 +41,9 @@
         width: fit-content;
         margin: 2rem auto;
     }
-}
 
-.images {
-    border-radius: 2px;
-    background-size: cover;
+    &__second-row {
+        height: 10rem;
+        background-color: $color-white;
+    }
 }

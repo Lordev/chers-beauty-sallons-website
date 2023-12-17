@@ -2,8 +2,16 @@
     max-width: $grid-width;
     margin: 0 auto;
 
-    &:not(:last-of-type) {
+    &:not(:last-of-type, :nth-of-type(5)) {
         margin-bottom: $gutter-vertical;
+    }
+
+    .grid-col-1-of-1 {
+        width: 70%;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        column-gap: $gutter-horizontal;
     }
 
     .grid-col-1-of-2 {
@@ -18,7 +26,7 @@
         width: 70%;
         display: grid;
         margin: 0 auto;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 2fr 1fr;
         column-gap: $gutter-horizontal;
     }
 
@@ -36,6 +44,7 @@
         margin: 0 auto;
         column-gap: $gutter-horizontal;
         grid-template-columns: repeat(4, 1fr);
+        // height: 25vh;
     }
     // justify-content: center;
 }
