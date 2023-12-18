@@ -1,4 +1,7 @@
-"use strict";
+import Swiper from "swiper";
+import { swiperReview } from "./slider/slider";
+
+("use strict");
 let imgArr = new Glide(".glide", {
     type: "carousel",
     perView: 1,
@@ -57,40 +60,4 @@ function getItemActiveIndex() {
     return itemActiveIndex;
 }
 
-//review slider
-var swiper = new Swiper(".mySwiper", {
-    // effect: "fade",
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-        delay: 6000,
-    },
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-        // renderBullet: function (index, className) {
-        //     return '<span class="' + className + '">' + (index + 1) + "</span>";
-        // },
-    },
-});
-
-{
-    /* <Marquee content="this is my content" />; */
-}
-//review slider
-// var swiper = new Swiper(".test", {
-//     effect: "flip",
-//     grabCursor: true,
-//     autoplay: true,
-//     pagination: {
-//         el: ".swiper-pagination",
-//     },
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-// });
+new Swiper(".mySwiper", swiperReview);
