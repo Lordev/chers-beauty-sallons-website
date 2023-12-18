@@ -1,9 +1,25 @@
 .story {
-    background-image: linear-gradient(
-        to top left,
-        ($color-primary-light 78%, $color-primary-dark 95%)
-    );
-    overflow: clip;
+    position: relative;
+    // overflow: clip;
+    z-index: 0;
+
+    &::before {
+        @include layer-behind;
+        background: $color-primary;
+        background: linear-gradient(
+            90deg,
+            $color-tertiary 0%,
+            transparent 30%,
+            transparent
+        );
+        mask-image: linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(0, 0, 0, 1) 1%,
+            rgba(0, 0, 0, 1) 99%,
+            transparent 100%
+        );
+    }
     // overflow-clip-margin: 5rem;
     // &__video {
     //     margin-top: -10rem;s
@@ -11,16 +27,12 @@
     //     filter: grayscale(100);
     //
     &__img {
-        grid-row: 1;
-        transform: translateY(2rem);
-        border-radius: 2px;
-        height: 100%;
-        background-size: cover;
+        transform: translateY(5rem);
         box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+        border-radius: 2px;
     }
 
     &__right {
-        grid-row: 1;
         padding: 4rem;
         color: $color-primary-dark;
         text-align: center;
@@ -29,7 +41,7 @@
 
         &--paragraph {
             padding: 4rem 0;
-            color: #6d6d6d;
+            color: $color-black;
             // overflow: scroll;
             // overflow-wrap: break-word;
             hyphens: auto;
@@ -40,10 +52,5 @@
         display: block;
         width: fit-content;
         margin: 2rem auto;
-    }
-
-    &__second-row {
-        height: 10rem;
-        background-color: $color-white;
     }
 }

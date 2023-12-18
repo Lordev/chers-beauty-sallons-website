@@ -1,9 +1,13 @@
 .appointment {
-    background-image: linear-gradient(
-        to bottom right,
-        ($color-primary-light 78%, $color-primary-dark 95%)
-    );
     display: grid;
+    position: relative;
+    padding: 3rem;
+    &::before {
+        @include layer-behind;
+        background: $color-quaternary;
+        background: linear-gradient(240deg, $color-quaternary 0%, $color-tertiary 90%);
+    }
+
     // align-items: center;
 
     &__text {
@@ -15,8 +19,8 @@
         align-self: center;
 
         &--paragraph {
+            color: $color-white;
             padding: 2rem 0;
-            color: $color-black;
         }
     }
 

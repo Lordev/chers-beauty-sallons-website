@@ -1,13 +1,33 @@
 .reviews {
-    // background-color: $color-primary-light;
-    background-color: $color-primary;
+    position: relative;
+    z-index: 0;
+    &::before {
+        // background-color: $color-primary-light;
+        @include layer-behind;
+        mask-image: linear-gradient(
+            180deg,
+            transparent 5%,
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 70%,
+            transparent 95%
+        );
+    }
+
     &__container {
         align-self: center;
         justify-self: center;
         width: 70%;
         height: 70%;
         display: grid;
-        background-color: $color-secondary;
+        // transform: translateX(7rem);
+
+        background: rgb(171, 186, 64);
+        background: linear-gradient(
+            299deg,
+            rgba(171, 186, 64, 1) 16%,
+            rgba(83, 169, 173, 1) 61%,
+            rgba(180, 59, 174, 1) 90%
+        );
         padding: 2rem 2rem;
         box-shadow: 0 1.5rem 2rem rgba($color-black, 0.15);
 
@@ -27,9 +47,33 @@
             font-size: 1.4rem;
         }
     }
+
+    &__text {
+        // margin-top: 5rem 0;
+        text-align: center;
+        font-size: $default-font-size;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        height: 70rem;
+
+        &::before {
+            content: "\201C";
+            position: absolute;
+            top: -2.75rem;
+            left: 5rem;
+            line-height: 1;
+            font-size: 20rem;
+            color: $color-gray;
+            opacity: 0.5;
+            font-family: sans-serif;
+            z-index: 1;
+        }
+        // padding: 2rem;
+    }
 }
 
-.swiper {
+.mySwiper {
     align-self: center;
     width: 100%;
     height: 100%;
@@ -38,27 +82,6 @@
 }
 
 .swiper-slide {
-    // margin-top: 5rem 0;
-    text-align: center;
-    font-size: $default-font-size;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    height: 70rem;
-
-    &::before {
-        content: "\201C";
-        position: absolute;
-        top: -2.75rem;
-        left: 5rem;
-        line-height: 1;
-        font-size: 20rem;
-        color: $color-gray;
-        opacity: 0.5;
-        font-family: sans-serif;
-        z-index: 1;
-    }
-    // padding: 2rem;
 }
 
 .swiper-slide img {

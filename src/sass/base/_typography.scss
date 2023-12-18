@@ -11,6 +11,13 @@ body {
     padding-bottom: 3rem;
     font-weight: 700;
 
+    &--sub {
+        font-style: italic;
+        font-family: $font-curly-style;
+        font-weight: 200;
+        color: $color-tertiary;
+    }
+
     &--black {
         color: $color-black;
     }
@@ -18,16 +25,16 @@ body {
     &--white {
         color: $color-white;
     }
-    &--sub {
-        font-style: italic;
-        font-family: $font-curly-style;
-        font-weight: 200;
-        color: $color-tertiary;
-    }
 }
 
 .heading-tertiary {
     font-size: 2rem;
     padding-bottom: 3rem;
     font-weight: 700;
+}
+
+.divider {
+    border-color: $color-white;
+    width: 70%;
+    margin: 0 auto;
 }

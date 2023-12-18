@@ -40,6 +40,16 @@
             color: $color-white;
         }
     }
+
+    &--white {
+        background: $color-white;
+        color: $color-primary;
+        &:hover {
+            @include button-3d;
+            background: $color-primary-dark2;
+            color: $color-white;
+        }
+    }
 }
 
 .btn-text {

@@ -1,5 +1,4 @@
 "use strict";
-
 let imgArr = new Glide(".glide", {
     type: "carousel",
     perView: 1,
@@ -78,3 +77,20 @@ var swiper = new Swiper(".mySwiper", {
         // },
     },
 });
+
+{
+    /* <Marquee content="this is my content" />; */
+}
+//review slider
+// var swiper = new Swiper(".test", {
+//     effect: "flip",
+//     grabCursor: true,
+//     autoplay: true,
+//     pagination: {
+//         el: ".swiper-pagination",
+//     },
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+// });
