@@ -15,14 +15,6 @@
         />
         <link
             rel="stylesheet"
-            href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
-        />
-        <link
-            rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
         <link rel="stylesheet" href="src/sass/main.scss" />
@@ -128,40 +120,25 @@
         </div>
         <div class="row">
             <div class="header">
-                <div class="slider">
-                    <div class="glide">
-                        <div class="glide__track" data-glide-el="track">
-                            <ul class="glide__slides">
-                                <li class="glide__slide glide__slide--1">&nbsp;</li>
-                                <li class="glide__slide glide__slide--2">&nbsp;</li>
-                                <li class="glide__slide glide__slide--3">&nbsp;</li>
-                            </ul>
-                        </div>
-                        <!-- <div class="glide__arrows" data-glide-el="controls">
-                            <button
-                            class="glide__arrow glide__arrow--left"
-                            data-glide-dir="<"
-                            >
-                            &#11164;
-                        </button>
-                        <button
-                        class="glide__arrow glide__arrow--right"
-                        data-glide-dir=">"
-                        >
-                        &#11166;
-                    </button>
-                </div> -->
-                        <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
-                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                    <button class="glide__bullet" data-glide-dir="=2"></button>
-                </div> -->
+                <!-- Slider main container -->
+                <div class="swiper header__swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide header__img header__img--1">&nbsp;</div>
+                        <div class="swiper-slide header__img header__img--2">&nbsp;</div>
+                        <div class="swiper-slide header__img header__img--1">&nbsp;</div>
+                        ...
                     </div>
-                    <div class="slider__box">
-                        <a href="#" class="btn slider__btn btn--style btn--pink"
-                            >Services</a
-                        >
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev header__button"></div>
+                    <div class="swiper-button-next header__button"></div>
+
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
             </div>
         </div>
@@ -340,37 +317,32 @@
         <div class="row">
             <div class="story">
                 <div class="grid-col-1-of-2">
-                    <div class="story__img">
-                        <div class="carousel">
-                            <div class="carousel_inner carousel__fade">
-                                <div class="carousel_item carousel_item__active">
-                                    <img
-                                        src="img\img_story_photo1.jpg"
-                                        alt=""
-                                        class="carousel_img"
-                                    />
-                                    <div class="carousel_caption">
-                                        <h1 class="carousel_title"></h1>
-                                        <p class="carousel_description"></p>
-                                    </div>
+                    <!-- Slider main container -->
+                    <div class="story__left">
+                        <div class="swiper story__swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide story__img story__img--1">
+                                    &nbsp;
                                 </div>
-                                <div class="carousel_item">
-                                    <img
-                                        src="img\img_story_photo2.jpg"
-                                        alt=""
-                                        class="carousel_img"
-                                    />
+                                <div class="swiper-slide story__img story__img--2">
+                                    &nbsp;
                                 </div>
-                                <div class="carousel_item">
-                                    <img
-                                        src="https://placehold.co/621x621"
-                                        alt=""
-                                        class="carousel_img"
-                                    />
+                                <div class="swiper-slide story__img story__img--3">
+                                    &nbsp;
                                 </div>
                             </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- If we need navigation buttons -->
+                            <!-- <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> -->
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
                         </div>
                     </div>
+
                     <div class="story__right">
                         <h3
                             class="story__right--header heading-primary heading-primary--black"
@@ -401,7 +373,7 @@
                 <div class="grid-col-1-of-1">
                     <!-- Slider main container -->
                     <div class="reviews__container">
-                        <div class="swiper mySwiper">
+                        <div class="swiper reviews__swiper">
                             <div class="swiper-wrapper">
                                 <div class="reviews__text swiper-slide">
                                     <div class="text">
@@ -417,7 +389,7 @@
                                     </div>
                                     <div class="reviews__reviewer">
                                         <img
-                                            class="img"
+                                            class="reviews__reviewer__img"
                                             src="https://placehold.co/150x150/jpg"
                                             alt="slide-img"
                                         />
@@ -444,7 +416,7 @@
                                     </div>
                                     <div class="reviews__reviewer">
                                         <img
-                                            class="img"
+                                            class="reviews__reviewer__img"
                                             src="https://placehold.co/150x150/jpg"
                                             alt="slide-img"
                                         />
@@ -465,11 +437,11 @@
                                         ullam tempora quam, alias minus in, dolorum, dicta
                                         quisquam veritatis veniam facere minima
                                         perferendis? Neques, totam maiores. Lorem ipsum
-                                        dolor sit amet consectetur adipisicing elit."
+                                        dolor sit amet consectetur adipisicing elit.""
                                     </div>
                                     <div class="reviews__reviewer">
                                         <img
-                                            class="img"
+                                            class="reviews__reviewer__img"
                                             src="https://placehold.co/150x150/jpg"
                                             alt="slide-img"
                                         />
@@ -482,6 +454,56 @@
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="portfolio">
+                <div class="swiper portfolio__slider">
+                    <div class="swiper-wrapper portfolio__wrapper">
+                        <div
+                            class="swiper-slide portfolio__img"
+                            style="background-image: url(https://placehold.co/500x500)"
+                        >
+                            1
+                        </div>
+                        <div
+                            class="swiper-slide portfolio__img"
+                            style="background-image: url(https://placehold.co/500x500)"
+                        >
+                            2
+                        </div>
+                        <div
+                            class="swiper-slide portfolio__img"
+                            style="background-image: url(https://placehold.co/500x500)"
+                        >
+                            3
+                        </div>
+                        <div
+                            class="swiper-slide portfolio__img"
+                            style="background-image: url(https://placehold.co/500x500)"
+                        >
+                            4
+                        </div>
+                        <div
+                            class="swiper-slide portfolio__img"
+                            style="background-image: url(https://placehold.co/500x500)"
+                        >
+                            5
+                        </div>
+                        <div
+                            class="swiper-slide portfolio__img"
+                            style="background-image: url(https://placehold.co/500x500)"
+                        >
+                            6
+                        </div>
+                        <div
+                            class="swiper-slide portfolio__img"
+                            style="background-image: url(https://placehold.co/500x500)"
+                        >
+                            7
                         </div>
                     </div>
                 </div>
@@ -604,39 +626,6 @@
                 </div>
             </div>
         </div>
-
-        <!--!REMOVE add 2nd class to libaries"
-        <div class="row">
-            <div class="grid-col-1-of-1">
-                <div class="swiper test">
-                    <div class="swiper-wrapper">
-                        <div class="test-slide swiper-slide">
-                            <img src="https://placehold.co/600x400" />
-                        </div>
-                        <div class="test-slide swiper-slide">
-                            <img src="https://placehold.co/600x400" />
-                        </div>
-                        <div class="test-slide swiper-slide">
-                            <img src="https://placehold.co/600x400" />
-                        </div>
-                        <div class="test-slide swiper-slide">
-                            <img src="https://placehold.co/600x400" />
-                        </div>
-                        <div class="test-slide swiper-slide">
-                            <img src="https://placehold.co/600x400" />
-                        </div>
-                        <div class="test-slide swiper-slide">
-                            <img src="https://placehold.co/600x400" />
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div> -->
-        <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
         <script type="module" src="./src/js/main.js"></script>
     </body>
 </html>

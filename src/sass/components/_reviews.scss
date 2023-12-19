@@ -46,6 +46,20 @@
             font-weight: 800;
             font-size: 1.4rem;
         }
+        &__img {
+            clip-path: ellipse(42% 50% at 50% 50%);
+            // width: 100%;
+            // height: 100%;
+            // object-fit: cover;
+        }
+    }
+
+    &__swiper {
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 3px;
     }
 
     &__text {
@@ -71,24 +85,6 @@
         }
         // padding: 2rem;
     }
-}
-
-.mySwiper {
-    align-self: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 3px;
-}
-
-.swiper-slide {
-}
-
-.swiper-slide img {
-    clip-path: ellipse(42% 50% at 50% 50%);
-    // width: 100%;
-    // height: 100%;
-    // object-fit: cover;
 }
 
 .text {

@@ -9,7 +9,7 @@
         background: linear-gradient(
             90deg,
             $color-tertiary 0%,
-            transparent 30%,
+            transparent 50%,
             transparent
         );
         mask-image: linear-gradient(
@@ -26,11 +26,6 @@
     //     background-position: center;zz
     //     filter: grayscale(100);
     //
-    &__img {
-        transform: translateY(5rem);
-        box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
-        border-radius: 2px;
-    }
 
     &__right {
         padding: 4rem;
@@ -52,5 +47,41 @@
         display: block;
         width: fit-content;
         margin: 2rem auto;
+    }
+
+    &__swiper {
+        transform: translateY(2rem);
+
+        background-size: cover;
+        width: 35rem;
+        height: 42rem;
+        // mask-image: linear-gradient(
+        //     90deg,
+        //     transparent -1%,
+        //     rgba(0, 0, 0, 1) 1%,
+        //     rgba(0, 0, 0, 1) 99%,
+        //     transparent 1%
+        // );
+    }
+
+    &__img {
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        &--1 {
+            background-image: url(../../img/img_story_photo1.jpg);
+        }
+        &--2 {
+            background-image: url(../../img/img_story_photo2.jpg);
+        }
+        &--3 {
+            background-image: url(../../img/img_story_photo3.jpg);
+        }
     }
 }

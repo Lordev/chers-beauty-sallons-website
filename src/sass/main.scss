@@ -7,14 +7,14 @@
 @import "base/typography";
 @import "base/utilities";
 
-// components
+//components
 @import "components/appointment";
 @import "components/buttons";
 @import "components/call-to-action";
-@import "components/carousel";
+@import "components/header";
+@import "components/portfolio-slider";
 @import "components/reviews";
 @import "components/services";
-@import "components/slider";
 @import "components/social-icons";
 @import "components/story";
 
@@ -23,9 +23,6 @@
 @import "layout/grid";
 @import "layout/header";
 @import "layout/nav";
+
 //Pages
 @import "pages/home";
-
-// library
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-// @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
