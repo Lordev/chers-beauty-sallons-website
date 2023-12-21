@@ -7,10 +7,9 @@ import {
     FreeMode,
 } from "swiper/modules";
 
-("use strict");
 ///////////////////////////////////////
 //* fadeSlider settings
-export let fadeSlider = {
+export const fadeSlider = {
     modules: [Navigation, Pagination, Autoplay, EffectFade],
     effect: "fade",
     crossfade: true,
@@ -32,7 +31,7 @@ export let fadeSlider = {
 };
 
 //* cardSlider settings
-export let cardSlider = {
+export const cardSlider = {
     modules: [EffectCards, Autoplay, Pagination],
     effect: "cards",
     grabCursor: true,
@@ -55,7 +54,7 @@ export let cardSlider = {
 };
 
 //* defaultSlider settings
-export let defaultSlider = {
+export const defaultSlider = {
     modules: [Navigation, Pagination, Autoplay],
     navigation: {
         nextEl: ".swiper-button-next",
@@ -73,14 +72,14 @@ export let defaultSlider = {
     },
 };
 
-//* rollSlider settings
-export let infiniteSlider = {
+//* rollSlider setting
+export const infiniteSlider = {
     modules: [Autoplay, FreeMode],
     loop: true,
     freeMode: true,
     spaceBetween: 30,
     grabCursor: true,
-    slidesPerView: "6",
+    slidesPerView: "7",
     loop: true,
     autoplay: {
         delay: 0.5,
@@ -90,5 +89,3 @@ export let infiniteSlider = {
     speed: 5000,
     freeModeMomentum: false,
 };
-
-//////////////////////////////////
