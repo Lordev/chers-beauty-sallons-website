@@ -6,6 +6,7 @@ import {
     EffectCards,
     FreeMode,
 } from "swiper/modules";
+import { PORTFOLIO_IMGS } from "./config";
 
 ///////////////////////////////////////
 //* fadeSlider settings
@@ -77,15 +78,15 @@ export const infiniteSlider = {
     modules: [Autoplay, FreeMode],
     loop: true,
     freeMode: true,
-    spaceBetween: 30,
+    spaceBetween: 5,
     grabCursor: true,
-    slidesPerView: "7",
+    slidesPerView: PORTFOLIO_IMGS - 3,
     loop: true,
     autoplay: {
         delay: 0.5,
         disableOnInteraction: true,
     },
-    // freeMode: true,
+    freeMode: true,
     speed: 5000,
     freeModeMomentum: false,
 };

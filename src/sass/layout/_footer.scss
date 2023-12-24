@@ -1,14 +1,21 @@
 .footer {
     width: 100%;
+
     // background-color: $color-black;
     display: block;
     text-align: center;
-
+    background-color: $color-white;
     &__link {
         text-decoration: none;
         color: $color-black;
         &:hover {
-            color: $color-primary-dark2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(
+                to bottom,
+                $color-primary,
+                $color-secondary
+            );
         }
     }
     &__section:not(:last-of-type) {

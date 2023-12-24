@@ -20,16 +20,17 @@ class SliderController {
 
     async fetchDataAndRenderSlider(url) {
         try {
+            //0) render spinner
+            this.slider.renderSpinner();
             //1) wait for fetching data
             await model.updateMedia(url);
-
-            // console.log(model.state.mediaUrl);
-
             //2 render images to page
+            console.log(model.state.results);
 
-            portfolioView._renderSlides(model.state);
+            this.slider._renderSlides(model.state.results);
         } catch (err) {
-            console.log(err);
+            console.error(`error in controller`, err);
+            this.slider.renderError();
         }
     }
 }

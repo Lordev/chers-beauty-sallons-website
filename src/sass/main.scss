@@ -14,9 +14,12 @@
 @import "components/header";
 @import "components/portfolio-slider";
 @import "components/reviews";
+@import "components/service";
 @import "components/services";
 @import "components/social-icons";
+@import "components/spinner";
 @import "components/story";
+@import "components/textblock";
 
 //layout
 @import "layout/footer";
@@ -25,4 +28,6 @@
 @import "layout/nav";
 
 //Pages
+@import "pages/bruidsmake-up.scss";
 @import "pages/home";
+@import "pages/portfolio";

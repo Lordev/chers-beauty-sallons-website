@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-
+import icons from "../../../img/icons.svg";
 export default class SliderView {
     constructor(parentElement, config) {
         this.parentElement = document.getElementById(parentElement);
@@ -25,14 +25,14 @@ export default class SliderView {
 
     renderSpinner() {
         const markup = `
-            <div class="spinner">
-            <svg>
-                <use href="${icons}#icon-loader"></use>
-            </svg>
-            </div> 
+        <div class="spinner">
+        <svg>
+        <use href="${icons}#icon-loader"></use>
+        </svg>
+        </div> 
         `;
         this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+        this.parentElement.insertAdjacentHTML("afterbegin", markup);
     }
 
     renderError(message = this._errorMessage) {
@@ -46,7 +46,7 @@ export default class SliderView {
                 <p>${message}</p>
             </div>`;
         this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+        this.parentElement.insertAdjacentHTML("afterbegin", markup);
     }
     x;
 

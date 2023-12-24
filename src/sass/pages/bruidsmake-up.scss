@@ -1,0 +1,73 @@
+.bruidsmake-up-banner {
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    &--top {
+        height: 85vh;
+        background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-bg.jpg);
+        top: 0;
+    }
+    &--middle {
+        filter: brightness(0.5) blur(2);
+        height: 35vh;
+        background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-middle-bg.webp);
+    }
+}
+
+.bruidsmake-up-banner-bg {
+}
+
+.s-heading-bruiloft {
+    z-index: 1;
+
+    clip-path: polygon(5% 0, 95% 0, 95% 100%, 5% 100%);
+    transform: translateY(-1rem);
+    opacity: 0.95;
+    box-shadow: $subtle-shadow;
+    border-radius: 3px;
+    &--top {
+        background-color: $color-primary;
+        margin-top: 55rem;
+    }
+    &--middle {
+        margin-top: 20rem;
+        background-color: rgba($color-white, 0.4);
+    }
+}
+
+.s-2-bruiloft {
+    margin-top: 10rem;
+    background-color: $color-white;
+}
+
+.s-3-bruiloft {
+    height: 50rem;
+    opacity: 0;
+    z-index: 1;
+}
+
+.s-4-bruiloft {
+    position: relative;
+    &::before {
+        content: "";
+        @include layer-behind;
+        background-color: $color-white2;
+        width: 100%;
+        aspect-ratio: 1;
+        height: 75%;
+        top: 5rem;
+    }
+    padding-top: 10rem;
+}
+.section-appointment {
+    max-width: $grid-width;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+}

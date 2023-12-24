@@ -1,8 +1,12 @@
+$grid-width: 5080%;
+$gutter-vertical: 10rem;
+$gutter-horizontal: 1rem;
+
 .row {
     max-width: $grid-width;
     margin: 0 auto;
 
-    &:not(:last-of-type) {
+    &:not(:last-child) {
         margin-bottom: $gutter-vertical;
     }
 
@@ -30,6 +34,14 @@
         column-gap: $gutter-horizontal;
     }
 
+    .grid-col-2-of-2--even {
+        width: 70%;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: $gutter-horizontal;
+    }
+
     .grid-col-1-of-3 {
         width: 70%;
         display: grid;
@@ -47,4 +59,31 @@
         // height: 25vh;
     }
     // justify-content: center;
+}
+
+// Desktop, large screen devices
+$flexbin-row-height: 400px; // height of image rows
+$flexbin-space: 3px; // space between images
+
+// Tablet, medium screen devices
+$flexbin-tablet-max: 800px;
+$flexbin-row-height-tablet: 150px;
+$flexbin-space-tablet: 8px;
+
+// Phone, small screen devices
+$flexbin-phone-max: 400px;
+$flexbin-row-height-phone: 100px;
+$flexbin-space-phone: 4px;
+
+@import "../../../node_modules/flexbin/flexbin.scss";
+.my-flexbin {
+    @include flexbin(100px, 8px);
+}
+
+.my-flexbin-large {
+    @include flexbin(400px, 20px);
+
+    @media (max-width: 768px) {
+        @include flexbin(200px, 10px);
+    }
 }

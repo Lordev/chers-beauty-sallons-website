@@ -1,0 +1,12 @@
+.text-block {
+    display: block;
+    text-align: center;
+    color: white;
+    &--off-center {
+        padding: 5rem 25rem 5rem 0;
+    }
+    &--center {
+        grid-column: 2;
+        padding: 5rem 0rem 5rem 25rem;
+    }
+}

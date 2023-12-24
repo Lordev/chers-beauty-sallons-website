@@ -2,7 +2,7 @@
 
 //*  stored API data
 export const state = {
-    mediaUrl: [],
+    results: [],
 };
 
 //* retrieving IG API data and pushing into state
@@ -13,10 +13,19 @@ export const updateMedia = async function (url) {
             fetch(url)
                 .then((response) => response.json())
                 .then((data) => {
-                    data.data.forEach((item) => {
-                        state.mediaUrl.push(item.media_url);
-                    });
-                    resolve(this.data);
+                    //State update
+                    const transformedData = data.data.map((item) => ({
+                        mediaType: item.media_type,
+                        mediaUrl: item.media_url,
+                        username: item.username,
+                        timestamp: item.timestamp,
+                        permalink: item.permalink,
+                    }));
+
+                    // Update state.results with the transformed data
+                    state.results = transformedData;
+
+                    resolve(state.results);
                 })
                 .catch((error) => {
                     console.error("Error fetching data:", error);

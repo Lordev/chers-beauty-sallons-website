@@ -1,0 +1,27 @@
+.service {
+    &__information {
+        color: $color-black;
+        padding-right: 5rem;
+        opacity: 1;
+        padding-top: 0rem;
+        &__h {
+        }
+
+        &__p {
+            padding: 5rem 0 5rem 0;
+            text-align: center;
+        }
+    }
+    &__img {
+        box-shadow: $soft-box-shadow;
+        border-radius: 2px;
+        transform: translateY(-20rem);
+        &--top {
+        }
+        &--caption {
+            text-align: center;
+        }
+    }
+    &__contact {
+    }
+}

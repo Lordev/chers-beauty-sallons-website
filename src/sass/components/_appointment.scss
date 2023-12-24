@@ -4,8 +4,8 @@
     padding: 3rem;
     &::before {
         @include layer-behind;
-        background: $color-quaternary;
-        background: linear-gradient(240deg, $color-quaternary 0%, $color-tertiary 90%);
+        background: $accent-color;
+        background: linear-gradient(240deg, $color-primary 0%, $color-tertiary 90%);
     }
 
     // align-items: center;

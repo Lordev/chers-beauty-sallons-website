@@ -1,20 +1,29 @@
 //COLORS
-
 $color-primary: #fc7fb6;
 $color-secondary: #cf6ea5;
 $color-tertiary: #be6b88;
-$color-quaternary: #974ed1;
-$color-pentupanary: #7ab07d;
 
-$color-primary-dark: #713f51;
-$color-primary-dark2: #d43198;
+$color-primary-dark: #4c2840;
+$color-secondary-dark: #a74586;
+$color-tertiary-dark: #8c546c;
+
+$accent-color: #974ed1;
+$accent-color2: #7ab07d;
+$accent-color3: #d43198;
+
+$accent-color-dark: #7a3a9b;
+$accent-color2-dark: #5e935d;
 
 $color-primary-light: #f7d9ec;
+$color-primary-light2: #e6e2e4;
 
 $color-white: #fff;
+$color-white2: #f5f0ec;
+
 $color-black: #000;
 
 $color-gray: #6d6d6d;
+$color-gray2: #aaaaaa;
 
 //FONT SIZES
 $default-font-size: 1.6rem;
@@ -24,7 +33,6 @@ $larger-font-size: 1.9rem;
 //CURLY SUB HEADERS
 $font-curly-style: "playfair display";
 
-//GRID
-$grid-width: 100%;
-$gutter-vertical: 10rem;
-$gutter-horizontal: 1rem;
+//SHADOWS
+$soft-box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+$subtle-shadow: 0 0.5rem 1rem rgba($color-black, 0.1);
