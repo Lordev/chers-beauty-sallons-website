@@ -15,11 +15,16 @@ body {
     padding-bottom: 3rem;
     font-weight: 700;
 
-    &--sub {
+    &__sub {
         font-style: italic;
         font-family: $font-curly-style;
         font-weight: 200;
-        color: $color-black;
+        &--black {
+            color: $color-black;
+        }
+        &--pink {
+            color: $color-secondary;
+        }
     }
 
     &--black {
@@ -38,7 +43,7 @@ body {
 }
 
 .divider {
-    border-color: $color-white;
+    border-color: $color-primary;
     width: 10rem;
     margin: 0 auto;
 }

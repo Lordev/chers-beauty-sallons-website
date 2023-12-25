@@ -1,12 +1,13 @@
 .text-block {
     display: block;
     text-align: center;
-    color: white;
-    &--off-center {
-        padding: 5rem 25rem 5rem 0;
+    &--left {
+        color: $color-white;
+        padding: 5rem 0;
     }
-    &--center {
+    &--right {
         grid-column: 2;
-        padding: 5rem 0rem 5rem 25rem;
+        padding: 5rem 0;
+        justify-self: end;
     }
 }

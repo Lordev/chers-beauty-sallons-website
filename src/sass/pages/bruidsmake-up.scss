@@ -1,7 +1,6 @@
 .bruidsmake-up-banner {
     justify-content: center;
     align-items: center;
-
     width: 100%;
     position: absolute;
     background-attachment: fixed;
@@ -10,63 +9,73 @@
     background-size: cover;
     z-index: -1;
     &--top {
-        height: 85vh;
+        height: 82.5rem;
         background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-bg.jpg);
         top: 0;
     }
     &--middle {
-        filter: brightness(0.5) blur(2);
-        height: 35vh;
+        filter: brightness(0.4) blur(1);
+        height: 47.5rem;
         background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-middle-bg.webp);
     }
 }
 
-.bruidsmake-up-banner-bg {
-}
+.heading-bruiloft {
+    z-index: 0;
 
-.s-heading-bruiloft {
-    z-index: 1;
+    // clip-path: polygon(15% 0, 60% 0, 60% 100%, 15% 100%);
 
-    clip-path: polygon(5% 0, 95% 0, 95% 100%, 5% 100%);
-    transform: translateY(-1rem);
-    opacity: 0.95;
-    box-shadow: $subtle-shadow;
-    border-radius: 3px;
+    // box-shadow: $subtle-shadow;
     &--top {
-        background-color: $color-primary;
-        margin-top: 55rem;
+        position: relative;
+        background-image: linear-gradient(125deg, $color-secondary 70%, transparent 100%);
+        margin-top: 57.5rem;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            z-index: 1;
+            bottom: 0;
+            background-color: rgba($color-white, 0.1);
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
     }
     &--middle {
-        margin-top: 20rem;
-        background-color: rgba($color-white, 0.4);
+        position: relative;
+        margin-top: 37.5rem;
+        background-image: linear-gradient(215deg, $color-white2 70%, transparent 100%);
+        &::after {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            z-index: 1;
+            bottom: 0;
+            right: 0;
+            background-color: rgba($color-gray, 0.1);
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 25% 100%);
+        }
     }
 }
 
+.s-1-bruiloft,
 .s-2-bruiloft {
-    margin-top: 10rem;
-    background-color: $color-white;
-}
-
-.s-3-bruiloft {
-    height: 50rem;
-    opacity: 0;
-    z-index: 1;
-}
-
-.s-4-bruiloft {
     position: relative;
+    padding-top: 10rem;
+    margin-bottom: -8rem;
+
     &::before {
         content: "";
         @include layer-behind;
-        background-color: $color-white2;
+        background-color: $color-primary-light;
         width: 100%;
-        aspect-ratio: 1;
-        height: 75%;
+        height: 100%;
         top: 5rem;
     }
-    padding-top: 10rem;
 }
-.section-appointment {
+
+.section-appointment-bruiloft {
     max-width: $grid-width;
     margin: 0 auto;
     margin-bottom: 10rem;

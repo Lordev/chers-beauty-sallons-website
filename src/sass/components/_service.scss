@@ -1,27 +1,43 @@
 .service {
+    &--right,
+    &--left {
+        transform: translateY(-20rem);
+        border-radius: 2px;
+        box-shadow: $soft-box-shadow;
+        overflow: hidden;
+    }
+
+    &--left {
+        justify-self: start;
+    }
+    &--right {
+        justify-self: end;
+    }
     &__information {
-        color: $color-black;
-        padding-right: 5rem;
         opacity: 1;
         padding-top: 0rem;
-        &__h {
+        color: $color-black;
+        &--left {
+            padding-right: 5rem;
         }
-
+        &--right {
+            padding-left: 5rem;
+        }
         &__p {
             padding: 5rem 0 5rem 0;
             text-align: center;
         }
     }
     &__img {
-        box-shadow: $soft-box-shadow;
-        border-radius: 2px;
-        transform: translateY(-20rem);
-        &--top {
+        // transition: all 1.5s;
+
+        animation-name: moveInLeft, zoomAnimation;
+        animation-duration: 1.5s, 5s;
+        animation-iteration-count: 1, infinite;
+        // animaion: moveInLeft 2s infinite;
+        &--1,
+        &--2 {
+            margin-bottom: -2rem;
         }
-        &--caption {
-            text-align: center;
-        }
-    }
-    &__contact {
     }
 }
