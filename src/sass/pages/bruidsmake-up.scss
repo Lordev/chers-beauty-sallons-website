@@ -1,13 +1,4 @@
 .bruidsmake-up-banner {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
     &--top {
         height: 82.5rem;
         background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-bg.jpg);
@@ -20,63 +11,29 @@
     }
 }
 
-.heading-bruiloft {
-    z-index: 0;
-
-    // clip-path: polygon(15% 0, 60% 0, 60% 100%, 15% 100%);
-
-    // box-shadow: $subtle-shadow;
-    &--top {
-        position: relative;
-        background-image: linear-gradient(125deg, $color-secondary 70%, transparent 100%);
-        margin-top: 57.5rem;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 70%;
-            height: 100%;
-            z-index: 1;
-            bottom: 0;
-            background-color: rgba($color-white, 0.1);
-            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-        }
-    }
-    &--middle {
-        position: relative;
-        margin-top: 37.5rem;
-        background-image: linear-gradient(215deg, $color-white2 70%, transparent 100%);
-        &::after {
-            content: "";
-            position: absolute;
-            width: 70%;
-            height: 100%;
-            z-index: 1;
-            bottom: 0;
-            right: 0;
-            background-color: rgba($color-gray, 0.1);
-            clip-path: polygon(0 0, 85% 0, 100% 100%, 25% 100%);
-        }
-    }
-}
-
 .s-1-bruiloft,
 .s-2-bruiloft {
     position: relative;
-    padding-top: 10rem;
-    margin-bottom: -8rem;
-
     &::before {
         content: "";
         @include layer-behind;
         background-color: $color-primary-light;
         width: 100%;
         height: 100%;
-        top: 5rem;
+        top: 8rem;
     }
 }
 
+.s-1-bruiloft {
+    margin-top: 50rem;
+}
+
+.s-2-bruiloft {
+    margin-top: 39.5rem;
+}
+
 .section-appointment-bruiloft {
+    background-color: $color-tertiary;
     max-width: $grid-width;
     margin: 0 auto;
-    margin-bottom: 10rem;
 }

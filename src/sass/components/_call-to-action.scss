@@ -1,55 +1,6 @@
-.call-to-action {
-    display: block;
-    // justify-content: center;
-    // height: 50rem;
-    background-color: white;
-
-    &__block {
-        text-align: center;
-        color: black;
-
-        &--2 {
-            border-radius: 3px;
-            box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
-
-            overflow: hidden;
-        }
-
-        &--3 {
-            background-size: cover;
-            background-image: linear-gradient(
-                to bottom,
-                rgba($color-primary, 0.85) 40%,
-                rgba($color-primary-dark, 0.85) 80%
-            );
-        }
-    }
-
-    //* content/text inside blocks
-    &__block-1 {
-        &--paragraph {
-            padding: 5rem 0rem;
-        }
-    }
-
-    &__block-2 {
-        height: 100%;
-        background-image: url(../../img/img_home2_small.jpg);
+.promo {
+    &--3 {
         background-size: cover;
-        background-repeat: no-repeat;
-        backface-visibility: hidden;
-        transition: transform 0.6s ease;
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-
-    &__block-3 {
-        &--header {
-            padding: 3rem 0;
-        }
-        &--paragraph {
-            padding-top: 5rem;
-        }
+        background: $color-primary;
     }
 }

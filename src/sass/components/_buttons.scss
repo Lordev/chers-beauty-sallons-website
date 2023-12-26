@@ -53,49 +53,36 @@
 }
 
 .btn-text {
-    &:link,
-    &:visited {
-        font-family: "Nunito";
-        font-weight: 400;
-        font-size: $default-font-size;
-        color: $color-primary-dark;
-        display: inline-block;
-        text-decoration: none;
-        padding: 3px;
-        transition: all 0.2s;
-    }
-
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5rem;
+    // background-color: $color-primary;
     &__link {
-        position: relative;
+        &:link,
+        &:visited {
+            font-family: "Nunito";
+            font-weight: 400;
+            font-size: $default-font-size;
+            color: $color-primary-dark;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            // background-color: $color-primary;
+        }
     }
-
-    &__link::before {
+    &::before {
         content: "";
         position: absolute;
         height: 1px;
         bottom: 0;
+        left: 50%;
         width: 1px;
         background-color: $color-black;
         transform: scaleX(0);
-        // transform-origin: bottom
-        transition:
-            transform 0.2s,
-            width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
-            background-color 0.1s;
+        transition: transform 0.2s;
     }
 
-    &__link:hover::before {
-        transform: scaleX(1);
-        width: 100%;
-        // border-bottom: 1px solid $color-primary;
-        // background-color: $color-primary;
-        // color: $color-white;
-        // box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
-        // transform: translateY(-2px)
-    }
-
-    &:active {
-        // box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
-        // transform: translateY(0);
+    &:hover::before {
+        transform: scaleX(40);
+        background-color: $color-black;
     }
 }

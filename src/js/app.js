@@ -50,7 +50,7 @@ import {
 //     }
 // };
 
-//PORTFOLIO
+//!PORTFOLIO
 
 // const revealElement = function (entries, observer) {
 //     entries.forEach((entry) => {

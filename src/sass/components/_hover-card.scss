@@ -1,0 +1,35 @@
+%image-setting {
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}
+
+.hover-card {
+    border-radius: 3px;
+    box-shadow: $soft-box-shadow;
+    overflow: hidden;
+    transform: translateY(-20rem);
+    &__img-hover {
+        @extend %image-setting;
+        height: 50rem;
+        background-image: url(../../img/img_home2_small.jpg);
+        transition: transform 0.6s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__img-zoom {
+        @extend %image-setting;
+        animation-name: moveInLeft, zoomAnimation;
+        animation-duration: 1.5s, 5s;
+        animation-iteration-count: 1, infinite;
+        height: 70rem;
+        &--1 {
+            background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-service-pic.jpg);
+        }
+        &--2 {
+            background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg);
+        }
+    }
+}

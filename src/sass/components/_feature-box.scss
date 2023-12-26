@@ -1,20 +1,14 @@
-.services {
-    height: 90vh;
-    background-image: linear-gradient(to right bottom, $color-primary, $color-tertiary);
-    display: block;
+.feature-box {
+    height: 80rem;
     cursor: pointer;
-
-    &__container {
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        background-color: white;
-        grid-auto-flow: column;
-    }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    grid-auto-flow: column;
+    box-shadow: $soft-box-shadow;
 
     &__block {
         height: 100%;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
         overflow: hidden;
         position: relative;
         text-align: center;
@@ -48,10 +42,6 @@
         color: $color-white;
         opacity: 0.6;
         transition: all 1s ease;
-
-        &--paragraph {
-            padding: 3rem 0;
-        }
     }
 
     &__block:hover &__img {

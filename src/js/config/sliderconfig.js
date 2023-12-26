@@ -38,9 +38,9 @@ export const cardSlider = {
     grabCursor: true,
     cardsEffect: {
         rotate: true,
-        perSlideRotate: 12,
-        perSlideOffset: 1,
-        slideShadows: true,
+        perSlideRotate: 3,
+        perSlideOffset: 2,
+        // slideShadows: false,
     },
     autoplay: {
         delay: 4000,

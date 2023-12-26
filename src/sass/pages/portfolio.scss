@@ -1,25 +1,26 @@
-.portfolio-section {
+.portfolio-banner {
+    height: 70rem;
+    background-image: url(../../img/img_header3-compressed-1980.jpg);
+    top: 0;
+}
+
+.heading-portfolio {
+    margin-top: 55rem;
     padding-top: $gutter-vertical;
     display: block;
     border-top: $color-primary solid 10px;
 }
 
-.portfolio-wallpaper {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../../img/img_header3-compressed-1980.jpg);
-    background-size: cover;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    position: fixed;
-}
-
-.portfolio {
-    &__heading {
-        margin: auto;
-        text-align: center;
-    }
+.s-portfolio-gallery {
+    margin: 10rem 0;
+    padding: 10rem 0;
+    background-image: linear-gradient(
+        180deg,
+        $color-white 0%,
+        $color-white2 1%,
+        $color-white2 99%,
+        $color-white 100%
+    );
 }
 
 .img {
@@ -32,9 +33,6 @@
 .hidden {
     opacity: 0;
     transform: scale(0.5) translateY(100%);
-}
-
-.transform {
 }
 
 .hover {

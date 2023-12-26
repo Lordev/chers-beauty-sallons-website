@@ -44,12 +44,12 @@ class homeSliderView extends SliderView {
             img.onload = () => {
                 console.log(`Image loaded: ${item}`);
                 const slideHTML = `<div
-                class="swiper-slide portfolio__slide"
+                class="swiper-slide infinite-slider__slide"
                 
                 data-swiper-slide-index="${index}"
             >
                 <a href="${link}" target="_blank"
-                    <div class="portfolio__img"
+                    <div class="infinite-slider__img"
                         style="background-image: url(${item})">
                     </div> 
                     </a>
@@ -76,7 +76,7 @@ class homeSliderView extends SliderView {
         this.parentElement.innerHTML = renderedSlides.join("");
 
         // Initialize the Swiper instance with settings
-        const swiper = new Swiper(".portfolio__slider", {
+        const swiper = new Swiper(".api-slider", {
             ...this.swiperSettings,
         });
         // Notify the controller that rendering is complete
@@ -85,6 +85,6 @@ class homeSliderView extends SliderView {
 }
 
 export const headerSlider = new homeSliderView("header", fadeSlider);
-export const storySlider = new homeSliderView("story", cardSlider);
-export const reviewSlider = new homeSliderView("review", defaultSlider);
-export const portfolioView = new homeSliderView("portfolio", infiniteSlider);
+export const storySlider = new homeSliderView("card", cardSlider);
+export const reviewSlider = new homeSliderView("default-slider", defaultSlider);
+export const portfolioView = new homeSliderView("infinite-slider", infiniteSlider);

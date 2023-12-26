@@ -1,2 +1,39 @@
-.section-appointment {
+.s-home-promo {
+    padding: 10rem 0;
+    background-color: $color-primary-light;
+}
+
+.s-feature-box {
+    background-color: $color-primary-dark;
+}
+
+.s-about-me {
+    margin-top: 5rem;
+    padding: 5rem 0 10rem 0;
+    background: $color-primary;
+    background: linear-gradient(
+        to right,
+        $color-primary 90%,
+        $color-secondary 90%,
+        $color-tertiary-dark 90%,
+        $color-tertiary-dark 95%,
+        $color-white2 95%
+    );
+}
+.s-appointment {
+    background-color: $color-tertiary-dark;
+}
+
+.s-reviews {
+    padding: 5rem 0;
+    background: $color-tertiary;
+}
+
+.s-social-media-slider {
+    padding-bottom: 8rem;
+    // background: $color-white2;
+}
+
+.home-wrapper {
+    background: $color-primary-light2;
 }

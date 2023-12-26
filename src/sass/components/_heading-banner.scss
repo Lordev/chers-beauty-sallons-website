@@ -1,0 +1,32 @@
+.heading-banner--pink,
+.heading-banner--white {
+    position: relative;
+}
+
+.heading-banner--pink::before,
+.heading-banner--white::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    z-index: 0;
+    bottom: 0;
+}
+
+.heading-banner {
+    &--pink {
+        background-image: linear-gradient(to right, $color-primary 70%, transparent 100%);
+        &::before {
+            background-color: rgba(transparent, 0.1);
+            clip-path: polygon(15% 0%, 90% 0%, 75% 100%, 0% 100%);
+        }
+    }
+    &--white {
+        background-image: linear-gradient(to left, $color-white2 70%, transparent 100%);
+        &::before {
+            right: 0;
+            background-color: rgba($color-gray, 0.1);
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 25% 100%);
+        }
+    }
+}

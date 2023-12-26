@@ -1,17 +1,8 @@
 .appointment {
     display: grid;
-    position: relative;
-    padding: 3rem;
-    &::before {
-        @include layer-behind;
-        background: $accent-color;
-        background: linear-gradient(240deg, $color-primary 0%, $color-tertiary 90%);
-    }
-
-    // align-items: center;
+    padding: 8rem 0;
 
     &__text {
-        padding: 3rem;
         width: 70%;
         display: block;
         text-align: center;
@@ -20,21 +11,16 @@
 
         &--paragraph {
             color: $color-white;
-            padding: 2rem 0;
         }
     }
 
     &__socials {
-        padding: 3rem;
         display: grid;
         text-align: center;
         align-items: end;
-        justify-content: center;
         &__list {
             display: grid;
-            justify-content: center;
             grid-template-columns: repeat(3, 1fr);
-            padding-bottom: 2rem;
         }
     }
 
@@ -47,6 +33,6 @@
     }
 
     &__btn {
-        align-self: center;
+        align-self: start;
     }
 }

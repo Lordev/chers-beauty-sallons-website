@@ -1,44 +1,76 @@
 .reviews {
     position: relative;
-    z-index: 0;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    width: 70%;
+    padding: 2rem;
+    background: $color-primary;
+
     &::before {
-        // background-color: $color-primary-light;
-        @include layer-behind;
-        mask-image: linear-gradient(
-            180deg,
-            transparent 5%,
-            rgba(0, 0, 0, 1) 20%,
-            rgba(0, 0, 0, 1) 70%,
-            transparent 95%
-        );
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(-45deg, $color-primary 0%, $color-white 100%);
+        transform: translate3d(1rem, 1rem, 0) scale(0.95);
+        filter: blur(20px);
+        opacity: 9;
+        transition: opacity 0.3s;
+        border-radius: inherit;
     }
 
-    &__container {
+    /* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+    .box::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: inherit;
+        border-radius: inherit;
+    }
+
+    &__swiper {
         align-self: center;
-        justify-self: center;
-        width: 70%;
-        height: 70%;
-        display: grid;
-        // transform: translateX(7rem);
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
 
-        background: rgb(171, 186, 64);
-        background: linear-gradient(
-            299deg,
-            rgba(171, 186, 64, 1) 16%,
-            rgba(83, 169, 173, 1) 61%,
-            rgba(180, 59, 174, 1) 90%
-        );
-        padding: 2rem 2rem;
-        box-shadow: 0 1.5rem 2rem rgba($color-black, 0.15);
-
-        // width: 50%;
-        // clip-path: circle(35% at 50% 50%);
+        &__card {
+            background: #fff;
+            display: grid;
+            height: 60rem;
+            justify-items: center;
+            &::before {
+                content: "\201C";
+                position: absolute;
+                top: -2.75rem;
+                left: 5rem;
+                line-height: 1;
+                font-size: 20rem;
+                color: $color-gray;
+                opacity: 0.5;
+                font-family: sans-serif;
+                z-index: 1;
+            }
+        }
+    }
+    &__text {
+        align-self: end;
     }
     &__reviewer {
+        align-self: start;
         display: flex;
-        position: absolute;
-        //! position image and name
-        bottom: 37%;
         align-items: center;
         &__name {
             margin-left: 2rem;
@@ -48,80 +80,35 @@
         }
         &__img {
             clip-path: ellipse(42% 50% at 50% 50%);
-            // width: 100%;
-            // height: 100%;
-            // object-fit: cover;
         }
     }
+}
 
-    &__swiper {
-        align-self: center;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        border-radius: 3px;
-    }
-
-    &__text {
-        // margin-top: 5rem 0;
-        text-align: center;
-        font-size: $default-font-size;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        height: 70rem;
-
-        &::before {
-            content: "\201C";
-            position: absolute;
-            top: -2.75rem;
-            left: 5rem;
-            line-height: 1;
-            font-size: 20rem;
-            color: $color-gray;
-            opacity: 0.5;
-            font-family: sans-serif;
-            z-index: 1;
+#default-slider {
+    .swiper-pagination {
+        margin-bottom: 4rem;
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.2);
         }
-        // padding: 2rem;
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: $color-primary;
+        }
     }
-}
-
-.text {
-    display: block;
-    padding: 10rem;
-    // width: 100%;
-    // height: 100%;
-    // position: absolute;
-    // @include center-horizontal-vertical;
-    // padding: 20rem;
-}
-
-.swiper-pagination {
-    display: block;
-    margin-bottom: 3rem;
-}
-
-.swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    // text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: #000;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.swiper-pagination-bullet-active {
-    color: #fff;
-    background: $color-primary;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: $color-primary;
-}
-
-.swiper-scrollbar {
+    .swiper-button-next,
+    .swiper-button-prev {
+        --swiper-navigation-size: 3rem;
+        --swiper-navigation-sides-offset: 3rem;
+        color: $color-gray2;
+        &:hover {
+            color: $color-primary;
+        }
+    }
 }

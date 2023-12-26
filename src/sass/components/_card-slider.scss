@@ -1,0 +1,25 @@
+.card-slider {
+    transform: translateY(5rem);
+    background-size: cover;
+    width: 35rem;
+    height: 50rem;
+    &__img {
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        &--1 {
+            background-image: url(../../img/img_story_photo1.jpg);
+        }
+        &--2 {
+            background-image: url(../../img/img_story_photo2.jpg);
+        }
+        &--3 {
+            background-image: url(../../img/img_story_photo3.jpg);
+        }
+    }
+}
