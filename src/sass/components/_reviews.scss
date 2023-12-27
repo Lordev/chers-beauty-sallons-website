@@ -5,18 +5,19 @@
     justify-self: center;
     width: 70%;
     padding: 2rem;
-    background: $color-primary;
+    background: $color-tertiary-dark;
+    box-shadow: $heavy-shadow;
 
     &::before {
         content: "";
-        z-index: -1;
+        z-index: 0;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(-45deg, $color-primary 0%, $color-white 100%);
-        transform: translate3d(1rem, 1rem, 0) scale(0.95);
+        background: linear-gradient(-45deg, $color-white 0%, $color-primary 100%);
+        transform: translate3d(1rem, 1rem, 0) scale(0.88);
         filter: blur(20px);
         opacity: 9;
         transition: opacity 0.3s;
@@ -47,7 +48,7 @@
         border-radius: 3px;
 
         &__card {
-            background: #fff;
+            background: $color-primary-light;
             display: grid;
             height: 60rem;
             justify-items: center;

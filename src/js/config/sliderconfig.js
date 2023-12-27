@@ -40,7 +40,7 @@ export const cardSlider = {
         rotate: true,
         perSlideRotate: 3,
         perSlideOffset: 2,
-        // slideShadows: false,
+        slideShadows: true,
     },
     autoplay: {
         delay: 4000,
@@ -56,6 +56,7 @@ export const cardSlider = {
 
 //* defaultSlider settings
 export const defaultSlider = {
+    grabCursor: true,
     modules: [Navigation, Pagination, Autoplay],
     navigation: {
         nextEl: ".swiper-button-next",

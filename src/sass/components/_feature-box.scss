@@ -5,7 +5,7 @@
     grid-template-columns: repeat(4, 1fr);
     background-color: white;
     grid-auto-flow: column;
-    box-shadow: $soft-box-shadow;
+    box-shadow: $soft-shadow;
 
     &__block {
         height: 100%;

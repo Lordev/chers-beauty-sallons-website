@@ -3,9 +3,8 @@
     // background-color: $color-black;
     display: block;
     text-align: center;
-    // background-color: $color-white2;
+    background-color: $color-primary-light2;
     &__link {
-        text-decoration: none;
         color: $color-black;
         &:hover {
             background-clip: text;

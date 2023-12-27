@@ -1,26 +1,15 @@
-.portfolio-banner {
-    height: 70rem;
-    background-image: url(../../img/img_header3-compressed-1980.jpg);
-    top: 0;
-}
-
 .heading-portfolio {
-    margin-top: 55rem;
-    padding-top: $gutter-vertical;
     display: block;
+    margin-top: 35rem;
+    background-color: $color-white;
+    box-shadow: $minimal-shadow;
     border-top: $color-primary solid 10px;
+    padding: 4rem 0;
 }
 
 .s-portfolio-gallery {
-    margin: 10rem 0;
-    padding: 10rem 0;
-    background-image: linear-gradient(
-        180deg,
-        $color-white 0%,
-        $color-white2 1%,
-        $color-white2 99%,
-        $color-white 100%
-    );
+    padding: 8rem 0;
+    background: $color-primary-light2 99%;
 }
 
 .img {

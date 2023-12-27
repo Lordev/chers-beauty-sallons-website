@@ -1,28 +1,29 @@
 //COLORS
-$color-primary: #fc7fb6;
+$color-primary: #ff99cc;
 $color-secondary: #cf6ea5;
-$color-tertiary: #be6b88;
+$color-tertiary: #cc6699;
 
 $color-primary-dark: #4c2840;
 $color-secondary-dark: #a74586;
 $color-tertiary-dark: #8c546c;
 
 $accent-color: #974ed1;
-$accent-color2: #7ab07d;
+$accent-color2: #7ffcc5;
 $accent-color3: #d43198;
 
 $accent-color-dark: #7a3a9b;
 $accent-color2-dark: #5e935d;
 
 $color-primary-light: #f7d9ec;
-$color-primary-light2: #e6e2e4;
+$color-primary-light2: #f8f0f0;
 
 $color-white: #fff;
-$color-white2: #f5f0ec;
+$color-white2: #f7f7f7;
+$color-white3: #f5ecf2;
 
 $color-black: #000;
 
-$color-gray: #6d6d6d;
+$color-gray: #bdbdbd;
 $color-gray2: #aaaaaa;
 
 //FONT SIZES
@@ -34,5 +35,10 @@ $larger-font-size: 1.9rem;
 $font-curly-style: "playfair display";
 
 //SHADOWS
-$soft-box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
-$subtle-shadow: 0 0.5rem 1rem rgba($color-black, 0.1);
+$minimal-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+$soft-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+$subtle-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
+$subtle-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
+$medium-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.4);
+$heavy-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.5);
+$intense-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);

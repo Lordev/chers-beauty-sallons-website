@@ -1,15 +1,14 @@
 .header {
-    display: block;
     &__swiper {
-        height: 85vh;
-        transition: all 2s;
-        width: 100%;
+        top: 0;
+        height: 100vh;
     }
 
     &__img {
-        display: block;
-        background-position: 0% 25%;
+        filter: brightness(0.9);
+        background-position: 0% 10%;
         background-size: cover;
+
         &--1 {
             background-image: url(../../img/img_home1.jpg);
         }
@@ -31,5 +30,43 @@
 
     &:hover &__button {
         opacity: 1;
+    }
+}
+
+.portfolio-header {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-image: url(../../img/img_header3-compressed-1980.jpg);
+    &::after {
+        @include layer-behind;
+        @include center-horizontal-vertical;
+        background-color: rgba($color-black, 0.3);
+        backdrop-filter: blur(1.1);
+        height: 100%;
+        width: 100%;
+    }
+    &__text {
+        color: rgba($color-white, 0.5);
+        text-shadow: $minimal-shadow;
+        font-size: 30rem;
+        transform: perspective(500px) rotateX(-2eg);
+        & {
+        }
+    }
+}
+
+.bruidsmake-up-banner {
+    &--top {
+        height: 82.5rem;
+        background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-bg.jpg);
+        top: 0;
+    }
+    &--middle {
+        filter: brightness(0.4) blur(1);
+        height: 47.5rem;
+        background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-middle-bg.webp);
     }
 }

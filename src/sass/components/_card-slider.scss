@@ -1,17 +1,13 @@
 .card-slider {
-    transform: translateY(5rem);
-    background-size: cover;
-    width: 35rem;
+    position: absolute;
+    // margin-bottom: 1rem;
+    transform: translateY(2rem);
+    width: 34rem;
     height: 50rem;
     &__img {
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: px;
-        font-size: 22px;
-        font-weight: bold;
-        color: #fff;
+        border-radius: 10px;
+        box-shadow: $medium-shadow;
+        display: block;
         &--1 {
             background-image: url(../../img/img_story_photo1.jpg);
         }
@@ -22,4 +18,22 @@
             background-image: url(../../img/img_story_photo3.jpg);
         }
     }
+}
+
+.main-content {
+    padding: 0 10rem;
+}
+
+.swiper-container {
+    /* change container to overflow visible */
+    overflow: visible;
+    /* add enough padding to account for the shadow */
+    padding: 0 2rem;
+}
+
+.my-swiper-wrapper {
+    /* add the overflow to the outer wrapper */
+    // overflow: hidden;
+    /* add negative margin to counteract the padding */
+    margin: -20px;
 }

@@ -1,29 +1,35 @@
 //! STYLE FULL
 .section-navigation {
-    background-color: rgba($color-white, 0.9);
+    background-color: $color-primary-light2;
     box-shadow: $subtle-shadow;
-    width: 100%;
-    height: 15rem;
     // position: fixed;
     // top: 0;
-    // z-index: 10000;
+    // height: 10vh;
+    z-index: 10000;
+    width: 100%;
+    opacity: 0.9;
+    // border-bottom: 10px solid $color-primary;
 }
 
 //! INNER LAYOUT
 .navigation {
-    display: block;
+    display: grid;
     margin: 0 auto;
     width: 60vw;
-    padding: 1.5rem 0;
+    height: 100%;
+    grid-template-rows: repeat(2, 1fr);
 
     &__container {
-        padding: 2rem 0;
         align-items: center;
         grid-row: 2;
         &--top {
+            padding: 0.1rem 0;
             grid-row: 1;
             display: grid;
             grid-template-columns: 3fr 1;
+        }
+        &--bottom {
+            padding: 0.5rem 0;
         }
     }
 
@@ -56,7 +62,7 @@
                 &:link,
                 &:visited {
                     opacity: 0.9;
-                    text-decoration: none;
+
                     color: black;
                     transition: all 0.2s;
                 }
@@ -70,15 +76,12 @@
             grid-row: 2;
             display: flex;
             position: relative;
+            font-size: 1.3rem;
             &--text {
-                font-size: 1.3rem;
                 text-transform: uppercase;
                 font-weight: 600;
                 color: $color-black;
-                &:link,
-                &:visited {
-                    text-decoration: none;
-                }
+
                 &:hover {
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -98,9 +101,6 @@
                 );
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                &:link {
-                    text-decoration: none;
-                }
             }
         }
 
@@ -113,34 +113,33 @@
 
 //! INNER
 .menu-list {
-    display: block;
     text-align: center;
     position: absolute;
     top: 3rem;
     left: -2rem;
     z-index: 100;
     list-style: none;
-    width: 220%;
+    width: 200%;
     line-height: 5rem;
     opacity: 0;
     background-color: $color-white;
     box-shadow: $subtle-shadow;
+
     transition:
         clip-path 0.5s ease,
-        opacity 0.2s ease-out;
+        opacity 0.1s ease-out;
 
     &__item {
+        border-bottom: 0.1px solid rgba($color-tertiary, 0.2);
         &:hover {
+            border-bottom: 1px solid $color-tertiary;
             background-color: $color-primary;
             cursor: pointer;
         }
         &--text {
-            color: $color-gray;
-            font-weight: 400;
-            &:link,
-            &:visited {
-                text-decoration: none;
-            }
+            font-size: inherit;
+            color: inherit;
+            font-weight: inherit;
         }
     }
 }

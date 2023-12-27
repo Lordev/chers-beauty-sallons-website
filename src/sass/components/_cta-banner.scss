@@ -1,7 +1,6 @@
-.appointment {
+.cta-banner {
     display: grid;
     padding: 8rem 0;
-
     &__text {
         width: 70%;
         display: block;
@@ -10,17 +9,21 @@
         align-self: center;
 
         &--paragraph {
-            color: $color-white;
+            // color: $color-white;
         }
     }
 
     &__socials {
+        width: 70%;
         display: grid;
         text-align: center;
         align-items: end;
         &__list {
+            justify-self: center;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: column;
+            gap: 2rem;
         }
     }
 
@@ -33,6 +36,7 @@
     }
 
     &__btn {
+        // width: 70%;
         align-self: start;
     }
 }

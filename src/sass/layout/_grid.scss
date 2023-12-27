@@ -1,6 +1,6 @@
 $grid-width: 100%;
-$gutter-vertical: 10rem;
-$gutter-horizontal: 3rem;
+$gutter-vertical: 5rem;
+$gutter-horizontal: 8rem;
 
 .row {
     max-width: $grid-width;
@@ -22,7 +22,7 @@ $gutter-horizontal: 3rem;
         width: 70%;
         display: grid;
         margin: 0 auto;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 50rem 2fr;
         column-gap: $gutter-horizontal;
     }
 

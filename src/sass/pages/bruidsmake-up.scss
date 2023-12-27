@@ -1,16 +1,3 @@
-.bruidsmake-up-banner {
-    &--top {
-        height: 82.5rem;
-        background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-bg.jpg);
-        top: 0;
-    }
-    &--middle {
-        filter: brightness(0.4) blur(1);
-        height: 47.5rem;
-        background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-middle-bg.webp);
-    }
-}
-
 .s-1-bruiloft,
 .s-2-bruiloft {
     position: relative;
@@ -21,6 +8,10 @@
         width: 100%;
         height: 100%;
         top: 8rem;
+    }
+
+    &__img {
+        transform: translateY(-15rem);
     }
 }
 
