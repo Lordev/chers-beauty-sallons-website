@@ -7,7 +7,7 @@
     },
     "default": "index.html",
     "scripts": {
-        "start": "parcel index.html",
+        "start": "parcel contact-me.html",
         "build": "parcel build index.html --out-dir ./dist"
     },
     "author": "Lorenzo Sallons",
@@ -17,6 +17,7 @@
         "parcel": "^2.10.3"
     },
     "dependencies": {
+        "@googlemaps/js-api-loader": "^1.16.2",
         "core-js": "^3.34.0",
         "flexbin": "^0.2.0",
         "photoswipe": "^5.4.3",

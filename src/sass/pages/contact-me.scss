@@ -1,0 +1,58 @@
+.heading-contact-me {
+    position: relative;
+    display: block;
+    margin-top: 35rem;
+
+    // box-shadow: $minimal-shadow;
+    background:
+        linear-gradient(
+                to right,
+                $color-primary $border-thickness,
+                transparent 0,
+                transparent 100%
+            )
+            top,
+        linear-gradient(
+                to bottom,
+                $color-primary $border-thickness,
+                $color-white2 0,
+                $color-white2 100%
+            )
+            left;
+    padding: 4rem 0;
+}
+
+.s-map {
+    padding: 8rem 0;
+    // background-color: $color-white2;
+    background: linear-gradient(
+            to top,
+            $color-white2 20,
+            $color-white2 0,
+            $color-white2 100%
+        )
+        left;
+}
+
+.form-contact {
+    padding: 0.8rem;
+    // box-shadow: $soft-shadow;
+    // background-color: $color-primary-light;
+    & > * {
+        display: block;
+        width: 100%;
+    }
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none; /* Remove default focus outline */
+    border-width: 0 0 1px;
+    border-bottom: solid rgba($color-gray, 0.5);
+    padding: 0;
+    background: none;
+    line-height: 1.5em;
+    font-weight: 300;
+}

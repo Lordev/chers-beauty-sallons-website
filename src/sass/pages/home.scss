@@ -1,8 +1,20 @@
 .s-home-promo {
-    border-top: 10px solid $color-primary;
-    margin-top: 90vh;
     padding: 10rem 0;
-    background-color: $color-primary-light2;
+    background:
+        linear-gradient(
+                to right,
+                $color-primary $border-thickness,
+                transparent $border-thickness,
+                transparent 100%
+            )
+            top,
+        linear-gradient(
+                to bottom,
+                $color-primary $border-thickness,
+                transparent $border-thickness,
+                transparent 100%
+            )
+            left;
 }
 
 .s-feature-box {

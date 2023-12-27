@@ -46,7 +46,8 @@ body {
     width: 8rem;
     margin: 0 auto;
     &--pink {
-        border-color: $color-primary;
+        border: none;
+        border-top: 1px solid $color-primary;
     }
     &--white {
         border-color: $color-white;

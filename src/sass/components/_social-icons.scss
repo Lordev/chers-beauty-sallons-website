@@ -1,11 +1,11 @@
 .fa-brands {
     filter: opacity(0.6) grayscale(100);
     transition: all 0.3s;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    // box-shadow: $minimal-shadow;
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-        fill: $color-secondary;
+        // box-shadow: $medium-shadow;
+        color: $accent-color3;
         transform: scale(1.2);
         filter: opacity(0.9) grayscale(0);
     }
@@ -13,6 +13,6 @@
     &:focus {
         outline: none;
         transform: translateY(2px);
-        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+        // box-shadow: $soft-shadow;
     }
 }

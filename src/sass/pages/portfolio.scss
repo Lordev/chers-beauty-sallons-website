@@ -1,9 +1,24 @@
 .heading-portfolio {
+    position: relative;
     display: block;
     margin-top: 35rem;
-    background-color: $color-white;
+
     box-shadow: $minimal-shadow;
-    border-top: $color-primary solid 10px;
+    background:
+        linear-gradient(
+                to right,
+                $color-primary $border-thickness,
+                transparent 0,
+                transparent 100%
+            )
+            top,
+        linear-gradient(
+                to bottom,
+                $color-primary $border-thickness,
+                $color-white 0,
+                $color-white 100%
+            )
+            left;
     padding: 4rem 0;
 }
 
@@ -38,4 +53,7 @@
 
 .pswp__img {
     cursor: pointer !important;
+}
+
+.portfolio-wrapper {
 }

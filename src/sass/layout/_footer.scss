@@ -1,9 +1,11 @@
 .footer {
+    padding-top: 8rem;
+
     width: 100%;
     // background-color: $color-black;
     display: block;
     text-align: center;
-    background-color: $color-primary-light2;
+    background-color: $color-white;
     &__link {
         color: $color-black;
         &:hover {
@@ -17,7 +19,8 @@
         }
     }
     &__section:not(:last-of-type) {
-        border-right: 2px double $color-tertiary;
+        border: none;
+        border-right: 1px solid $color-black;
     }
 
     &__list {

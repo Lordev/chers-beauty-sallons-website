@@ -2,6 +2,20 @@ $grid-width: 100%;
 $gutter-vertical: 5rem;
 $gutter-horizontal: 8rem;
 
+%grid {
+    width: 70%;
+    display: grid;
+    margin: 0 auto;
+    column-gap: $gutter-horizontal;
+}
+
+%even-grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $gutter-horizontal;
+}
+
 .row {
     max-width: $grid-width;
     margin: 0 auto;
@@ -11,34 +25,35 @@ $gutter-horizontal: 8rem;
     }
 
     .grid-col-1-of-1 {
-        width: 70%;
-        display: grid;
-        margin: 0 auto;
+        @extend %grid;
         grid-template-columns: 1fr;
-        column-gap: $gutter-horizontal;
     }
 
     .grid-col-1-of-2 {
-        width: 70%;
-        display: grid;
-        margin: 0 auto;
+        @extend %grid;
         grid-template-columns: 50rem 2fr;
+    }
+    .grid-col-1-of-3 {
+        @extend %grid;
         column-gap: $gutter-horizontal;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-col-1-of-4 {
+        @extend %grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .grid-col-2-of-2 {
-        width: 70%;
-        display: grid;
-        margin: 0 auto;
+        @extend %grid;
         grid-template-columns: 2fr 1fr;
-        column-gap: $gutter-horizontal;
-
+        &--narrow {
+            @extend %even-grid;
+            width: 40%;
+        }
         &--even {
+            @extend %even-grid;
             width: 70%;
-            display: grid;
-            margin: 0 auto;
-            grid-template-columns: 1fr 1fr;
-            column-gap: $gutter-horizontal;
 
             .col2 {
                 grid-column: 2;
@@ -46,24 +61,6 @@ $gutter-horizontal: 8rem;
             }
         }
     }
-
-    .grid-col-1-of-3 {
-        width: 70%;
-        display: grid;
-        margin: 0 auto;
-        column-gap: $gutter-horizontal;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .grid-col-1-of-4 {
-        width: 70%;
-        display: grid;
-        margin: 0 auto;
-        column-gap: $gutter-horizontal;
-        grid-template-columns: repeat(4, 1fr);
-        // height: 25vh;
-    }
-    // justify-content: center;
 }
 
 // Desktop, large screen devices
