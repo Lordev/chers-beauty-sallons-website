@@ -2,10 +2,10 @@
     width: 100%;
     mask-image: linear-gradient(
         90deg,
-        transparent 2%,
-        rgba(0, 0, 0, 1) 4%,
-        rgba(0, 0, 0, 1) 96%,
-        transparent 98%
+        transparent 4%,
+        rgba(0, 0, 0, 1) 6%,
+        rgba(0, 0, 0, 1) 94%,
+        transparent 96%
     );
     &__slide {
         display: flex;
@@ -15,8 +15,8 @@
     }
 
     &__img {
-        width: 40rem;
-        height: 40rem;
+        width: 60rem;
+        height: 60rem;
         background-position: center;
         background-size: cover;
         align-items: center;

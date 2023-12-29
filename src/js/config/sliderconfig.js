@@ -14,6 +14,7 @@ export const fadeSlider = {
     modules: [Navigation, Pagination, Autoplay, EffectFade],
     effect: "fade",
     crossfade: true,
+    // grabCursor: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -26,7 +27,7 @@ export const fadeSlider = {
     loop: true,
     pagination: {
         el: ".swiper-pagination",
-        dynamicBullets: true,
+        dynamicBullets: false,
         clickable: true,
     },
 };
@@ -38,7 +39,7 @@ export const cardSlider = {
     grabCursor: true,
     cardsEffect: {
         rotate: true,
-        perSlideRotate: 3,
+        perSlideRotate: 8,
         perSlideOffset: 2,
         slideShadows: true,
     },

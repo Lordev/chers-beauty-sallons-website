@@ -1,12 +1,12 @@
 .card-slider {
     position: absolute;
     // margin-bottom: 1rem;
-    transform: translateY(2rem);
+    transform: translateY(-5rem);
     width: 34rem;
     height: 50rem;
     &__img {
         border-radius: 10px;
-        box-shadow: $medium-shadow;
+        box-shadow: $intense-shadow;
         display: block;
         &--1 {
             background-image: url(../../img/img_story_photo1.jpg);

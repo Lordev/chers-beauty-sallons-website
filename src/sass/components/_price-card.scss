@@ -1,0 +1,33 @@
+.price-card {
+    background-color: $color-primary-light;
+    padding: 4rem 2rem;
+    border-radius: 2px;
+    box-shadow: $soft-shadow;
+    &__heading {
+        width: 60%;
+        margin: 0 auto;
+        border-bottom: 1px solid $color-gray;
+        position: relative;
+        &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-right: 1px solid $color-gray;
+            border-bottom: 1px solid $color-gray;
+            background: $color-primary-light;
+            position: absolute;
+            bottom: -11px;
+            left: calc(50% - 10px);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    &__list {
+        padding: 3rem 0;
+        & > * {
+            margin-bottom: 1rem;
+        }
+    }
+    &__btn {
+    }
+}

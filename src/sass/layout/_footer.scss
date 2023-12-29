@@ -18,14 +18,14 @@
             );
         }
     }
-    &__section:not(:last-of-type) {
+    &__section:not(:first-of-type) {
         border: none;
-        border-right: 1px solid $color-black;
+        border-left: 1px solid rgba($accent-color3, 0.8);
     }
 
     &__list {
         text-align: start;
-        padding: 2rem 2rem;
+        padding: 2rem 0 4rem 4rem;
         &__item {
             list-style: none;
         }

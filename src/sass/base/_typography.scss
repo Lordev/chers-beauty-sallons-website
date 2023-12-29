@@ -37,9 +37,27 @@ body {
 }
 
 .heading-tertiary {
-    font-size: 2rem;
-    margin-bottom: 5rem;
-    font-weight: 700;
+    font-family: "Old Standard TT";
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.heading-quaternary {
+    font-family: "Old Standard TT";
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.heading-subtext {
+    font-family: $font-curly-style;
+    font-weight: 200;
+
+    &--pink {
+        color: rgba($accent-color3, 0.8);
+    }
 }
 
 .sm-divider {

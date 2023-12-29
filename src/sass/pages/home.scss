@@ -1,4 +1,10 @@
+.home-wrapper {
+    background: $color-primary-light2;
+    box-shadow: $medium-shadow;
+}
+
 .s-home-promo {
+    margin: 0 10rem;
     padding: 10rem 0;
     background:
         linear-gradient(
@@ -15,22 +21,22 @@
                 transparent 100%
             )
             left;
+    box-shadow: $soft-shadow;
 }
 
 .s-feature-box {
-    background-color: $color-primary-dark;
+    background-color: $color-secondary;
     // box-shadow: $medium-shadow;
 }
 
-.s-reviews {
-    padding: 5rem 0;
-    background: $color-tertiary-dark;
-}
 .s-appointment {
-    background-color: $color-white;
+    background-color: $color-primary-light;
+    margin: 0 10rem;
+    box-shadow: $soft-shadow;
 }
 
 .s-about-me {
+    margin: 0 10rem;
     // margin-top: 5rem;
     padding: 5rem 0 10rem 0;
     background: $color-primary;
@@ -39,18 +45,35 @@
         $color-primary 90%,
         $color-tertiary-dark 90%,
         $color-tertiary-dark 95%,
-        $color-primary-light2 95%,
-        $color-white 95%
+        $color-primary-light 95%
     );
-    box-shadow: $minimal-shadow;
+    box-shadow: $soft-shadow;
     // border-bottom: 20px solid $color-primary;
 }
 
-.s-social-media-slider {
-    padding-bottom: 8rem;
-    // background: $color-primary;
+.s-reviews {
+    margin: 0 10rem;
+    padding: 5rem 0;
+    background:
+        linear-gradient(
+            to left,
+            transparent 90%,
+            $color-tertiary-dark 90%,
+            $color-tertiary-dark 95%,
+            $color-primary 95%
+        ),
+        linear-gradient(
+                to bottom,
+                $color-tertiary-dark 10%,
+                transparent 10%,
+                transparent 100%
+            )
+            left;
+    box-shadow: $soft-shadow;
 }
 
-.home-wrapper {
-    background: $color-primary-light2;
+.s-social-media-slider {
+    // padding: 1rem;
+    // background: $color-primary;
+    // box-shadow: $heavy-shadow;
 }

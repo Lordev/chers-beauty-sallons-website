@@ -2,13 +2,12 @@
 .section-navigation {
     background-color: $color-primary-light2;
     box-shadow: $subtle-shadow;
-    // position: fixed;
-    // top: 0;
-    // height: 10vh;
-    z-index: 10000;
+    // overflow: visible;
+    position: absolute;
+    top: 0;
+    z-index: 99999999;
     width: 100%;
     opacity: 0.9;
-    // border-bottom: 10px solid $color-primary;
 }
 
 //! INNER LAYOUT
@@ -117,7 +116,7 @@
     position: absolute;
     top: 3rem;
     left: -2rem;
-    z-index: 100;
+    z-index: 9999999999999999999999999;
     list-style: none;
     width: 200%;
     line-height: 5rem;

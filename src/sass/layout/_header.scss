@@ -1,12 +1,60 @@
-.header {
+%textbox {
+    backdrop-filter: blur(5);
+    background-color: rgba($color-black, 0.3);
+    position: absolute;
+    color: $color-white;
+    width: 50rem;
+    padding: 1.8rem;
+}
+
+%home-header-btn {
+    background-color: $color-primary;
+    position: absolute;
+    padding: 1.5rem 5rem;
+}
+
+.home-header {
     &__swiper {
         top: 0;
         height: 100vh;
     }
-
+    &__text-box {
+        &--1 {
+            @extend %textbox;
+            right: 20rem;
+            bottom: 30rem;
+        }
+        &--2 {
+            @extend %textbox;
+            left: 20rem;
+            bottom: 30rem;
+        }
+        &--3 {
+            @extend %textbox;
+            right: 20rem;
+            top: 30rem;
+        }
+    }
+    &__btn {
+        &--1 {
+            @extend %home-header-btn;
+            left: 50rem;
+            bottom: 50rem;
+        }
+        &--2 {
+            @extend %home-header-btn;
+            left: 50rem;
+            bottom: 30rem;
+        }
+        &--3 {
+            @extend %home-header-btn;
+            left: 50rem;
+            bottom: 30rem;
+        }
+    }
     &__img {
-        filter: brightness(0.9);
-        background-position: 0% 10%;
+        filter: brightness(0.8);
+        background-position: 0% 20%;
         background-size: cover;
 
         &--1 {
@@ -19,20 +67,46 @@
             background-image: url(../../img/img_header3.jpg);
         }
     }
-    &__button {
-        width: 7rem;
-        height: 7rem;
-        border-radius: 50%;
-        box-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        transition: all 0.4s ease-in;
-    }
+}
 
-    &:hover &__button {
-        opacity: 1;
+// .home-header:hover #header.swiper-button-next {
+//     opacity: 1;
+// }
+#header {
+    .swiper-pagination {
+        margin-bottom: 4rem;
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background: $color-white;
+        }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: $color-primary;
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        padding: 4rem;
+        background-color: rgba($color-primary, 0.1);
+        border-radius: 50%;
+        --swiper-navigation-size: 3rem;
+        --swiper-navigation-sides-offset: 3rem;
+        color: $color-gray2;
+        &:hover {
+            color: $color-primary;
+        }
     }
 }
 
+//!PORTFOLIO
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 .portfolio-header {
     overflow: hidden;
     position: absolute;
@@ -53,11 +127,12 @@
         text-shadow: $minimal-shadow;
         font-size: 30rem;
         transform: perspective(500px) rotateX(-2eg);
-        & {
-        }
     }
 }
 
+//!DIENSTEN
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 .bruidsmake-up-banner {
     &--top {
         height: 82.5rem;

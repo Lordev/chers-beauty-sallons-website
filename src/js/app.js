@@ -12,10 +12,10 @@ import {
 // homepage;
 
 // document.addEventListener();
-// headerController.createSlider();
-// storyController.createSlider();
-// reviewSController.createSlider();
-// portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
+headerController.createSlider();
+storyController.createSlider();
+reviewSController.createSlider();
+portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
 
 // Include Lightbox
 
