@@ -6,8 +6,12 @@
 
 .hover-card {
     border-radius: 3px;
-    box-shadow: $minimal-shadow;
     overflow: hidden;
+    box-shadow: $medium-shadow;
+
+    &--margin {
+        margin: 0 10rem;
+    }
 
     &__img-hover {
         @extend %image-setting;

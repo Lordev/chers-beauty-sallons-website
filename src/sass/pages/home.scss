@@ -4,7 +4,7 @@
 }
 
 .s-home-promo {
-    margin: 0 10rem;
+    margin: 0 5rem;
     padding: 10rem 0;
     background:
         linear-gradient(
@@ -21,7 +21,6 @@
                 transparent 100%
             )
             left;
-    box-shadow: $soft-shadow;
 }
 
 .s-feature-box {
@@ -31,12 +30,12 @@
 
 .s-appointment {
     background-color: $color-primary-light;
-    margin: 0 10rem;
+    margin: 0 5rem;
     box-shadow: $soft-shadow;
 }
 
 .s-about-me {
-    margin: 0 10rem;
+    margin: 0 5rem;
     // margin-top: 5rem;
     padding: 5rem 0 10rem 0;
     background: $color-primary;
@@ -52,7 +51,7 @@
 }
 
 .s-reviews {
-    margin: 0 10rem;
+    margin: 0 5rem;
     padding: 5rem 0;
     background:
         linear-gradient(

@@ -7,7 +7,7 @@
     },
     "default": "index.html",
     "scripts": {
-        "start": "parcel index.html",
+        "start": "parcel bruidsmake-up.html",
         "build": "parcel build index.html --out-dir ./dist"
     },
     "author": "Lorenzo Sallons",
