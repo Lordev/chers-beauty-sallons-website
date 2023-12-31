@@ -6,7 +6,7 @@
     width: 70%;
     padding: 2rem;
     background: $color-tertiary;
-    box-shadow: $heavy-shadow;
+    box-shadow: $medium-shadow;
 
     &::before {
         content: "";
@@ -55,7 +55,7 @@
             &::before {
                 content: "\201C";
                 position: absolute;
-                top: -2.75rem;
+                top: -1.75rem;
                 left: 5rem;
                 line-height: 1;
                 font-size: 20rem;
@@ -68,6 +68,7 @@
     }
     &__text {
         align-self: end;
+        padding: 0 5rem;
     }
     &__reviewer {
         align-self: start;

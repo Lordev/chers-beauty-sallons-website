@@ -11,18 +11,17 @@ import { PORTFOLIO_IMGS } from "./config";
 ///////////////////////////////////////
 //* fadeSlider settings
 export const fadeSlider = {
+    activeIndex: 4,
     modules: [Navigation, Pagination, Autoplay, EffectFade],
     effect: "fade",
     crossfade: true,
-    // grabCursor: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 4000,
-        // waitForTransition: true,
-        // pauseOnMouseEnter: true,
+        delay: 8000,
+        waitForTransition: true,
     },
     loop: true,
     pagination: {
@@ -30,6 +29,7 @@ export const fadeSlider = {
         dynamicBullets: false,
         clickable: true,
     },
+    speed: 1500,
 };
 
 //* cardSlider settings

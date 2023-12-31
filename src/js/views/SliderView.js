@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import icons from "../../../img/icons.svg";
+
 export default class SliderView {
     constructor(parentElement, config) {
         this.parentElement = document.getElementById(parentElement);
@@ -14,9 +15,6 @@ export default class SliderView {
             ...this.swiperSettings,
             // Other settings...
         });
-
-        // Notify the controller that rendering is complete
-        this.onRenderComplete();
     }
 
     _clear() {

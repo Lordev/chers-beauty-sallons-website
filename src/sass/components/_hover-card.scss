@@ -7,9 +7,9 @@
 .hover-card {
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: $medium-shadow;
 
     &--margin {
+        box-shadow: $medium-shadow;
         margin: 0 10rem;
     }
 

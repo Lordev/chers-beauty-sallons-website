@@ -8,17 +8,56 @@ import {
     reviewSController,
     portfolioController,
 } from "../js/controller/controller.js";
+import Swiper from "swiper";
+import { fadeSlider, infiniteSlider } from "./config/sliderconfig";
 
 // homepage;
 
 // document.addEventListener();
-headerController.createSlider();
+headerController.createHeaderSlider();
 storyController.createSlider();
 reviewSController.createSlider();
 portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
 
-// Include Lightbox
+const nav = document.querySelector(".section-navigation");
+const logo = document.querySelector(".navigation__logo");
 
+let lastScrollPosition = 0;
+let threshold = window.innerHeight / 2;
+let scrolledPastThreshold = false;
+
+window.addEventListener("scroll", function () {
+    let scrollPosition = window.scrollY;
+
+    if (!scrolledPastThreshold && scrollPosition > threshold) {
+        // Set the flag to true once we have scrolled 50vh away from the top.
+        scrolledPastThreshold = true;
+    }
+
+    if (scrolledPastThreshold) {
+        if (scrollPosition > lastScrollPosition && scrollPosition > threshold) {
+            // Scrolling down
+            if (nav.classList.contains("moveDown")) {
+                nav.classList.remove("moveDown");
+            }
+        } else if (scrollPosition < lastScrollPosition) {
+            // Scrolling up
+            // Check if scrolled back above the 50vh threshold
+            if (scrollPosition <= threshold) {
+                // Reset the classes and flags when scrolling back above the 50vh threshold
+                scrolledPastThreshold = false;
+                logo.style.transform = "scale(1)";
+                nav.classList.remove("fixed", "moveDown");
+            } else {
+                logo.style.transform = "scale(0.7)";
+                nav.classList.add("fixed");
+                nav.classList.add("moveDown");
+            }
+        }
+    }
+
+    lastScrollPosition = scrollPosition;
+});
 //* 1) loading images in from an array// const renderImgs = async function (images) {
 //     console.log(images);
 //     try {
@@ -53,20 +92,15 @@ portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
 
 //!PORTFOLIO
 
-// const revealElement = function (entries, observer) {
-//     entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.remove("hidden");
-//             entry.target.classList.add("transform");
-//             observer.unobserve(entry.target);
-//         }
-//     });
-// };
-
-// const sectionObserver = new IntersectionObserver(revealElement, {
-//     root: null,
-//     threshold: 0.15,
-// });
+const revealElement = function (entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove("hidden");
+            entry.target.classList.add("transform");
+            observer.unobserve(entry.target);
+        }
+    });
+};
 
 // const allImages = document.querySelectorAll(".img");
 // allImages.forEach(function (element) {

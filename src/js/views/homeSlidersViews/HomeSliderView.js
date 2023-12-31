@@ -20,7 +20,7 @@ class homeSliderView extends SliderView {
     }
 
     _renderSlides(data) {
-        console.log(data);
+        // console.log(data);
         // console.log(mediaUrls);
         const promises = data.map((entry, index) => {
             const { mediaUrl, permalink } = entry;
@@ -42,7 +42,7 @@ class homeSliderView extends SliderView {
             const img = new Image();
             img.src = item;
             img.onload = () => {
-                console.log(`Image loaded: ${item}`);
+                // console.log(`Image loaded: ${item}`);
                 const slideHTML = `<div
                 class="swiper-slide infinite-slider__slide"
                 
@@ -60,12 +60,12 @@ class homeSliderView extends SliderView {
                 reject(error);
                 console.error(`Error loading image: ${item}`, error);
             };
-            img.addEventListener("loadstart", () =>
-                console.log(`Image load started: ${item}`)
-            );
-            img.addEventListener("loadend", () =>
-                console.log(`Image load ended: ${item}`)
-            );
+            // img.addEventListener("loadstart", () =>
+            //     console.log(`Image load started: ${item}`)
+            // );
+            // img.addEventListener("loadend", () =>
+            //     console.log(`Image load ended: ${item}`)
+            // );
         });
     }
 
@@ -84,7 +84,6 @@ class homeSliderView extends SliderView {
     }
 }
 
-export const headerSlider = new homeSliderView("header", fadeSlider);
 export const storySlider = new homeSliderView("card", cardSlider);
 export const reviewSlider = new homeSliderView("default-slider", defaultSlider);
 export const portfolioView = new homeSliderView("infinite-slider", infiniteSlider);

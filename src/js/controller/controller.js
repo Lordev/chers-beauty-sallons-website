@@ -1,11 +1,11 @@
 // controller.js
 import * as model from "../model/model";
 import {
-    headerSlider,
     storySlider,
     reviewSlider,
     portfolioView,
 } from "../views/homeSlidersViews/HomeSliderView.js";
+import { headerSlider } from "../views/homeSlidersViews/headerSliderView";
 
 // Controller functions
 class SliderController {
@@ -18,6 +18,10 @@ class SliderController {
         this.slider.initSlider(settings);
     }
 
+    createHeaderSlider(settings) {
+        this.slider.renderElementOnChange(settings);
+    }
+
     async fetchDataAndRenderSlider(url) {
         try {
             //0) render spinner
@@ -25,7 +29,7 @@ class SliderController {
             //1) wait for fetching data
             await model.updateMedia(url);
             //2 render images to page
-            console.log(model.state.results);
+            // console.log(model.state.results);
 
             this.slider._renderSlides(model.state.results);
         } catch (err) {

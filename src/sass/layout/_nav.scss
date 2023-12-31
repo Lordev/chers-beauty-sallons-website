@@ -1,15 +1,29 @@
 //! STYLE FULL
 .section-navigation {
     background-color: $color-primary-light2;
-    box-shadow: $subtle-shadow;
-    // overflow: visible;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s ease-in-out;
     position: absolute;
     top: 0;
     z-index: 99999999;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.95;
+    padding-bottom: 0.8rem;
+    border-bottom: $color-secondary 1px solid;
 }
 
+.fixed {
+    opacity: 0.98;
+    position: fixed;
+    animation: moveInTop 0.3s ease-in-out forwards;
+    box-shadow: $medium-shadow;
+}
+
+.moveDown {
+    animation: moveInBottom 0.3s ease-in-out forwards;
+}
 //! INNER LAYOUT
 .navigation {
     display: grid;
@@ -20,15 +34,19 @@
 
     &__container {
         align-items: center;
-        grid-row: 2;
         &--top {
-            padding: 0.1rem 0;
+            // padding: 0.1rem 0;
             grid-row: 1;
             display: grid;
-            grid-template-columns: 3fr 1;
+            justify-content: space-between;
         }
         &--bottom {
-            padding: 0.5rem 0;
+            grid-row: 2;
+            // padding: 0.2rem 0;
+            display: grid;
+            text-wrap: nowrap;
+            grid-template-columns: 1fr 1.5fr;
+            justify-items: self-start;
         }
     }
 
@@ -36,17 +54,22 @@
         display: grid;
 
         &--contacts {
-            gap: 0 10px;
+            gap: 0 2rem;
             justify-content: start;
             grid-row: 1;
             font-weight: 100;
             opacity: 0.7;
         }
         &--menu {
+            width: 70%;
             gap: 0 30px;
-            grid-template-rows: auto;
-            justify-content: center;
+            grid-template-columns: auto;
         }
+    }
+
+    &__logo {
+        display: grid;
+        transition: all 0.5s ease;
     }
 
     //! STYLING
@@ -56,7 +79,7 @@
 
         &__top {
             grid-row: 1;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             &--hover {
                 &:link,
                 &:visited {
@@ -76,6 +99,7 @@
             display: flex;
             position: relative;
             font-size: 1.3rem;
+
             &--text {
                 text-transform: uppercase;
                 font-weight: 600;

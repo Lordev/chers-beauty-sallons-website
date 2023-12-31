@@ -1,5 +1,5 @@
 .feature-box {
-    height: 80rem;
+    height: 80vh;
     cursor: pointer;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -24,30 +24,35 @@
         transform: scale(1.05);
 
         &-1 {
-            background-image: url(../../img/img_home1_small.jpg);
+            background-image: url(../../img/img_features1.jpg);
         }
         &-2 {
-            background-image: url(../../img/img_home1_small.jpg);
+            background-image: url(../../img/img_features3.jpg);
         }
         &-3 {
-            background-image: url(../../img/img_header2.jpg);
+            background-image: url(../../img/img_features2.jpg);
         }
         &-4 {
-            background-image: url(../../img/img_header2.jpg);
+            background-image: url(../../img/img_features4.jpg);
         }
     }
 
     &__text {
         @include center-horizontal-vertical;
         color: $color-white;
-        opacity: 0.6;
+        opacity: 0.8;
         transition: all 1s ease;
+        height: 50%;
+        width: 70%;
+        padding: 3rem;
+        background-color: rgba($color-white, 0.2);
     }
 
     &__block:hover &__img {
         filter: blur(0);
-        filter: brightness(1);
+        filter: brightness(0.8);
         transform: scale(1.2);
+        background-color: rgba($color-white, 0.3);
     }
 
     &__block:hover &__text {

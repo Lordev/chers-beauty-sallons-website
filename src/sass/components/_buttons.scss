@@ -10,7 +10,7 @@
         text-transform: uppercase;
         font-weight: 400;
         font-family: "Nunito";
-        transition: all 0.3s;
+        transition: 0.3s;
         border: none;
     }
 
@@ -18,7 +18,7 @@
         background: $color-primary;
         color: $color-white;
         &:hover {
-            @include button-3d;
+            // @include button-3d;
             background: $color-white;
             color: $color-primary;
         }
