@@ -1,9 +1,10 @@
 $grid-width: 100%;
-$gutter-vertical: 5rem;
+$inner-grid-width: 60%;
+$gutter-vertical: 1rem;
 $gutter-horizontal: 8rem;
 
 %grid {
-    width: 70%;
+    max-width: $inner-grid-width;
     display: grid;
     margin: 0 auto;
     column-gap: $gutter-horizontal;
@@ -16,6 +17,20 @@ $gutter-horizontal: 8rem;
     column-gap: $gutter-horizontal;
 }
 
+%four-grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: $gutter-horizontal;
+}
+
+%one-grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    column-gap: $gutter-horizontal;
+}
+
 .row {
     max-width: $grid-width;
     margin: 0 auto;
@@ -25,13 +40,17 @@ $gutter-horizontal: 8rem;
     }
 
     .grid-col-1-of-1 {
-        @extend %grid;
-        grid-template-columns: 1fr;
+        @extend %one-grid;
+        width: $inner-grid-width;
+        &--wide {
+            @extend %one-grid;
+            width: 75%;
+        }
     }
 
     .grid-col-1-of-2 {
         @extend %grid;
-        grid-template-columns: 50rem 2fr;
+        grid-template-columns: 1fr 2fr;
     }
     .grid-col-1-of-3 {
         @extend %grid;
@@ -42,6 +61,10 @@ $gutter-horizontal: 8rem;
     .grid-col-1-of-4 {
         @extend %grid;
         grid-template-columns: repeat(4, 1fr);
+        &--wide {
+            @extend %four-grid;
+            width: 80%;
+        }
     }
 
     .grid-col-2-of-2 {
@@ -57,12 +80,14 @@ $gutter-horizontal: 8rem;
 
             .col2 {
                 grid-column: 2;
-                justify-self: self-end;
             }
         }
     }
 }
 
+.col2 {
+    grid-column: 2;
+}
 // Desktop, large screen devices
 $flexbin-row-height: 400px; // height of image rows
 $flexbin-space: 3px; // space between images

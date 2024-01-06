@@ -9,16 +9,17 @@
 @import "base/utilities";
 
 //components
-@import "components/cta-banner";
 @import "components/buttons";
+@import "components/card-slider";
+@import "components/cta-banner";
+@import "components/card.scss";
 @import "components/feature-box";
 @import "components/google-map";
 @import "components/heading-banner";
-@import "components/card-slider";
 @import "components/hover-card";
+@import "components/infinite-slider";
 @import "components/parallax-bg";
 @import "components/price-card";
-@import "components/infinite-slider";
 @import "components/reviews";
 @import "components/social-icons";
 @import "components/spinner";

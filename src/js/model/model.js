@@ -14,16 +14,19 @@ export const updateMedia = async function (url) {
                 .then((response) => response.json())
                 .then((data) => {
                     //State update
-                    const transformedData = data.data.map((item) => ({
-                        mediaType: item.media_type,
-                        mediaUrl: item.media_url,
-                        username: item.username,
-                        timestamp: item.timestamp,
-                        permalink: item.permalink,
-                    }));
+                    console.log(data);
+                    const imageResults = data.data
+                        .filter((item) => item.media_type === "IMAGE")
+                        .map((item) => ({
+                            mediaType: item.media_type,
+                            mediaUrl: item.media_url,
+                            username: item.username,
+                            timestamp: item.timestamp,
+                            permalink: item.permalink,
+                        }));
 
                     // Update state.results with the transformed data
-                    state.results = transformedData;
+                    state.results = imageResults;
 
                     resolve(state.results);
                 })

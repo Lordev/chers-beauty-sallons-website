@@ -7,8 +7,8 @@
     },
     "default": "index.html",
     "scripts": {
-        "start": "parcel index.html",
-        "build": "parcel build index.html --out-dir ./dist"
+        "start": "parcel bruidsmake-up.html",
+        "build": "parcel build index.html --dist-dir ./dist"
     },
     "author": "Lorenzo Sallons",
     "license": "ISC",

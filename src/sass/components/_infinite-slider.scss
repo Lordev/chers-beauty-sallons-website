@@ -1,5 +1,4 @@
 .infinite-slider {
-    width: 100%;
     mask-image: linear-gradient(
         90deg,
         transparent 1%,
@@ -15,8 +14,8 @@
     }
 
     &__img {
-        width: 60rem;
-        height: 60rem;
+        width: 50rem;
+        height: 50rem;
         background-position: center;
         background-size: cover;
         align-items: center;

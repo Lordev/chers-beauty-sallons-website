@@ -1,10 +1,10 @@
 .card-slider {
-    position: absolute;
-    // margin-bottom: 1rem;
-    transform: translateY(-1rem);
+    transform: translateY(0rem);
     width: 34rem;
-    height: 50rem;
+    height: 55rem;
     &__img {
+        background-size: cover;
+        background-position: center;
         border-radius: 10px;
         box-shadow: $medium-shadow;
         display: block;
@@ -16,6 +16,12 @@
         }
         &--3 {
             background-image: url(../../img/img_story_photo3.jpg);
+        }
+        &--4 {
+            background-image: url(../../img/img_story_photo4.jpg);
+        }
+        &--5 {
+            background-image: url(../../img/img_story_photo5.jpg);
         }
     }
 }

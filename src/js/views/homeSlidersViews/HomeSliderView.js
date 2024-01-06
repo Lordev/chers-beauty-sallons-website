@@ -20,7 +20,7 @@ class homeSliderView extends SliderView {
     }
 
     _renderSlides(data) {
-        // console.log(data);
+        console.log(data);
         // console.log(mediaUrls);
         const promises = data.map((entry, index) => {
             const { mediaUrl, permalink } = entry;

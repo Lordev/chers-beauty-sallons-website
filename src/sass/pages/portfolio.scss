@@ -1,7 +1,7 @@
 .heading-portfolio {
     position: relative;
     display: block;
-    margin-top: 35rem;
+    margin-top: 60vh;
 
     box-shadow: $minimal-shadow;
     background:
@@ -27,7 +27,7 @@
     background: $color-primary-light2 99%;
 }
 
-.img {
+.gallery-img {
     overflow: hidden;
     transition: all 1.2s ease;
     // margin: 1%;
@@ -36,7 +36,7 @@
 
 .hidden {
     opacity: 0;
-    transform: scale(0.5) translateY(100%);
+    transform: scale(0.5) translateY(20%);
 }
 
 .hover {
@@ -53,7 +53,4 @@
 
 .pswp__img {
     cursor: pointer !important;
-}
-
-.portfolio-wrapper {
 }

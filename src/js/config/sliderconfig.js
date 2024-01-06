@@ -37,12 +37,14 @@ export const cardSlider = {
     modules: [EffectCards, Autoplay, Pagination],
     effect: "cards",
     grabCursor: true,
+    centeredSlides: true,
     cardsEffect: {
         rotate: true,
-        perSlideRotate: 8,
-        perSlideOffset: 2,
+        perSlideRotate: 2,
+        perSlideOffset: 9,
         slideShadows: true,
     },
+    speed: 600,
     autoplay: {
         delay: 4000,
         waitForTransition: true,
@@ -67,6 +69,7 @@ export const defaultSlider = {
         delay: 4000,
         pauseOnMouseEnter: true,
     },
+    speed: 500,
     loop: true,
     pagination: {
         el: ".swiper-pagination",
@@ -80,7 +83,7 @@ export const infiniteSlider = {
     modules: [Autoplay, FreeMode],
     loop: true,
     freeMode: true,
-    spaceBetween: 5,
+    spaceBetween: 0,
     grabCursor: true,
     slidesPerView: PORTFOLIO_IMGS - 3,
     loop: true,

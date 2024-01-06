@@ -1,73 +1,62 @@
 .home-wrapper {
-    background: $color-primary-light2;
+    background: $color-primary-light;
 }
 
 .s-home-promo {
-    padding: 10rem 0;
-    background:
-        linear-gradient(
-                to right,
-                $color-primary $border-thickness,
-                transparent $border-thickness,
-                transparent 100%
-            )
-            top,
-        linear-gradient(
-                to bottom,
-                $color-primary $border-thickness,
-                transparent $border-thickness,
-                transparent 100%
-            )
-            left,
-        linear-gradient(
-                to top,
-                $color-primary $border-thickness,
-                transparent $border-thickness,
-                transparent 100%
-            )
-            left;
+    position: relative;
+    padding-top: 10rem;
+    background: $color-primary-light;
+    &::after {
+        @include layer(1);
+        z-index: 5;
+        width: 5%;
+        background: linear-gradient(to left, $color-secondary 0%, $color-secondary 100%);
+    }
 }
 
-// .s-feature-box {
-
-// }
+.s-feature-box {
+    z-index: 0;
+    position: relative;
+    padding-left: 5%;
+    padding-top: 10rem;
+    // padding-bottom: 10rem;
+    background-color: $color-primary-light;
+    &::after {
+        @include layer(1);
+        z-index: 5;
+        width: 5%;
+        background: linear-gradient(to left, $color-secondary 0%, $color-secondary 100%);
+    }
+}
 
 .s-appointment {
-    // background-color: $color-primary-light;
+    background: $color-secondary;
 }
 
 .s-about-me {
     // margin-top: 5rem;
-    padding: 5rem 0 10rem 0;
+    padding: 10rem 0 10rem 0;
     background: $color-primary;
     background: linear-gradient(
         to right,
-        $color-primary-light 90%,
-        $color-tertiary-dark 90%,
-        $color-tertiary-dark 95%,
-        $color-primary-light2 95%
+        $color-primary-light 95%,
+        $color-primary 95%,
+        $color-primary 95%,
+        $color-secondary 95%
     );
-    // border-bottom: 20px solid $color-primary;
 }
 .s-reviews {
-    padding: 5rem 0;
-    background:
-        linear-gradient(
-            to left,
-            transparent 90%,
-            $color-tertiary-dark 90%,
-            $color-tertiary-dark 95%,
-            $color-primary-light 95%
-        ),
-        linear-gradient(
-                to bottom,
-                $color-tertiary-dark 10%,
-                transparent 10%,
-                transparent 100%
-            )
-            left;
+    padding: 10rem 0;
+    background: $color-secondary;
 }
 
 .s-social-media-slider {
-    // background: linear-gradient(to left, transparent 95%, $color-primary-light 95%);
+    padding: 10rem 0 10rem 0;
+    position: relative;
+    &::after {
+        @include layer(1);
+        z-index: 5;
+        width: 5%;
+        background: linear-gradient(to left, $color-secondary 0%, $color-secondary 100%);
+    }
 }

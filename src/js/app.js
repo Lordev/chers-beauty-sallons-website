@@ -11,7 +11,7 @@ import {
 import Swiper from "swiper";
 import { fadeSlider, infiniteSlider } from "./config/sliderconfig";
 
-// homepage;
+//! homepage;
 
 // document.addEventListener();
 headerController.createHeaderSlider();
@@ -19,6 +19,7 @@ storyController.createSlider();
 reviewSController.createSlider();
 portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
 
+//! NAV
 const nav = document.querySelector(".section-navigation");
 const logo = document.querySelector(".navigation__logo");
 
@@ -58,6 +59,7 @@ window.addEventListener("scroll", function () {
 
     lastScrollPosition = scrollPosition;
 });
+
 //* 1) loading images in from an array// const renderImgs = async function (images) {
 //     console.log(images);
 //     try {
@@ -91,40 +93,44 @@ window.addEventListener("scroll", function () {
 // };
 
 //!PORTFOLIO
-
 const revealElement = function (entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.remove("hidden");
-            entry.target.classList.add("transform");
             observer.unobserve(entry.target);
         }
     });
 };
 
-// const allImages = document.querySelectorAll(".img");
-// allImages.forEach(function (element) {
-//     sectionObserver.observe(element);
-//     element.classList.add("hidden");
-// });
+const sectionObserver = new IntersectionObserver(revealElement, {
+    root: null, // Use the viewport as the root
+    threshold: 0.2, // The element will be revealed when 20% of it is visible
+});
 
-// // renderImgs(imgZoom);
+const allImages = document.querySelectorAll(".gallery-img");
+allImages.forEach(function (element) {
+    sectionObserver.observe(element);
+    element.classList.add("hidden");
+});
 
-// const lightbox = new PhotoSwipeLightbox({
-//     gallery: "#gallery",
-//     children: "a",
+// renderImgs(imgZoom);
 
-//     initialZoomLevel: "fit",
-//     secondaryZoomLevel: "fill",
+const lightbox = new PhotoSwipeLightbox({
+    gallery: "#gallery",
+    children: "a",
 
-//     imageClickAction: "next",
-//     tapAction: "next",
+    initialZoomLevel: "fit",
+    secondaryZoomLevel: "fill",
 
-//     // tap delay is removed if set to false
-//     doubleTapAction: false,
-//     pswpModule: () => import("photoswipe/dist/photoswipe.esm"),
-// });
-// lightbox.init();
+    imageClickAction: "next",
+    tapAction: "next",
+
+    // tap delay is removed if set to false
+    doubleTapAction: false,
+    pswpModule: () => import("photoswipe/dist/photoswipe.esm"),
+});
+
+lightbox.init();
 
 //! Contact me
 

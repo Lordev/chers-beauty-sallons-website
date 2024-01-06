@@ -15,27 +15,27 @@
     }
 
     &--pink {
-        background: $color-primary;
+        background: $color-tertiary;
         color: $color-white;
         &:hover {
             // @include button-3d;
             background: $color-white;
-            color: $color-primary;
+            color: $color-tertiary;
         }
     }
 
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(2px);
-        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-    }
+    // &:active,
+    // &:focus {
+    //     outline: none;
+    //     transform: translateY(2px);
+    //     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    // }
 
     &--black {
         background: $color-black;
         color: $color-white;
         &:hover {
-            @include button-3d;
+            // @include button-3d;
             background: $color-white2;
             color: $color-primary-dark;
         }
@@ -45,7 +45,7 @@
         background: $color-white;
         color: $color-primary;
         &:hover {
-            @include button-3d;
+            // @include button-3d;
             background: $accent-color3;
             color: $color-white;
         }
@@ -56,32 +56,36 @@
     display: inline-block;
     position: relative;
     padding-bottom: 0.5rem;
-    // background-color: $color-primary;
+    text-transform: uppercase;
     &__link {
+        &,
         &:link,
         &:visited {
-            font-family: "Nunito";
-            font-weight: 400;
-            font-size: $default-font-size;
-            color: $color-primary-dark;
-            padding: 0.5rem 0;
-            // background-color: $color-primary;
+            font-size: 1.3rem;
+            font-family: "Nunito-sans";
+            font-weight: 600;
+            color: $color-tertiary;
         }
     }
     &::before {
         content: "";
         position: absolute;
-        height: 1px;
+        height: 2px;
         bottom: 0;
         left: 50%;
         width: 1px;
-        background-color: $color-black;
-        transform: scaleX(0);
-        transition: transform 0.2s;
+        background-color: $color-tertiary;
+        transform: translateX(-50%);
+        transition:
+            transform 0.4s,
+            opacity 0.3s ease-in-out;
+        opacity: 0;
+        transform-origin: center;
     }
 
     &:hover::before {
-        transform: scaleX(40);
-        background-color: $color-black;
+        opacity: 1;
+        transform: scaleX(100);
+        background-color: $color-tertiary;
     }
 }
