@@ -56,7 +56,7 @@ body {
 .heading-secondary {
     font-family: $font-curly-style;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -110,4 +110,9 @@ body {
 .bold {
     margin-bottom: 1rem;
     font-weight: bold;
+}
+
+.text-link {
+    color: #f79489;
+    font-weight: 500;
 }

@@ -43,6 +43,18 @@
             @extend %image-hover;
             background-image: url(../../img/img-tarieven2.jpg);
         }
+        &--4 {
+            height: 40rem;
+            @extend %image-setting;
+            @extend %image-hover;
+            background-image: url(../../img/img_festival-1.jpg);
+        }
+        &--5 {
+            height: 40rem;
+            @extend %image-setting;
+            @extend %image-hover;
+            background-image: url(../../img/img_festival-2.jpg);
+        }
     }
 
     &__img-zoom {
@@ -58,7 +70,10 @@
         }
         &--2 {
             background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg);
-            background-position: top;
+            background-position: center;
+        }
+        &--3 {
+            background-image: url(../../img/img_festival.jpg);
         }
     }
 }

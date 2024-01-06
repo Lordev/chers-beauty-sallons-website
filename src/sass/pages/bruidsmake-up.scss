@@ -13,7 +13,6 @@
 
     &__img {
         transform: translateY(-12rem);
-        // box-shadow: $medium-shadow;
     }
 }
 
@@ -24,7 +23,7 @@
         &::after {
             @include layer(1);
             border: $color-primary 9px solid;
-            transform: translateY(4rem) translateX(4rem);
+            transform: translateY(-4rem) translateX(4rem);
             z-index: -1;
         }
         justify-self: start;
@@ -44,7 +43,7 @@
         &::after {
             @include layer(1);
             border: $color-primary 9px solid;
-            transform: translateY(4rem) translateX(-4rem);
+            transform: translateY(-4rem) translateX(-4rem);
             z-index: -1;
         }
     }

@@ -1,0 +1,24 @@
+.s-1-festival {
+    margin-top: 50rem;
+    position: relative;
+    padding-bottom: 8rem;
+    padding-top: 3rem;
+    background-color: $color-primary-light;
+    &::after {
+        @include layer(1);
+        z-index: 5;
+        width: 5%;
+        background: linear-gradient(to right, $color-secondary 0%, $color-secondary 100%);
+    }
+    &__img {
+        transform: translateY(-12rem);
+        overflow: visible;
+        &::after {
+            @include layer(1);
+            border: $color-primary 9px solid;
+            transform: translateY(4rem) translateX(4rem);
+            z-index: -1;
+        }
+        justify-self: start;
+    }
+}
