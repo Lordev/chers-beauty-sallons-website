@@ -57,7 +57,6 @@
             gap: 0 2rem;
             justify-content: start;
             grid-row: 1;
-            font-weight: 100;
             opacity: 0.7;
         }
         &--menu {
@@ -147,6 +146,7 @@
     transition: all 2s;
 
     &__item {
+        display: block;
         border-bottom: 0.1px solid rgba($color-tertiary, 0.2);
         &:hover {
             border-bottom: 1px solid $color-tertiary;
@@ -154,9 +154,7 @@
             cursor: pointer;
         }
         &--text {
-            font-size: inherit;
-            color: inherit;
-            font-weight: inherit;
+            color: $color-black;
         }
     }
 }

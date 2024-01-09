@@ -7,7 +7,7 @@
         text-align: center;
         justify-self: center;
         align-self: center;
-        text-wrap: nowrap;
+        // text-wrap: nowrap;
 
         &--paragraph {
             color: $color-white;
@@ -38,7 +38,8 @@
     }
 
     &__btn {
-        // width: 70%;
+        text-wrap: nowrap;
+        width: 100%;
         align-self: start;
     }
 }

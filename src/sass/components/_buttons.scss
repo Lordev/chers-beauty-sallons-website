@@ -10,7 +10,7 @@
         text-transform: uppercase;
         font-weight: 400;
         font-family: "Nunito";
-        transition: 0.3s;
+        transition: 0.2s;
         border: none;
     }
 
@@ -37,7 +37,7 @@
         &:hover {
             // @include button-3d;
             background: $color-white2;
-            color: $color-primary-dark;
+            color: $color-black;
         }
     }
 

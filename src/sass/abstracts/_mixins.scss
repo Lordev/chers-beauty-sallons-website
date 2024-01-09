@@ -46,3 +46,8 @@
         transform: scale($scale);
     }
 }
+
+$base-path: "../../img";
+@mixin background-image($filename) {
+    background-image: url("#{$base-path}#{$filename}");
+}

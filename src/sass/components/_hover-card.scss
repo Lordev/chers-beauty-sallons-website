@@ -1,3 +1,5 @@
+$base-path: "../../img";
+
 %image-setting {
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,31 +31,31 @@
             @extend %image-hover;
             background-position: top;
             height: 50rem;
-            background-image: url(../../img/img_home2_small.jpg);
+            background-image: url(#{$base-path}/img_home2_small.jpg);
         }
         &--2 {
             height: 70rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(../../img/img-tarieven.jpg);
+            background-image: url(#{$base-path}/img-tarieven.jpg);
         }
         &--3 {
             height: 70rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(../../img/img-tarieven2.jpg);
+            background-image: url(#{$base-path}/img-tarieven2.jpg);
         }
         &--4 {
             height: 40rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(../../img/img_festival-1.jpg);
+            background-image: url(#{$base-path}/img_festival-1.jpg);
         }
         &--5 {
             height: 40rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(../../img/img_festival-2.jpg);
+            background-image: url(#{$base-path}/img_festival-2.jpg);
         }
     }
 
@@ -65,15 +67,15 @@
         height: 70rem;
 
         &--1 {
-            background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-service-pic.jpg);
+            background-image: url(#{$base-path}/Bruiloftsmake-up_imgs/bruiloft-service-pic.jpg);
             background-position: center;
         }
         &--2 {
-            background-image: url(../../img/Bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg);
+            background-image: url(#{$base-path}/Bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg);
             background-position: center;
         }
         &--3 {
-            background-image: url(../../img/img_festival.jpg);
+            background-image: url(#{$base-path}/img_festival.jpg);
         }
     }
 }
