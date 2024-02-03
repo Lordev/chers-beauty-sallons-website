@@ -8,23 +8,27 @@
     "default": "index.html",
     "scripts": {
         "clean": "rm -rf dist",
-        "start": "parcel index.html",
-        "build": "parcel index.html --dist-dir ./dist"
+        "start": "parcel views/index.html",
+        "build": "parcel views/index.html --dist-dir ./dist"
     },
     "author": "Lorenzo Sallons",
     "license": "ISC",
     "devDependencies": {
         "@parcel/transformer-sass": "^2.10.3",
+        "concat": "^1.0.3",
+        "core-js": "^3.34.0",
         "gulp": "^4.0.2",
-        "parcel": "^2.10.3"
+        "gulp-concat": "^2.6.1",
+        "gulp-file-include": "^2.3.0",
+        "gulp-watch": "^5.0.1",
+        "handlebars": "^4.7.8",
+        "parcel": "^2.10.3",
+        "regenerator-runtime": "^0.14.1"
     },
     "dependencies": {
         "@googlemaps/js-api-loader": "^1.16.2",
-        "core-js": "^3.34.0",
         "flexbin": "^0.2.0",
-        "handlebars": "^4.7.8",
         "photoswipe": "^5.4.3",
-        "regenerator-runtime": "^0.14.1",
         "swiper": "^11.0.5"
     }
 }

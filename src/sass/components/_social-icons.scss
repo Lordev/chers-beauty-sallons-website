@@ -16,3 +16,9 @@
         // box-shadow: $soft-shadow;
     }
 }
+
+.fa-map-marker,
+.fa-envelope {
+    color: $color-tertiary;
+    display: inline-block;
+}

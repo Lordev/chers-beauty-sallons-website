@@ -67,15 +67,22 @@ $base-path: "../../img";
         height: 70rem;
 
         &--1 {
-            background-image: url(#{$base-path}/Bruiloftsmake-up_imgs/bruiloft-service-pic.jpg);
+            @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic.jpg");
             background-position: center;
         }
         &--2 {
-            background-image: url(#{$base-path}/Bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg);
+            @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg");
             background-position: center;
         }
         &--3 {
-            background-image: url(#{$base-path}/img_festival.jpg);
+            @include background-image("/img_festival.jpg");
+        }
+        &--4 {
+            @include background-image("/img-beauty.jpg");
+        }
+        &--5 {
+            background-position: center;
+            @include background-image("/img-beauty2.jpg");
         }
     }
 }

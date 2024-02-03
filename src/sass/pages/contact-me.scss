@@ -1,8 +1,6 @@
 .heading-contact-me {
     position: relative;
     display: block;
-    margin-top: 55rem;
-
     // box-shadow: $minimal-shadow;
     background:
         linear-gradient(
@@ -36,23 +34,26 @@
 
 .form-contact {
     padding: 0.8rem;
-    // box-shadow: $soft-shadow;
-    // background-color: $color-primary-light;
+    line-height: 3.3rem;
     & > * {
+        margin-bottom: 1rem;
         display: block;
         width: 100%;
     }
 }
 
 input {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    font-size: 1.6rem;
     outline: none; /* Remove default focus outline */
     border-width: 0 0 1px;
-    border-bottom: solid rgba($color-gray, 0.5);
     padding: 0;
     background: none;
     line-height: 1.5em;
-    font-weight: 300;
+    font-weight: 100;
+    &:valid {
+        border-bottom: solid rgba($color-secondary, 0.9);
+    }
+    &:invalid {
+        border-bottom: solid rgba($color-gray, 0.5);
+    }
 }

@@ -46,6 +46,10 @@ $gutter-horizontal: 8rem;
             @extend %one-grid;
             width: 75%;
         }
+        &--narrow {
+            @extend %one-grid;
+            width: 40%;
+        }
     }
 
     .grid-col-1-of-2 {
@@ -72,7 +76,11 @@ $gutter-horizontal: 8rem;
         grid-template-columns: 2fr 1fr;
         &--narrow {
             @extend %even-grid;
-            width: 40%;
+            width: 55%;
+        }
+        &--very-narrow {
+            @extend %even-grid;
+            width: 45%;
         }
         &--even {
             @extend %even-grid;

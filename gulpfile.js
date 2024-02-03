@@ -1,24 +1,23 @@
 const gulp = require("gulp");
-const handlebars = require("gulp-handlebars");
-const wrap = require("gulp-wrap");
-const declare = require("gulp-declare");
-const concat = require("gulp-concat");
+const fileInclude = require("gulp-file-include");
 
-// Compile Handlebars templates
-gulp.task("handlebars", () => {
+gulp.task("processHTML", function () {
     return gulp
-        .src(["src/templates/common.hbs", "src/templates/*.hbs"])
-        .pipe(handlebars())
-        .pipe(wrap("Handlebars.template(<%= contents %>)"))
+        .src("src/views/build/pages/*.html")
         .pipe(
-            declare({
-                namespace: "YourApp.templates",
-                noRedeclare: true,
+            fileInclude({
+                prefix: "@@",
+                basepath: "@file",
             })
         )
-        .pipe(concat("templates.js"))
-        .pipe(gulp.dest("dist/js"));
+        .pipe(gulp.dest("./views"));
 });
 
-// Default task
-gulp.task("default", gulp.series("handlebars"));
+gulp.task("watch", function () {
+    gulp.watch(
+        ["src/views/build/pages/*.html", "src/views/build/partials/*.html"],
+        gulp.series("processHTML")
+    );
+});
+
+gulp.task("default", gulp.series("processHTML", "watch"));

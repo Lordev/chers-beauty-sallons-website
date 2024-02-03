@@ -1,152 +1,14 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,400;1,6..12,400&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Old+Standard+TT:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Quicksand&display=swap&family=Mrs+Saint+Delafield&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
-        <link rel="stylesheet" href="./node_modules/photoswipe/src/photoswipe.css" />
-        <link rel="stylesheet" href="src/sass/main.scss" />
-        <script type="module" src="./src/js/app.js"></script>
-        <title>Document</title>
-    </head>
+    @@include('../partials/head.html')
     <body>
-        <nav class="section-navigation">
-            <nav class="navigation">
-                <div class="navigation__container navigation__container--top">
-                    <ul class="navigation__grid navigation__grid--contacts">
-                        <li class="navigation__menu__top navigation__menu">
-                            <span>T:</span
-                            ><a href="#" class="navigation__menu__top--hover"
-                                >(06)55555555</a
-                            >
-                        </li>
-                        <li class="navigation__menu__top navigation__menu">
-                            <span>E:</span
-                            ><a href="#" class="navigation__menu__top--hover"
-                                >voorbeeld@hotmail.com</a
-                            >
-                        </li>
-                        <li class="navigation__menu__top navigation__menu">
-                            A.voorbeeld 12, 1234VW, Stad
-                        </li>
-                    </ul>
-                    <ul class="navigation__grid navigation__grid--contacts">
-                        <li class="navigation__menu__top navigation__menu">
-                            <a href="#" class="facebook">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="navigation__menu__top navigation__menu">
-                            <a href="#" class="instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="navigation__menu__top navigation__menu">
-                            <a href="#" class="whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navigation__container navigation__container--bottom">
-                    <li class="navigation__logo">
-                        <img
-                            src="https://placehold.co/260x60?/EEE/31343C?font=lora&text=Lora"
-                            alt="logo"
-                        />
-                    </li>
-                    <ul class="navigation__grid navigation__grid--menu">
-                        <li class="navigation__menu__bottom navigation__menu">
-                            <a
-                                href="index.html"
-                                class="navigation__menu__bottom--text navigation__menu__bottom--active"
-                                >Home</a
-                            >
-                        </li>
-                        <li class="navigation__menu__bottom navigation__menu">
-                            <a href="#" class="navigation__menu__bottom--text"
-                                >Diensten</a
-                            >
-                            <span class="navigation__menu--arrow">&#129171;</span>
-                            <ul class="menu-list">
-                                <li class="">
-                                    <a href="/bruidsmake-up.html" class="menu-list__item"
-                                        ><span class="menu-list__item--text"
-                                            >Bruidsmake-up</span
-                                        ></a
-                                    >
-                                </li>
-                                <li class="">
-                                    <a
-                                        href="/festival-en-evenementen.html"
-                                        class="menu-list__item"
-                                        ><span class="menu-list__item--text"
-                                            >Festival en evenementen</span
-                                        ></a
-                                    >
-                                </li>
-
-                                <li class="">
-                                    <a href="#" class="menu-list__item"
-                                        ><span class="menu-list__item--text"
-                                            >Lashes en brows</span
-                                        ></a
-                                    >
-                                </li>
-                                <li class="">
-                                    <a href="#" class="menu-list__item"
-                                        ><span class="menu-list__item--text"
-                                            >Beauty en Party</span
-                                        ></a
-                                    >
-                                </li>
-                                <li class="">
-                                    <a href="#" class="menu-list__item"
-                                        ><span class="menu-list__item--text"
-                                            >Editorials</span
-                                        ></a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navigation__menu__bottom navigation__menu">
-                            <a
-                                href="/portfolio.html"
-                                class="navigation__menu__bottom--text"
-                                >Portfolio</a
-                            >
-                        </li>
-                        <li class="navigation__menu__bottom navigation__menu">
-                            <a href="tarieven.html" class="navigation__menu__bottom--text"
-                                >Tarieven</a
-                            >
-                        </li>
-                        <li class="navigation__menu__bottom navigation__menu">
-                            <a
-                                href="contact-me.html"
-                                class="navigation__menu__bottom--text"
-                                >Contact me</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </nav>
+        @@include('../partials/nav.html')
         <div class="wrapper">
             <header class="bruidsmake-up-banner--top parallax-bg">&nbsp;</header>
             <section class="s-1-bruiloft">
                 <div class="row">
                     <div class="heading-banner heading-banner--pink">
-                        <div class="grid-col-2-of-2">
+                        <div class="grid-col-2-of-2--narrow">
                             <div class="title">
                                 <h1
                                     class="u-margin-t-m heading-primary--black text-block--left"
@@ -167,7 +29,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="grid-col-2-of-2">
+                    <div class="grid-col-2-of-2--narrow">
                         <div class="">
                             <p class="paragraph">
                                 Allereerst van harte gefeliciteerd met jullie aankomend
@@ -201,21 +63,6 @@
                                 jij
                                 <span class="text-link">sprankelt</span>! Indien gewenst,
                                 sta ik klaar om je ook te ondersteunen bij het aankleden.
-                            </p>
-
-                            <h2 class="u-margin-t-m heading-secondary">
-                                Perfectie die Blijft: Make-up voor de Hele Dag
-                            </h2>
-                            <p class="paragraph">
-                                Na de proefsessie ga ik vol enthousiasme aan de slag om de
-                                perfecte make-up look voor jou te verfijnen en volledig af
-                                te stemmen op jouw persoonlijke stijl. Op de langverwachte
-                                trouwdag zelf ben ik er om jou te laten
-                                <span class="text-link">stralen</span>. Mijn missie is om
-                                ervoor te zorgen dat de make-up gedurende de hele dag
-                                perfect blijft zitten, zodat jij je nergens zorgen over
-                                hoeft te maken en volop kunt genieten van elk bijzonder
-                                moment.
                             </p>
                         </div>
 
@@ -335,7 +182,7 @@
             <section class="s-2-bruiloft">
                 <div class="row">
                     <div class="heading-banner heading-banner--white">
-                        <div class="grid-col-1-of-2">
+                        <div class="grid-col-2-of-2--narrow">
                             <div class="title col2">
                                 <h1 class="u-margin-t-m heading-primary--black">
                                     Stralend de nacht in
@@ -353,7 +200,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="grid-col-1-of-2">
+                    <div class="grid-col-2-of-2--narrow">
                         <div class="hover-card hover-card--margin s-2-bruiloft__img">
                             <div class="hover-card__img-zoom hover-card__img-zoom--2">
                                 &nbsp;
@@ -389,18 +236,6 @@
                                 ik de mogelijkheid om mijn diensten uit te breiden naar
                                 bruidsmeisjes, (schoon)moeder, vriendinnen en andere
                                 gasten die jij wilt verwennen.
-                            </p>
-
-                            <h2 class="u-margin-t-m heading-secondary">
-                                Individuele Stijl, Collectieve Schoonheid
-                            </h2>
-                            <p class="paragraph">
-                                "Samen kunnen we de perfecte look creëren die past bij de
-                                stijl en voorkeuren van elke individuele persoon. Of het
-                                nu gaat om subtiele accenten of een opvallende glamoureuze
-                                uitstraling, alles is mogelijk. Voor grotere groepen
-                                kunnen we zelfs meerdere make-up artiesten inzetten om
-                                ervoor te zorgen dat iedereen er stralend uitziet."
                             </p>
                         </div>
                     </div>
@@ -523,126 +358,7 @@
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="row">
-            <div class="footer">
-                <div class="grid-col-1-of-4">
-                    <div class="footer__section">
-                        <ul class="footer__list">
-                            <h3
-                                class="footer__header heading-tertiary heading-primary--black"
-                            >
-                                Social media
-                            </h3>
-                            <a href="#" class="|">
-                                <li class="footer__list__item">
-                                    <a href="#" class="footer__link">lorem</a>
-                                </li>
-                                <li class="footer__list__item">
-                                    <a href="#" class="footer__link">lorem</a>
-                                </li>
-                                <li class="footer__list__item">
-                                    <a href="#" class="footer__link">lorem</a>
-                                </li>
-                                <li class="footer__list__item">
-                                    <a href="#" class="footer__link">lorem</a>
-                                </li>
-                                <li class="footer__list__item">
-                                    <a href="#" class="footer__link">lorem</a>
-                                </li>
-                            </a>
-                        </ul>
-                    </div>
-                    <div class="footer__section">
-                        <ul class="footer__list">
-                            <h3
-                                class="footer__header heading-tertiary heading-primary--black"
-                            >
-                                Informatie
-                            </h3>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__section">
-                        <ul class="footer__list">
-                            <h3
-                                class="footer__header heading-tertiary heading-primary--black"
-                            >
-                                Services
-                            </h3>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__section">
-                        <ul class="footer__list">
-                            <h3
-                                class="footer__header heading-tertiary heading-primary--black"
-                            >
-                                Contact
-                            </h3>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                            <li class="footer__list__item">
-                                <a href="#" class="footer__link">lorem</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="grid-col-1-of-1">
-                    <p class="footer__autograph">
-                        paragraph
-                        <span class="footer__copyright">
-                            &copy; 2024 Cheryl Sallons | All Rights Reserved.
-                        </span>
-                        <span class="footer__designer"
-                            >Designed by .......Sallons | All Rights Reserved.
-                        </span>
-                    </p>
-                </div>
-            </div>
+            @@include('../partials/footer.html')
         </div>
     </body>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
 </html>

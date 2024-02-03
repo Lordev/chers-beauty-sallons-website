@@ -10,7 +10,12 @@ export const updateMedia = async function (url) {
     return new Promise((resolve, reject) => {
         // Simulate an asynchronous data fetching operation
         setTimeout(() => {
-            fetch(url)
+            fetch(url, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
                 .then((response) => response.json())
                 .then((data) => {
                     //State update

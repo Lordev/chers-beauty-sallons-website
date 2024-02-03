@@ -1,11 +1,8 @@
 .heading-portfolio {
     position: relative;
     display: block;
-    margin-top: 60vh;
-
     box-shadow: $minimal-shadow;
-    background:
-        linear-gradient(
+    background: linear-gradient(
                 to right,
                 $color-primary $border-thickness,
                 transparent 0,
@@ -42,9 +39,7 @@
 .hover {
     // border: rgba($color-primary-dark, 0.5) solid 10px;
     border-radius: 3px;
-    transition:
-        transform 1.2s ease,
-        filter 0.5s ease;
+    transition: transform 1.2s ease, filter 0.5s ease;
     &:hover {
         transform: scale(1.2);
         filter: brightness(0.4);
