@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     @@include('../partials/head.html')
     <body>
-        @@include('../partials/nav.html')
+        @@include('../partials/header.html') @@include('../partials/nav.html')
         <div class="home-wrapper">
             <header class="swiper home-header__swiper" id="header">
                 <!-- Additional required wrapper -->
@@ -13,8 +13,7 @@
                             class="home-header__text-box home-header__text-box--1 u-c-text"
                             data-text-box="1"
                         >
-                            <h1 class="heading-primary">Hello</h1>
-                            <!-- <hr class="sm-divider u-margin-b-m" /> -->
+                            <h1 class="heading-primary--white">Hello</h1>
                             <p class="paragraph">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Laboriosam a omnis ea, ab consequuntur animi harum
@@ -38,8 +37,7 @@
                             class="home-header__text-box home-header__text-box--2 u-c-text"
                             data-text-box="2"
                         >
-                            <h1 class="heading-primary">hello</h1>
-                            <hr class="sm-divider u-margin-b-m" />
+                            <h1 class="heading-primary--white">hello</h1>
                             <p class="paragraph">
                                 orem ipsum dolor sit amet consectetur adipisicing elit.
                                 Laboriosam a omnis ea, ab consequuntur animi harum
@@ -63,8 +61,7 @@
                             class="home-header__text-box home-header__text-box--3 u-c-text"
                             data-text-box="3"
                         >
-                            <h1 class="heading-primary">hello</h1>
-                            <hr class="sm-divider u-margin-b-m" />
+                            <h1 class="heading-primary--white">hello</h1>
                             <p class="paragraph">
                                 orem ipsum dolor sit amet consectetur adipisicing elit.
                                 Laboriosam a omnis ea, ab consequuntur animi harum
@@ -87,8 +84,7 @@
                             class="home-header__text-box home-header__text-box--4 u-c-text"
                             data-text-box="4"
                         >
-                            <h3 class="heading-primary">hello</h3>
-                            <hr class="sm-divider u-margin-b-m" />
+                            <h3 class="heading-primary--white">hello</h3>
                             <p class="paragraph">
                                 orem ipsum dolor sit amet consectetur adipisicing elit.
                                 Laboriosam a omnis ea, ab consequuntur animi harum
@@ -122,7 +118,7 @@
             <section class="s-home-promo">
                 <div class="row">
                     <div class="grid-col-1-of-3 u-c-text">
-                        <div class="promo">
+                        <div class="promo u-padding-x-s">
                             <h3 class="heading-secondary--black">
                                 Take your Make-up
                                 <span class="heading-secondary__sub--pink">
@@ -145,7 +141,7 @@
                         <div class="hover-card">
                             <div class="hover-card__img-hover--1">&nbsp;</div>
                         </div>
-                        <div class="u-c-text promo--3">
+                        <div class="u-c-text u-padding-x-s promo--3">
                             <h3 class="heading-secondary--black">Werktijden</h3>
                             <hr class="sm-divider sm-divider--white u-margin-b-m" />
                             <p class="paragraph">
@@ -173,7 +169,7 @@
                                 </div>
                                 <div class="feature-box__text">
                                     <h3
-                                        class="feature-box__text--header heading-secondary--white"
+                                        class="feature-box__text--header heading-tertiary--white"
                                     >
                                         Bruidsmake-up
                                     </h3>
@@ -195,7 +191,7 @@
                                 <div class="feature-box__img feature-box__img-2"></div>
                                 <div class="feature-box__text">
                                     <h3
-                                        class="feature-box__text--header heading-secondary--white"
+                                        class="feature-box__text--header heading-tertiary--white"
                                     >
                                         Festival en evenementen
                                     </h3>
@@ -215,7 +211,7 @@
                                 <div class="feature-box__img feature-box__img-3"></div>
                                 <div class="feature-box__text">
                                     <h3
-                                        class="feature-box__text--header heading-secondary--white"
+                                        class="feature-box__text--header heading-tertiary--white"
                                     >
                                         Lashes en brows
                                     </h3>
@@ -234,7 +230,7 @@
                                 <div class="feature-box__img feature-box__img-4"></div>
                                 <div class="feature-box__text">
                                     <h3
-                                        class="feature-box__text--header heading-secondary--white"
+                                        class="feature-box__text--header heading-tertiary--white"
                                     >
                                         Beauty en party
                                     </h3>
@@ -248,12 +244,12 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="feature-box__link">
+                        <a href="../views/editorials.html" class="feature-box__link">
                             <div class="feature-box__block">
                                 <div class="feature-box__img feature-box__img-5"></div>
                                 <div class="feature-box__text">
                                     <h3
-                                        class="feature-box__text--header heading-secondary--white"
+                                        class="feature-box__text--header heading-tertiary--white"
                                     >
                                         Editorials
                                     </h3>
@@ -320,8 +316,8 @@
                 <div class="row">
                     <div class="grid-col-2-of-2">
                         <!-- Slider main container -->
-                        <div class="">
-                            <h3 class="heading-secondary--black">
+                        <div class="u-padding-x-s">
+                            <h3 class="heading-secondary--black ">
                                 Jouw Perfecte Make-up Touch
                             </h3>
                             <hr class="sm-divider--start sm-divider--pink u-margin-b-m" />

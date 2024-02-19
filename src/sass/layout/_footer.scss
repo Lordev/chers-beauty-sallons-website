@@ -1,31 +1,30 @@
 .footer {
-    padding-top: 8rem;
-
     width: 100%;
-    // background-color: $color-black;
     display: block;
-    text-align: center;
-    background-color: $color-primary-light2;
-    &__link {
-        color: $color-black;
-        &:hover {
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(
-                to bottom,
-                $color-primary,
-                $color-secondary
-            );
+    background-color: $color-gray3;
+    padding-top: 8rem;
+    @include respond(tab-port) {
+        text-align: center;
+    }
+
+    &__section {
+        padding: 2rem 0 4rem 4rem;
+        @include respond(tab-port) {
+            padding: 4rem 0 ;
         }
     }
+
     &__section:not(:first-of-type) {
         border: none;
         border-left: 1px solid rgba($accent-color, 0.8);
+        
+        @include respond(tab-port) {
+            border-left: none;
+            border-top: 1px solid rgba($accent-color, 0.8);
+        }
     }
 
     &__list {
-        text-align: start;
-        padding: 2rem 0 4rem 4rem;
         &__item {
             list-style: none;
         }
@@ -33,7 +32,7 @@
 
     &__autograph {
         font-size: 1.2rem;
-        color: $color-gray;
+        color: $color-black3;
         padding: 4rem;
     }
 

@@ -5,10 +5,9 @@
     "alias": {
         "process": false
     },
-    "default": "index.html",
     "scripts": {
         "clean": "rm -rf dist",
-        "start": "parcel views/index.html",
+        "start": "concurrently \"parcel views/index.html\" \"gulp\" ",
         "build": "parcel views/index.html --dist-dir ./dist"
     },
     "author": "Lorenzo Sallons",
@@ -21,12 +20,12 @@
         "gulp-concat": "^2.6.1",
         "gulp-file-include": "^2.3.0",
         "gulp-watch": "^5.0.1",
-        "handlebars": "^4.7.8",
         "parcel": "^2.10.3",
         "regenerator-runtime": "^0.14.1"
     },
     "dependencies": {
         "@googlemaps/js-api-loader": "^1.16.2",
+        "concurrently": "^8.2.2",
         "flexbin": "^0.2.0",
         "photoswipe": "^5.4.3",
         "swiper": "^11.0.5"

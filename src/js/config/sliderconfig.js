@@ -20,7 +20,7 @@ export const fadeSlider = {
         prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 10000000000,
+        delay: 8000,
         waitForTransition: true,
     },
     loop: true,

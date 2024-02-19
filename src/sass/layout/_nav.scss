@@ -1,167 +1,46 @@
-//! STYLE FULL
-.section-navigation {
-    background-color: $color-primary-light2;
-
-    transition:
-        opacity 0.3s ease,
-        transform 0.4s ease-in-out;
-    position: absolute;
-    top: 0;
-    z-index: 9;
-    width: 100%;
-    opacity: 0.85;
-    padding-bottom: 0.8rem;
-}
-
-.fixed {
-    height: 12vh;
-    opacity: 0.98;
-    position: fixed;
-    animation: moveInTop 0.3s ease-in-out forwards;
-    box-shadow: $medium-shadow;
-}
-
-.moveDown {
-    animation: moveInBottom 0.3s ease-in-out forwards;
-}
-//! INNER LAYOUT
-.navigation {
-    display: grid;
-    margin: 0 auto;
-    width: $inner-grid-width;
+.nav-mobile {    
+    display: block;
+    width: 40%;
     height: 100%;
-    grid-template-rows: repeat(2, 1fr);
-
-    &__container {
-        align-items: center;
-        &--top {
-            // padding: 0.1rem 0;
-            grid-row: 1;
-            display: grid;
-            justify-content: space-between;
-        }
-        &--bottom {
-            grid-row: 2;
-            // padding: 0.2rem 0;
-            display: grid;
-            text-wrap: nowrap;
-            grid-template-columns: 1fr 1.5fr;
-            justify-items: self-start;
-        }
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba($color-black , .98);
+    z-index: 50;
+    transform: translateX(100%);
+    transition: transform .4s ease-in;
+    &__toggle {
+        float: right;
+        padding: 3rem 3rem 0 0;
+        cursor: pointer;
     }
-
-    &__grid {
-        display: grid;
-
-        &--contacts {
-            gap: 0 2rem;
-            justify-content: start;
-            grid-row: 1;
-            opacity: 0.7;
-        }
-        &--menu {
-            width: 70%;
-            gap: 0 30px;
-            grid-template-columns: auto;
-        }
-    }
-
-    &__logo {
-        display: grid;
-        transition: all 0.5s ease;
-    }
-
-    //! STYLING
 
     &__menu {
-        list-style: none;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-left: 2rem;
 
-        &__top {
-            grid-row: 1;
-            font-size: 1.4rem;
-            &--hover {
-                &:link,
-                &:visited {
-                    opacity: 0.9;
-
-                    color: black;
-                    transition: all 0.2s;
-                }
-                &:hover {
-                    color: $color-tertiary;
-                }
-            }
+        a {
+            color: $color-white;
         }
 
-        &__bottom {
-            grid-row: 2;
+        &--items {
+            width: 100%;
+            height: 30%;
             display: flex;
-            position: relative;
-            font-size: 1.3rem;
-
-            &--text {
-                text-transform: uppercase;
-                font-weight: 600;
-                color: $color-black;
-
-                &:hover {
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-image: linear-gradient($color-tertiary, $color-tertiary);
-                    opacity: 0.7;
-                }
-            }
-            &--active {
-                background-image: linear-gradient(
-                    to bottom,
-                    $color-tertiary,
-                    $color-tertiary
-                );
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+            flex-direction: column;
+            justify-content: space-around;
         }
 
-        &--arrow {
-            font-size: 2rem;
-            margin-left: 0.4rem;
+        &--item {
+            
         }
     }
 }
 
-//! INNER
-.menu-list {
-    display: none;
-    text-align: center;
-    position: absolute;
-    top: 3rem;
-    left: -2rem;
-    z-index: 9999999999999999999999999;
-    list-style: none;
-    width: 200%;
-    line-height: 5rem;
-    opacity: 0;
-    background-color: $color-white;
-    box-shadow: $subtle-shadow;
-    transition: all 2s;
-
-    &__item {
-        display: block;
-        border-bottom: 0.1px solid rgba($color-tertiary, 0.2);
-        &:hover {
-            border-bottom: 1px solid $color-tertiary;
-            background-color: $color-primary;
-            cursor: pointer;
-        }
-        &--text {
-            color: $color-black;
-        }
+@media screen and (min-width: 900px) {
+    .nav-mobile {
+        display: none;
     }
-}
-
-//! MENU FUNCTIONALITY
-
-.navigation__menu__bottom:hover > .menu-list {
-    display: block;
-    opacity: 1;
 }

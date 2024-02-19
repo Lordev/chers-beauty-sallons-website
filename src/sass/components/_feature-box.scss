@@ -5,11 +5,15 @@ $base-path: "../../img";
     cursor: pointer;
     display: grid;
     grid-template-columns: auto;
-    background-color: white;
     grid-auto-flow: column;
-    // box-shadow: $soft-shadow;
     z-index: -5;
-    // margin-left: 10%;
+
+    @include respond(tab-port) {
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+        height: 200vh;
+    }
+
 
     &__block {
         height: 100%;
@@ -21,27 +25,46 @@ $base-path: "../../img";
     &__img {
         height: 100%;
         border-radius: 2px;
-        background-size: cover;
-        background-position: center;
+        background-size:cover;
+        background-position: bottom;
         transition: transform 1s ease;
         filter: blur(2);
         filter: brightness(0.35);
         transform: scale(1.05);
 
         &-1 {
-            background-image: url(#{$base-path}/img_features1.jpg);
+            @include background-image("/img-features-bridal.jpg");
+            @include respond(phone) {
+            @include background-image("/img-features-bridal.jpg");
+            }
         }
         &-2 {
-            background-image: url(#{$base-path}/img_features3.jpg);
+            @include background-image("/img-features-festival.jpg");
+            @include respond(phone) {
+                @include background-image("/img-features-festival.jpg");
+                background-position: top
+                }
         }
         &-3 {
-            background-image: url(#{$base-path}/img_features2.jpg);
+            @include background-image("/img-features-lashes.jpg");
+            @include respond(phone) {
+                @include background-image("/img-features-lashes.jpg");
+                background-position: top
+                }
         }
         &-4 {
-            background-image: url(#{$base-path}/img_features6.jpg);
+            @include background-image("/img-features-beauty.jpg");
+            @include respond(phone) {
+                @include background-image("/img-features-beauty.jpg");
+                background-position: top
+                }
         }
         &-5 {
-            background-image: url(#{$base-path}/img-feature-editorial.jpg);
+            @include background-image("/img-features-editorials.jpg");
+            @include respond(phone) {
+                @include background-image("/img-features-editorials.jpg");
+                background-position: top
+                }
         }
     }
 

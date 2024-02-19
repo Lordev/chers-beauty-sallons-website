@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     @@include('../partials/head.html')
     <body>
-        @@include('../partials/nav.html')
+        @@include('../partials/header.html') @@include('../partials/nav.html')
         <header class="parallax-bg portfolio-header">
             <div
                 class="portfolio-header__text heading-primary heading-primary--white u-c-text"
@@ -14,9 +14,7 @@
             <div class="row u-margin-t-m">
                 <div class="grid-col-1-of-1">
                     <div class="text-block u-c-text">
-                        <h1
-                            class="heading-primary heading-primary--u heading-primary--black"
-                        >
+                        <h1 class="heading-secondary--black u-margin-t-m">
                             Neem contact op
                         </h1>
                         <hr class="sm-divider sm-divider--pink u-margin-b-m" />
@@ -149,7 +147,7 @@
 
                         <!-- Extra Opmerkingen (Textarea) -->
                         <label for="comments">Extra Opmerkingen:</label>
-                        <textarea id="comments" name="comments" rows="4"></textarea>
+                        <textarea id="comments" name="comments" rows="8"></textarea>
 
                         <!-- Submit Button -->
                         <button type="submit">Aanvraag Versturen</button>

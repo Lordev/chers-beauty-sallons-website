@@ -32,12 +32,12 @@
     // }
 
     &--black {
-        background: $color-black;
+        background: $color-black2;
         color: $color-white;
         &:hover {
             // @include button-3d;
             background: $color-white2;
-            color: $color-black;
+            color: $color-black2;
         }
     }
 

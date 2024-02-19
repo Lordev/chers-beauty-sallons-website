@@ -16,14 +16,13 @@
     }
 
     &__socials {
-        width: 70%;
+        width: 100%;
         display: grid;
         text-align: center;
-        align-items: end;
+        align-content: center;
         &__list {
-            justify-self: center;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
             grid-auto-flow: column;
             gap: 2rem;
         }
@@ -32,7 +31,6 @@
     &__item {
         height: 100%;
         &--socials {
-            // padding: 0 4px;
             list-style: none;
         }
     }
@@ -41,5 +39,7 @@
         text-wrap: nowrap;
         width: 100%;
         align-self: start;
+        margin-bottom: 6rem;
+        
     }
 }

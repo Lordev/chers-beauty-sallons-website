@@ -7,23 +7,34 @@ body {
     hyphens: auto;
 }
 
-.heading-primary {
+%heading-primary {
     padding: 10rem 0;
     font-family: "Playfair-display";
-    font-size: 7rem;
+    font-size: 17rem;
     font-weight: 700;
-    line-height: 36px;
-    margin-bottom: 3rem;
+    line-height: 17.5rem;
 }
 
 %heading-secondary {
     font-family: "Playfair-display";
     font-size: $header-font-size;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     font-weight: 700;
     font-size: 4.6rem;
-    line-height: 36px;
+    line-height: 4.9rem;
 }
+
+.heading-primary {
+    &--white {
+        @extend %heading-primary;
+        color: $color-white;
+    }
+    &--black {
+        @extend %heading-primary;
+        color: #333;
+    }
+}
+
 .heading-secondary {
     &--black {
         @extend %heading-secondary;
@@ -61,7 +72,11 @@ body {
     font-weight: 500;
     font-size: 2rem;
     margin-bottom: 3rem;
+    &--white {
+        color: $color-white;
+    }
 }
+
 
 .heading-quaternary {
     font-family: "Old Standard TT";
@@ -115,14 +130,24 @@ body {
     }
 }
 
-.bold {
-    margin-bottom: 1rem;
-    font-weight: bold;
+.link-upper {
+    text-transform: uppercase;
+        &:hover {
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient($color-tertiary, $color-tertiary);
+            opacity: 0.7;
+        }
 }
 
 .text-link {
     color: #f79489;
     font-weight: 500;
+}
+
+
+.bold {
+    font-weight: 600;
 }
 
 // icons

@@ -2,7 +2,7 @@ $base-path: "../../img";
 
 %image-setting {
     background-size: cover;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     backface-visibility: hidden;
 }
 %image-hover {
@@ -21,9 +21,6 @@ $base-path: "../../img";
     width: 100%;
     height: 100%;
     // box-shadow: $medium-shadow;
-
-    &--margin {
-    }
 
     &__img-hover {
         &--1 {
@@ -65,24 +62,39 @@ $base-path: "../../img";
         animation-duration: 1.5s, 5s;
         animation-iteration-count: 1, infinite;
         height: 70rem;
+        width: 50rem;
 
         &--1 {
             @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic.jpg");
             background-position: center;
         }
+
         &--2 {
             @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg");
             background-position: center;
         }
+
         &--3 {
             @include background-image("/img_festival.jpg");
         }
+
         &--4 {
             @include background-image("/img-beauty.jpg");
         }
+
         &--5 {
             background-position: center;
             @include background-image("/img-beauty2.jpg");
+        }
+
+        &--6 {
+            background-position: center;
+            @include background-image("/img_lashes.jpg");
+        }
+        
+        &--7 {
+            background-position: center;
+            @include background-image("/img_editorials.jpg");
         }
     }
 }

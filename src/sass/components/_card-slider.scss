@@ -1,7 +1,13 @@
 .card-slider {
-    transform: translateY(0rem);
     width: 34rem;
     height: 55rem;
+
+    @include respond(phone) {
+        width: 24rem;
+        height: 45rem;
+
+    }
+
     &__img {
         background-size: cover;
         background-position: center;
@@ -27,7 +33,11 @@
 }
 
 .main-content {
+    margin: auto;
     padding: 0 10rem;
+    @include respond (phone) {
+        padding: 0 5rem;
+    }
 }
 
 .swiper-container {

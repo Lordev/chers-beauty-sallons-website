@@ -21,10 +21,13 @@ $color-white: #fff;
 $color-white2: #f7f7f7;
 $color-white3: #f5ecf2;
 
-$color-black: #000;
+$color-black3: #1b1b1b;
+$color-black2: #1f1f1f;
+$color-black: #111111;
 
 $color-gray: #bdbdbd;
 $color-gray2: #aaaaaa;
+$color-gray3: #dadada;
 
 //FONT SIZES
 $default-font-size: 1.6rem;
@@ -45,3 +48,8 @@ $intense-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.6);
 
 //Border styling
 $border-thickness: 1rem;
+
+//PADDING VERTICAL
+
+$vertical-padding-large: 10rem 0;
+$vertical-padding-small: 5rem 0;

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
     <meta charset="UTF-8" />
@@ -17,66 +17,67 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="../node_modules/photoswipe/dist/photoswipe.css" />
+
     <link rel="stylesheet" href="../src/sass/main.scss" />
     <script defer type="module" src="../src/js/app.js"></script>
     <title>Document</title>
 </head>
 
     <body>
-        <nav class="section-navigation">
-    <nav class="navigation">
-        <div class="navigation__container navigation__container--top">
-            <ul class="navigation__grid navigation__grid--contacts">
-                <li class="navigation__menu__top navigation__menu">
+        <header class="container-header">
+    <div class="header">
+        <div class="header__container header__container--top">
+            <ul class="header__grid header__grid--contacts">
+                <li class="header__menu__top header__menu">
                     <span>T:</span
-                    ><a href="#" class="navigation__menu__top--hover">(06)55555555</a>
+                    ><a href="#" class="header__menu__top--hover">(06)55555555</a>
                 </li>
-                <li class="navigation__menu__top navigation__menu">
+                <li class="header__menu__top header__menu">
                     <span>E:</span
-                    ><a href="#" class="navigation__menu__top--hover"
+                    ><a href="#" class="header__menu__top--hover"
                         >voorbeeld@hotmail.com</a
                     >
                 </li>
-                <li class="navigation__menu__top navigation__menu">
+                <li class="header__menu__top header__menu">
                     A.voorbeeld 12, 1234VW, Stad
                 </li>
             </ul>
-            <ul class="navigation__grid navigation__grid--contacts">
-                <li class="navigation__menu__top navigation__menu">
+            <ul class="header__grid header__grid--contacts">
+                <li class="header__menu__top header__menu">
                     <a href="#" class="facebook">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </li>
-                <li class="navigation__menu__top navigation__menu">
+                <li class="header__menu__top header__menu">
                     <a href="#" class="instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
-                <li class="navigation__menu__top navigation__menu">
+                <li class="header__menu__top header__menu">
                     <a href="#" class="whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </li>
             </ul>
         </div>
-        <div class="navigation__container navigation__container--bottom">
-            <li class="navigation__logo">
-                <img
-                    src="https://placehold.co/260x60?/EEE/31343C?font=lora&text=Lora"
-                    alt="logo"
-                />
-            </li>
-            <ul class="navigation__grid navigation__grid--menu">
-                <li class="navigation__menu__bottom navigation__menu">
+        <div class="header__container header__container--bottom">
+            <div class="header__logo">
+                <a href="../views/index.html">
+                    <img src="../img/logo.png" alt="logo" />
+                </a>
+            </div>
+            <ul class="header__grid header__grid--menu">
+                <li class="header__menu__bottom header__menu">
                     <a
                         href="../views/index.html"
-                        class="navigation__menu__bottom--text navigation__menu__bottom--active"
+                        class="link-upper bold header__menu__bottom--active"
                         >Home</a
                     >
                 </li>
-                <li class="navigation__menu__bottom navigation__menu">
-                    <a href="#" class="navigation__menu__bottom--text">Diensten</a>
-                    <span class="navigation__menu--arrow">&#129171;</span>
+                <li class="header__menu__bottom header__menu">
+                    <a href="#" class="link-upper bold">Diensten</a>
+                    <span class="header__menu--arrow">&#129171;</span>
                     <ul class="menu-list">
                         <li class="">
                             <a href="../views/bruidsmake-up.html" class="menu-list__item"
@@ -120,54 +121,66 @@
                         </li>
                     </ul>
                 </li>
-                <li class="navigation__menu__bottom navigation__menu">
-                    <a
-                        href="../views/portfolio.html"
-                        class="navigation__menu__bottom--text"
+                <li class="header__menu__bottom header__menu">
+                    <a href="../views/portfolio.html" class="link-upper bold"
                         >Portfolio</a
                     >
                 </li>
-                <li class="navigation__menu__bottom navigation__menu">
-                    <a
-                        href="../views/tarieven.html"
-                        class="navigation__menu__bottom--text"
-                        >Tarieven</a
-                    >
+                <li class="header__menu__bottom header__menu">
+                    <a href="../views/tarieven.html" class="link-upper bold">Tarieven</a>
                 </li>
-                <li class="navigation__menu__bottom navigation__menu">
-                    <a
-                        href="../views/contact-me.html"
-                        class="navigation__menu__bottom--text"
+                <li class="header__menu__bottom header__menu">
+                    <a href="../views/contact-me.html" class="link-upper bold"
                         >Contact me</a
                     >
                 </li>
             </ul>
+            <!-- mobile effect -->
+            <input type="checkbox" class="header__checkbox" id="navi-toggle" />
+            <label for="navi-toggle" class="header__button">
+                <span class="header__icon">&nbsp;</span>
+            </label>
         </div>
-    </nav>
+    </div>
+</header>
+ <nav class="nav-mobile">
+    <div class="nav-mobile__toggle">
+        <i style="color: white" class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div class="nav-mobile__menu">
+        <ul class="nav-mobile__menu--items">
+            <li class="nav-mobile__menu--item">
+                <a href="../views/index.html" class="link-upper">Home</a>
+            </li>
+            <li class="nav-mobile__menu--item">
+                <a href="#" class="link-upper">Diensten</a>
+                <span class="header__menu--arrow">&#129171;</span>
+            </li>
+            <li class="nav-mobile__menu--item">
+                <a href="../views/portfolio.html" class="link-upper">Portfolio</a>
+            </li>
+            <li class="nav-mobile__menu--item">
+                <a href="../views/tarieven.html" class="link-upper">Tarieven</a>
+            </li>
+            <li class="nav-mobile__menu--item">
+                <a href="../views/contact-me.html" class="link-upper">Contact me</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
         <div class="wrapper">
             <header class="festival-banner parallax-bg">&nbsp;</header>
             <section class="s-1-festival">
-                <div class="row">
-                    <div class="heading-banner heading-banner--pink">
-                        <div class="grid-col-2-of-2--narrow">
-                            <div class="title">
-                                <h1
-                                    class="u-margin-t-m heading-primary--black text-block--left"
-                                >
-                                    Betoverende Glitter en Glamour
-                                </h1>
-                                <hr
-                                    class="sm-divider--start sm-divider--pink u-margin-b-m"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row u-margin-b-m">
+                <div class="row u-margin-b-l u-margin-t-m">
                     <div class="grid-col-2-of-2--narrow">
-                        <div class="">
+                        <div class="u-padding-x-s">
+                            <h1
+                                class="u-margin-t-m heading-secondary--black text-block--left"
+                            >
+                                Betoverende Glitter en Glamour
+                            </h1>
+                            <hr class="sm-divider--start sm-divider--pink u-margin-b-m" />
                             <h2 class="heading-secondary">
                                 Ontdek de Magie van Onze Festival- en Evenementenservice
                             </h2>
@@ -221,7 +234,7 @@
                         <div class="hover-card">
                             <div class="hover-card__img-hover--5">&nbsp;</div>
                         </div>
-                        <div class="">
+                        <div class="u-padding-x-s">
                             <h2 class="u-margin-t-m heading-secondary">
                                 Neem Contact Op Voor Meer Informatie
                             </h2>
@@ -242,7 +255,7 @@
                         <div class="grid-col-2-of-2--even">
                             <div class="cta-banner__text">
                                 <div
-                                    class="cta-banner__text--header heading-primary--white"
+                                    class="cta-banner__text--header heading-secondary--white"
                                 >
                                     Maak een Afspraak
                                 </div>
@@ -287,96 +300,81 @@
     <div class="row">
         <div class="grid-col-1-of-4">
             <div class="footer__section">
+                <h3 class="footer__header heading-tertiary">Social media</h3>
                 <ul class="footer__list">
-                    <h3 class="footer__header heading-tertiary">Social media</h3>
                     <a href="#" class="|">
                         <li class="footer__list__item">
-                            <a href="#" class="footer__link">lorem</a>
+                            <a href="#" class="link-upper">Instagram</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="footer__link">lorem</a>
+                            <a href="#" class="link-upper">Facebook</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="footer__link">lorem</a>
+                            <a href="#" class="link-upper">LinkedIn</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="footer__link">lorem</a>
+                            <a href="#" class="link-upper">TikTok</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="footer__link">lorem</a>
+                            <a href="#" class="link-upper">Pinterest</a>
                         </li>
                     </a>
                 </ul>
             </div>
             <div class="footer__section">
+                <h3 class="footer__header heading-tertiary">Informatie</h3>
                 <ul class="footer__list">
-                    <h3 class="footer__header heading-tertiary">Informatie</h3>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">About me</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Speciale acties</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
-                    </li>
-                    <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
-                    </li>
-                    <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Nieuw berichten</a>
                     </li>
                 </ul>
             </div>
             <div class="footer__section">
+                <h3 class="footer__header heading-tertiary">Services</h3>
                 <ul class="footer__list">
-                    <h3 class="footer__header heading-tertiary">Services</h3>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Bruidsmake-up</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Festival</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Lashes en Brows</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Beauty en Party</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Editorials</a>
                     </li>
                 </ul>
             </div>
             <div class="footer__section">
+                <h3 class="footer__header heading-tertiary">Contact</h3>
                 <ul class="footer__list">
-                    <h3 class="footer__header heading-tertiary">Contact</h3>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">E-mail</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Telefoon</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
-                    </li>
-                    <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
-                    </li>
-                    <li class="footer__list__item">
-                        <a href="#" class="footer__link">lorem</a>
+                        <a href="#" class="link-upper">Adres</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="grid-col-1-of-1">
-            <p class="footer__autograph">
+            <p class="footer__autograph u-c-text">
                 <span class="footer__copyright">
                     &copy; 2024 Cheryl Sallons | All Rights Reserved.
-                </span>
-                <span class="footer__designer"
-                    >Designed by .......Sallons | All Rights Reserved.
                 </span>
             </p>
         </div>
