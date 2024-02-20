@@ -8,11 +8,10 @@ body {
 }
 
 %heading-primary {
-    padding: 10rem 0;
     font-family: "Playfair-display";
-    font-size: 17rem;
+    font-size: 4rem;
     font-weight: 700;
-    line-height: 17.5rem;
+    line-height: 7.5rem;
 }
 
 %heading-secondary {
@@ -130,14 +129,23 @@ body {
     }
 }
 
-.link-upper {
+.upper {
     text-transform: uppercase;
-        &:hover {
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient($color-tertiary, $color-tertiary);
-            opacity: 0.7;
-        }
+}
+
+.link {
+    &:hover {
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient($color-tertiary, $color-tertiary);
+        opacity: 0.7;
+    }
+}
+
+
+.text-sm {
+    font-size: 1.4rem;
+    font-weight: 200;
 }
 
 .text-link {
@@ -148,6 +156,11 @@ body {
 
 .bold {
     font-weight: 600;
+}
+
+.arrow {
+    line-height: 2rem;
+    font-size: 1.5rem;
 }
 
 // icons

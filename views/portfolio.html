@@ -71,13 +71,13 @@
                 <li class="header__menu__bottom header__menu">
                     <a
                         href="../views/index.html"
-                        class="link-upper bold header__menu__bottom--active"
+                        class="link upper bold header__menu__bottom--active"
                         >Home</a
                     >
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="#" class="link-upper bold">Diensten</a>
-                    <span class="header__menu--arrow">&#129171;</span>
+                    <a href="#" class="link upper bold">Diensten</a>
+                    <span class="arrow header__menu--arrow">&#129171;</span>
                     <ul class="menu-list">
                         <li class="">
                             <a href="../views/bruidsmake-up.html" class="menu-list__item"
@@ -122,15 +122,15 @@
                     </ul>
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/portfolio.html" class="link-upper bold"
+                    <a href="../views/portfolio.html" class="link upper bold"
                         >Portfolio</a
                     >
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/tarieven.html" class="link-upper bold">Tarieven</a>
+                    <a href="../views/tarieven.html" class="link upper bold">Tarieven</a>
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/contact-me.html" class="link-upper bold"
+                    <a href="../views/contact-me.html" class="link upper bold"
                         >Contact me</a
                     >
                 </li>
@@ -152,9 +152,48 @@
             <li class="nav-mobile__menu--item">
                 <a href="../views/index.html" class="link-upper">Home</a>
             </li>
-            <li class="nav-mobile__menu--item">
-                <a href="#" class="link-upper">Diensten</a>
-                <span class="header__menu--arrow">&#129171;</span>
+            <li class="nav-mobile__menu--item" id="submenu-dropdown-link">
+                <div>
+                    <a href="#" class="link-upper">Diensten</a>
+                    <i class="fa-solid fa-chevron-down arrow nav-mobile__menu--arrow"></i>
+                </div>
+
+                <ul class="nav-mobile__submenu" id="submenu-dropdown">
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/bruidsmake-up.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Bruidsmake-up</span
+                            ></a
+                        >
+                    </li>
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/festival-en-evenementen.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Festival en evenementen</span
+                            ></a
+                        >
+                    </li>
+
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/lashes-en-brows.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Lashes en brows</span
+                            ></a
+                        >
+                    </li>
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/beauty-en-party.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Beauty en Party</span
+                            ></a
+                        >
+                    </li>
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/editorials.html"
+                            ><span class="nav-mobile__submenu--text">Editorials</span></a
+                        >
+                    </li>
+                </ul>
             </li>
             <li class="nav-mobile__menu--item">
                 <a href="../views/portfolio.html" class="link-upper">Portfolio</a>
@@ -657,37 +696,64 @@
         <div class="grid-col-1-of-4">
             <div class="footer__section">
                 <h3 class="footer__header heading-tertiary">Social media</h3>
-                <ul class="footer__list">
-                    <a href="#" class="|">
+                <div class="footer__list footer__list--socials">
+                    <ul>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">Instagram</a>
+                            <a href="#" class="link text-sm">Instagram</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">Facebook</a>
+                            <a href="#" class="link text-sm">Facebook</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">LinkedIn</a>
+                            <a href="#" class="link text-sm">LinkedIn</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">TikTok</a>
+                            <a href="#" class="link text-sm">TikTok</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">Pinterest</a>
+                            <a href="#" class="link text-sm">Pinterest</a>
                         </li>
-                    </a>
-                </ul>
+                    </ul>
+                    <ul class="footer__list__icons">
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="footer__section">
                 <h3 class="footer__header heading-tertiary">Informatie</h3>
                 <ul class="footer__list">
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">About me</a>
+                        <a href="#" class="link text-sm">About me</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Speciale acties</a>
+                        <a href="#" class="link text-sm">Speciale acties</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Nieuw berichten</a>
+                        <a href="#" class="link text-sm">Nieuw berichten</a>
                     </li>
                 </ul>
             </div>
@@ -695,38 +761,47 @@
                 <h3 class="footer__header heading-tertiary">Services</h3>
                 <ul class="footer__list">
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Bruidsmake-up</a>
+                        <a href="../views/bruidsmake-up.html" class="link text-sm"
+                            >Bruidsmake-up</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Festival</a>
+                        <a
+                            href="../views/festival-en-evenementen.html"
+                            class="link text-sm"
+                            >Festival</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Lashes en Brows</a>
+                        <a href="../views/lashes-en-brows.html" class="link text-sm"
+                            >Lashes en Brows</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Beauty en Party</a>
+                        <a href="../views/beauty-en-party.html" class="link text-sm"
+                            >Beauty en Party</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Editorials</a>
+                        <a href="../views/editorials.html" class="link text-sm"
+                            >Editorials</a
+                        >
                     </li>
                 </ul>
             </div>
             <div class="footer__section">
                 <h3 class="footer__header heading-tertiary">Contact</h3>
                 <ul class="footer__list">
+                    <li class="footer__list__item text-sm">Voorbeeld 12, 1234VW, Stad</li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">E-mail</a>
+                        <a href="#" class="link text-sm">(06)55555555</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Telefoon</a>
-                    </li>
-                    <li class="footer__list__item">
-                        <a href="#" class="link-upper">Adres</a>
+                        <a href="#" class="link text-sm">voorbeeld@hotmail.com</a>
                     </li>
                 </ul>
             </div>
         </div>
-
         <div class="grid-col-1-of-1">
             <p class="footer__autograph u-c-text">
                 <span class="footer__copyright">

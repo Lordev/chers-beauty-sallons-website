@@ -132,6 +132,7 @@ if (window.location.pathname === "/portfolio.html") {
 const exitButton = document.querySelector(".nav-mobile__toggle");
 const sideMenuWindow = document.querySelector(".nav-mobile");
 const headerMenuButton = document.querySelector(".header__button");
+const dropDown = document.querySelector("#submenu-dropdown-link");
 
 exitButton.addEventListener("click", () => {
     sideMenuWindow.style.transform = "translateX(100%)";
@@ -140,3 +141,11 @@ exitButton.addEventListener("click", () => {
 headerMenuButton.addEventListener("click", () => {
     sideMenuWindow.style.transform = "translateX(0%)";
 });
+
+dropDown.addEventListener("click", () => {
+    dropDown.style.height === "20px"
+        ? (dropDown.style.height = "170px")
+        : (dropDown.style.height = "20px");
+});
+
+console.log(dropDownMenu.style.display);

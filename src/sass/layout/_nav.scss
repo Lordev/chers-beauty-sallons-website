@@ -16,7 +16,6 @@
     }
 
     &__menu {
-        display: flex;
         width: 100%;
         height: 100%;
         padding-left: 2rem;
@@ -28,16 +27,36 @@
         &--items {
             width: 100%;
             height: 30%;
-            display: flex;
             flex-direction: column;
             justify-content: space-around;
+            margin-top: 10rem;
         }
 
         &--item {
-            
+            margin: 2rem 0;
+            height: 20px;
+        }
+
+        &--item:nth-child(2){
+            overflow: hidden;
+            transition: height ease-in .3s;
+        }
+
+        &--arrow {
+            float: right;
+            margin-right: 2rem;
+            color: white;
+        }
+    }
+    
+    &__submenu {
+
+        &--link {
+            margin: .8rem 0 .5rem 3rem ;
         }
     }
 }
+
 
 @media screen and (min-width: 900px) {
     .nav-mobile {

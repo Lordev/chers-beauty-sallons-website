@@ -71,13 +71,13 @@
                 <li class="header__menu__bottom header__menu">
                     <a
                         href="../views/index.html"
-                        class="link-upper bold header__menu__bottom--active"
+                        class="link upper bold header__menu__bottom--active"
                         >Home</a
                     >
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="#" class="link-upper bold">Diensten</a>
-                    <span class="header__menu--arrow">&#129171;</span>
+                    <a href="#" class="link upper bold">Diensten</a>
+                    <span class="arrow header__menu--arrow">&#129171;</span>
                     <ul class="menu-list">
                         <li class="">
                             <a href="../views/bruidsmake-up.html" class="menu-list__item"
@@ -122,15 +122,15 @@
                     </ul>
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/portfolio.html" class="link-upper bold"
+                    <a href="../views/portfolio.html" class="link upper bold"
                         >Portfolio</a
                     >
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/tarieven.html" class="link-upper bold">Tarieven</a>
+                    <a href="../views/tarieven.html" class="link upper bold">Tarieven</a>
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/contact-me.html" class="link-upper bold"
+                    <a href="../views/contact-me.html" class="link upper bold"
                         >Contact me</a
                     >
                 </li>
@@ -152,9 +152,48 @@
             <li class="nav-mobile__menu--item">
                 <a href="../views/index.html" class="link-upper">Home</a>
             </li>
-            <li class="nav-mobile__menu--item">
-                <a href="#" class="link-upper">Diensten</a>
-                <span class="header__menu--arrow">&#129171;</span>
+            <li class="nav-mobile__menu--item" id="submenu-dropdown-link">
+                <div>
+                    <a href="#" class="link-upper">Diensten</a>
+                    <i class="fa-solid fa-chevron-down arrow nav-mobile__menu--arrow"></i>
+                </div>
+
+                <ul class="nav-mobile__submenu" id="submenu-dropdown">
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/bruidsmake-up.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Bruidsmake-up</span
+                            ></a
+                        >
+                    </li>
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/festival-en-evenementen.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Festival en evenementen</span
+                            ></a
+                        >
+                    </li>
+
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/lashes-en-brows.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Lashes en brows</span
+                            ></a
+                        >
+                    </li>
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/beauty-en-party.html"
+                            ><span class="nav-mobile__submenu--text"
+                                >Beauty en Party</span
+                            ></a
+                        >
+                    </li>
+                    <li class="nav-mobile__submenu--link">
+                        <a href="../views/editorials.html"
+                            ><span class="nav-mobile__submenu--text">Editorials</span></a
+                        >
+                    </li>
+                </ul>
             </li>
             <li class="nav-mobile__menu--item">
                 <a href="../views/portfolio.html" class="link-upper">Portfolio</a>
@@ -170,117 +209,107 @@
 </nav>
 
         <div class="home-wrapper">
-            <header class="swiper home-header__swiper" id="header">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide home-header__img home-header__img--1">
-                        <div
-                            class="home-header__text-box home-header__text-box--1 u-c-text"
-                            data-text-box="1"
-                        >
-                            <h1 class="heading-primary--white">Hello</h1>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt. orem
-                                ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
+            <section class="home-hero">
+                <header class="swiper home-hero__swiper" id="header">
+                    <div class="swiper-wrapper home-hero__swiper__wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide home-hero__img home-hero__img--1">
+                            <div
+                                class="home-hero__text-box home-hero__text-box--1 u-c-text"
+                                data-text-box="1"
+                            >
+                                <h1 class="heading-primary--white">
+                                    Cher's Beauty Sallons
+                                </h1>
+                                <h2 class="heading-tertiary">Make-up Artiest</h2>
+                                <hr class="sm-divider u-margin-b-m" />
+                                <p class="paragraph">
+                                    "Elke penseelstreek viert jouw unieke schoonheid en
+                                    zelfvertrouwen."
+                                </p>
+                            </div>
+                            <a
+                                href="../views/bruidsmake-up.html"
+                                class="home-hero__btn--1 btn--pink"
+                                >Bruidsmake-up</a
+                            >
                         </div>
-                        <a
-                            href="../views/bruidsmake-up.html"
-                            class="home-header__btn--1 btn--pink"
-                            >Bruidsmake-up</a
-                        >
-                    </div>
-                    <div class="swiper-slide home-header__img home-header__img--2">
-                        <div
-                            class="home-header__text-box home-header__text-box--2 u-c-text"
-                            data-text-box="2"
-                        >
-                            <h1 class="heading-primary--white">hello</h1>
-                            <p class="paragraph">
-                                orem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt. orem
-                                ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
+                        <div class="swiper-slide home-hero__img home-hero__img--2">
+                            <div
+                                class="home-hero__text-box home-hero__text-box--2 u-c-text"
+                                data-text-box="2"
+                            >
+                                <h1 class="heading-primary--white">
+                                    Cher's Beauty Sallons
+                                </h1>
+                                <h2 class="heading-tertiary">Trendsetter</h2>
+                                <hr class="sm-divider u-margin-b-m" />
+                                <p class="paragraph">
+                                    "Mijn droom: een wereld waarin make-up verhalen
+                                    vertelt en empowered."
+                                </p>
+                            </div>
+                            <a
+                                href="../views/festival-en-evenementen.html"
+                                class="home-hero__btn--2 btn--pink"
+                                >Festival en evenementen</a
+                            >
                         </div>
-                        <a
-                            href="../views/festival-en-evenementen.html"
-                            class="home-header__btn--2 btn--pink"
-                            >Festival en evenementen</a
-                        >
-                    </div>
-                    <div class="swiper-slide home-header__img home-header__img--3">
-                        <div
-                            class="home-header__text-box home-header__text-box--3 u-c-text"
-                            data-text-box="3"
-                        >
-                            <h1 class="heading-primary--white">hello</h1>
-                            <p class="paragraph">
-                                orem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt.
-                            </p>
+                        <div class="swiper-slide home-hero__img home-hero__img--3">
+                            <div
+                                class="home-hero__text-box home-hero__text-box--3 u-c-text"
+                                data-text-box="3"
+                            >
+                                <h1 class="heading-primary--white">
+                                    Cher's Beauty Sallons
+                                </h1>
+                                <h2 class="heading-tertiary">Freelancer</h2>
+                                <hr class="sm-divider u-margin-b-m" />
+                                <p class="paragraph">
+                                    "Ik streef naar een wereld waarin make-up inspireert
+                                    en inclusie viert."
+                                </p>
+                            </div>
+                            <a
+                                href="../views/lashes-en-brows.html"
+                                class="home-hero__btn--3 btn--pink"
+                                >Lashes en brows</a
+                            >
                         </div>
-                        <a
-                            href="../views/lashes-en-brows.html"
-                            class="home-header__btn--3 btn--pink"
-                            >Lashes en brows</a
-                        >
-                    </div>
-                    <div class="swiper-slide home-header__img home-header__img--4">
-                        <div
-                            class="home-header__text-box home-header__text-box--4 u-c-text"
-                            data-text-box="4"
-                        >
-                            <h3 class="heading-primary--white">hello</h3>
-                            <p class="paragraph">
-                                orem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Laboriosam a omnis ea, ab consequuntur animi harum
-                                necessitatibus dolores. Provident, illum illo explicabo
-                                aut quod repellat quo ratione beatae minus. Incidunt.
-                            </p>
+                        <div class="swiper-slide home-hero__img home-hero__img--4">
+                            <div
+                                class="home-hero__text-box home-hero__text-box--4 u-c-text"
+                                data-text-box="4"
+                            >
+                                <h1 class="heading-primary--white">
+                                    Cher's Beauty Sallons
+                                </h1>
+                                <h2 class="heading-tertiary">Designer</h2>
+                                <hr class="sm-divider u-margin-b-m" />
+                                <p class="paragraph">
+                                    "Mijn missie: make-up als jouw persoonlijke
+                                    uitdrukking van kracht en schoonheid."
+                                </p>
+                            </div>
+                            <a
+                                href="../views/editorials.html"
+                                class="home-hero__btn--4 btn--pink"
+                                >Editorials</a
+                            >
                         </div>
-                        <a
-                            href="../views/editorials.html"
-                            class="home-header__btn--4 btn--pink"
-                            >Editorials</a
-                        >
+                        ...
                     </div>
-                    ...
-                </div>
-                <!-- If we need pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
 
-                <!-- If we need navigation buttons -->
-                <!-- <div class="swiper-button-prev home-header__button-prev"></div> -->
-                <!-- <div class="swiper-button-next home-header__button-next"></div> -->
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev home-hero__button-prev"></div> -->
+                    <!-- <div class="swiper-button-next home-hero__button-next"></div> -->
 
-                <!-- If we need scrollbar -->
-                <!-- <div class="swiper-scrollbar"></div> -->
-            </header>
-
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </header>
+            </section>
             <section class="s-home-promo">
                 <div class="row">
                     <div class="grid-col-1-of-3 u-c-text">
@@ -483,7 +512,7 @@
                     <div class="grid-col-2-of-2">
                         <!-- Slider main container -->
                         <div class="u-padding-x-s">
-                            <h3 class="heading-secondary--black ">
+                            <h3 class="heading-secondary--black">
                                 Jouw Perfecte Make-up Touch
                             </h3>
                             <hr class="sm-divider--start sm-divider--pink u-margin-b-m" />
@@ -581,7 +610,7 @@
                                         <div class="reviews__reviewer u-margin-t-m">
                                             <img
                                                 class="reviews__reviewer__img"
-                                                src="https://placehold.co/150x150/jpg"
+                                                src="https://placehold.co/100x100/jpg"
                                                 alt="slide-img"
                                             />
                                             <span class="reviews__reviewer__name">
@@ -597,21 +626,17 @@
                                             adipisicing elit. Eum aspernatur mollitia
                                             repellendus ipsa ullam tempora quam, alias
                                             minus in, dolorum, dicta quisquam veritatis
-                                            veniam facere minima perferendis? Neques,
-                                            totam maiores. elit. Eum aspernatur mollitia
-                                            repellendus ipsa ullam tempora quam, alias
-                                            minus in, dolorum, dicta quisquam veritatis
                                             veniam facere minima perferendis? Neque, totam
                                             maiores. elit. Eum aspernatur mollitia
                                             repellendus ipsa ullam tempora quam, alias
                                             minus in, dolorum, dicta quisquam veritatis
                                             veniam facere minima perferendis? Neque, totam
-                                            maiores."
+                                            maiores. elit."
                                         </div>
                                         <div class="reviews__reviewer u-margin-t-m">
                                             <img
                                                 class="reviews__reviewer__img"
-                                                src="https://placehold.co/150x150/jpg"
+                                                src="https://placehold.co/100x100/jpg"
                                                 alt="slide-img"
                                             />
                                             <span
@@ -629,19 +654,17 @@
                                             adipisicing elit. Eum aspernatur mollitia
                                             repellendus ipsa ullam tempora quam, alias
                                             minus in, dolorum, dicta quisquam veritatis
-                                            veniam facere minima perferendis? Neques,
-                                            totam maiores. Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Eum aspernatur
-                                            mollitia repellendus ipsa ullam tempora quam,
-                                            alias minus in, dolorum, dicta quisquam
-                                            veritatis veniam facere minima perferendis?
-                                            Neques, totam maiores. Lorem ipsum dolor sit
-                                            amet consectetur adipisicing elit.""
+                                            veniam facere minima perferendis? Neque, totam
+                                            maiores. elit. Eum aspernatur mollitia
+                                            repellendus ipsa ullam tempora quam, alias
+                                            minus in, dolorum, dicta quisquam veritatis
+                                            veniam facere minima perferendis? Neque, totam
+                                            maiores. elit."
                                         </p>
                                         <div class="reviews__reviewer u-margin-t-m">
                                             <img
                                                 class="reviews__reviewer__img"
-                                                src="https://placehold.co/150x150/jpg"
+                                                src="https://placehold.co/100x100/jpg"
                                                 alt="slide-img"
                                             />
                                             <span class="reviews__reviewer__name">
@@ -672,37 +695,64 @@
         <div class="grid-col-1-of-4">
             <div class="footer__section">
                 <h3 class="footer__header heading-tertiary">Social media</h3>
-                <ul class="footer__list">
-                    <a href="#" class="|">
+                <div class="footer__list footer__list--socials">
+                    <ul>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">Instagram</a>
+                            <a href="#" class="link text-sm">Instagram</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">Facebook</a>
+                            <a href="#" class="link text-sm">Facebook</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">LinkedIn</a>
+                            <a href="#" class="link text-sm">LinkedIn</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">TikTok</a>
+                            <a href="#" class="link text-sm">TikTok</a>
                         </li>
                         <li class="footer__list__item">
-                            <a href="#" class="link-upper">Pinterest</a>
+                            <a href="#" class="link text-sm">Pinterest</a>
                         </li>
-                    </a>
-                </ul>
+                    </ul>
+                    <ul class="footer__list__icons">
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                        <li class="footer__list__icon">
+                            <a href="#">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="footer__section">
                 <h3 class="footer__header heading-tertiary">Informatie</h3>
                 <ul class="footer__list">
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">About me</a>
+                        <a href="#" class="link text-sm">About me</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Speciale acties</a>
+                        <a href="#" class="link text-sm">Speciale acties</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Nieuw berichten</a>
+                        <a href="#" class="link text-sm">Nieuw berichten</a>
                     </li>
                 </ul>
             </div>
@@ -710,38 +760,47 @@
                 <h3 class="footer__header heading-tertiary">Services</h3>
                 <ul class="footer__list">
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Bruidsmake-up</a>
+                        <a href="../views/bruidsmake-up.html" class="link text-sm"
+                            >Bruidsmake-up</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Festival</a>
+                        <a
+                            href="../views/festival-en-evenementen.html"
+                            class="link text-sm"
+                            >Festival</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Lashes en Brows</a>
+                        <a href="../views/lashes-en-brows.html" class="link text-sm"
+                            >Lashes en Brows</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Beauty en Party</a>
+                        <a href="../views/beauty-en-party.html" class="link text-sm"
+                            >Beauty en Party</a
+                        >
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Editorials</a>
+                        <a href="../views/editorials.html" class="link text-sm"
+                            >Editorials</a
+                        >
                     </li>
                 </ul>
             </div>
             <div class="footer__section">
                 <h3 class="footer__header heading-tertiary">Contact</h3>
                 <ul class="footer__list">
+                    <li class="footer__list__item text-sm">Voorbeeld 12, 1234VW, Stad</li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">E-mail</a>
+                        <a href="#" class="link text-sm">(06)55555555</a>
                     </li>
                     <li class="footer__list__item">
-                        <a href="#" class="link-upper">Telefoon</a>
-                    </li>
-                    <li class="footer__list__item">
-                        <a href="#" class="link-upper">Adres</a>
+                        <a href="#" class="link text-sm">voorbeeld@hotmail.com</a>
                     </li>
                 </ul>
             </div>
         </div>
-
         <div class="grid-col-1-of-1">
             <p class="footer__autograph u-c-text">
                 <span class="footer__copyright">

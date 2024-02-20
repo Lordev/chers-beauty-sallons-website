@@ -2,6 +2,7 @@
     background: $color-primary-light;
 }
 
+
 .s-home-promo {
     position: relative;
     padding: $vertical-padding-large;
@@ -11,6 +12,9 @@
         z-index: 5;
         width: 5%;
         background: linear-gradient(to left, $color-secondary 0%, $color-secondary 100%);
+        @include respond (phone) {
+            background: none
+        }
     }
 }
 
@@ -20,11 +24,17 @@
     padding-left: 5%;
     // padding-bottom: 10rem;
     background-color: $color-primary-light;
+    @include respond (phone) {
+        padding-left: 0;
+    }
     &::after {
         @include layer(1);
         z-index: 5;
         width: 5%;
         background: linear-gradient(to left, $color-secondary 0%, $color-secondary 100%);
+        @include respond (phone) {
+            background: none
+        }
     }
 }
 
@@ -44,6 +54,9 @@
         $color-primary 95%,
         $color-secondary 95%
     );
+    @include respond(phone) {
+        background: none;
+    }
 }
 
 .s-reviews {
@@ -62,5 +75,8 @@
         z-index: 5;
         width: 5%;
         background: linear-gradient(to left, $color-secondary 0%, $color-secondary 100%);
+        @include respond(phone) {
+            background: none;
+        }
     }
 }

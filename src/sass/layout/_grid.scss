@@ -10,7 +10,7 @@ $gutter-horizontal: 4rem;
     gap: $gutter-horizontal;
     @include respond(big-desktop) {
         // width > 1800?
-        max-width: 50%; //1rem = 12px, 12/16 = 75%
+        max-width: 55%; //1rem = 12px, 12/16 = 75%
         gap: 4.4rem;
     }
     @include respond(desktop) {

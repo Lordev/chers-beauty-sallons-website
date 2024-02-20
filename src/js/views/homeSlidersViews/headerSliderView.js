@@ -15,19 +15,17 @@ class headerSliderView extends SliderView {
             // Other settings...
         });
 
-        const Slides = document.querySelectorAll(".home-header__img");
-        const textBox = document.querySelectorAll(".home-header__text-box");
+        const Slides = document.querySelectorAll(".home-hero__img");
+        const textBox = document.querySelectorAll(".home-hero__text-box");
 
         //1) First slide trigger
         document.addEventListener("DOMContentLoaded", function () {
             Slides.forEach((el) => {
                 if (el.classList.contains("swiper-slide-active"))
                     setTimeout(function () {
-                        el.classList.add("home-header__img--active");
-                        el.firstElementChild.classList.add(
-                            "home-header__text-box--active"
-                        );
-                        el.children[1].classList.add("home-header__btn--active");
+                        el.classList.add("home-hero__img--active");
+                        el.firstElementChild.classList.add("home-hero__text-box--active");
+                        el.children[1].classList.add("home-hero__btn--active");
                     }, 5);
             });
         });
@@ -38,14 +36,14 @@ class headerSliderView extends SliderView {
             textBox.forEach((el) => {
                 if (+el.dataset.textBox === activeSlideIndex + 1) {
                     setTimeout(function () {
-                        el.parentElement.classList.add("home-header__img--active");
-                        el.classList.add("home-header__text-box--active");
-                        el.nextElementSibling.classList.add("home-header__btn--active");
+                        el.parentElement.classList.add("home-hero__img--active");
+                        el.classList.add("home-hero__text-box--active");
+                        el.nextElementSibling.classList.add("home-hero__btn--active");
                     }, 5);
                 } else {
-                    el.classList.remove("home-header__text-box--active");
-                    el.nextElementSibling.classList.remove("home-header__btn--active");
-                    el.parentElement.classList.remove("home-header__img--active");
+                    el.classList.remove("home-hero__text-box--active");
+                    el.nextElementSibling.classList.remove("home-hero__btn--active");
+                    el.parentElement.classList.remove("home-hero__img--active");
                 }
             });
         });

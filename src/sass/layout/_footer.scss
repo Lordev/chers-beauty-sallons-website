@@ -4,13 +4,15 @@
     background-color: $color-gray3;
     padding-top: 8rem;
     @include respond(tab-port) {
-        text-align: center;
+        // text-align: center;
     }
 
     &__section {
         padding: 2rem 0 4rem 4rem;
         @include respond(tab-port) {
-            padding: 4rem 0 ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -27,6 +29,10 @@
     &__list {
         &__item {
             list-style: none;
+        }
+        &--socials {
+            display: flex;
+            gap: 3rem;
         }
     }
 
