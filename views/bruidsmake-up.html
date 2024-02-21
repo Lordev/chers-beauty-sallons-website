@@ -71,12 +71,12 @@
                 <li class="header__menu__bottom header__menu">
                     <a
                         href="../views/index.html"
-                        class="link upper bold header__menu__bottom--active"
+                        class="link upper bold-m header__menu__bottom--active"
                         >Home</a
                     >
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="#" class="link upper bold">Diensten</a>
+                    <a href="#" class="link upper bold-m">Diensten</a>
                     <span class="arrow header__menu--arrow">&#129171;</span>
                     <ul class="menu-list">
                         <li class="">
@@ -122,15 +122,17 @@
                     </ul>
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/portfolio.html" class="link upper bold"
+                    <a href="../views/portfolio.html" class="link upper bold-m"
                         >Portfolio</a
                     >
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/tarieven.html" class="link upper bold">Tarieven</a>
+                    <a href="../views/tarieven.html" class="link upper bold-m"
+                        >Tarieven</a
+                    >
                 </li>
                 <li class="header__menu__bottom header__menu">
-                    <a href="../views/contact-me.html" class="link upper bold"
+                    <a href="../views/contact-me.html" class="link upper bold-m"
                         >Contact me</a
                     >
                 </li>
@@ -313,10 +315,10 @@
             <section class="bruidsmake-up-banner--middle parallax-bg"></section>
             <section class="s-bruidsmake-up-cards">
                 <div class="row">
-                    <div class="grid-col-1-of-3 u-c-text">
-                        <div class="main-container">
-                            <div class="cards">
-                                <div class="card card--1 card-1">
+                    <div class="cards">
+                        <div class="swiper cards__swiper" id="cards-slider">
+                            <div class="swiper-wrapper">
+                                <div class="card card--1 card-1 swiper-slide">
                                     <div class="card__icon">
                                         <i class="fas fa-heart"></i>
                                     </div>
@@ -332,7 +334,7 @@
                                         ></a>
                                     </p>
                                 </div>
-                                <div class="card card--2 card-2">
+                                <div class="card card--2 card-2 swiper-slide">
                                     <div class="card__icon">
                                         <i class="fas fa-heart"></i>
                                     </div>
@@ -348,14 +350,14 @@
                                         ></a>
                                     </p>
                                 </div>
-                                <div class="card card--3 card-3">
+                                <div class="card card--3 card-3 swiper-slide">
                                     <div class="card__icon">
                                         <i class="fas fa-heart"></i>
                                     </div>
                                     <p class="card__title">
-                                        "Ontdek perfectie in elke toets. Van proefsessie
-                                        tot huwelijksaltaar, onze service staat garant
-                                        voor een stralende en zorgeloze ervaring."
+                                        "Van proefsessie tot huwelijksaltaar, onze service
+                                        staat garant voor een stralende en orgeloze
+                                        ervaring."
                                     </p>
                                     <p class="card__apply">
                                         <a class="card__link" href="#"
@@ -365,6 +367,9 @@
                                     </p>
                                 </div>
                             </div>
+                            <div class="swiper-pagination cards__pagination"></div>
+                            <!-- <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> -->
                         </div>
                     </div>
                 </div>
@@ -418,6 +423,7 @@
                         </div>
                     </div>
                 </div>
+                w
             </section>
 
             <section class="s-bruidsmake-up-tarieven">
@@ -435,101 +441,134 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="grid-col-1-of-4--wide">
-                        <div class="price-card u-c-text">
-                            <div class="price-card__heading u-margin-b-m">
-                                <h3 class="heading-tertiary">Bridal Beauty</h3>
+                    <div class="container-price-card">
+                        <div class="swiper" id="cards-prices-bridal">
+                            <div class="swiper-wrapper price-card-slider">
+                                <div class="price-card-container swiper-slide">
+                                    <div class="price-card u-c-text">
+                                        <div class="price-card__heading u-margin-b-m">
+                                            <h3 class="heading-tertiary">
+                                                Bridal Beauty
+                                            </h3>
+                                        </div>
+                                        <h4 class="heading-quaternary">€ 245</h4>
+                                        <p class="heading-subtext heading-subtext--pink">
+                                            Bronze
+                                        </p>
+
+                                        <ul class="price-card__list u-margin-b-l">
+                                            <li>Bruidsmake-up op locatie +/- 2,5 uur</li>
+                                            <li>Nepwimpers</li>
+
+                                            <li>Assistentie bij het aankleden</li>
+                                        </ul>
+                                        <a
+                                            href="#"
+                                            type="button"
+                                            class="btn btn--black price-card__btn"
+                                        >
+                                            RESERVEREN
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="price-card-container swiper-slide">
+                                    <div class="price-card u-c-text">
+                                        <div class="price-card__heading u-margin-b-m">
+                                            <h3 class="heading-tertiary">
+                                                Bridal Beauty
+                                            </h3>
+                                        </div>
+                                        <h4 class="heading-quaternary">€ 345</h4>
+                                        <p class="heading-subtext heading-subtext--pink">
+                                            Silver
+                                        </p>
+
+                                        <ul class="price-card__list u-margin-b-l">
+                                            <li>Proefsessie op locatie +/- 2.,5 uur</li>
+                                            <li>Bruidsmake-up op locatie +/- 2,5 uur</li>
+                                            <li>Nepwimpers</li>
+                                            <li>Assistentie bij het aankleden</li>
+                                            <li>Touch up op locatie</li>
+                                        </ul>
+                                        <a
+                                            href="#"
+                                            type="button"
+                                            class="btn btn--black price-card__btn"
+                                        >
+                                            RESERVEREN
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="price-card-container swiper-slide">
+                                    <div class="price-card u-c-text">
+                                        <div class="price-card__heading u-margin-b-m">
+                                            <h3 class="heading-tertiary">
+                                                Bridal Beauty
+                                            </h3>
+                                        </div>
+                                        <h4 class="heading-quaternary">€ 445</h4>
+                                        <p class="heading-subtext heading-subtext--pink">
+                                            Gold
+                                        </p>
+
+                                        <ul class="price-card__list u-margin-b-l">
+                                            <li>
+                                                Proefsessie op locatie +/-2.,5 uur
+                                                Exclusief:
+                                            </li>
+                                            <li>Bruidsmake-up op locatie +/- 2.5 uur</li>
+                                            <li>Nepwimpers</li>
+                                            <li>Assistentie bij het aankleden</li>
+                                            <li>Touch up op locatie</li>
+                                            <li>
+                                                Make-up voor 1 extra gast op dezelfde
+                                                locatie inclusief touch-up
+                                            </li>
+                                        </ul>
+                                        <a
+                                            href="#"
+                                            type="button"
+                                            class="btn btn--black price-card__btn"
+                                        >
+                                            RESERVEREN
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="price-card-container swiper-slide">
+                                    <div class="price-card u-c-text">
+                                        <div class="price-card__heading u-margin-b-m">
+                                            <h3 class="heading-tertiary">
+                                                Bridal Beauty
+                                            </h3>
+                                        </div>
+                                        <h4 class="heading-quaternary">€ 725</h4>
+                                        <p class="heading-subtext heading-subtext--pink">
+                                            Platinum
+                                        </p>
+
+                                        <ul class="price-card__list u-margin-b-l">
+                                            <li>Proefsessie op locatie +/-2.,5 uur</li>
+                                            <li>Bruidsmake-up op locatie +/- 2.5 uur</li>
+                                            <li>Nepwimpers</li>
+                                            <li>Assistentie bij het aankleden</li>
+                                            <li>Touch up op locatie</li>
+                                            <li>Make-up voor zelf te bepalen aantal</li>
+                                            <li>
+                                                bruidsmeisjes op dezelfde locatie
+                                                inclusief touch-up
+                                            </li>
+                                        </ul>
+                                        <a
+                                            href="#"
+                                            type="button"
+                                            class="btn btn--black price-card__btn"
+                                        >
+                                            RESERVEREN
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="heading-quaternary">€ 245</h4>
-                            <p class="heading-subtext heading-subtext--pink">Bronze</p>
-
-                            <ul class="price-card__list u-margin-b-l">
-                                <li>Bruidsmake-up op locatie +/- 2,5 uur</li>
-                                <li>Nepwimpers</li>
-
-                                <li>Assistentie bij het aankleden</li>
-                            </ul>
-                            <a
-                                href="#"
-                                type="button"
-                                class="btn btn--black price-card__btn"
-                            >
-                                RESERVEREN
-                            </a>
-                        </div>
-                        <div class="price-card u-c-text">
-                            <div class="price-card__heading u-margin-b-m">
-                                <h3 class="heading-tertiary">Bridal Beauty</h3>
-                            </div>
-                            <h4 class="heading-quaternary">€ 345</h4>
-                            <p class="heading-subtext heading-subtext--pink">Silver</p>
-
-                            <ul class="price-card__list u-margin-b-l">
-                                <li>Proefsessie op locatie +/- 2.,5 uur</li>
-                                <li>Bruidsmake-up op locatie +/- 2,5 uur</li>
-                                <li>Nepwimpers</li>
-                                <li>Assistentie bij het aankleden</li>
-                                <li>Touch up op locatie</li>
-                            </ul>
-                            <a
-                                href="#"
-                                type="button"
-                                class="btn btn--black price-card__btn"
-                            >
-                                RESERVEREN
-                            </a>
-                        </div>
-                        <div class="price-card u-c-text">
-                            <div class="price-card__heading u-margin-b-m">
-                                <h3 class="heading-tertiary">Bridal Beauty</h3>
-                            </div>
-                            <h4 class="heading-quaternary">€ 445</h4>
-                            <p class="heading-subtext heading-subtext--pink">Gold</p>
-
-                            <ul class="price-card__list u-margin-b-l">
-                                <li>Proefsessie op locatie +/-2.,5 uur Exclusief:</li>
-                                <li>Bruidsmake-up op locatie +/- 2.5 uur</li>
-                                <li>Nepwimpers</li>
-                                <li>Assistentie bij het aankleden</li>
-                                <li>Touch up op locatie</li>
-                                <li>
-                                    Make-up voor 1 extra gast op dezelfde locatie
-                                    inclusief touch-up
-                                </li>
-                            </ul>
-                            <a
-                                href="#"
-                                type="button"
-                                class="btn btn--black price-card__btn"
-                            >
-                                RESERVEREN
-                            </a>
-                        </div>
-                        <div class="price-card u-c-text">
-                            <div class="price-card__heading u-margin-b-m">
-                                <h3 class="heading-tertiary">Bridal Beauty</h3>
-                            </div>
-                            <h4 class="heading-quaternary">€ 725</h4>
-                            <p class="heading-subtext heading-subtext--pink">Platinum</p>
-
-                            <ul class="price-card__list u-margin-b-l">
-                                <li>Proefsessie op locatie +/-2.,5 uur</li>
-                                <li>Bruidsmake-up op locatie +/- 2.5 uur</li>
-                                <li>Nepwimpers</li>
-                                <li>Assistentie bij het aankleden</li>
-                                <li>Touch up op locatie</li>
-                                <li>Make-up voor zelf te bepalen aantal</li>
-                                <li>
-                                    bruidsmeisjes op dezelfde locatie inclusief touch-up
-                                </li>
-                            </ul>
-                            <a
-                                href="#"
-                                type="button"
-                                class="btn btn--black price-card__btn"
-                            >
-                                RESERVEREN
-                            </a>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>

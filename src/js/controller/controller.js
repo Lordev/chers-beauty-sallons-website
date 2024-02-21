@@ -4,6 +4,9 @@ import {
     storySlider,
     reviewSlider,
     portfolioView,
+    cardSlider,
+    cardSliderBeauty,
+    cardSliderBridal,
 } from "../views/homeSlidersViews/HomeSliderView.js";
 import { headerSlider } from "../views/homeSlidersViews/headerSliderView";
 
@@ -44,3 +47,6 @@ export const headerController = new SliderController(model, headerSlider);
 export const storyController = new SliderController(model, storySlider);
 export const reviewSController = new SliderController(model, reviewSlider);
 export const portfolioController = new SliderController(model, portfolioView);
+export const cardController = new SliderController(model, cardSlider);
+export const cardBridalController = new SliderController(model, cardSliderBridal);
+export const cardBeautyController = new SliderController(model, cardSliderBeauty);

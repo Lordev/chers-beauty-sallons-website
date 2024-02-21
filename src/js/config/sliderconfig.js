@@ -9,7 +9,24 @@ import {
 import { PORTFOLIO_IMGS } from "./config";
 
 ///////////////////////////////////////
+
 //* fadeSlider settings
+
+export const defaultSlider = {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    spaceBetween: 100,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+};
+
 export const fadeSlider = {
     activeIndex: 4,
     modules: [Navigation, Pagination, Autoplay, EffectFade],
@@ -58,24 +75,16 @@ export const cardSlider = {
 };
 
 //* defaultSlider settings
-export const defaultSlider = {
-    grabCursor: true,
+export const defaultSliderAuto = {
+    ...defaultSlider,
     modules: [Navigation, Pagination, Autoplay],
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+    grabCursor: true,
     autoplay: {
         delay: 4000,
         pauseOnMouseEnter: true,
     },
     speed: 500,
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-    },
 };
 
 //* rollSlider setting
@@ -94,4 +103,38 @@ export const infiniteSlider = {
     freeMode: true,
     speed: 5000,
     freeModeMomentum: false,
+};
+
+export const sliderBreakpointsFour = {
+    ...defaultSlider,
+    breakpoints: {
+        600: {
+            slidesPerView: 1,
+        },
+
+        1200: {
+            slidesPerView: 2,
+        },
+
+        1500: {
+            slidesPerView: 4,
+        },
+    },
+};
+
+export const sliderBreakpointsThree = {
+    ...defaultSlider,
+    breakpoints: {
+        600: {
+            slidesPerView: 1,
+        },
+
+        1200: {
+            slidesPerView: 2,
+        },
+
+        1500: {
+            slidesPerView: 3,
+        },
+    },
 };

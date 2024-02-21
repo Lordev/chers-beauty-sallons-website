@@ -1,115 +1,105 @@
-%card {
-    background-color: $color-white;
-    opacity: 0.95;
-    position: absolute;
-}
-
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    transform: translateY(-70%);
+    
+    @include respond (big-desktop) {
+        width: 60%;
+    }
+    @include respond (tab-land) {
+        width: 80%;
+    }
+    @include respond (tab-port) {
+        width: 90%;
+    }
+    @include respond (phone) {
+        width: 100%;
+    }
+    &__swiper {
+        width: 100%;
+    }
+
+    &__pagination {
+        color: red;
+    }
 }
 
 .card {
-    padding: 3rem;
-    width: 350px;
-    min-height: 200px;
+    background: $color-white;
+    opacity: .9;
+    text-align: center;
     display: grid;
-    grid-template-rows: 20px 50px 1fr 50px;
+    height: 25rem;
+    grid-template-rows: 10px repeat(3, auto);
+    gap: 2rem;
     border-radius: 10px;
-    box-shadow: $medium-shadow;
-}
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
 
-.card__link,
-.card__exit,
-.card__icon {
-    position: relative;
-    text-decoration: none;
-    color: $color-tertiary;
-}
+    &__link,
+    &__exit,
+    &__icon {
+        position: relative;
+        text-decoration: none;
+        color: $color-tertiary;
+    }
 
-.card__link::after {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    content: "";
-    width: 0%;
-    height: 3px;
-    background-color: $color-primary;
-}
+    &__link::after {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        content: "";
+        width: 0%;
+        height: 3px;
+        background-color: $color-primary;
+    }
 
-.card__link:hover::after {
-    width: 100%;
-}
+    &__link:hover::after {
+        width: 100%;
+    }
 
-.card__exit {
-    grid-row: 1/2;
-    justify-self: end;
-}
+    &__exit {
+        grid-row: 1/2;
+        justify-self: end;
+    }
 
-.card__icon {
-    grid-row: 2/3;
-    font-size: 30px;
-}
-
-.card__title {
-    grid-row: 3/4;
-    font-weight: 400;
-    color: $color-black;
-}
-
-.card__apply {
-    grid-row: 4/5;
-    align-self: center;
-}
-
-/* CARD BACKGROUNDS */
-
-.card-1 {
-    background: $color-white;
-}
-
-.card-2 {
-    background: $color-white;
-}
-
-.card-3 {
-    background: $color-white;
-}
-
-.card {
-    &--1 {
-        @extend %card;
-        bottom: 50%;
-        left: 15%;
-        @include respond(big-desktop) {
-            left: 20%
-        }
-        @include respond(desktop) {
-            left: 5%
-        }
-        @include respond(tab-land) {
-            left: 0%
+    &__icon {
+        margin: 0 auto;
+        grid-row: 2/3;
+        font-size: 40px;
+        @include respond (tab-port) {
+            font-size: 25px;
         }
     }
-    &--2 {
-        @extend %card;
-        bottom: 50%;
-        left: 50%;
-        transform: translateX(-50%);
+
+    &__title {
+        padding: 0 2rem;
+        grid-row: 3/4;
     }
-    &--3 {
-        @extend %card;
-        bottom: 50%;
-        right: 15%;
-        @include respond(big-desktop) {
-            right: 20%
+
+    &__apply {
+        margin: 0 auto;
+        grid-row: 4/5;
+        align-self: center;
+    }
+}
+
+
+#cards-slider {
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: .7;
+            background: rgba(0, 0, 0, 0.2);
         }
-        @include respond(desktop) {
-            right: 5%
-        }
-        @include respond(tab-land) {
-            right: 0%
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: $color-white;
         }
     }
 }

@@ -77,10 +77,9 @@
     margin: 0 auto;
 }
 
-.s-bruidsmake-up-cards {
-    overflow: visible;
+.s-bruidsmake-up-cards,
+.s-beauty-en-party-cards {
     height: 10rem;
-    position: relative;
     background-color: $color-secondary;
 }
 

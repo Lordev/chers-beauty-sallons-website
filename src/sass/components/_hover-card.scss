@@ -62,7 +62,6 @@ $base-path: "../../img";
         animation-duration: 1.5s, 5s;
         animation-iteration-count: 1, infinite;
         height: 70rem;
-        width: 50rem;
 
         &--1 {
             @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic.jpg");

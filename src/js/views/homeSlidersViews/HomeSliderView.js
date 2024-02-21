@@ -1,9 +1,12 @@
 import { PORTFOLIO_IMGS } from "../../config/config";
 import {
-    fadeSlider,
     cardSlider,
     defaultSlider,
+    defaultSliderTwo,
     infiniteSlider,
+    defaultSliderAuto,
+    sliderBreakpointsThree,
+    sliderBreakpointsFour,
 } from "../../config/sliderconfig";
 import SliderView from "../SliderView";
 import Swiper from "swiper";
@@ -85,5 +88,14 @@ class homeSliderView extends SliderView {
 }
 
 export const storySlider = new homeSliderView("card", cardSlider);
-export const reviewSlider = new homeSliderView("default-slider", defaultSlider);
+export const reviewSlider = new homeSliderView("default-slider", defaultSliderAuto);
 export const portfolioView = new homeSliderView("infinite-slider", infiniteSlider);
+export const cardSlider = new homeSliderView("cards-slider", sliderBreakpointsThree);
+export const cardSliderBridal = new homeSliderView(
+    "cards-prices-bridal",
+    sliderBreakpointsFour
+);
+export const cardSliderBeauty = new homeSliderView(
+    "cards-prices-beauty",
+    sliderBreakpointsThree
+);
