@@ -3,6 +3,7 @@
 .s-1-beauty-en-party,
 .s-2-beauty-en-party,
 .s-1-festival,
+.s-1-editorials,
 .s-1-lashes-en-brows {
     position: relative;
     padding: 10rem 0 ;
@@ -27,6 +28,7 @@
 .s-1-bruiloft,
 .s-1-beauty-en-party,
 .s-1-festival,
+.s-1-editorials,
 .s-1-lashes-en-brows {
     // &__img {
     //     overflow: visible;
@@ -71,7 +73,7 @@
     }
 }
 
-.section-appointment-bruiloft {
+.section-appointment {
     background-color: $color-secondary;
     max-width: $grid-width;
     margin: 0 auto;

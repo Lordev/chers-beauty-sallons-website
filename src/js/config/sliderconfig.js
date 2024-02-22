@@ -28,32 +28,24 @@ export const defaultSlider = {
 };
 
 export const fadeSlider = {
+    ...defaultSlider,
     activeIndex: 4,
-    modules: [Navigation, Pagination, Autoplay, EffectFade],
+    modules: [Autoplay, EffectFade],
     effect: "fade",
     crossfade: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
     autoplay: {
         delay: 8000,
         waitForTransition: true,
     },
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: false,
-        clickable: true,
-    },
     speed: 1500,
 };
 
 //* cardSlider settings
 export const cardSlider = {
-    modules: [EffectCards, Autoplay, Pagination],
+    ...defaultSlider,
+    modules: [EffectCards, Autoplay],
     effect: "cards",
-    grabCursor: true,
     centeredSlides: true,
     cardsEffect: {
         rotate: true,
@@ -67,11 +59,6 @@ export const cardSlider = {
         waitForTransition: true,
     },
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-    },
 };
 
 //* defaultSlider settings
@@ -96,6 +83,7 @@ export const infiniteSlider = {
     grabCursor: true,
     slidesPerView: PORTFOLIO_IMGS - 3,
     loop: true,
+    slidesPerView: 3,
     autoplay: {
         delay: 0.5,
         disableOnInteraction: true,
@@ -103,6 +91,20 @@ export const infiniteSlider = {
     freeMode: true,
     speed: 5000,
     freeModeMomentum: false,
+
+    breakpoints: {
+        600: {
+            slidesPerView: 4,
+        },
+
+        1200: {
+            slidesPerView: 7,
+        },
+
+        1500: {
+            slidesPerView: 9,
+        },
+    },
 };
 
 export const sliderBreakpointsFour = {

@@ -13,10 +13,10 @@ import {
 
 // // document.addEventListener();
 if (window.location.pathname === "/index.html" || "/") {
-    // headerController.createHeaderSlider();
-    // storyController.createSlider();
-    // reviewSController.createSlider();
-    // portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
+    headerController.createHeaderSlider();
+    storyController.createSlider();
+    reviewSController.createSlider();
+    portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
 }
 
 cardController.createSlider();

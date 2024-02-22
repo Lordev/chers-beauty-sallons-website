@@ -54,6 +54,21 @@ $base-path: "../../img";
             @extend %image-hover;
             background-image: url(#{$base-path}/img_festival-2.jpg);
         }
+        &--6 {
+            height: 40rem;
+
+            @extend %image-setting;
+            @extend %image-hover;
+            @include background-image("/img-editorials.jpg")
+        }
+
+        &--7 {
+            height: 40rem;
+
+            @extend %image-setting;
+            @extend %image-hover;
+            @include background-image("/img-editorials2.jpg")
+        }
     }
 
     &__img-zoom {
