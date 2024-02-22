@@ -1,4 +1,4 @@
-import { PORTFOLIO_IMGS } from "../../config/config";
+import { PORTFOLIO_IMGS } from "../../config/_config";
 import {
     cardSlider,
     defaultSlider,

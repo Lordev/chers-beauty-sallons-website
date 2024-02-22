@@ -6,7 +6,7 @@ import {
     EffectCards,
     FreeMode,
 } from "swiper/modules";
-import { PORTFOLIO_IMGS } from "./config";
+import { PORTFOLIO_IMGS } from "./_config";
 
 ///////////////////////////////////////
 

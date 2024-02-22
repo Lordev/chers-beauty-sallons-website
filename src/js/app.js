@@ -1,4 +1,4 @@
-import { IG_URL, IG_KEY } from "../js/config/config";
+import { IG_URL, IG_KEY } from "./config/_config";
 import PhotoSwipeLightbox from "photoswipe/dist/photoswipe-lightbox.esm";
 
 import {
