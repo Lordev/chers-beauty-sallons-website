@@ -6,7 +6,6 @@ import {
     EffectCards,
     FreeMode,
 } from "swiper/modules";
-import { PORTFOLIO_IMGS } from "./_config";
 
 ///////////////////////////////////////
 
@@ -81,7 +80,7 @@ export const infiniteSlider = {
     freeMode: true,
     spaceBetween: 0,
     grabCursor: true,
-    slidesPerView: PORTFOLIO_IMGS - 3,
+    slidesPerView: 3,
     loop: true,
     slidesPerView: 3,
     autoplay: {
