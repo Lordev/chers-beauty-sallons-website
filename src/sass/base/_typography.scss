@@ -9,9 +9,9 @@ body {
 
 %heading-primary {
     font-family: "Playfair-display";
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
-    line-height: 7.5rem;
+    line-height: 6rem;
 }
 
 %heading-secondary {
@@ -109,21 +109,23 @@ body {
 .sm-divider {
     margin: 0 auto;
     width: 8rem;
+    border: none;
     &--start {
         width: 8rem;
     }
     &--pink {
-        border: none;
         border-top: 1px solid $color-tertiary;
     }
     &--white {
         border-top: 1px solid $color-white;
     }
+    &--black {
+        border-top: 1px solid $color-black;
+    }
+
 }
 
 .paragraph {
-    font-size: $default-font-size;
-
     &:not(:last-child) {
         margin-bottom: 1rem;
     }
@@ -140,6 +142,12 @@ body {
         background-image: linear-gradient($color-tertiary, $color-tertiary);
         opacity: 0.7;
     }
+    &:active {
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient($color-tertiary, $color-tertiary);
+        opacity: 0.7;
+    }
 }
 
 
@@ -149,7 +157,10 @@ body {
 
 .text-m {
     font-size: 1.5rem;
-    text-wrap: nowrap;
+}
+
+.text-l {
+    font-size: 1.7rem;
 }
 
 .text-link {
@@ -167,8 +178,7 @@ body {
 }
 
 .arrow {
-    line-height: 2rem;
-    font-size: 1.5rem;
+    
 }
 
 // icons

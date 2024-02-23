@@ -1,8 +1,5 @@
-import { PORTFOLIO_IMGS } from "../../config/_config";
 import {
     cardSlider,
-    defaultSlider,
-    defaultSliderTwo,
     infiniteSlider,
     defaultSliderAuto,
     sliderBreakpointsThree,
@@ -90,7 +87,7 @@ class homeSliderView extends SliderView {
 export const storySlider = new homeSliderView("card", cardSlider);
 export const reviewSlider = new homeSliderView("default-slider", defaultSliderAuto);
 export const portfolioView = new homeSliderView("infinite-slider", infiniteSlider);
-export const cardSlider = new homeSliderView("cards-slider", sliderBreakpointsThree);
+export const cardSliderCTA = new homeSliderView("cards-slider", sliderBreakpointsThree);
 export const cardSliderBridal = new homeSliderView(
     "cards-prices-bridal",
     sliderBreakpointsFour

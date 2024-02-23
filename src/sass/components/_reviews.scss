@@ -81,6 +81,9 @@
     &__text {
         align-self: end;
         padding: 0 10rem;
+        @include respond (phone) {
+            padding: 0 5rem;
+        }
     }
     &__reviewer {
         align-self: start;

@@ -52,11 +52,11 @@ export const cardSlider = {
         perSlideOffset: 9,
         slideShadows: true,
     },
-    speed: 600,
-    autoplay: {
-        delay: 4000,
-        waitForTransition: true,
-    },
+    // speed: 600,
+    // autoplay: {
+    //     delay: 4000,
+    //     waitForTransition: true,
+    // },
     loop: true,
 };
 
@@ -80,9 +80,8 @@ export const infiniteSlider = {
     freeMode: true,
     spaceBetween: 0,
     grabCursor: true,
-    slidesPerView: 3,
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 2,
     autoplay: {
         delay: 0.5,
         disableOnInteraction: true,

@@ -63,6 +63,35 @@ window.addEventListener("scroll", function () {
     lastScrollPosition = scrollPosition;
 });
 
+// Get the current URL path
+let path = window.location.pathname;
+
+// Get the filename from the path
+let page = path.split("/").pop();
+
+// Remove the extension from the filename
+page = page.split(".").shift();
+
+console.log(page);
+
+const menuItems = document.querySelectorAll("#menu-item");
+const diensten = document.querySelector("#diensten");
+const subMenuDiensten = document.querySelectorAll("#diensten-submenu-item");
+
+menuItems.forEach((item) => {
+    let href = item.getAttribute("href").split("/").pop().split(".").shift();
+    if (href === page) {
+        item.classList.add("header__menu__bottom--active");
+    }
+});
+
+subMenuDiensten.forEach((item) => {
+    let href = item.getAttribute("href").split("/").pop().split(".").shift();
+    if (href === page) {
+        diensten.classList.add("header__menu__bottom--active");
+    }
+});
+
 // //!PORTFOLIO
 
 if (window.location.pathname === "/portfolio.html") {

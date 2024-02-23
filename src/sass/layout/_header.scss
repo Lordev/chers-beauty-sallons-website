@@ -1,15 +1,19 @@
 //! STYLE FULL
+.header-fixed {
+    height: 12.5rem;
+}
+
 .container-header {
-    background-color: $color-primary-light2;
+    background-color: $color-primary-light;
     transition:
         opacity 0.3s ease,
         transform 0.4s ease-in-out; 
-    position: absolute;
+    // position: absolute; 
     top: 0;
     z-index: 10;
     width: 100%;
-    opacity: 0.95;
-    height: fit-content
+    height: 12.5rem;
+    // opacity: 0.95;
 }
 
 .fixed {
@@ -28,7 +32,7 @@
     display: grid;
     margin: 0 auto;
     width: 50%;
-    height: 100%;
+    // height:  13rem;
     grid-template-rows: minmax(50px, auto) minmax(min-content, 1fr); 
 
     &__container {
@@ -138,9 +142,11 @@
         }
 
         &--arrow {
-            margin-left: 0.4rem;
+            margin-left: 0.3rem;
             margin-top: .7rem;
             margin-bottom: -7rem;
+            line-height: 2rem;
+            font-size: 2rem;
         }
     }
     &__checkbox {        
@@ -241,6 +247,7 @@
     &__item {
         display: block;
         border-bottom: 0.1px solid rgba($color-tertiary, 0.2);
+        &--active,
         &:hover {
             border-bottom: 1px solid $color-tertiary;
             background-color: $color-primary;
@@ -255,6 +262,7 @@
 //! MENU FUNCTIONALITY
 
 .header__menu__bottom:hover > .menu-list {
+    z-index: 999999;
     display: block;
     opacity: 1;
 }

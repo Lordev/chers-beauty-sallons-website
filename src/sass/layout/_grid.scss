@@ -88,6 +88,10 @@ $gutter-horizontal: 4rem;
         &--narrow {
             @extend %one-grid;
             width: 40%;
+            @include respond (tab-port) {
+                width: fit-content
+            }
+
         }
     }
 

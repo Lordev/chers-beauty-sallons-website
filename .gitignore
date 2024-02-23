@@ -1,9 +1,5 @@
 node_modules/
 dist/
 .parcel-cache/
-php/
-src/views/
 gulpfile.js
-
-
-
+.vercel

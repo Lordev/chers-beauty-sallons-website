@@ -2,16 +2,20 @@
     &,
     &:link,
     &--style {
-        font-size: 1.5rem;
-        padding: 2rem 3rem;
         display: inline-block;
-        // border-radius: 1rem;
-        // text-decoration: none;
         text-transform: uppercase;
         font-weight: 400;
         font-family: "Nunito";
         transition: 0.2s;
         border: none;
+    }
+
+    &__primary {
+        padding: 2rem 3rem;
+    }
+
+    &__secondary {
+        padding: .7rem 3rem;
     }
 
     &--pink {
@@ -51,6 +55,7 @@
         }
     }
 }
+
 
 .btn-text {
     display: inline-block;

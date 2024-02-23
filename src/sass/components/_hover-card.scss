@@ -76,7 +76,8 @@ $base-path: "../../img";
         animation-name: moveInLeft, zoomAnimation;
         animation-duration: 1.5s, 5s;
         animation-iteration-count: 1, infinite;
-        height: 70rem;
+        height: 100%;
+        min-height: 70rem;
 
         &--1 {
             @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic.jpg");
@@ -85,11 +86,12 @@ $base-path: "../../img";
 
         &--2 {
             @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg");
-            background-position: center;
+            background-position: 0 10%;
         }
 
         &--3 {
             @include background-image("/img_festival.jpg");
+            background-position: bottom
         }
 
         &--4 {
