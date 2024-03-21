@@ -69,7 +69,7 @@
             font-size: 1.3rem;
             font-family: "Nunito-sans";
             font-weight: 600;
-            color: $color-tertiary;
+            color: $color-secondary;
         }
     }
     &::before {
@@ -79,7 +79,7 @@
         bottom: 0;
         left: 50%;
         width: 1px;
-        background-color: $color-tertiary;
+        background-color: $color-secondary;
         transform: translateX(-50%);
         transition:
             transform 0.4s,
@@ -91,6 +91,6 @@
     &:hover::before {
         opacity: 1;
         transform: scaleX(100);
-        background-color: $color-tertiary;
+        background-color: $color-secondary;
     }
 }

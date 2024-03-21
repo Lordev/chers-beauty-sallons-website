@@ -32,6 +32,7 @@
 
 .home-hero {
     &__swiper {
+        min-height: 35rem;
         height: 30vh;
         position: relative;
     }

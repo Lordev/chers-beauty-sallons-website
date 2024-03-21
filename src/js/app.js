@@ -27,7 +27,7 @@ cardBridalController.createSlider();
 const header = document.querySelector(".container-header");
 
 let lastScrollPosition = 0;
-let threshold = window.innerHeight / 2;
+let threshold = window.innerHeight / 3;
 let scrolledPastThreshold = false;
 
 window.addEventListener("scroll", function () {
