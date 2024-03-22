@@ -2,4 +2,3 @@ export const IG_URL =
     "https://graph.instagram.com/me/media?fields=media_type,media_url,username,timestamp,permalink&access_token=";
 export const IG_KEY =
     "IGQWRPUVcwTkJYUWM4TnBuMnhFWjRUQ2ZALV1NEemZAfc09Vb0dyWkw2WFVjZAXV0S2FDYlJMYWxVNU85bmpaei1ZAQ1BCNUlkdUJTakstN2hpWTVWUUlXYzlibVJEandGUzZAxbGZA4TDRwdHRVSmlZANGVfcWV2Y090SkkZD";
-// "IGQWROZAlB0U1dHbENOSk9HX3ktX0xGbU9nQ0VCTC0xa3RlSWRXc1U1cTE1bFRlYk5wRFRwVEEwUW1PbGRUMEJtQlF0VGI5N3oxa0hHbUdDRGd0dGdMM1BXNEJUamZAodHpyRFJ2cWdkMklQeHFMeFpUMWxoR2FYNE0ZD";
