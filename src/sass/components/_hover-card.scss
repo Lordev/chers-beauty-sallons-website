@@ -79,12 +79,12 @@ $base-path: "../../img";
         height: 70rem;
 
         &--1 {
-            @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic.jpg");
+            @include background-image("/Bruiloftsmake-up_imgs/bruiloft-service-pic.jpg");
             background-position: center;
         }
 
         &--2 {
-            @include background-image("/bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg");
+            @include background-image("/Bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg");
             background-position: center;
         }
 
