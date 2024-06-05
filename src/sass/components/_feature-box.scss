@@ -1,5 +1,3 @@
-$base-path: "../../img";
-
 .feature-box {
     height: 70vh;
     cursor: pointer;
@@ -33,38 +31,22 @@ $base-path: "../../img";
         transform: scale(1.05);
 
         &-1 {
-            @include background-image("/img-features-bridal.jpg");
-            @include respond(phone) {
-            @include background-image("/img-features-bridal.jpg");
-            }
+            @include background-image("home/home-features-bridal.jpg");
         }
+
         &-2 {
-            @include background-image("/img-features-festival.jpg");
-            @include respond(phone) {
-                @include background-image("/img-features-festival.jpg");
-                background-position: top
-                }
+            @include background-image("home/home-features-festival.jpg");
         }
         &-3 {
-            @include background-image("/img-features-lashes.jpg");
-            @include respond(phone) {
-                @include background-image("/img-features-lashes.jpg");
-                background-position: top
-                }
+            @include background-image("home/home-features-beauty.jpg");
         }
+
         &-4 {
-            @include background-image("/img-features-beauty.jpg");
-            @include respond(phone) {
-                @include background-image("/img-features-beauty.jpg");
-                background-position: top
-                }
+            @include background-image("home/home-features-lashes.jpg");
         }
+
         &-5 {
-            @include background-image("/img-features-editorials.jpg");
-            @include respond(phone) {
-                @include background-image("/img-features-editorials.jpg");
-                background-position: top
-                }
+            @include background-image("home/home-features-editorials.jpg");
         }
     }
 
@@ -85,8 +67,8 @@ $base-path: "../../img";
         transform: scale(1.2);
         background-color: rgba($color-white, 0.3);
     }
-
     &__block:hover &__text {
         opacity: 1;
     }
 }
+

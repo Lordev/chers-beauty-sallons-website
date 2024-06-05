@@ -5,7 +5,7 @@ import {
     EffectFade,
     EffectCards,
     FreeMode,
-} from "swiper/modules";
+} from 'swiper/modules';
 
 ///////////////////////////////////////
 
@@ -16,12 +16,12 @@ export const defaultSlider = {
     slidesPerView: 1,
     grabCursor: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     spaceBetween: 100,
     pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
         clickable: true,
     },
 };
@@ -30,7 +30,8 @@ export const fadeSlider = {
     ...defaultSlider,
     activeIndex: 4,
     modules: [Autoplay, EffectFade],
-    effect: "fade",
+    effect: 'fade',
+    centeredSlides: true,
     crossfade: true,
     autoplay: {
         delay: 8000,
@@ -44,7 +45,7 @@ export const fadeSlider = {
 export const cardSlider = {
     ...defaultSlider,
     modules: [EffectCards, Autoplay],
-    effect: "cards",
+    effect: 'cards',
     centeredSlides: true,
     cardsEffect: {
         rotate: true,

@@ -1,4 +1,3 @@
-$base-path: "../../img";
 
 %image-setting {
     background-size: cover;
@@ -28,38 +27,38 @@ $base-path: "../../img";
             @extend %image-hover;
             background-position: top;
             height: 50rem;
-            background-image: url(#{$base-path}/img_home2_small.jpg);
+            @include background-image("home/home-model-card.jpg");
         }
         &--2 {
             height: 70rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(#{$base-path}/img-tarieven.jpg);
+            @include background-image("tarieven/tarieven-bridal.jpg");
         }
         &--3 {
             height: 70rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(#{$base-path}/img-tarieven2.jpg);
+            @include background-image("tarieven/tarieven-beauty.jpg");
         }
         &--4 {
             height: 40rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(#{$base-path}/img_festival-1.jpg);
+            @include background-image("diensten/festival/festival-applying-make-up.jpg");
         }
         &--5 {
             height: 40rem;
             @extend %image-setting;
             @extend %image-hover;
-            background-image: url(#{$base-path}/img_festival-2.jpg);
+            @include background-image("diensten/festival/festival-headshot-02.jpg");
         }
         &--6 {
             height: 40rem;
 
             @extend %image-setting;
             @extend %image-hover;
-            @include background-image("/img-editorials.jpg")
+            @include background-image("diensten/editorials/editorials-headshot-01.jpg")
         }
 
         &--7 {
@@ -67,7 +66,7 @@ $base-path: "../../img";
 
             @extend %image-setting;
             @extend %image-hover;
-            @include background-image("/img-editorials2.jpg")
+            @include background-image("diensten/editorials/editorials-headshot-02.jpg")
         }
     }
 
@@ -76,41 +75,41 @@ $base-path: "../../img";
         animation-name: moveInLeft, zoomAnimation;
         animation-duration: 1.5s, 5s;
         animation-iteration-count: 1, infinite;
-        height: 100%;
+        height: 100%; 
         min-height: 70rem;
 
         &--1 {
-            @include background-image("/Bruiloftsmake-up_imgs/bruiloft-service-pic.jpg");
+            @include background-image("diensten/bridal/bridal-pose.jpg");
             background-position: center;
         }
 
         &--2 {
-            @include background-image("/Bruiloftsmake-up_imgs/bruiloft-service-pic2.jpg");
+            @include background-image("diensten/bridal/bridal-makeup.jpg");
             background-position: 0 10%;
         }
 
         &--3 {
-            @include background-image("/img_festival.jpg");
+            @include background-image("diensten/festival/festival-headshot-01.jpg");
             background-position: bottom
         }
 
         &--4 {
-            @include background-image("/img-beauty.jpg");
+            @include background-image("diensten/beauty/beauty-headshot-01.jpg");
         }
 
         &--5 {
             background-position: center;
-            @include background-image("/img-beauty2.jpg");
+            @include background-image("diensten/beauty/beauty-headshot-02.jpg");
         }
 
         &--6 {
             background-position: center;
-            @include background-image("/img_lashes.jpg");
+            @include background-image("diensten/lashes/lashes-make-up-kit.jpg");
         }
         
         &--7 {
             background-position: center;
-            @include background-image("/img_editorials.jpg");
+            @include background-image("diensten/editorials/editorials-catwalk.jpg");
         }
     }
 }

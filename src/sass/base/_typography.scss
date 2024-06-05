@@ -1,33 +1,41 @@
 body {
     hyphens: none;
     font-family: "Nunito-sans", "Nunito";
-    font-weight: 300;
-    line-height: 1.6;
+    font-weight: 200;
+    line-height: 2.3rem;
     font-size: $default-font-size;
     hyphens: auto;
 }
 
 %heading-primary {
     font-family: "Playfair-display";
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 6rem;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 4rem;
+    text-wrap: pretty;
 }
 
 %heading-secondary {
     font-family: "Playfair-display";
     font-size: $header-font-size;
-    margin-bottom: 2rem;
     font-weight: 800;
-    font-size: 3.2rem;
-    line-height: 4.9rem;
+    font-size: 2.2rem;
+    line-height: 5rem;
 }
 
 %heading-tertiary {
     font-family: $font-curly-style;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 3rem;
+}
+
+%heading-quaternary {
+    font-family: "Old Standard TT";
+    font-size: 2.2rem;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 1rem;
 }
 
 .heading-primary {
@@ -42,6 +50,7 @@ body {
 }
 
 .heading-secondary {
+    @extend %heading-secondary;
     &--black {
         @extend %heading-secondary;
         color: #333;
@@ -74,27 +83,18 @@ body {
 }
 
 .heading-tertiary {
+    @extend %heading-tertiary;
     &--white {
         @extend %heading-tertiary;
         color: $color-white;
     }
 }
 
-
 .heading-quaternary {
-    font-family: "Old Standard TT";
-    font-size: 2.2rem;
-    font-weight: 400;
-
-    position: relative;
-    margin-bottom: 1rem;
+    @extend %heading-quaternary;
 }
 
-// .heading-quaternary {
-//     font-family: "Old Standard TT";
-//     font-size: 4rem;
-//     font-weight: 400;
-// }
+
 %heading-sub {
     font-style: italic;
     font-family: $font-curly-style;
@@ -114,8 +114,10 @@ body {
     margin: 0 auto;
     width: 8rem;
     border: none;
+    margin-top: 2rem;
     &--start {
         width: 8rem;
+        margin-top: 2rem;
     }
     &--pink {
         border-top: 1px solid $color-tertiary;
@@ -181,11 +183,6 @@ body {
     font-weight: 400;
 }
 
-.arrow {
-    
-}
-
-// icons
 
 .fa {
     font-family: "FontAwesome";

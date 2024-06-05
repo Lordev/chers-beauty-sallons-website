@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('partials/head.html')
+    <body>
+        @@include('partials/header.html') @@include('partials/nav.html')
+        <header class="parallax-bg contact-me-hero">&nbsp;</header>
+
+        <section class="heading-contact-me">
+            <div class="row u-margin-t-m">
+                <div class="grid-col-1-of-1">
+                    <div class="text-block u-c-text">
+                        <h1 class="heading-secondary--black u-margin-t-m">
+                            Neem contact op
+                        </h1>
+                        <hr class="sm-divider sm-divider--pink u-margin-b-m" />
+                        <h2
+                            class="heading-primary__sub heading-primary__sub--pink u-margin-b-m"
+                        ></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row u-margin-b-l">
+                <div class="grid-col-2-of-2--very-narrow">
+                    <div class="contact-box u-c-text">
+                        <i class="fa fa-map-marker u-margin-b-m" aria-hidden="true"></i>
+                        <div class="textbox">
+                            <strong>Adres:</strong>
+                            <p class="paragraph">A.voorbeeld 12, 1234VW, Stad</p>
+                            <p class="paragraph"></p>
+                            <p class="paragraph">
+                                Onze focus ligt voornamelijk op het bedienen van klanten
+                                binnen Rotterdam en omgeving.
+                            </p>
+
+                            <p class="paragraph">
+                                We streven ernaar om jouw visagie-ervaring zo naadloos en
+                                comfortabel mogelijk te maken. Neem contact met ons op
+                                voor meer informatie of om een visagiesessie op jouw
+                                locatie te plannen.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-box u-c-text">
+                        <i class="fa fa-envelope u-margin-b-m" aria-hidden="true"></i>
+                        <div class="textbox">
+                            <strong>Contact-informatie:</strong>
+                            <p class="paragraph">
+                                Voor zakelijke samenwerkingen, evenementen, of specifieke
+                                aanvragen, kun je me bereiken via onderstaande
+                                contactgegevens:
+                            </p>
+                            <strong>Telefoon:</strong>
+                            <p>(06) 55555555</p>
+                            <strong>E-mail:</strong>
+                            <p>voorbeeld.email.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="grid-col-1-of-1">
+                    <ul class="cta-banner__socials__list">
+                        <li class="cta-banner__item--socials">
+                            <a href="#" class="facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="cta-banner__item--socials">
+                            <a href="#" class="instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="cta-banner__item--socials">
+                            <a href="#" class="whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="s-map">
+            <div class="row">
+                <div class="grid-col-2-of-2">
+                    <div class="map-container" id="map">
+                        <h3>MAPS</h3>
+                        <div class="google-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus"
+                                width="600"
+                                height="450"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                        <!-- <div id="map"></div> -->
+                    </div>
+                    <form class="form-contact" method="post">
+                        <!-- Text Input -->
+                        <label for="name">Naam:</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <!-- Email Input -->
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <!-- Telefoonnummer Input -->
+                        <label for="phone">Telefoonnummer:</label>
+                        <input type="tel" id="phone" name="phone" required />
+
+                        <!-- Datum van de Dienst Input -->
+                        <label for="service-date">Datum van de Dienst:</label>
+                        <input
+                            type="date"
+                            id="service-date"
+                            name="service-date"
+                            required
+                        />
+
+                        <!-- Type Dienst (Dropdown) -->
+                        <label for="service-type">Type Dienst:</label>
+                        <select id="service-type" name="service-type">
+                            <option value="Bruidsmake-up">Bruidsmake-up</option>
+                            <option value="Beauty-en-party">Beauty-en-party</option>
+                            <option value="Festivals en Evenementen">
+                                Festivals en Evenementen
+                            </option>
+                            <option value="editorial">Editorial</option>
+                            <option value="anders">Anders...</option>
+                        </select>
+
+                        <!-- Locatie van de Dienst Input -->
+                        <label for="service-location">Locatie van de Dienst:</label>
+                        <input
+                            type="text"
+                            id="service-location"
+                            name="service-location"
+                            required
+                        />
+
+                        <!-- Extra Opmerkingen (Textarea) -->
+                        <label for="comments">Extra Opmerkingen:</label>
+                        <textarea id="comments" name="comments" rows="8"></textarea>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn--pink btn__secondary">
+                            Aanvraag Versturen
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        @@include('partials/footer.html')
+    </body>
+</html>

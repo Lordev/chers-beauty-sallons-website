@@ -1,6 +1,5 @@
-
-import Swiper from "swiper";
-import icons from "../../../img/icons.svg";
+import Swiper from 'swiper';
+import icons from '../../assets/img/_shared/icons.svg';
 
 export default class SliderView {
     constructor(parentElement, config) {
@@ -19,7 +18,7 @@ export default class SliderView {
     }
 
     _clear() {
-        this.parentElement.innerHTML = "";
+        this.parentElement.innerHTML = '';
     }
 
     renderSpinner() {
@@ -31,7 +30,7 @@ export default class SliderView {
         </div> 
         `;
         this._clear();
-        this.parentElement.insertAdjacentHTML("afterbegin", markup);
+        this.parentElement.insertAdjacentHTML('afterbegin', markup);
     }
 
     renderError(message = this._errorMessage) {
@@ -45,7 +44,7 @@ export default class SliderView {
                 <p>${message}</p>
             </div>`;
         this._clear();
-        this.parentElement.insertAdjacentHTML("afterbegin", markup);
+        this.parentElement.insertAdjacentHTML('afterbegin', markup);
     }
     x;
 
@@ -60,7 +59,7 @@ export default class SliderView {
                 <p>${message}</p>
             </div>`;
         this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+        this._parentElement.insertAdjacentHTML('afterbegin', markup);
     }
 
     onRenderComplete() {

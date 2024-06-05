@@ -1,5 +1,5 @@
-import { IG_URL, IG_KEY } from "./config/_config";
-import PhotoSwipeLightbox from "photoswipe/dist/photoswipe-lightbox.esm";
+import { IG_URL, IG_KEY } from './config/_config';
+import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm';
 
 import {
     headerController,
@@ -9,14 +9,14 @@ import {
     cardController,
     cardBeautyController,
     cardBridalController,
-} from "../js/controller/controller.js";
+} from '../js/controller/controller.js';
 
 // // document.addEventListener();
-if (window.location.pathname === "/index.html" || "/") {
+if (window.location.pathname === '/index.html' || '/') {
     headerController.createHeaderSlider();
     storyController.createSlider();
     reviewSController.createSlider();
-    portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
+    // portfolioController.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
 }
 
 cardController.createSlider();
@@ -24,25 +24,25 @@ cardBeautyController.createSlider();
 cardBridalController.createSlider();
 
 //! Header
-const header = document.querySelector(".container-header");
+const header = document.querySelector('.container-header');
 
 let lastScrollPosition = 0;
 let threshold = window.innerHeight / 3;
 let scrolledPastThreshold = false;
 
-window.addEventListener("scroll", function () {
+window.addEventListener('scroll', function () {
     let scrollPosition = window.scrollY;
 
     if (!scrolledPastThreshold && scrollPosition > threshold) {
-        // Set the flag to true once we have scrolled 50vh away from the top.
         scrolledPastThreshold = true;
+        // Set the flag to true once we have scrolled 50vh away from the top.
     }
 
     if (scrolledPastThreshold) {
         if (scrollPosition > lastScrollPosition && scrollPosition > threshold) {
             // Scrolling down
-            if (header.classList.contains("moveDown")) {
-                header.classList.remove("moveDown");
+            if (header.classList.contains('moveDown')) {
+                header.classList.remove('moveDown');
             }
         } else if (scrollPosition < lastScrollPosition) {
             // Scrolling up
@@ -51,11 +51,11 @@ window.addEventListener("scroll", function () {
                 // Reset the classes and flags when scrolling back above the 50vh threshold
                 scrolledPastThreshold = false;
                 // logo.style.transform = "scale(1)";
-                header.classList.remove("fixed", "moveDown");
+                header.classList.remove('fixed', 'moveDown');
             } else {
                 // logo.style.transform = "scale(0.7)";
-                header.classList.add("fixed");
-                header.classList.add("moveDown");
+                header.classList.add('fixed');
+                header.classList.add('moveDown');
             }
         }
     }
@@ -67,38 +67,36 @@ window.addEventListener("scroll", function () {
 let path = window.location.pathname;
 
 // Get the filename from the path
-let page = path.split("/").pop();
+let page = path.split('/').pop();
 
 // Remove the extension from the filename
-page = page.split(".").shift();
+page = page.split('.').shift();
 
-console.log(page);
+const menuItems = document.querySelectorAll('#menu-item');
+const diensten = document.querySelector('#diensten');
+const subMenuDiensten = document.querySelectorAll('#diensten-submenu-item');
 
-const menuItems = document.querySelectorAll("#menu-item");
-const diensten = document.querySelector("#diensten");
-const subMenuDiensten = document.querySelectorAll("#diensten-submenu-item");
-
-menuItems.forEach((item) => {
-    let href = item.getAttribute("href").split("/").pop().split(".").shift();
+menuItems.forEach(item => {
+    let href = item.getAttribute('href').split('/').pop().split('.').shift();
     if (href === page) {
-        item.classList.add("header__menu__bottom--active");
+        item.classList.add('header__menu__bottom--active');
     }
 });
 
-subMenuDiensten.forEach((item) => {
-    let href = item.getAttribute("href").split("/").pop().split(".").shift();
+subMenuDiensten.forEach(item => {
+    let href = item.getAttribute('href').split('/').pop().split('.').shift();
     if (href === page) {
-        diensten.classList.add("header__menu__bottom--active");
+        diensten.classList.add('header__menu__bottom--active');
     }
 });
 
-// //!PORTFOLIO
+// !PORTFOLIO;
 
-if (window.location.pathname === "/portfolio.html") {
+function observeImages() {
     const revealElement = function (entries, observer) {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.remove("hidden");
+                entry.target.classList.remove('hidden');
                 observer.unobserve(entry.target);
             }
         });
@@ -109,31 +107,42 @@ if (window.location.pathname === "/portfolio.html") {
         threshold: 0.2, // The element will be revealed when 20% of it is visible
     });
 
-    const allImages = document.querySelectorAll(".gallery-img");
+    const allImages = document.querySelectorAll('.gallery-img');
     allImages.forEach(function (element) {
         sectionObserver.observe(element);
-        element.classList.add("hidden");
+        element.classList.add('hidden');
     });
 
     // // renderImgs(imgZoom);
 
     const lightbox = new PhotoSwipeLightbox({
-        gallery: "#gallery",
-        children: "a",
+        gallery: '#gallery',
+        children: 'a',
 
-        initialZoomLevel: "fit",
-        secondaryZoomLevel: "fill",
+        initialZoomLevel: 'fit',
+        secondaryZoomLevel: 'fill',
 
-        imageClickAction: "next",
-        tapAction: "next",
+        imageClickAction: 'next',
+        tapAction: 'next',
 
         // tap delay is removed if set to false
         doubleTapAction: true,
-        pswpModule: () => import("photoswipe/dist/photoswipe.esm.js"),
+        pswpModule: () => import('photoswipe/dist/photoswipe.esm.js'),
     });
 
     lightbox.init();
 }
+
+const LoadGallery = function () {
+    try {
+        observeImages();
+    } catch (error) {
+        console.error(`Error loading gallery: ${error}`);
+    }
+};
+
+return LoadGallery();
+
 //! Contact me
 // or const {Loader} = require('google-maps'); without typescript
 
@@ -166,21 +175,21 @@ if (window.location.pathname === "/portfolio.html") {
 
 //! SIDE MENU
 
-const exitButton = document.querySelector(".nav-mobile__toggle");
-const sideMenuWindow = document.querySelector(".nav-mobile");
-const headerMenuButton = document.querySelector(".header__button");
-const dropDown = document.querySelector("#submenu-dropdown-link");
+const exitButton = document.querySelector('.nav-mobile__toggle');
+const sideMenuWindow = document.querySelector('.nav-mobile');
+const headerMenuButton = document.querySelector('.header__button');
+const dropDown = document.querySelector('#submenu-dropdown-link');
 
-exitButton.addEventListener("click", () => {
-    sideMenuWindow.style.transform = "translateX(100%)";
+exitButton.addEventListener('click', () => {
+    sideMenuWindow.style.transform = 'translateX(100%)';
 });
 
-headerMenuButton.addEventListener("click", () => {
-    sideMenuWindow.style.transform = "translateX(0%)";
+headerMenuButton.addEventListener('click', () => {
+    sideMenuWindow.style.transform = 'translateX(0%)';
 });
 
-dropDown.addEventListener("click", () => {
-    dropDown.style.height === "20px"
-        ? (dropDown.style.height = "170px")
-        : (dropDown.style.height = "20px");
+dropDown.addEventListener('click', () => {
+    dropDown.style.height === '20px'
+        ? (dropDown.style.height = '170px')
+        : (dropDown.style.height = '20px');
 });

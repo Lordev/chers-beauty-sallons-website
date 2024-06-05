@@ -47,7 +47,7 @@
     }
 }
 
-$base-path: "../../img/";
+$base-path: "../assets/img/";
 @mixin background-image($filename) {
     background-image: url("#{$base-path}#{$filename}");
 }

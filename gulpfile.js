@@ -1,21 +1,34 @@
 const gulp = require("gulp");
 const fileInclude = require("gulp-file-include");
+const replace = require("gulp-replace");
+const path = require("path");
+
+const alias = {
+    "@img": "../../src/assets/img",
+};
+
+gulp.task("html", () => {
+    return gulp
+        .src("src/views/*.html")
+        .pipe(replace(/@img/g, alias["@img"]))
+        .pipe(gulp.dest("dist"));
+});
 
 gulp.task("processHTML", function () {
     return gulp
-        .src("src/views/build/pages/*.html")
+        .src("src/views/**/*.html")
         .pipe(
             fileInclude({
                 prefix: "@@",
-                basepath: "@file",
+                basepath: "src/views/",
             })
         )
-        .pipe(gulp.dest("./views"));
+        .pipe(gulp.dest("./dist/views"));
 });
 
 gulp.task("watch", function () {
     gulp.watch(
-        ["src/views/build/pages/*.html", "src/views/build/partials/*.html"],
+        ["src/views/**/*.html", "src/views/**/*.html"],
         gulp.series("processHTML")
     );
 });
