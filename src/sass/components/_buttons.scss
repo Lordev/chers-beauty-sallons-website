@@ -5,9 +5,10 @@
         display: inline-block;
         text-transform: uppercase;
         font-weight: 400;
-        font-family: "Nunito";
+        font-family: 'Nunito';
         transition: 0.2s;
         border: none;
+        width: fit-content;
     }
 
     &__primary {
@@ -15,7 +16,7 @@
     }
 
     &__secondary {
-        padding: .7rem 3rem;
+        padding: 0.7rem 3rem;
     }
 
     &--pink {
@@ -56,7 +57,6 @@
     }
 }
 
-
 .btn-text {
     display: inline-block;
     position: relative;
@@ -67,13 +67,13 @@
         &:link,
         &:visited {
             font-size: 1.3rem;
-            font-family: "Nunito-sans";
+            font-family: 'Nunito-sans';
             font-weight: 600;
             color: $color-secondary;
         }
     }
     &::before {
-        content: "";
+        content: '';
         position: absolute;
         height: 2px;
         bottom: 0;
@@ -81,9 +81,7 @@
         width: 1px;
         background-color: $color-secondary;
         transform: translateX(-50%);
-        transition:
-            transform 0.4s,
-            opacity 0.3s ease-in-out;
+        transition: transform 0.4s, opacity 0.3s ease-in-out;
         opacity: 0;
         transform-origin: center;
     }

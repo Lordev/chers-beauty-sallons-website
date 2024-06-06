@@ -8,11 +8,7 @@ $color-secondary-dark: #b95c50;
 $color-tertiary-dark: #d48c70;
 
 $accent-color: #fb6090;
-$accent-color2: #7ffcc5;
 $accent-color3: #7bacae;
-
-$accent-color-dark: #7a3a9b;
-$accent-color2-dark: #5e935d;
 
 $color-primary-light: #f9f1f0;
 $color-primary-light2: #f7f7f7;
@@ -27,7 +23,9 @@ $color-black: #111111;
 
 $color-gray: #bdbdbd;
 $color-gray2: #aaaaaa;
-$color-gray3: #dadada;
+$color-gray3: #999999;
+
+$color-gray-light: #dadada;
 
 //FONT SIZES
 $default-font-size: 1.6rem;
@@ -35,7 +33,7 @@ $header-font-size: 3.6rem;
 $larger-font-size: 1.9rem;
 
 //CURLY SUB HEADERS
-$font-curly-style: "playfair display";
+$font-curly-style: 'playfair display';
 
 //SHADOWS
 $minimal-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
@@ -51,4 +49,26 @@ $border-thickness: 1rem;
 
 //PADDING VERTICAL
 $vertical-padding-large: 10rem 0;
+$vertical-padding-medium: 8rem 0;
 $vertical-padding-small: 1rem 0;
+
+//GRID
+$max-width: 125rem; //1250px
+$gutter-vertical: 1rem;
+$gutter-horizontal: 4rem;
+
+//FLEXBIN GALLERY
+
+// Desktop, large screen devices
+$flexbin-row-height: 500px; // height of image rows
+$flexbin-space: 3px; // space between images
+
+// Tablet, medium screen devices
+$flexbin-tablet-max: 800px;
+$flexbin-row-height-tablet: 300px;
+$flexbin-space-tablet: 8px;
+
+// Phone, small screen devices
+$flexbin-phone-max: 200px;
+$flexbin-row-height-phone: 200px;
+$flexbin-space-phone: 4px;

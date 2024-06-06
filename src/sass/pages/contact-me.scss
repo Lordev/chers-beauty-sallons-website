@@ -2,8 +2,7 @@
     position: relative;
     display: block;
     // box-shadow: $minimal-shadow;
-    background:
-        linear-gradient(
+    background: linear-gradient(
                 to right,
                 $color-primary $border-thickness,
                 transparent 0,
@@ -32,28 +31,5 @@
         left;
 }
 
-.form-contact {
-    padding: 0.8rem;
-    line-height: 3.3rem;
-    & > * {
-        margin-bottom: 1rem;
-        display: block;
-        width: 100%;
-    }
-}
-
-input {
-    font-size: 1.6rem;
-    outline: none; /* Remove default focus outline */
-    border-width: 0 0 1px;
-    padding: 0;
-    background: none;
-    line-height: 1.5em;
-    font-weight: 100;
-    &:valid {
-        border-bottom: solid rgba($color-secondary, 0.9);
-    }
-    &:invalid {
-        border-bottom: solid rgba($color-gray, 0.5);
-    }
+.contact-me-text-box {
 }

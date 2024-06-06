@@ -76,7 +76,35 @@
         transform-origin: 84% 16%;
     }
     100% {
-        transform: scale(1.2);
+        transform: scale(1.07);
         transform-origin: right top;
     }
+}
+
+// hover animations
+
+.animation-hover-move-up {
+    transition: transform 0.3s;
+    &:hover {
+        transform: translateY(-0.2rem);
+    }
+}
+
+//swiper slider animations
+
+.swiper-slide > .swiper-slide-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.swiper-scale-effect .swiper-slide-cover {
+    transition: 12s ease-out;
+    transform: scale(1.1);
+}
+
+.swiper-scale-effect .swiper-slide.swiper-slide-active .swiper-slide-cover {
+    transform: scale(1);
 }

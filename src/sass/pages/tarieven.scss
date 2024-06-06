@@ -1,58 +1,58 @@
 .s1-tarieven {
-    position: relative;
-    display: block;
-    background: linear-gradient(
-            to bottom,
-        $color-primary $border-thickness,
-            $color-white2 0,
-            $color-white2 100%
-        )
-        left;
-    padding: 4rem 0;
+	position: relative;
+	display: block;
+	background: linear-gradient(
+			to bottom,
+			$color-primary $border-thickness,
+			$color-white2 0,
+			$color-white2 100%
+		)
+		left;
+	padding: 4rem 0;
 }
 
 .s2-tarieven {
-    background: $color-white2;
-    padding: 8rem 0;
+	background: $color-white2;
+	padding: 8rem 0;
 }
 
 .s1-tarieven-tabel {
-    background-color: $color-primary-light;
-    padding: 8rem 0;
+	background-color: $color-primary-light;
+	padding: 8rem 0;
 }
 
 .table {
-    text-align: left;
-    border-collapse: collapse;
-    align-self: self-start;
-    &__header {
-        & > * {
-            padding-bottom: 1rem;
-            font-style: oblique;
-        }
-    }
-    &__header,
-    &__items {
-        line-height: 4rem;
-        text-wrap: nowrap;
-        & > :nth-child(1),
-        & > :nth-child(2) {
-            font-family: "Nunito";
-            font-weight: 400;
-            font-size: 1.8rem;
-        }
-        & > :nth-child(2) {
-            text-align: right;
-        }
-    }
+	text-align: left;
+	align-self: self-start;
+	padding: 0 2rem;
+	&__header {
+		& > * {
+			padding-bottom: 1rem;
+			font-style: oblique;
+		}
+	}
+	&__header,
+	&__items {
+		line-height: 4rem;
+		text-wrap: nowrap;
+		& > :nth-child(1),
+		& > :nth-child(2) {
+			font-family: 'Nunito';
+			font-weight: 400;
+			font-size: 1.8rem;
+		}
+		& > :nth-child(2) {
+			text-align: right;
+		}
+	}
 
-    &__description {
-        & > * {
-            color: #666666;
-            font-size: 1.4rem;
-            font-style: italic;
-            text-align: left;
-            padding: 0 3rem;
-        }
-    }
+	&__description {
+		& > * {
+			color: #666666;
+			font-size: 1.4rem;
+			font-style: italic;
+			text-align: left;
+			padding: 0 3rem;
+		}
+	}
 }

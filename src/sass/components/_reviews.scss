@@ -1,131 +1,120 @@
 .reviews {
-    position: relative;
-    display: grid;
-    align-self: center;
-    justify-self: center;
-    width: 100%;    
-    width: 40%;
-    padding: 2rem;
-    background: $color-primary;
-    box-shadow: $medium-shadow;
-    
-    
-    @include respond (desktop) {
-        width: 55%;
+	position: relative;
+	display: grid;
+	align-self: center;
+	justify-self: center;
+	max-width: 90rem;
+	padding: 2rem;
+	margin: 0 1rem;
+	background: $color-primary;
+	box-shadow: $medium-shadow;
 
-    }
-    @include respond (tab-land) {
-        width: 70%;
-    }
-    @include respond (tab-port) {
-        width: 80%;
-    }
-    @include respond (phone) {
-        width: 95%;
-    }
+	&::before {
+		content: '';
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(
+			-45deg,
+			$color-white 0%,
+			$color-primary 100%
+		);
+		transform: translate3d(1rem, 1rem, 0) scale(0.88);
+		filter: blur(20px);
+		opacity: 9;
+		transition: opacity 0.3s;
+		border-radius: inherit;
+	}
 
-    &::before {
-        content: "";
-        z-index: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(-45deg, $color-white 0%, $color-primary 100%);
-        transform: translate3d(1rem, 1rem, 0) scale(0.88);
-        filter: blur(20px);
-        opacity: 9;
-        transition: opacity 0.3s;
-        border-radius: inherit;
-    }
+	.box::after {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: inherit;
+		border-radius: inherit;
+	}
 
-    .box::after {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: inherit;
-        border-radius: inherit;
-    }
+	&__swiper {
+		align-self: center;
+		width: 100%;
 
-    &__swiper {
-        align-self: center;
-        width: 100%;
-        
-        height: 100%;
-        border-radius: 3px;
+		height: 100%;
+		border-radius: 3px;
 
-        &__card {
-            background: $color-primary-light;
-            display: grid;
-            height: 60rem;
-            justify-items: center;
-            &::before {
-                content: "\201C";
-                position: absolute;
-                top: -1.75rem;
-                left: 5rem;
-                line-height: 1;
-                font-size: 20rem;
-                color: $color-gray;
-                opacity: 0.5;
-                font-family: sans-serif;
-                z-index: 1;
-            }
-        }
-    }
-    &__text {
-        align-self: end;
-        padding: 0 10rem;
-        @include respond (phone) {
-            padding: 0 5rem;
-        }
-    }
-    &__reviewer {
-        align-self: start;
-        display: flex;
-        align-items: center;
-        &__name {
-            margin-left: 2rem;
-            color: $color-secondary;
-            font-weight: 800;
-            font-size: 1.4rem;
-        }
-        &__img {
-            clip-path: ellipse(42% 50% at 50% 50%);
-        }
-    }
+		&__card {
+			background: $color-primary-light;
+			display: grid;
+			height: 60rem;
+			justify-items: center;
+			&::before {
+				content: '\201C';
+				position: absolute;
+				top: -1.75rem;
+				left: 5rem;
+				line-height: 1;
+				font-size: 20rem;
+				color: $color-gray;
+				opacity: 0.5;
+				font-family: sans-serif;
+				z-index: 1;
+			}
+		}
+	}
+	&__text {
+		align-self: end;
+		padding: 0 10rem;
+		@include respond(phone) {
+			padding: 0 5rem;
+		}
+	}
+	&__reviewer {
+		align-self: start;
+		display: flex;
+		align-items: center;
+		&__name {
+			margin-left: 2rem;
+			color: $color-secondary;
+			font-weight: 800;
+			font-size: 1.4rem;
+		}
+		&__img {
+			clip-path: ellipse(42% 50% at 50% 50%);
+		}
+	}
 }
 
 #default-slider {
-    .swiper-pagination {
-        margin-bottom: 4rem;
-        .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            line-height: 20px;
-            font-size: 12px;
-            color: #000;
-            opacity: 1;
-            background: rgba(0, 0, 0, 0.2);
-        }
+	.swiper-pagination {
+		margin-bottom: 4rem;
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			line-height: 20px;
+			font-size: 12px;
+			color: #000;
+			opacity: 1;
+			background: rgba(0, 0, 0, 0.2);
+		}
 
-        .swiper-pagination-bullet-active {
-            color: #fff;
-            background: $color-primary;
-        }
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        --swiper-navigation-size: 3rem;
-        --swiper-navigation-sides-offset: 2rem;
-        color: $color-gray2;
-        &:hover {
-            color: $color-primary;
-        }
-    }
+		.swiper-pagination-bullet-active {
+			color: #fff;
+			background: $color-primary;
+		}
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		--swiper-navigation-size: 3rem;
+		--swiper-navigation-sides-offset: 2rem;
+		color: $color-gray2;
+		&:hover {
+			color: $color-primary;
+		}
+	}
 }

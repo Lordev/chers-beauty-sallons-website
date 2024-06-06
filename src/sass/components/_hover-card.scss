@@ -1,115 +1,131 @@
-
 %image-setting {
-    background-size: cover;
-    // background-repeat: no-repeat;
-    backface-visibility: hidden;
+	background-size: cover;
+	// background-repeat: no-repeat;
+	backface-visibility: hidden;
 }
 %image-hover {
-    transition: transform 0.6s ease;
-    background-position: center;
+	transition: transform 0.6s ease;
+	background-position: center;
 
-    transform: scale(1.02);
-    &:hover {
-        transform: scale(1.08);
-    }
+	transform: scale(1.02);
+	&:hover {
+		transform: scale(1.08);
+	}
 }
 
 .hover-card {
-    border-radius: 3px;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    // box-shadow: $medium-shadow;
+	border-radius: 3px;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	max-width: 40rem;
+	z-index: 1;
 
-    &__img-hover {
-        &--1 {
-            @extend %image-setting;
-            @extend %image-hover;
-            background-position: top;
-            height: 50rem;
-            @include background-image("home/home-model-card.jpg");
-        }
-        &--2 {
-            height: 70rem;
-            @extend %image-setting;
-            @extend %image-hover;
-            @include background-image("tarieven/tarieven-bridal.jpg");
-        }
-        &--3 {
-            height: 70rem;
-            @extend %image-setting;
-            @extend %image-hover;
-            @include background-image("tarieven/tarieven-beauty.jpg");
-        }
-        &--4 {
-            height: 40rem;
-            @extend %image-setting;
-            @extend %image-hover;
-            @include background-image("diensten/festival/festival-applying-make-up.jpg");
-        }
-        &--5 {
-            height: 40rem;
-            @extend %image-setting;
-            @extend %image-hover;
-            @include background-image("diensten/festival/festival-headshot-02.jpg");
-        }
-        &--6 {
-            height: 40rem;
+	@include respond(tab-land) {
+		margin: 0 auto;
+	}
 
-            @extend %image-setting;
-            @extend %image-hover;
-            @include background-image("diensten/editorials/editorials-headshot-01.jpg")
-        }
+	&__img-hover {
+		&--1 {
+			@extend %image-setting;
+			@extend %image-hover;
+			background-position: top;
+			height: 50rem;
+			@include background-image('home/home-model-card.jpg');
+		}
+		&--2 {
+			height: 70rem;
+			@extend %image-setting;
+			@extend %image-hover;
+			@include background-image('tarieven/tarieven-bridal.jpg');
+		}
+		&--3 {
+			height: 70rem;
+			@extend %image-setting;
+			@extend %image-hover;
+			@include background-image('tarieven/tarieven-beauty.jpg');
+		}
+		&--4 {
+			height: 40rem;
+			@extend %image-setting;
+			@extend %image-hover;
+			@include background-image(
+				'diensten/festival/festival-applying-make-up.jpg'
+			);
+		}
+		&--5 {
+			height: 40rem;
+			@extend %image-setting;
+			@extend %image-hover;
+			@include background-image(
+				'diensten/festival/festival-headshot-02.jpg'
+			);
+		}
+		&--6 {
+			height: 40rem;
 
-        &--7 {
-            height: 40rem;
+			@extend %image-setting;
+			@extend %image-hover;
+			@include background-image(
+				'diensten/editorials/editorials-headshot-01.jpg'
+			);
+		}
 
-            @extend %image-setting;
-            @extend %image-hover;
-            @include background-image("diensten/editorials/editorials-headshot-02.jpg")
-        }
-    }
+		&--7 {
+			height: 40rem;
 
-    &__img-zoom {
-        @extend %image-setting;
-        animation-name: moveInLeft, zoomAnimation;
-        animation-duration: 1.5s, 5s;
-        animation-iteration-count: 1, infinite;
-        height: 100%; 
-        min-height: 70rem;
+			@extend %image-setting;
+			@extend %image-hover;
+			@include background-image(
+				'diensten/editorials/editorials-headshot-02.jpg'
+			);
+		}
+	}
 
-        &--1 {
-            @include background-image("diensten/bridal/bridal-pose.jpg");
-            background-position: center;
-        }
+	&__img-zoom {
+		@extend %image-setting;
+		animation-name: moveInLeft, zoomAnimation;
+		animation-duration: 1.5s, 5s;
+		animation-iteration-count: 1, infinite;
+		height: 100%;
+		min-height: 70rem;
 
-        &--2 {
-            @include background-image("diensten/bridal/bridal-makeup.jpg");
-            background-position: 0 10%;
-        }
+		&--1 {
+			@include background-image('diensten/bridal/bridal-pose.jpg');
+			background-position: center;
+		}
 
-        &--3 {
-            @include background-image("diensten/festival/festival-headshot-01.jpg");
-            background-position: bottom
-        }
+		&--2 {
+			@include background-image('diensten/bridal/bridal-makeup.jpg');
+			background-position: 0 10%;
+		}
 
-        &--4 {
-            @include background-image("diensten/beauty/beauty-headshot-01.jpg");
-        }
+		&--3 {
+			@include background-image(
+				'diensten/festival/festival-headshot-01.jpg'
+			);
+			background-position: bottom;
+		}
 
-        &--5 {
-            background-position: center;
-            @include background-image("diensten/beauty/beauty-headshot-02.jpg");
-        }
+		&--4 {
+			@include background-image('diensten/beauty/beauty-headshot-01.jpg');
+		}
 
-        &--6 {
-            background-position: center;
-            @include background-image("diensten/lashes/lashes-make-up-kit.jpg");
-        }
-        
-        &--7 {
-            background-position: center;
-            @include background-image("diensten/editorials/editorials-catwalk.jpg");
-        }
-    }
+		&--5 {
+			background-position: center;
+			@include background-image('diensten/beauty/beauty-headshot-02.jpg');
+		}
+
+		&--6 {
+			background-position: center;
+			@include background-image('diensten/lashes/lashes-make-up-kit.jpg');
+		}
+
+		&--7 {
+			background-position: center;
+			@include background-image(
+				'diensten/editorials/editorials-catwalk.jpg'
+			);
+		}
+	}
 }

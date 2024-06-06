@@ -33,6 +33,7 @@ export const fadeSlider = {
     effect: 'fade',
     centeredSlides: true,
     crossfade: true,
+    grabCursor: false,
     autoplay: {
         delay: 8000,
         waitForTransition: true,

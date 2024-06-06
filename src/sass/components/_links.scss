@@ -1,0 +1,16 @@
+.link {
+    transition: color 0.1s ease-in;
+    &--pink {
+        &:hover,
+        &:active {
+            color: $color-tertiary;
+        }
+    }
+
+    &--dark-pink {
+        &:hover,
+        &:active {
+            color: $color-secondary-dark;
+        }
+    }
+}

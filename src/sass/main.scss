@@ -1,42 +1,44 @@
 //abstracts
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
 //base
-@import "base/animation";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/animation';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
 //components
-@import "components/buttons";
-@import "components/card-slider";
-@import "components/cta-banner";
-@import "components/card.scss";
-@import "components/feature-box";
-@import "components/google-map";
-@import "components/heading-banner";
-@import "components/hover-card";
-@import "components/infinite-slider";
-@import "components/parallax-bg";
-@import "components/price-card";
-@import "components/reviews";
-@import "components/social-icons";
-@import "components/spinner";
-@import "components/time-table";
+@import 'components/buttons';
+@import 'components/card-slider';
+@import 'components/cta-banner';
+@import 'components/card.scss';
+@import 'components/contact-form.scss';
+@import 'components/feature-box';
+@import 'components/google-map';
+@import 'components/heading-banner';
+@import 'components/hover-card';
+@import 'components/infinite-slider';
+@import 'components/links';
+@import 'components/parallax-bg';
+@import 'components/price-card';
+@import 'components/reviews';
+@import 'components/social-icons';
+@import 'components/spinner';
+@import 'components/time-table';
 
 //layout
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/hero";
-@import "layout/nav";
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/nav';
 
 //Pages
-@import "pages/beauty-en-party.scss";
-@import "pages/contact-me.scss";
-@import "pages/diensten.scss";
-@import "pages/festival.scss";
-@import "pages/home";
-@import "pages/portfolio";
-@import "pages/tarieven";
+@import 'pages/beauty-en-party.scss';
+@import 'pages/contact-me.scss';
+@import 'pages/diensten.scss';
+@import 'pages/festival.scss';
+@import 'pages/home';
+@import 'pages/portfolio';
+@import 'pages/tarieven';

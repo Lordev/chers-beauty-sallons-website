@@ -1,55 +1,55 @@
 .card-slider {
-    width: 34rem;
-    height: 55rem;
+	width: 34rem;
+	height: 55rem;
 
-    @include respond(phone) {
-        width: 24rem;
-        height: 45rem;
+	@include respond(tab-port) {
+		width: 24rem;
+		margin: $vertical-padding-medium;
+		height: 45rem;
+	}
 
-    }
-
-    &__img {
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        box-shadow: $medium-shadow;
-        display: block;
-        &--1 {
-            @include background-image("/home/home-about-01.jpg");
-        }
-        &--2 {
-            @include background-image("/home/home-about-02.jpg");
-        }
-        &--3 {
-            @include background-image("/home/home-about-03.jpg");
-        }
-        &--4 {
-            @include background-image("/home/home-about-04.jpg");
-        }
-        &--5 {
-            @include background-image("/home/home-about-05.jpg");
-        }
-    }
+	&__img {
+		background-size: cover;
+		background-position: center;
+		border-radius: 10px;
+		box-shadow: $medium-shadow;
+		display: block;
+		&--1 {
+			@include background-image('/home/home-about-01.jpg');
+		}
+		&--2 {
+			@include background-image('/home/home-about-02.jpg');
+		}
+		&--3 {
+			@include background-image('/home/home-about-03.jpg');
+		}
+		&--4 {
+			@include background-image('/home/home-about-04.jpg');
+		}
+		&--5 {
+			@include background-image('/home/home-about-05.jpg');
+		}
+	}
 }
 
 .main-content {
-    margin: auto;
-    padding: 0 10rem;
-    @include respond (phone) {
-        padding: 0 5rem;
-    }
+	margin: auto;
+	padding: 0 10rem;
+	@include respond(phone) {
+		padding: 0 5rem;
+	}
 }
 
 .swiper-container {
-    /* change container to overflow visible */
-    overflow: visible;
-    /* add enough padding to account for the shadow */
-    padding: 0 2rem;
+	/* change container to overflow visible */
+	overflow: visible;
+	/* add enough padding to account for the shadow */
+	padding: 0 2rem;
 }
 
 .my-swiper-wrapper {
-    /* add the overflow to the outer wrapper */
-    // overflow: hidden;
-    /* add negative margin to counteract the padding */
-    margin: -20px;
+	/* add the overflow to the outer wrapper */
+	// overflow: hidden;
+	/* add negative margin to counteract the padding */
+	margin: -20px;
 }

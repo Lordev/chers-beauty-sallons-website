@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     display: block;
-    background-color: $color-gray3;
+    background-color: $color-gray-light;
     padding-top: 8rem;
     @include respond(tab-port) {
         // text-align: center;
@@ -20,21 +20,17 @@
     &__section:not(:first-of-type) {
         border: none;
         border-left: 1px solid rgba($accent-color, 0.8);
-        
+
         @include respond(tab-port) {
             border-left: none;
             border-top: 1px solid rgba($accent-color, 0.8);
         }
     }
 
-    &__list {
-        &__item {
-            list-style: none;
-        }
-        &--socials {
-            display: flex;
-            gap: 3rem;
-        }
+    &__socials-list {
+        display: flex;
+        justify-content: space-between;
+        width: 12rem;
     }
 
     &__autograph {

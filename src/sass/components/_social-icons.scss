@@ -1,22 +1,3 @@
-.fa-brands {
-    filter: opacity(0.6) grayscale(100);
-    transition: all 0.3s;
-    // box-shadow: $minimal-shadow;
-    &:hover {
-        transform: translateY(-2px);
-        // box-shadow: $medium-shadow;
-        color: $color-secondary-dark;
-        transform: scale(1.2);
-        filter: opacity(0.9) grayscale(0);
-    }
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(2px);
-        // box-shadow: $soft-shadow;
-    }
-}
-
 .fa-map-marker,
 .fa-envelope {
     color: $color-tertiary;
@@ -25,4 +6,20 @@
 
 .fa-solid {
     color: $color-white;
+}
+
+.social-icons {
+    transition: all 0.3s;
+    color: $color-gray3;
+    &:hover {
+        transform: translateY(-2px);
+        color: $color-secondary-dark;
+        transform: scale(1.2);
+        filter: opacity(0.9) grayscale(0);
+    }
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(2px);
+    }
 }
