@@ -1,65 +1,63 @@
-.nav-mobile {    
-    display: block;
-    width: 40%;
-    height: 100%;
-    position: fixed;
-    right: 0;
-    top: 0;
-    background-color: rgba($color-black , .98);
-    z-index: 50;
-    transform: translateX(100%);
-    transition: transform .4s ease-in;
-    &__toggle {
-        float: right;
-        padding: 3rem 3rem 0 0;
-        cursor: pointer;
-    }
+.nav-mobile {
+	display: block;
+	width: 40%;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: rgba($color-black, 0.98);
+	z-index: 999;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in;
+	&__toggle {
+		float: right;
+		padding: 3rem 3rem 0 0;
+		cursor: pointer;
+	}
 
-    &__menu {
-        width: 100%;
-        height: 100%;
-        padding-left: 2rem;
+	&__menu {
+		width: 100%;
+		height: 100%;
+		padding-left: 2rem;
 
-        a {
-            color: $color-white;
-        }
+		a {
+			color: $color-white;
+		}
 
-        &--items {
-            width: 100%;
-            height: 30%;
-            flex-direction: column;
-            justify-content: space-around;
-            margin-top: 10rem;
-        }
+		&--items {
+			width: 100%;
+			height: 30%;
+			flex-direction: column;
+			justify-content: space-around;
+			margin-top: 10rem;
+		}
 
-        &--item {
-            margin: 2rem 0;
-            height: 20px;
-        }
+		&--item {
+			margin: 2rem 0;
+			height: 20px;
+		}
 
-        &--item:nth-child(2){
-            overflow: hidden;
-            transition: height ease-in .3s;
-        }
+		&--item:nth-child(2) {
+			overflow: hidden;
+			transition: height ease-in 0.3s;
+		}
 
-        &--arrow {
-            float: right;
-            margin-right: 2rem;
-            color: white;
-        }
-    }
-    
-    &__submenu {
+		&--arrow {
+			float: right;
+			margin-right: 2rem;
+			color: white;
+		}
+	}
 
-        &--link {
-            margin: .8rem 0 .5rem 3rem ;
-        }
-    }
+	&__submenu {
+		&--link {
+			margin: 0.8rem 0 0.5rem 3rem;
+		}
+	}
 }
 
-
 @media screen and (min-width: 900px) {
-    .nav-mobile {
-        display: none;
-    }
+	.nav-mobile {
+		display: none;
+	}
 }

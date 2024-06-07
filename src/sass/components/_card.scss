@@ -1,105 +1,105 @@
 .cards {
-    width: 70%;
-    margin: 0 auto;
-    transform: translateY(-70%);
-    
-    @include respond (big-desktop) {
-        width: 60%;
-    }
-    @include respond (tab-land) {
-        width: 80%;
-    }
-    @include respond (tab-port) {
-        width: 90%;
-    }
-    @include respond (phone) {
-        width: 95%;
-    }
-    &__swiper {
-        width: 100%;
-    }
+	width: 70%;
+	margin: 0 auto;
+	transform: translateY(-70%);
+	@include respond(desktop) {
+		width: 80%;
+	}
+	@include respond(tab-land) {
+		width: 60rem;
+	}
+	@include respond(phone) {
+		width: 95%;
+	}
+	&__swiper {
+		width: 100%;
+	}
 
-    &__pagination {
-        color: red;
-    }
+	&__pagination {
+		color: red;
+	}
 }
 
 .card {
-    background: $color-white;
-    opacity: .9;
-    text-align: center;
-    display: grid;
-    height: 25rem;
-    grid-template-rows: 10px repeat(3, auto);
-    gap: 2rem;
-    border-radius: 10px;
-    margin-bottom: 5rem;
-    padding-bottom: 2rem;
+	opacity: 0.9;
+	text-align: center;
+	height: 25rem;
+	background: $color-white;
+	margin-bottom: 5rem;
 
-    &__link,
-    &__exit,
-    &__icon {
-        position: relative;
-        text-decoration: none;
-        color: $color-tertiary;
-    }
+	&__link,
+	&__exit,
+	&__icon {
+		position: relative;
+		text-decoration: none;
+		color: $color-tertiary;
+	}
 
-    &__link::after {
-        position: absolute;
-        top: 25px;
-        left: 0;
-        content: "";
-        width: 0%;
-        height: 3px;
-        background-color: $color-primary;
-    }
+	&__link::after {
+		position: absolute;
+		top: 25px;
+		left: 0;
+		content: '';
+		width: 0%;
+		height: 3px;
+		background-color: $color-primary;
+	}
 
-    &__link:hover::after {
-        width: 100%;
-    }
+	&__link:hover::after {
+		width: 100%;
+	}
 
-    &__exit {
-        grid-row: 1/2;
-        justify-self: end;
-    }
+	&__exit {
+		grid-row: 1/2;
+		justify-self: end;
+	}
 
-    &__icon {
-        margin: 0 auto;
-        grid-row: 2/3;
-        font-size: 40px;
-        @include respond (tab-port) {
-            font-size: 25px;
-        }
-    }
+	&__icon {
+		margin: 0 auto;
+		grid-row: 2/3;
+		font-size: 40px;
+		@include respond(tab-port) {
+			font-size: 25px;
+		}
+	}
 
-    &__title {
-        padding: 0 2rem;
-        grid-row: 3/4;
-    }
+	&__title {
+		padding: 0 2rem;
+		grid-row: 3/4;
+	}
 
-    &__apply {
-        margin: 0 auto;
-        grid-row: 4/5;
-        align-self: center;
-    }
+	&__apply {
+		margin: 0 auto;
+		grid-row: 4/5;
+		align-self: center;
+	}
+
+	&__content {
+		height: 100%;
+		max-width: 36rem;
+		margin: 0 auto;
+		display: grid;
+		grid-template-rows: 20px repeat(3, auto) 20px;
+		gap: 2rem;
+		border-radius: 10px;
+	}
 }
 
-
 #cards-slider {
-    .swiper-pagination {
-        .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            line-height: 20px;
-            font-size: 12px;
-            color: #000;
-            opacity: .7;
-            background: rgba(0, 0, 0, 0.2);
-        }
+	.swiper-pagination {
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			line-height: 20px;
+			font-size: 12px;
+			color: #000;
+			opacity: 0.7;
+			background: rgba(0, 0, 0, 0.2);
+		}
 
-        .swiper-pagination-bullet-active {
-            color: #fff;
-            background: $color-white;
-        }
-    }
+		.swiper-pagination-bullet-active {
+			color: $color-white;
+			background: $color-white;
+		}
+	}
 }

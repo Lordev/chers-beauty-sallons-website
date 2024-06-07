@@ -1,186 +1,151 @@
 %header {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    top: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 60vh;
+	top: 0;
 }
 
-%slider-hero {
-    height: 60vh;
-    .swiper-pagination {
-        margin-bottom: 4rem;
-        .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            line-height: 20px;
-            font-size: 12px;
-            color: #000;
-            opacity: 1;
-            background: $color-white;
-        }
-
-        .swiper-pagination-bullet-active {
-            color: #fff;
-            background: $color-primary;
-        }
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        padding: 4rem;
-        background-color: rgba($color-black, 0.3);
-        border-radius: 50%;
-        --swiper-navigation-size: 3rem;
-        --swiper-navigation-sides-offset: 3rem;
-        color: $color-gray;
-        transition: opacity 0.4s ease-out;
-        &:hover {
-            color: $color-primary;
-        }
-    }
+%banner-height {
+	height: 60vh;
 }
 
-.home-hero {
-    &__swiper {
-        &::after {
-            @include layer(1);
-            background-color: rgba($color-white, 0.7);
-            backdrop-filter: blur(1.1);
-            bottom: 0;
-        }
-        min-height: 35rem;
-        height: 15vh;
-        position: relative;
-    }
+%diensten-banner-height {
+	height: 30vh;
+}
 
-    &__img {
-        background-position: center;
-        background-size: cover;
-        transform: scale(1);
+//!HOME
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.home-banner-slider {
+	&__swiper {
+		&::after {
+			@include layer(1);
+			background-color: rgba($color-white, 0.7);
+			backdrop-filter: blur(1.1);
+			bottom: 0;
+		}
+		min-height: 30rem;
+		height: 20vh;
+		position: relative;
+	}
 
-        &::before {
-            @include layer(-1);
-            transition: all ease 0.2s;
-            background-color: rgba($color-black, 0.1);
-        }
+	&__img {
+		background-position: center;
+		background-size: cover;
+		transform: scale(1);
 
-        &--1 {
-            @include background-image('home/home-banner-01.jpeg');
-            background-position: 0 70%;
-        }
-        &--2 {
-            @include background-image('home/home-banner-02.jpeg');
-            background-position: 0% 60%;
-        }
-        &--3 {
-            @include background-image('home/home-banner-03.jpeg');
-            background-position: 0 30%;
-        }
-        &--4 {
-            @include background-image('home/home-banner-04.jpeg');
-            background-position: top;
-            background-position: 0 40%;
-        }
-        &--active {
-            transform: scale(1.4);
-        }
-    }
+		&--1 {
+			@include background-image('banners/home-banner-slide-01@1600w.jpg');
+			background-position: 0 70%;
+		}
+		&--2 {
+			@include background-image('banners/home-banner-slide-02@1600w.jpg');
+			background-position: 0% 60%;
+		}
+		&--3 {
+			@include background-image('banners/home-banner-slide-03@1600w.jpg');
+			background-position: 0 30%;
+		}
+		&--4 {
+			@include background-image('banners/home-banner-slide-04@1600w.jpg');
+			background-position: top;
+			background-position: 0 40%;
+		}
+	}
 }
 
 //!DIENSTEN
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 .bruidsmake-up-banner {
-    &--top {
-        height: 30vh;
-        @include background-image('/diensten/bridal/bridal-banner.jpg');
-        top: 0;
-    }
-    &--middle {
-        position: relative;
-        z-index: 0;
-        height: 30vh;
-        @include background-image('diensten/bridal/bridal-banner-middle.webp');
-        filter: brightness(0.4) blur(1);
-    }
+	&--top {
+		@extend %diensten-banner-height;
+		@include background-image('/banners/bridal-banner-top@1600w.jpg');
+		top: 0;
+	}
+	&--middle {
+		position: relative;
+		z-index: 0;
+		@extend %diensten-banner-height;
+		@include background-image('/banners/bridal-banner-top@1600w.jpg');
+	}
 }
 
 .festival-banner {
-    position: relative;
-    height: 30vh;
-    @include background-image('diensten/festival/festival-banner.jpg');
-    top: 0;
+	position: relative;
+	@extend %diensten-banner-height;
+	@include background-image('/banners/festival-banner@1600w.jpg');
+	top: 0;
 }
 
 .beauty-en-party-banner {
-    &--top {
-        height: 30vh;
-        @include background-image('diensten/beauty/beauty-banner.jpg');
-        top: 0;
-    }
-    &--middle {
-        height: 30vh;
-        @include background-image('diensten/beauty/beauty-banner-middle.jpg');
-    }
+	&--top {
+		@extend %diensten-banner-height;
+		@include background-image('banners/beauty-banner@1600w.jpg');
+		top: 0;
+	}
+	&--middle {
+		@extend %diensten-banner-height;
+		@include background-image('banners/beauty-banner-middle@1600w.jpg');
+	}
 }
 
 .lashes-en-brows-banner {
-    height: 30vh;
-    top: 0;
-    @include background-image('diensten/lashes/lashes-banner.jpeg');
+	@extend %diensten-banner-height;
+	top: 0;
+	@include background-image('banners/lashes-banner@1600w.jpg');
 }
 
 .editorials-banner {
-    height: 30vh;
-    top: 0;
-    @include background-image('diensten/editorials/editorials-banner.jpg');
+	@extend %diensten-banner-height;
+	top: 0;
+	@include background-image('banners/editorials-banner@1600w.jpg');
 }
 
 //!PORTFOLIO
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-.portfolio-hero {
-    @extend %slider-hero;
-    // @extend %black-filter;
-    @include background-image('portfolio/portfolio-banner.jpg');
+.portfolio-banner {
+	@extend %banner-height;
+	@include background-image('banners/portfolio-banner@1600w.jpg');
 }
 
 //!TARIEVEN
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-.tarieven-hero {
-    @extend %slider-hero;
-    @include background-image('tarieven/tarieven-banner.jpg');
-    background-position: 40% 70%;
-    position: relative;
-}
+.tarieven-banner {
+	@extend %banner-height;
+	@include background-image('banners/tarieven-banner@1600w.jpg');
+	background-position: 40% 70%;
+	position: relative;
 
-.hero-text-box {
-    z-index: 10;
-    color: $color-white;
-    background-color: $color-black;
-    opacity: 0.7;
-    position: absolute;
-    bottom: 0%;
-    width: 25%;
-    right: 0%;
-    padding: 4rem;
-    @include respond(desktop) {
-        width: 50%;
-    }
-    @include respond(tab-land) {
-        width: 75%;
-    }
-    @include respond(phone) {
-        width: 100%;
-    }
+	&__text-box {
+		z-index: 10;
+		color: $color-white;
+		background-color: $color-black;
+		opacity: 0.7;
+		position: absolute;
+		bottom: 0%;
+		width: 25%;
+		right: 0%;
+		padding: 4rem;
+		@include respond(desktop) {
+			width: 50%;
+		}
+		@include respond(tab-land) {
+			width: 75%;
+		}
+		@include respond(phone) {
+			width: 100%;
+		}
+	}
 }
 
 //!CONTACT ME
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-///
-.contact-me-hero {
-    @extend %slider-hero;
-    @include background-image('contact/contact-me-banner.jpg');
+.contact-me-banner {
+	@extend %banner-height;
+	@include background-image('banners/contact-me-banner@1600w.jpg');
 }

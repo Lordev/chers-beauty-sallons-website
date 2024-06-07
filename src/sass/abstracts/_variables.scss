@@ -27,13 +27,20 @@ $color-gray3: #999999;
 
 $color-gray-light: #dadada;
 
-//FONT SIZES
-$default-font-size: 1.6rem;
-$header-font-size: 3.6rem;
-$larger-font-size: 1.9rem;
+//Typography
+$header-primary-font: 'Playfair-display';
+$header-secondary-font: 'Nunito Sans';
+$header-tertiary-font: 'Old Standard TT';
 
-//CURLY SUB HEADERS
-$font-curly-style: 'playfair display';
+$font-bold: 800;
+$font-normal: 500;
+$font-thin: 300;
+
+$font-size-xl: 4.5rem;
+$font-size-lg: 3.2rem;
+$font-size-md: 2.5rem;
+$font-size-sm: 1.8rem;
+$font-size-base: 1.6rem;
 
 //SHADOWS
 $minimal-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
@@ -58,8 +65,6 @@ $gutter-vertical: 1rem;
 $gutter-horizontal: 4rem;
 
 //FLEXBIN GALLERY
-
-// Desktop, large screen devices
 $flexbin-row-height: 500px; // height of image rows
 $flexbin-space: 3px; // space between images
 

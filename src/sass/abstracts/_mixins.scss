@@ -99,3 +99,9 @@ $base-path: '../assets/img/';
 		grid-template-rows: repeat(#{length($columns)}, auto);
 	}
 }
+
+@mixin heading($font-weight, $font-size, $line-height: null) {
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+}

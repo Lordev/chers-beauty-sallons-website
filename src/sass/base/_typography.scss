@@ -1,131 +1,60 @@
-body {
-	hyphens: none;
-	font-family: 'Nunito-sans', 'Nunito';
-	font-weight: 200;
-	line-height: 2.3rem;
-	font-size: $default-font-size;
-	hyphens: auto;
-}
-
-%heading-primary {
-	font-family: 'Playfair-display';
-	font-size: 3.2rem;
-	font-weight: 800;
-	line-height: 4rem;
-	text-wrap: pretty;
-}
-
-%heading-secondary {
-	font-family: 'Playfair-display';
-	font-size: $header-font-size;
-	font-weight: 800;
-	font-size: 2.2rem;
-	line-height: 5rem;
-}
-
-%heading-tertiary {
-	font-family: $font-curly-style;
-	font-weight: 500;
-	font-size: 1.8rem;
-	margin-bottom: 3rem;
-}
-
-%heading-quaternary {
-	font-family: 'Old Standard TT';
-	font-size: 2.2rem;
-	font-weight: 400;
-	position: relative;
-	margin-bottom: 1rem;
-}
-
 .heading-primary {
-	&--white {
-		@extend %heading-primary;
-		color: $color-white;
+	font-family: $header-primary-font;
+
+	&--lg {
+		@include heading($font-bold, $font-size-lg, calc($font-size-lg * 1.5));
 	}
+
+	&--md {
+		@include heading($font-bold, $font-size-md, calc($font-size-md * 1.5));
+	}
+
+	&--sm {
+		@include heading($font-bold, $font-size-sm, calc($font-size-sm * 1.5));
+	}
+
 	&--black {
-		@extend %heading-primary;
-		color: #333;
+		color: $color-black;
+	}
+
+	&--white {
+		color: $color-black;
 	}
 }
 
 .heading-secondary {
-	@extend %heading-secondary;
+	font-family: $header-secondary-font;
+
+	&--md {
+		@include heading($font-bold, $font-size-md, calc($font-size-md * 1.5));
+	}
+
 	&--black {
-		@extend %heading-secondary;
-		color: #333;
+		color: $color-black;
 	}
 
 	&--white {
-		@extend %heading-secondary;
-		color: $color-white;
-	}
-	&--u {
-		text-transform: uppercase;
+		color: $color-black;
 	}
 
-	&__sub {
-		&--black {
-			@extend %heading-sub;
-			color: $color-black;
-		}
-		&--pink {
-			@extend %heading-sub;
-
-			color: $color-secondary;
-		}
-		&--white {
-			@extend %heading-sub;
-
-			color: $color-white;
-		}
+	&--pink {
+		color: $color-primary;
 	}
 }
 
 .heading-tertiary {
-	@extend %heading-tertiary;
-	&--white {
-		@extend %heading-tertiary;
-		color: $color-white;
-	}
-}
+	font-family: $header-tertiary-font;
 
-.heading-quaternary {
-	@extend %heading-quaternary;
-}
-
-%heading-sub {
-	font-style: italic;
-	font-family: $font-curly-style;
-	font-weight: 200;
-}
-
-.heading-subtext {
-	font-family: $font-curly-style;
-	font-weight: 200;
-
-	&--pink {
-		color: rgba($accent-color, 0.7);
+	&--md {
+		@include heading($font-bold, $font-size-md, calc($font-size-md * 1.5));
 	}
-}
 
-.sm-divider {
-	margin: 0 auto;
-	width: 8rem;
-	border: none;
-	margin-top: 2rem;
-	&--start {
-		width: 8rem;
-		margin-top: 2rem;
-	}
-	&--pink {
-		border-top: 1px solid $color-tertiary;
-	}
-	&--white {
-		border-top: 1px solid $color-white;
-	}
 	&--black {
-		border-top: 1px solid $color-black;
+		color: $color-black;
+	}
+
+	&--white {
+		color: $color-black;
 	}
 }
 
@@ -162,36 +91,4 @@ body {
 
 .bold-s {
 	font-weight: 400;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-wrap: pretty;
-	word-wrap: break-word;
-	hyphens: none;
-	overflow-wrap: break-word;
-	word-break: break-word;
-}
-
-.fa {
-	font-family: 'FontAwesome';
-	font-size: 2.3rem;
-	font-style: normal;
-	line-height: 1 !important;
-	font-size-adjust: none;
-	font-stretch: normal;
-	-webkit-font-feature-settings: normal;
-	font-feature-settings: normal;
-	-webkit-font-language-override: normal;
-	font-language-override: normal;
-	-webkit-font-kerning: auto;
-	font-kerning: auto;
-	font-synthesis: weight style;
-	font-variant: normal;
-	text-rendering: auto;
 }

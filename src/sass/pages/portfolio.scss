@@ -1,51 +1,51 @@
 .heading-portfolio {
-    position: relative;
-    display: block;
-    box-shadow: $minimal-shadow;
-    background: linear-gradient(
-                to right,
-                $color-primary $border-thickness,
-                transparent 0,
-                transparent 100%
-            )
-            top,
-        linear-gradient(
-                to bottom,
-                $color-primary $border-thickness,
-                $color-white 0,
-                $color-white 100%
-            )
-            left;
-    padding: 4rem 0;
+	position: relative;
+	display: block;
+	box-shadow: $minimal-shadow;
+	background: linear-gradient(
+				to right,
+				$color-primary $border-thickness,
+				transparent 0,
+				transparent 100%
+			)
+			top,
+		linear-gradient(
+				to bottom,
+				$color-primary $border-thickness,
+				$color-white 0,
+				$color-white 100%
+			)
+			left;
+	padding: $vertical-padding-large;
 }
 
 .s-portfolio-gallery {
-    padding: 8rem 0;
-    background: $color-primary-light2 99%;
+	padding: 8rem 0;
+	background: $color-primary-light2 99%;
 }
 
 .gallery-img {
-    overflow: hidden;
-    transition: all 1.2s ease;
-    // margin: 1%;
-    transform: scale(1) translateY(0%);
+	overflow: hidden;
+	transition: all 1.2s ease;
+	// margin: 1%;
+	transform: scale(1) translateY(0%);
 }
 
-.hidden {
-    opacity: 0;
-    transform: scale(0.5) translateY(20%);
+.reveal-img {
+	opacity: 0;
+	transform: scale(0.5) translateY(20%);
 }
 
 .hover {
-    // border: rgba($color-primary-dark, 0.5) solid 10px;
-    border-radius: 3px;
-    transition: transform 1.2s ease, filter 0.5s ease;
-    &:hover {
-        transform: scale(1.2);
-        filter: brightness(0.4);
-    }
+	// border: rgba($color-primary-dark, 0.5) solid 10px;
+	border-radius: 3px;
+	transition: transform 1.2s ease, filter 0.5s ease;
+	&:hover {
+		transform: scale(1.2);
+		filter: brightness(0.4);
+	}
 }
 
 .pswp__img {
-    cursor: pointer !important;
+	cursor: pointer !important;
 }
