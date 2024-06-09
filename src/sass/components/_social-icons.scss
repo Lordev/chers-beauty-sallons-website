@@ -4,39 +4,34 @@
 	display: inline-block;
 }
 
-.fa-solid {
-	color: $color-white;
-}
-
-.social-icons {
+.icons {
 	transition: all 0.3s;
-	color: $color-gray3;
-	&:hover {
-		transform: translateY(-2px);
-		color: $color-secondary-dark;
-		transform: scale(1.2);
-		filter: opacity(0.9) grayscale(0);
-	}
+
 	&:active,
 	&:focus {
 		outline: none;
 		transform: translateY(2px);
 	}
-}
-.fa {
-	font-family: 'FontAwesome';
-	font-size: 2.3rem;
-	font-style: normal;
-	line-height: 1 !important;
-	font-size-adjust: none;
-	font-stretch: normal;
-	-webkit-font-feature-settings: normal;
-	font-feature-settings: normal;
-	-webkit-font-language-override: normal;
-	font-language-override: normal;
-	-webkit-font-kerning: auto;
-	font-kerning: auto;
-	font-synthesis: weight style;
-	font-variant: normal;
-	text-rendering: auto;
+
+	&--primary {
+		color: $color-icons-primary;
+	}
+
+	&--muted {
+		color: $color-icons-muted;
+		&:hover {
+			transform: translateY(-2px);
+			color: $color-icons-hover;
+			transform: scale(1.2);
+			filter: opacity(0.9) grayscale(0);
+		}
+	}
+
+	&--lg {
+		font-size: 2.5rem;
+	}
+
+	&--sm {
+		font-size: 1.5rem;
+	}
 }

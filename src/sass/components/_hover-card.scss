@@ -30,7 +30,7 @@
 			@extend %image-setting;
 			@extend %image-hover;
 			background-position: top;
-			height: 50rem;
+			height: 45rem;
 			@include background-image('home/home-model-card.jpg');
 		}
 		&--2 {

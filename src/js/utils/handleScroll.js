@@ -10,24 +10,30 @@ export function handleScroll(threshold, header) {
 			// Set the flag to true once we have scrolled past the threshold.
 		}
 
+		if (!scrolledPastThreshold && scrollPosition <= threshold) {
+			header.classList.remove(
+				'animate-move-up',
+				'header--sticky',
+				'animate-move-down'
+			);
+			// Reset the header to init state
+		}
+
 		if (scrolledPastThreshold) {
 			if (
 				scrollPosition > lastScrollPosition &&
 				scrollPosition > threshold
 			) {
 				// Scrolling down
-				if (header.classList.contains('moveDown')) {
-					header.classList.remove('moveDown');
+				if (header.classList.contains('animate-move-down')) {
+					header.classList.remove('animate-move-down');
+					header.classList.add('animate-move-up');
 				}
 			} else if (scrollPosition < lastScrollPosition) {
-				if (scrollPosition <= threshold) {
-					// Reset the classes and flags when scrolling back above the threshold
-					scrolledPastThreshold = false;
-					header.classList.remove('fixed', 'moveDown');
-				} else {
-					header.classList.add('fixed');
-					header.classList.add('moveDown');
-				}
+				scrolledPastThreshold = false;
+				// Scrolling up
+				header.classList.remove('animate-move-up');
+				header.classList.add('animate-move-down', 'header--sticky');
 			}
 		}
 

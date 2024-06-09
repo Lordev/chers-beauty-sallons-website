@@ -3,21 +3,21 @@
 	display: block;
 	background: linear-gradient(
 			to bottom,
-			$color-primary $border-thickness,
-			$color-white2 0,
-			$color-white2 100%
+			$color-background-secondary $border-thickness,
+			$color-background-muted 0,
+			$color-background-muted 100%
 		)
 		left;
-	padding: 4rem 0;
+	padding: $vertical-padding-large;
 }
 
 .s2-tarieven {
-	background: $color-white2;
+	background: $color-background-muted;
 	padding: 8rem 0;
 }
 
 .s1-tarieven-tabel {
-	background-color: $color-primary-light;
+	background-color: $color-background-primary;
 	padding: 8rem 0;
 }
 

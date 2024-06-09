@@ -1,7 +1,6 @@
 .container-price-card {
-	width: 70%;
+	max-width: $container-width-lg;
 	margin: 0 auto;
-
 	@include respond(tab-port) {
 		width: 90%;
 	}
@@ -12,8 +11,8 @@
 }
 
 .price-card {
-	background-color: $color-primary-light;
-	// margin: 4rem 0;
+	background-color: $color-background-primary;
+	// max-width: 20rem;
 	padding: 4rem;
 	border-radius: 2px;
 	box-shadow: $minimal-shadow;
@@ -29,7 +28,7 @@
 			height: 20px;
 			border-right: 1px solid $color-gray;
 			border-bottom: 1px solid $color-gray;
-			background: $color-primary-light;
+			background: $color-background-primary;
 			position: absolute;
 			bottom: -11px;
 			left: calc(50% - 10px);

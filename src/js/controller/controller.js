@@ -63,6 +63,7 @@ export class MenuController {
 		this.exitButton = exitButton;
 		this.sideMenuWindow = sideMenuWindow;
 		this.dropDown = dropDown;
+		this.dropDownOpen = false;
 
 		this.initEventListeners();
 	}
@@ -76,10 +77,16 @@ export class MenuController {
 			this.sideMenuWindow.style.transform = 'translateX(100%)';
 		});
 
-		this.dropDown.addEventListener('click', () => {
-			this.dropDown.style.height === '20px'
-				? (this.dropDown.style.height = '170px')
-				: (this.dropDown.style.height = '20px');
+		this.dropDown.addEventListener('click', e => {
+			e.stopPropagation();
+			if (!this.dropDownOpen) {
+				this.dropDownOpen = true;
+				this.dropDown.style.height = '170px';
+			} else {
+				this.dropDownOpen = false;
+				this.dropDown.style.transform = '20px';
+			}
+			console.log(this.dropDownOpen);
 		});
 	}
 }
@@ -103,7 +110,7 @@ export class MenuLinksActiveController {
 				.split('.')
 				.shift();
 			if (href === this.page) {
-				item.classList.add('header__menu__bottom--active');
+				item.classList.add('header__nav__link--active');
 			}
 		});
 
@@ -115,7 +122,9 @@ export class MenuLinksActiveController {
 				.split('.')
 				.shift();
 			if (href === this.page) {
-				this.diensten.classList.add('header__menu__bottom--active');
+				item.classList.add('menu-dropdown__item--active');
+				this.diensten.classList.add('header__nav__link--active');
+				this.diensten.setAttribute('active', 'true');
 			}
 		});
 	}
@@ -179,7 +188,7 @@ export const beautyPriceCardSlider = new SliderController(
 // Header Scroll
 export const headerScroll = new HeaderScrollController(
 	window.innerHeight * 0.5,
-	document.querySelector('.container-header')
+	document.getElementById('header-sticky')
 );
 
 // Side Menu
@@ -197,7 +206,7 @@ export const sideMenu = new MenuController(
 // Active Menu Links
 const path = window.location.pathname;
 let page = path.split('/').pop().split('.').shift();
-const menuItems = document.querySelectorAll('#menu-item');
+const menuItems = document.querySelectorAll('#nav-link');
 const diensten = document.querySelector('#diensten');
 const subMenuDiensten = document.querySelectorAll('#diensten-submenu-item');
 export const activeMenuLinks = new MenuLinksActiveController(

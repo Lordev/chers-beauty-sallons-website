@@ -10,7 +10,7 @@
 	&::before {
 		content: '';
 		@include layer(-1);
-		background-color: $color-primary-light;
+		background-color: $color-background-primary;
 		width: 100%;
 		height: 100%;
 	}
@@ -30,7 +30,7 @@
 	@include respond(phone) {
 		padding-left: 0;
 	}
-	background-color: $color-primary-light;
+	background-color: $color-background-primary;
 	@include respond(phone) {
 		padding-left: 0;
 	}
@@ -40,8 +40,8 @@
 		width: 7rem;
 		background: linear-gradient(
 			to left,
-			$color-secondary 0%,
-			$color-secondary 100%
+			$color-background-secondary 0%,
+			$color-background-secondary 100%
 		);
 		@include respond(phone) {
 			background: none;
@@ -64,9 +64,9 @@
 		right: 0;
 		background: linear-gradient(
 			to right,
-			$color-primary-light 0%,
-			$color-primary-light calc(100% - 7rem),
-			$color-secondary 7rem
+			$color-background-primary 0%,
+			$color-background-primary calc(100% - 7rem),
+			$color-background-secondary 7rem
 		);
 		@include respond(phone) {
 			background: none;
@@ -75,19 +75,18 @@
 }
 
 .section-appointment {
-	background-color: $color-secondary;
-	margin: 0 auto;
+	background-color: $color-background-secondary;
 	padding: $vertical-padding-medium;
 }
 
 .s-bruidsmake-up-cards,
 .s-beauty-en-party-cards {
 	height: 12rem;
-	background-color: $color-secondary;
+	background-color: $color-background-secondary;
 }
 
 .s-bruidsmake-up-tarieven,
-.s-beauty-en-make-up-tarieven {
+.s-beauty-en-party-tarieven {
 	padding: 8rem 0 16rem 0;
-	background-color: $color-secondary;
+	background-color: $color-background-secondary;
 }

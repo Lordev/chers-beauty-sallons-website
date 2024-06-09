@@ -1,94 +1,112 @@
-.heading-primary {
-	font-family: $header-primary-font;
+// HEADINGS
+.heading {
+	&-primary {
+		//h1
+		font-family: $font-headings;
+		margin-bottom: $margin-md;
+		@include heading($font-size-xl, $font-bold, $font-size-xl * 1.15);
 
-	&--lg {
-		@include heading($font-bold, $font-size-lg, calc($font-size-lg * 1.5));
+		&--italic {
+			font-style: italic;
+			font-weight: $font-normal;
+		}
 	}
 
-	&--md {
-		@include heading($font-bold, $font-size-md, calc($font-size-md * 1.5));
+	&-secondary {
+		//h2
+		font-family: $font-headings;
+		margin-bottom: $margin-md;
+		@include heading($font-size-2xl, $font-bold, $font-size-2xl * 1.15);
+		&--italic {
+			font-style: italic;
+			font-weight: $font-normal;
+		}
 	}
 
-	&--sm {
-		@include heading($font-bold, $font-size-sm, calc($font-size-sm * 1.5));
+	&-tertiary {
+		//h3
+		font-family: $font-headings;
+		margin-bottom: $margin-md;
+		@include heading($font-size-md, $font-bold, $font-size-md * 1.3);
 	}
 
-	&--black {
-		color: $color-black;
+	&-uppercase {
+		//h4
+		font-family: $font-headings;
+		text-transform: uppercase;
+		margin-bottom: $margin-md;
+		@include heading($font-size-lg, $font-bold, $font-size-lg * 1.3);
 	}
 
-	&--white {
-		color: $color-black;
+	&-sub {
+		//h5
+		font-family: $font-sub-headings;
+		margin-bottom: $margin-sm;
+		@include heading($font-size-md, $font-normal, $font-size-md * 1.2);
+	}
+
+	&-color {
+		&--primary {
+			color: $color-text-primary;
+		}
+		&--secondary {
+			color: $color-text-secondary;
+		}
+		&--accent {
+			color: $color-text-highlight;
+		}
 	}
 }
 
-.heading-secondary {
-	font-family: $header-secondary-font;
+// MENU LINKS
 
-	&--md {
-		@include heading($font-bold, $font-size-md, calc($font-size-md * 1.5));
-	}
+// DIVIDERS
+
+.sm-divider {
+	width: 5rem;
+	height: 0.2rem;
+	border: none;
+	border-top: 1px solid;
+	padding-bottom: $margin-md;
 
 	&--black {
-		color: $color-black;
+		border-color: $color-border-primary;
 	}
 
 	&--white {
-		color: $color-black;
+		border-color: $color-border-secondary;
 	}
 
 	&--pink {
-		color: $color-primary;
+		border-color: $color-border-tertiary;
 	}
 }
 
-.heading-tertiary {
-	font-family: $header-tertiary-font;
-
-	&--md {
-		@include heading($font-bold, $font-size-md, calc($font-size-md * 1.5));
-	}
-
-	&--black {
-		color: $color-black;
-	}
-
-	&--white {
-		color: $color-black;
-	}
-}
+// PARAGRAPHS
 
 .paragraph {
 	&:not(:last-child) {
-		margin-bottom: 1rem;
+		margin-bottom: $margin-md;
+	}
+}
+
+.text-highlight {
+	color: $color-text-highlight;
+	text-decoration: none;
+	font-weight: $font-normal;
+	transition: all 0.2s;
+}
+
+.text-link {
+	color: $color-text-link;
+	font-weight: $font-normal;
+	text-decoration: none;
+	transition: all 0.2s;
+	&:hover {
+		color: $color-text-link-hover;
 	}
 }
 
 .upper {
 	text-transform: uppercase;
-}
-
-.text-sm {
-	font-size: 1.4rem;
-}
-
-.text-m {
-	font-size: 1.5rem;
-}
-
-.text-l {
-	font-size: 1.7rem;
-}
-
-.text-link {
-	color: #f79489;
-	font-weight: 500;
-}
-
-.bold-m {
-	font-weight: 600;
-}
-
-.bold-s {
-	font-weight: 400;
 }

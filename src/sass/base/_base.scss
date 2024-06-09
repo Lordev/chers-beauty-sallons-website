@@ -29,17 +29,17 @@ body {
 	box-sizing: border-box;
 	background-size: cover;
 	background-repeat: no-repeat;
-	line-height: 1.6em;
 	hyphens: none;
-	font-family: 'Nunito-sans', 'Nunito';
-	font-weight: 200;
+	font-family: 'nunito sans';
+	font-weight: 300;
 	line-height: 2.3rem;
 	font-size: $font-size-base;
 	hyphens: auto;
 }
 
 a {
-	color: $color-black;
+	font-family: 'nunito sans';
+	color: $color-text-primary;
 	text-decoration: none;
 }
 
@@ -57,10 +57,10 @@ input {
 	line-height: 1.5em;
 	font-weight: 100;
 	&:valid {
-		border-bottom: solid rgba($color-secondary, 0.9);
+		border-bottom: solid rgba($color-input-valid, 0.9);
 	}
 	&:invalid {
-		border-bottom: solid rgba($color-gray, 0.5);
+		border-bottom: solid rgba($color-input-invalid, 0.5);
 	}
 }
 
@@ -84,4 +84,21 @@ h6 {
 	hyphens: none;
 	overflow-wrap: break-word;
 	word-break: break-word;
+}
+
+.fa {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	line-height: 1 !important;
+	font-size-adjust: none;
+	font-stretch: normal;
+	-webkit-font-feature-settings: normal;
+	font-feature-settings: normal;
+	-webkit-font-language-override: normal;
+	font-language-override: normal;
+	-webkit-font-kerning: auto;
+	font-kerning: auto;
+	font-synthesis: weight style;
+	font-variant: normal;
+	text-rendering: auto;
 }

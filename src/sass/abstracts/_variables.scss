@@ -1,46 +1,75 @@
-//COLORS
+// COLORS
+/* Base Colors */
 $color-primary: #f7cac9;
-$color-secondary: #e4b8b2;
+$color-secondary: #e4b9b4;
 $color-tertiary: #f79489;
 
 $color-primary-dark: #ce9999;
-$color-secondary-dark: #b95c50;
 $color-tertiary-dark: #d48c70;
 
-$accent-color: #fb6090;
-$accent-color3: #7bacae;
+$color-black: #333;
 
-$color-primary-light: #f9f1f0;
-$color-primary-light2: #f7f7f7;
-
-$color-white: #fff;
-$color-white2: #f7f7f7;
-$color-white3: #f5ecf2;
-
-$color-black3: #1b1b1b;
-$color-black2: #1f1f1f;
-$color-black: #111111;
-
-$color-gray: #bdbdbd;
-$color-gray2: #aaaaaa;
-$color-gray3: #999999;
-
+$color-gray: #aaaaaa;
 $color-gray-light: #dadada;
 
-//Typography
-$header-primary-font: 'Playfair-display';
-$header-secondary-font: 'Nunito Sans';
-$header-tertiary-font: 'Old Standard TT';
+$color-white: #fff;
+$color-white-2: #f3eeee;
+$color-white-3: #faf5f5;
 
+/* Icon Colors */
+$color-icons-primary: $color-black;
+$color-icons-muted: $color-gray;
+$color-icons-hover: $color-secondary;
+
+/* Link Colors */
+$color-links-hover: $color-secondary;
+$color-links-active: $color-secondary;
+
+/* Background Colors */
+$color-background-primary: $color-white-3;
+$color-background-secondary: $color-secondary;
+$color-background-muted: $color-white-2;
+$color-background-footer: $color-gray-light;
+
+/* Text Colors */
+$color-text-primary: $color-black;
+$color-text-secondary: $color-white-2;
+$color-text-highlight: $color-secondary;
+
+$color-text-link: $color-secondary;
+$color-text-link-hover: $color-tertiary-dark;
+/* Input Colors */
+$color-input-valid: $color-tertiary;
+$color-input-invalid: $color-gray-light;
+
+/* Button Colors */
+$color-button-primary: $color-black;
+$color-button-secondary: $color-tertiary;
+$color-button-primary-hover: $color-white;
+
+/* Border Colors */
+$color-border-primary: $color-black;
+$color-border-secondary: $color-white;
+$color-border-tertiary: $color-secondary;
+
+//TYPOGRAPHY
+$font-base: 'Nunito sans';
+$font-headings: 'Playfair-display';
+$font-sub-headings: 'Old Standard TT';
+
+/* Fon Weights */
 $font-bold: 800;
 $font-normal: 500;
+$font-light: 400;
 $font-thin: 300;
 
-$font-size-xl: 4.5rem;
-$font-size-lg: 3.2rem;
-$font-size-md: 2.5rem;
-$font-size-sm: 1.8rem;
-$font-size-base: 1.6rem;
+/* Font Sizes */
+$font-size-2xl: 2.8rem;
+$font-size-xl: 2.4rem;
+$font-size-lg: 2.2rem;
+$font-size-md: 1.8rem;
+$font-size-base: 1.5rem;
+$font-size-sm: 1.3rem;
 
 //SHADOWS
 $minimal-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
@@ -51,7 +80,7 @@ $medium-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.4);
 $heavy-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.5);
 $intense-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.6);
 
-//Border styling
+//Border background styling
 $border-thickness: 1rem;
 
 //PADDING VERTICAL
@@ -59,21 +88,33 @@ $vertical-padding-large: 10rem 0;
 $vertical-padding-medium: 8rem 0;
 $vertical-padding-small: 1rem 0;
 
-//GRID
-$max-width: 125rem; //1250px
+//GUTTERS
 $gutter-vertical: 1rem;
 $gutter-horizontal: 4rem;
 
 //FLEXBIN GALLERY
-$flexbin-row-height: 500px; // height of image rows
-$flexbin-space: 3px; // space between images
+$flexbin-row-height: 500px;
+$flexbin-space: 3px;
 
-// Tablet, medium screen devices
+/* Tablet */
 $flexbin-tablet-max: 800px;
 $flexbin-row-height-tablet: 300px;
 $flexbin-space-tablet: 8px;
 
-// Phone, small screen devices
+/* Phone */
 $flexbin-phone-max: 200px;
 $flexbin-row-height-phone: 200px;
 $flexbin-space-phone: 4px;
+
+//MARGINS
+$margin-lg: 4rem;
+$margin-md: 2.2rem;
+$margin-sm: 1.3rem;
+
+//MAX WIDTHS
+$container-width-2xl: 1800px;
+$container-width-xl: 1500px;
+$container-width-lg: 1280px;
+$container-width-md: 1100px;
+$container-width-sm: 900px;
+$container-width-xs: 600px;

@@ -1,45 +1,54 @@
 .footer {
-    width: 100%;
-    display: block;
-    background-color: $color-gray-light;
-    padding-top: 8rem;
-    @include respond(tab-port) {
-        // text-align: center;
-    }
+	width: 100%;
+	display: block;
+	background-color: $color-background-footer;
+	padding-top: 8rem;
+	@include respond(tab-port) {
+		// text-align: center;
+	}
 
-    &__section {
-        padding: 2rem 0 4rem 4rem;
-        @include respond(tab-port) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 0 4rem 0rem;
-        }
-    }
+	&__section {
+		padding: 2rem 0 4rem 4rem;
+		@include respond(tab-port) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 2rem 0 4rem 0rem;
+		}
+	}
 
-    &__section:not(:first-of-type) {
-        border: none;
-        border-left: 1px solid rgba($accent-color, 0.8);
+	&__section:not(:first-of-type) {
+		border: none;
+		border-left: 1px solid rgba($color-border-primary, 0.8);
 
-        @include respond(tab-port) {
-            border-left: none;
-            border-top: 1px solid rgba($accent-color, 0.8);
-        }
-    }
+		@include respond(tab-port) {
+			border-left: none;
+			border-top: 1px solid rgba($color-border-primary, 0.8);
+		}
+	}
 
-    &__socials-list {
-        display: flex;
-        justify-content: space-between;
-        width: 12rem;
-    }
+	&__socials-list {
+		display: flex;
+		justify-content: space-between;
+		width: 12rem;
 
-    &__autograph {
-        font-size: 1.2rem;
-        color: $color-black3;
-        padding: 4rem;
-    }
+		&--icons {
+			font-size: 2.8rem;
+			color: $color-icons-primary;
 
-    &__copyright {
-        margin-right: 2rem;
-    }
+			&:hover {
+				color: $color-icons-hover;
+			}
+		}
+	}
+
+	&__autograph {
+		font-size: 1.2rem;
+		color: $color-black;
+		padding: 4rem;
+	}
+
+	&__copyright {
+		margin-right: 2rem;
+	}
 }

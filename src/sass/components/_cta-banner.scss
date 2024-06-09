@@ -1,14 +1,12 @@
 .cta-banner {
-	display: grid;
-	&__socials {
-		display: grid;
-		justify-content: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 0 auto;
 
-		&__list {
-			display: grid;
-			justify-content: center;
-			grid-auto-flow: column;
-			gap: 2rem;
-		}
+	&__socials-list {
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
 	}
 }

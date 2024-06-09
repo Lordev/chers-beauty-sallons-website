@@ -88,19 +88,42 @@ $base-path: '../assets/img/';
 }
 
 @mixin generate-grid($columns...) {
-	max-width: $max-width;
+	max-width: $container-width-lg;
 	display: grid;
 	margin: 0 auto;
 	gap: $gutter-horizontal;
 	grid-template-columns: #{$columns};
 
+	@include respond(big-desktop) {
+		// width > 1800?
+		gap: 4.4rem;
+	}
+
+	@include respond(desktop) {
+		// width < 1500?
+		width: 95%;
+		gap: 3.2rem;
+		padding: 0 1.5rem;
+	}
+	@include respond(tab-land) {
+		// width < 1200?
+		width: 100%;
+		gap: 2.4rem;
+	}
 	@include respond(tab-port) {
+		// width < 900?
+		gap: 8rem;
+		padding: 0 1rem;
 		grid-template-columns: none;
 		grid-template-rows: repeat(#{length($columns)}, auto);
 	}
+
+	@include respond(phone) {
+		// width < 1200?
+	}
 }
 
-@mixin heading($font-weight, $font-size, $line-height: null) {
+@mixin heading($font-size, $font-weight, $line-height: null) {
 	font-weight: $font-weight;
 	font-size: $font-size;
 	line-height: $line-height;

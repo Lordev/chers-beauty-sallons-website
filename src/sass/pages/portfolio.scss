@@ -4,16 +4,16 @@
 	box-shadow: $minimal-shadow;
 	background: linear-gradient(
 				to right,
-				$color-primary $border-thickness,
+				$color-background-secondary $border-thickness,
 				transparent 0,
 				transparent 100%
 			)
 			top,
 		linear-gradient(
 				to bottom,
-				$color-primary $border-thickness,
-				$color-white 0,
-				$color-white 100%
+				$color-background-secondary $border-thickness,
+				$color-background-primary 0,
+				$color-background-primary 100%
 			)
 			left;
 	padding: $vertical-padding-large;
@@ -21,7 +21,7 @@
 
 .s-portfolio-gallery {
 	padding: 8rem 0;
-	background: $color-primary-light2 99%;
+	background: $color-background-muted 99%;
 }
 
 .gallery-img {

@@ -11,51 +11,47 @@
 
 /* Margin Bottom */
 .u-margin-b-s {
-	margin-bottom: 1.5rem !important;
+	margin-bottom: $margin-sm !important;
 }
 
 .u-margin-b-m {
-	margin-bottom: 3rem !important;
+	margin-bottom: $margin-md !important;
 }
 
 .u-margin-b-l {
-	margin-bottom: 8rem !important;
+	margin-bottom: $margin-lg !important;
 }
 
 /* Margin Top */
 .u-margin-t-s {
-	margin-top: 1rem !important;
+	margin-top: $margin-sm !important;
 }
 
 .u-margin-t-m {
-	margin-top: 3rem !important;
+	margin-top: $margin-md !important;
 }
 
 .u-margin-t-l {
-	margin-top: 8rem !important;
-}
-
-.u-margin-t-xl {
-	margin-top: 10rem !important;
+	margin-top: $margin-lg !important;
 }
 
 /* Margin Left */
 .u-margin-l-s {
-	margin-left: 1rem !important;
+	margin-left: $margin-sm !important;
 }
 
 .u-margin-l-m {
-	margin-left: 3rem !important;
+	margin-left: $margin-md !important;
 }
 
 /* Margin Right */
 
 .u-margin-r-s {
-	margin-right: 1rem !important;
+	margin-right: $margin-sm !important;
 }
 
 .u-margin-r-m {
-	margin-right: 3rem !important;
+	margin-right: $margin-md !important;
 }
 
 /* Centered */

@@ -1,11 +1,11 @@
 .home-wrapper {
-	background: $color-primary-light;
+	background: $color-background-primary;
 }
 
 .s-home-promo {
 	position: relative;
 	padding: $vertical-padding-large;
-	background: $color-primary-light;
+	background: $color-background-primary;
 	padding-left: 7rem;
 	@include respond(phone) {
 		padding-left: 0;
@@ -16,8 +16,8 @@
 		width: 7rem;
 		background: linear-gradient(
 			to left,
-			$color-secondary 0%,
-			$color-secondary 100%
+			$color-background-secondary 0%,
+			$color-background-secondary 100%
 		);
 		@include respond(phone) {
 			background: none;
@@ -32,7 +32,7 @@
 	@include respond(phone) {
 		padding-left: 0;
 	}
-	background-color: $color-primary-light;
+	background-color: $color-background-primary;
 	@include respond(phone) {
 		padding-left: 0;
 	}
@@ -42,8 +42,8 @@
 		width: 7rem;
 		background: linear-gradient(
 			to left,
-			$color-secondary 0%,
-			$color-secondary 100%
+			$color-background-secondary 0%,
+			$color-background-secondary 100%
 		);
 		@include respond(phone) {
 			background: none;
@@ -53,7 +53,7 @@
 
 .s-appointment {
 	padding: $vertical-padding-medium;
-	background: $color-secondary;
+	background: $color-background-secondary;
 }
 
 .s-about-me {
@@ -68,9 +68,9 @@
 		right: 0;
 		background: linear-gradient(
 			to right,
-			$color-primary-light 0%,
-			$color-primary-light calc(100% - 7rem),
-			$color-secondary 7rem
+			$color-background-primary 0%,
+			$color-background-primary calc(100% - 7rem),
+			$color-background-secondary 7rem
 		);
 		@include respond(phone) {
 			background: none;
@@ -80,7 +80,7 @@
 
 .s-reviews {
 	padding: $vertical-padding-large;
-	background: $color-secondary;
+	background: $color-background-secondary;
 }
 
 .s-social-media-slider {
@@ -95,8 +95,8 @@
 		width: 5%;
 		background: linear-gradient(
 			to left,
-			$color-secondary 0%,
-			$color-secondary 100%
+			$color-background-secondary 0%,
+			$color-background-secondary 100%
 		);
 		@include respond(phone) {
 			background: none;
