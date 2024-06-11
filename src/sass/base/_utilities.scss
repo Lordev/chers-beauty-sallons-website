@@ -9,6 +9,12 @@
 	}
 }
 
+.u-c-text-mobile {
+	@include respond(tab-port) {
+		text-align: center !important;
+	}
+}
+
 /* Margin Bottom */
 .u-margin-b-s {
 	margin-bottom: $margin-sm !important;

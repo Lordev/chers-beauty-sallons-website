@@ -18,36 +18,39 @@
 				<li>
 					<a href="#">
 						<i
-							class="fa-brands fa-facebook-f icons--muted icons"
+							class="fa-brands fa-facebook-f header__top-bar__socials--icons icons icons--sm"
 						></i>
 					</a>
 				</li>
 				<li>
 					<a href="#">
 						<i
-							class="fa-brands fa-instagram icons--muted icons"
+							class="fa-brands fa-instagram header__top-bar__socials--icons icons icons--sm"
 						></i>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i class="fa-brands fa-whatsapp icons--muted icons">
+						<i
+							class="fa-brands fa-whatsapp header__top-bar__socials--icons icons icons--sm"
+						>
 						</i>
 					</a>
 				</li>
 			</ul>
 		</div>
-		<div class="header__main">
+		<div class="header__main" id="header-main">
 			<div class="header__logo">
 				<a href="../views/index.html">
 					<img
+						src="../../src/assets/img/_shared/logo@250w.png"
 						srcset="
-                                ../../src/assets/img/_shared/logo@281w.png 281w
-                                ../../src/assets/img/_shared/logo@200w.png 200w
-                                ../../src/assets/img/_shared/logo@100w.png 100w
-                            "
-						class="header__logo__image"
-						alt="logo"
+							../../src/assets/img/_shared/logo@250w.png 250w,
+							../../src/assets/img/_shared/logo@100w.png 100w
+						"
+						sizes="(max-width: 900px) 100px, 250px"
+						alt="Logo"
+						class="header__logo__img"
 					/>
 				</a>
 			</div>
@@ -65,14 +68,16 @@
 						<a id="diensten" href="#" class="header__nav__link"
 							>Diensten</a
 						>
-						<i class="header__nav__arrow-icon">&#129171;</i>
+						<div class="header__nav__arrow-icon">
+							<i class="">&#129171;</i>
+						</div>
 						<ul class="menu-dropdown">
 							<li>
 								<a
 									id="diensten-submenu-item"
 									href="../views/bruidsmake-up.html"
 									class="menu-dropdown__item"
-									><span>Bruidsmake-up</span></a
+									>Bruidsmake-up</a
 								>
 							</li>
 							<li>
@@ -80,7 +85,7 @@
 									id="diensten-submenu-item"
 									href="../views/festival-en-evenementen.html"
 									class="menu-dropdown__item"
-									><span>Festival en evenementen</span></a
+									>Festival en evenementen</a
 								>
 							</li>
 
@@ -89,7 +94,7 @@
 									id="diensten-submenu-item"
 									href="../views/lashes-en-brows.html"
 									class="menu-dropdown__item"
-									><span>Lashes en brows</span></a
+									>Lashes en brows</a
 								>
 							</li>
 							<li>
@@ -97,7 +102,7 @@
 									id="diensten-submenu-item"
 									href="../views/beauty-en-party.html"
 									class="menu-dropdown__item"
-									><span>Beauty en Party</span></a
+									>Beauty en Party</a
 								>
 							</li>
 							<li class="">
@@ -105,7 +110,7 @@
 									id="diensten-submenu-item"
 									href="../views/editorials.html"
 									class="menu-dropdown__item"
-									><span>Editorials</span></a
+									>Editorials</a
 								>
 							</li>
 						</ul>
@@ -137,9 +142,6 @@
 				</ul>
 			</nav>
 		</div>
-		<!-- mobile menu -->
-		<label for="navi-toggle" class="header__button">
-			<span class="header__side-menu-icon">&nbsp;</span>
-		</label>
+		<!-- mobile menu  -->
 	</div>
 </header>

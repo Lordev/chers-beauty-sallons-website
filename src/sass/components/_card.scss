@@ -32,7 +32,7 @@
 	&__icon {
 		position: relative;
 		text-decoration: none;
-		color: $color-tertiary;
+		color: $color-blush-pink;
 	}
 
 	&__link::after {
@@ -42,7 +42,7 @@
 		content: '';
 		width: 0%;
 		height: 3px;
-		background-color: $color-primary;
+		background-color: $color-background-primary;
 	}
 
 	&__link:hover::after {

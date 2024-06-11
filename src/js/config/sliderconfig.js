@@ -86,11 +86,12 @@ export const infiniteSlider = {
 	slidesPerView: 2,
 	autoplay: {
 		delay: 0.5,
-		disableOnInteraction: true,
+		disableOnInteraction: false,
 	},
 	freeMode: true,
 	speed: 5000,
 	freeModeMomentum: false,
+	allowTouchMove: false,
 
 	breakpoints: {
 		600: {
@@ -98,11 +99,11 @@ export const infiniteSlider = {
 		},
 
 		1200: {
-			slidesPerView: 7,
+			slidesPerView: 5,
 		},
 
 		1500: {
-			slidesPerView: 9,
+			slidesPerView: 6,
 		},
 	},
 };

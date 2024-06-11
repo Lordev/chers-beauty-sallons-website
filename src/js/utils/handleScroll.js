@@ -6,8 +6,11 @@ export function handleScroll(threshold, header) {
 		let scrollPosition = window.scrollY;
 
 		if (!scrolledPastThreshold && scrollPosition > threshold) {
+			const headerInner = document.getElementById('header-sticky');
+			const header = document.querySelector('.header');
+			const headerHeight = headerInner.getBoundingClientRect().height;
+			header.style.height = `${headerHeight}px`;
 			scrolledPastThreshold = true;
-			// Set the flag to true once we have scrolled past the threshold.
 		}
 
 		if (!scrolledPastThreshold && scrollPosition <= threshold) {

@@ -1,56 +1,63 @@
 // COLORS
 /* Base Colors */
-$color-primary: #f7cac9;
-$color-secondary: #e4b9b4;
-$color-tertiary: #f79489;
-
-$color-primary-dark: #ce9999;
-$color-tertiary-dark: #d48c70;
-
+$color-blush-pink: #e4b9b4; //primary
+$color-coral-pink: #f79489; //secondary
+$color-dusty-rose: #ce9999;
+$color-deep-puce: #a56069;
 $color-black: #333;
-
 $color-gray: #aaaaaa;
 $color-gray-light: #dadada;
-
-$color-white: #fff;
-$color-white-2: #f3eeee;
-$color-white-3: #faf5f5;
+$color-white: #faf5f5;
+$color-off-white: #f3eeee;
 
 /* Icon Colors */
-$color-icons-primary: $color-black;
+$color-icons-secondary: $color-coral-pink;
+$color-icons-black: $color-black;
 $color-icons-muted: $color-gray;
-$color-icons-hover: $color-secondary;
+
+$color-icons-active: $color-blush-pink;
+
+$color-icons-hover-primary: $color-blush-pink;
+$color-icons-hover-secondary: $color-deep-puce;
+$color-icons-hover-black: $color-black;
 
 /* Link Colors */
-$color-links-hover: $color-secondary;
-$color-links-active: $color-secondary;
+$color-links-hover: $color-blush-pink;
+$color-links-hover-secondary: $color-coral-pink;
+$color-links-active: $color-blush-pink;
 
 /* Background Colors */
-$color-background-primary: $color-white-3;
-$color-background-secondary: $color-secondary;
-$color-background-muted: $color-white-2;
+$color-background-primary: $color-white;
+$color-background-secondary: $color-blush-pink;
+$color-background-muted: $color-off-white;
 $color-background-footer: $color-gray-light;
 
 /* Text Colors */
 $color-text-primary: $color-black;
-$color-text-secondary: $color-white-2;
-$color-text-highlight: $color-secondary;
+$color-text-secondary: $color-off-white;
 
-$color-text-link: $color-secondary;
-$color-text-link-hover: $color-tertiary-dark;
+$color-header-highlight: $color-blush-pink;
+
+$color-text-highlight: $color-coral-pink;
+$color-text-muted: $color-gray;
+
 /* Input Colors */
-$color-input-valid: $color-tertiary;
+$color-input-valid: $color-coral-pink;
 $color-input-invalid: $color-gray-light;
 
 /* Button Colors */
-$color-button-primary: $color-black;
-$color-button-secondary: $color-tertiary;
-$color-button-primary-hover: $color-white;
+$color-button-primary: $color-blush-pink;
+$color-button-secondary: $color-coral-pink;
+$color-button-black: $color-black;
+
+$color-button-hover-white: $color-white;
+$color-button-secondary-hover: $color-white;
 
 /* Border Colors */
-$color-border-primary: $color-black;
-$color-border-secondary: $color-white;
-$color-border-tertiary: $color-secondary;
+$color-border-primary: $color-dusty-rose;
+$color-border-secondary: $color-coral-pink;
+$color-border-black: $color-black;
+$color-border-white: $color-white;
 
 //TYPOGRAPHY
 $font-base: 'Nunito sans';
@@ -58,10 +65,10 @@ $font-headings: 'Playfair-display';
 $font-sub-headings: 'Old Standard TT';
 
 /* Fon Weights */
-$font-bold: 800;
-$font-normal: 500;
-$font-light: 400;
-$font-thin: 300;
+$font-weight-bold: 800;
+$font-weight-normal: 500;
+$font-weight-light: 400;
+$font-weight-thin: 300;
 
 /* Font Sizes */
 $font-size-2xl: 2.8rem;
@@ -118,3 +125,6 @@ $container-width-lg: 1280px;
 $container-width-md: 1100px;
 $container-width-sm: 900px;
 $container-width-xs: 600px;
+$container-width-2xs: 480px;
+$container-width-3xs: 300px;
+$container-width-4xs: 200px;

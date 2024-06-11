@@ -4,8 +4,7 @@
 	&--style {
 		display: inline-block;
 		text-transform: uppercase;
-		font-weight: 400;
-		font-family: 'Nunito';
+		font-weight: $font-weight-normal;
 		transition: 0.2s;
 		border: none;
 		width: fit-content;
@@ -24,17 +23,17 @@
 		background: $color-button-secondary;
 		color: $color-text-secondary;
 		&:hover {
-			background: $color-button-primary-hover;
+			background: $color-button-hover-white;
 			color: $color-text-primary;
 			box-shadow: $soft-shadow;
 		}
 	}
 
 	&--black {
-		background: $color-button-primary;
+		background: $color-button-black;
 		color: $color-text-secondary;
 		&:hover {
-			background: $color-button-primary-hover;
+			background: $color-button-hover-white;
 			color: $color-text-primary;
 			box-shadow: $soft-shadow;
 		}
@@ -53,7 +52,7 @@
 			font-size: 1.3rem;
 			font-family: 'Nunito-sans';
 			font-weight: 600;
-			color: $color-text-highlight;
+			color: $color-button-primary;
 		}
 	}
 	&::before {
@@ -63,7 +62,7 @@
 		bottom: 0;
 		left: 50%;
 		width: 1px;
-		background-color: $color-text-highlight;
+		background-color: $color-button-primary;
 		transform: translateX(-50%);
 		transition: transform 0.4s, opacity 0.3s ease-in-out;
 		opacity: 0;
@@ -73,6 +72,6 @@
 	&:hover::before {
 		opacity: 1;
 		transform: scaleX(100);
-		background-color: $color-text-highlight;
+		background-color: $color-button-primary;
 	}
 }

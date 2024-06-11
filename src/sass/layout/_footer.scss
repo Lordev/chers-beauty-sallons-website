@@ -3,9 +3,6 @@
 	display: block;
 	background-color: $color-background-footer;
 	padding-top: 8rem;
-	@include respond(tab-port) {
-		// text-align: center;
-	}
 
 	&__section {
 		padding: 2rem 0 4rem 4rem;
@@ -27,6 +24,23 @@
 		}
 	}
 
+	&__item {
+		transition: transform 0.3s;
+		cursor: pointer;
+
+		&__link {
+			transition: color 0.5s;
+			line-height: 1.7;
+		}
+
+		&:hover {
+			transform: translateY(-0.2rem);
+			> :first-child {
+				color: $color-links-hover-secondary;
+			}
+		}
+	}
+
 	&__socials-list {
 		display: flex;
 		justify-content: space-between;
@@ -34,21 +48,12 @@
 
 		&--icons {
 			font-size: 2.8rem;
-			color: $color-icons-primary;
-
-			&:hover {
-				color: $color-icons-hover;
-			}
 		}
 	}
 
 	&__autograph {
 		font-size: 1.2rem;
-		color: $color-black;
+		color: $color-text-muted;
 		padding: 4rem;
-	}
-
-	&__copyright {
-		margin-right: 2rem;
 	}
 }

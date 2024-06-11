@@ -1,12 +1,20 @@
 .cta-banner {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 5rem;
 	margin: 0 auto;
 
 	&__socials-list {
 		display: flex;
 		gap: 2rem;
 		justify-content: center;
+	}
+
+	&__icons {
+		color: #555;
+
+		&:hover {
+			color: $color-icons-hover-secondary;
+		}
 	}
 }

@@ -1,13 +1,5 @@
 .header {
 	background-color: $color-background-primary;
-	height: 13.3rem;
-	@include respond(tab-land) {
-		height: 14rem;
-	}
-	@include respond(tab-port) {
-		height: 9rem;
-		position: relative;
-	}
 	z-index: 888;
 	box-shadow: none;
 	transition: box-shadow 0.9s ease-in-out;
@@ -20,22 +12,17 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 13.3rem;
-		@include respond(tab-land) {
-			height: 14rem;
-		}
-		@include respond(tab-port) {
-			height: 9rem;
-		}
 	}
 
 	&__top-bar {
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 1px solid rgba(#ddd, 1);
+		border-bottom: 1px solid rgba($color-border-black, 0.1);
 		max-width: $container-width-md;
 		margin: 0 auto;
-		padding: 1rem 0;
+		padding: 1rem 2rem;
+		position: relative;
+		margin-bottom: 1rem;
 
 		&__links {
 			display: flex;
@@ -50,21 +37,33 @@
 			gap: 0 2rem;
 
 			&--icons {
-				color: $color-icons-primary;
+				color: $color-icons-muted;
+
+				&:hover {
+					color: $color-icons-hover-primary;
+				}
 			}
 		}
 
 		@include respond(tab-port) {
 			display: none;
+			visibility: hidden;
+			position: absolute;
 		}
 	}
 
 	&__main {
+		height: 100%;
 		display: grid;
-		grid-template-columns: 1.5fr 2fr;
+		grid-template-columns: 1fr auto;
 		max-width: $container-width-md;
 		margin: 0 auto;
-		padding: 1.2rem 0;
+		padding: 1rem 3rem;
+		align-items: center;
+
+		@include respond(tab-port) {
+			padding: 2.1rem 1rem;
+		}
 	}
 
 	&__nav {
@@ -93,7 +92,7 @@
 			display: flex;
 			gap: 0 0.5rem;
 			font-size: $font-size-sm;
-			font-weight: $font-bold;
+			font-weight: $font-weight-bold;
 			text-transform: uppercase;
 
 			&--active {
@@ -104,6 +103,7 @@
 		@include respond(tab-port) {
 			display: none;
 		}
+
 		&__arrow-icon {
 			margin-top: 0.5rem;
 			font-size: 2rem;
@@ -113,32 +113,36 @@
 	}
 
 	&__logo {
-		float: left;
-		display: grid;
-		margin: auto 0;
+		width: 250px;
+		aspect-ratio: 250/67;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 67px;
+
+		@include respond(tab-land) {
+			max-width: 200px;
+			aspect-ratio: 200/67;
+		}
+
+		@include respond(tab-port) {
+			max-width: 100px;
+			height: 26.8px;
+			margin-top: 0.5rem;
+		}
 
 		&__image {
-			max-width: 221px;
-			@include respond(tab-land) {
-				max-width: 200px;
-				margin-top: 1.2rem;
-			}
-
-			@include respond(tab-port) {
-				max-width: 130px;
-				margin-top: 2.4rem;
-				margin-left: 1.2rem;
-			}
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
 		}
 	}
 
 	// MOBILE MENU
 
 	@include respond(tab-port) {
-		grid-template-rows: none;
-
 		&__side-menu-icon {
-			margin-top: 3.5rem;
+			margin-top: 3.6rem;
 			position: absolute;
 
 			&,
@@ -170,8 +174,8 @@
 
 		&__button {
 			position: absolute;
-			top: 0.8rem;
-			right: 5rem;
+			top: 0rem;
+			right: 4.5rem;
 			height: 8rem;
 			z-index: 30;
 			text-align: center;
@@ -179,12 +183,12 @@
 			padding-top: 0.5rem;
 		}
 
-		&__button:hover &__icon::before {
-			top: -2rem;
+		&__button:hover &__side-menu-icon::before {
+			top: -1rem;
 		}
 
-		&__button:hover &__icon::after {
-			top: 2rem;
+		&__button:hover &__side-menu-icon::after {
+			top: 1rem;
 		}
 	}
 }
@@ -203,17 +207,19 @@
 	width: 20rem;
 	line-height: 5rem;
 	opacity: 0;
-	background-color: $color-white;
+	background-color: $color-background-primary;
 	box-shadow: $subtle-shadow;
 	text-wrap: nowrap;
 
 	&__item {
+		font-weight: $font-weight-normal;
+		font-size: $font-size-sm;
 		display: block;
-		border-bottom: 0.1px solid rgba($color-tertiary, 0.2);
+		border-bottom: 0.1px solid rgba($color-border-secondary, 0.2);
 		&--active,
 		&:hover {
-			border-bottom: 1px solid $color-tertiary;
-			background-color: $color-primary;
+			border-bottom: 1px solid $color-border-secondary;
+			background-color: $color-background-secondary;
 			cursor: pointer;
 		}
 		&--text {

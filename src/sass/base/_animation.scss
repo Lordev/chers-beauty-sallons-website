@@ -84,10 +84,6 @@
 // hover animations
 
 .animation-hover-move-up {
-	transition: transform 0.3s;
-	&:hover {
-		transform: translateY(-0.2rem);
-	}
 }
 
 //swiper slider animations

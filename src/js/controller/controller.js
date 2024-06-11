@@ -10,11 +10,80 @@ import {
 	cardSliderBridal,
 } from '../views/homeSlidersViews/HomeSliderView.js';
 import { ElementObserver, handleScroll } from '../utils/';
-
+import { ButtonHeaderView } from '../views/buttonHeaderView';
 import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
 
 //////////////////////////////////////////////////////////////////
 //* Controller Classes
+
+class mobileMenuController {
+	constructor(parentEl, exitButton, dropDown, breakPoint) {
+		this.parentEl = parentEl;
+		this.exitButton = exitButton;
+		this.dropDown = dropDown;
+		this.breakPoint = breakPoint;
+		this.dropDownOpen = false;
+
+		this.initEventListeners();
+	}
+
+	initEventListeners = () => {
+		this.exitButton.addEventListener('click', e => {
+			this.parentEl.style.transform = 'translateX(100%)';
+		});
+
+		if (!this.dropDown) return;
+		this.dropDown.addEventListener('click', e => {
+			if (!this.dropDownOpen) {
+				this.dropDownOpen = true;
+				this.dropDown.style.height = '156px';
+			} else {
+				this.dropDownOpen = false;
+				this.dropDown.style.height = '20px';
+			}
+			console.log(this.dropDownOpen);
+		});
+	};
+}
+
+class HeaderButtonController {
+	constructor(parentElement, breakPoint) {
+		this.parentElement = document.getElementById(parentElement);
+		this.breakPoint = breakPoint;
+		this.sideMenuWindow = document.getElementById('mobile-menu');
+		this.init();
+	}
+
+	openMenu = () => {
+		if (this.parentElement && this.sideMenuWindow) {
+			this.parentElement.addEventListener('click', () => {
+				this.sideMenuWindow.style.transform = 'translateX(0%)';
+			});
+		} else {
+			console.error(
+				'Parent element or side menu window element is not defined'
+			);
+		}
+	};
+
+	renderButton = () => {
+		if (this.parentElement) {
+			const button = new ButtonHeaderView(
+				this.parentElement,
+				this.breakPoint
+			);
+			button.init();
+		} else {
+			console.error('Parent element is not defined');
+		}
+	};
+
+	init = () => {
+		this.renderButton();
+		this.openMenu();
+	};
+}
+
 class SliderController {
 	constructor(model, slider) {
 		this.model = model;
@@ -46,52 +115,28 @@ class SliderController {
 	}
 }
 
-export class HeaderScrollController {
+class HeaderScrollController {
 	constructor(threshold, header) {
 		this.threshold = threshold;
 		this.header = header;
 	}
 
+	setHeaderHeight() {
+		const headerContainer = document.querySelector('.header');
+
+		window.addEventListener('resize', () => {
+			const headerHeight = this.header.getBoundingClientRect().height;
+			headerContainer.style.height = `${headerHeight}px`;
+		});
+	}
+
 	init() {
+		this.setHeaderHeight();
 		handleScroll(this.threshold, this.header);
 	}
 }
 
-export class MenuController {
-	constructor(headerMenuButton, exitButton, sideMenuWindow, dropDown) {
-		this.headerMenuButton = headerMenuButton;
-		this.exitButton = exitButton;
-		this.sideMenuWindow = sideMenuWindow;
-		this.dropDown = dropDown;
-		this.dropDownOpen = false;
-
-		this.initEventListeners();
-	}
-
-	initEventListeners() {
-		this.headerMenuButton.addEventListener('click', () => {
-			this.sideMenuWindow.style.transform = 'translateX(0%)';
-		});
-
-		this.exitButton.addEventListener('click', () => {
-			this.sideMenuWindow.style.transform = 'translateX(100%)';
-		});
-
-		this.dropDown.addEventListener('click', e => {
-			e.stopPropagation();
-			if (!this.dropDownOpen) {
-				this.dropDownOpen = true;
-				this.dropDown.style.height = '170px';
-			} else {
-				this.dropDownOpen = false;
-				this.dropDown.style.transform = '20px';
-			}
-			console.log(this.dropDownOpen);
-		});
-	}
-}
-
-export class MenuLinksActiveController {
+class MenuLinksActiveController {
 	constructor(page, menuItems, diensten, subMenuDiensten) {
 		this.page = page;
 		this.menuItems = menuItems;
@@ -130,7 +175,7 @@ export class MenuLinksActiveController {
 	}
 }
 
-export class ImageObserverController {
+class ImageObserverController {
 	constructor(threshold, elementSelector, observeClass) {
 		this.imageObserver = new ElementObserver(
 			threshold,
@@ -167,6 +212,30 @@ export class ImageObserverController {
 	}
 }
 
+class innerLinksController {
+	constructor(links) {
+		this.links = links;
+		this.init();
+	}
+
+	init() {
+		this.links.forEach(link => {
+			const href = link.getAttribute('href');
+
+			link.addEventListener('click', e => {
+				e.preventDefault();
+				e.stopPropagation();
+
+				if (link.target === '_blank') {
+					window.open(href, '_blank');
+				} else {
+					window.location.href = href;
+				}
+			});
+		});
+	}
+}
+
 ////////////////////////////////////////////////////////////////
 //* Controller Instances
 
@@ -185,22 +254,25 @@ export const beautyPriceCardSlider = new SliderController(
 	cardSliderBeauty
 );
 
-// Header Scroll
+// Header;
 export const headerScroll = new HeaderScrollController(
 	window.innerHeight * 0.5,
 	document.getElementById('header-sticky')
 );
 
 // Side Menu
-const exitButton = document.getElementById('exit-button');
-const headerMenuButton = document.querySelector('.header__button');
-const sideMenuWindow = document.querySelector('.nav-mobile');
-const dropDown = document.querySelector('#submenu-dropdown-link');
-export const sideMenu = new MenuController(
-	headerMenuButton,
-	exitButton,
-	sideMenuWindow,
-	dropDown
+export const mobileMenu = new mobileMenuController(
+	document.getElementById('mobile-menu'),
+	document.getElementById('exit-button'),
+	document.getElementById('sidemenu-diensten'),
+	900
+);
+
+// Header Button
+
+export const headerSideMenuButton = new HeaderButtonController(
+	'header-sticky',
+	900
 );
 
 // Active Menu Links
@@ -222,3 +294,7 @@ export const galleryObserver = new ImageObserverController(
 	'.gallery-img',
 	'reveal-img'
 );
+
+//Footer Links
+const footerLinks = document.querySelectorAll('.footer__item__link');
+export const footerInnerLinks = new innerLinksController(footerLinks);

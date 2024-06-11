@@ -1,14 +1,24 @@
-.reviews {
-	position: relative;
+.testimonials-container {
 	display: grid;
-	align-self: center;
-	justify-self: center;
-	max-width: 90rem;
-	padding: 2rem;
-	margin: 0 1rem;
-	background: $color-primary;
-	box-shadow: $medium-shadow;
+	justify-content: center;
 
+	@include respond(tab-port) {
+		display: block;
+	}
+}
+
+.testimonials {
+	position: relative;
+	background: $color-background-secondary;
+	box-shadow: $medium-shadow;
+	max-width: $container-width-sm;
+
+	@include respond(tab-port) {
+		width: 95vw;
+	}
+
+	padding: 1.5rem;
+	justify-content: center;
 	&::before {
 		content: '';
 		z-index: 0;
@@ -17,42 +27,38 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background: linear-gradient(
-			-45deg,
-			$color-white 0%,
-			$color-primary 100%
-		);
 		transform: translate3d(1rem, 1rem, 0) scale(0.88);
 		filter: blur(20px);
 		opacity: 9;
-		transition: opacity 0.3s;
+		transition: opacity 0.98s;
 		border-radius: inherit;
-	}
-
-	.box::after {
-		content: '';
-		z-index: -1;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: inherit;
-		border-radius: inherit;
+		background: $color-background-muted;
+		opacity: 0.5;
 	}
 
 	&__swiper {
-		align-self: center;
 		width: 100%;
-
 		height: 100%;
 		border-radius: 3px;
 
 		&__card {
 			background: $color-background-primary;
-			display: grid;
-			height: 60rem;
-			justify-items: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			height: 28rem;
+			padding: 15rem 0;
+
+			@include respond(tab-port) {
+				height: 40rem;
+			}
+
+			@include respond(phone) {
+				height: 50rem;
+			}
+
 			&::before {
 				content: '\201C';
 				position: absolute;
@@ -68,19 +74,18 @@
 		}
 	}
 	&__text {
-		align-self: end;
 		padding: 0 10rem;
 		@include respond(phone) {
 			padding: 0 5rem;
 		}
 	}
 	&__reviewer {
-		align-self: start;
 		display: flex;
 		align-items: center;
+		justify-content: end;
 		&__name {
 			margin-left: 2rem;
-			color: $color-secondary;
+			color: $color-background-secondary;
 			font-weight: 800;
 			font-size: 1.4rem;
 		}
@@ -92,7 +97,7 @@
 
 #default-slider {
 	.swiper-pagination {
-		margin-bottom: 4rem;
+		margin-bottom: 2.2rem;
 		.swiper-pagination-bullet {
 			width: 10px;
 			height: 10px;
@@ -105,16 +110,27 @@
 
 		.swiper-pagination-bullet-active {
 			color: #fff;
-			background: $color-primary;
+			background: $color-icons-active;
 		}
 	}
 	.swiper-button-next,
 	.swiper-button-prev {
 		--swiper-navigation-size: 3rem;
 		--swiper-navigation-sides-offset: 2rem;
+		transition: transform 0.3s;
 		color: $color-gray;
 		&:hover {
-			color: $color-primary;
+			color: $color-icons-hover-primary;
+		}
+	}
+	.swiper-button-next {
+		&:hover {
+			transform: translateX(-0.2rem);
+		}
+	}
+	.swiper-button-prev {
+		&:hover {
+			transform: translateX(0.2rem);
 		}
 	}
 }

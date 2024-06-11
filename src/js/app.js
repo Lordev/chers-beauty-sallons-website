@@ -8,7 +8,7 @@ import {
 	ctaCardSlider,
 	instagramSlider,
 	headerScroll,
-	sideMenu,
+	footerInnerLinks,
 	activeMenuLinks,
 	galleryObserver,
 } from '../js/controller/controller.js';
@@ -19,12 +19,11 @@ activeMenuLinks.initActiveMenuItems();
 // Initialize header scroll controller
 headerScroll.init();
 
-// Initialize side menu controller
-sideMenu.initEventListeners();
+// Initialize footer links controller
+const path = window.location.pathname;
+footerInnerLinks.init();
 
 // Initialize sliders
-const path = window.location.pathname;
-
 if (path === '/index.html' || path === '/') {
 	homeBannerSlider.createHeaderSlider();
 	aboutCardSlider.createSlider();

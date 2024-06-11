@@ -1,10 +1,11 @@
 .time-table {
 	height: 100%;
-	background-color: $color-secondary;
+	background-color: $color-background-secondary;
 	padding: 4rem 0;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	max-width: 40rem;
+	gap: 3.5rem;
 
 	&__info {
 		display: flex;
@@ -19,10 +20,12 @@
 	}
 
 	&--icons {
-		font-size: 2.8rem;
-		color: $color-icons-primary;
-	}
+		color: $color-icons-muted;
 
+		&:hover {
+			color: $color-icons-hover-black;
+		}
+	}
 	@include respond(tab-land) {
 		margin: 0 auto;
 	}

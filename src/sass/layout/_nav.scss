@@ -1,32 +1,35 @@
 .nav-mobile {
 	display: block;
-	width: 40%;
+	width: $container-width-3xs;
 	height: 100%;
 	position: fixed;
 	right: 0;
 	top: 0;
-	background-color: rgba($color-black, 0.98);
+	background-color: rgba($color-black, 0.99);
 	z-index: 999;
 	transform: translateX(100%);
 	transition: transform 0.4s ease-in;
 	&__toggle {
-		float: right;
-		padding: 3rem 3rem 0 0;
+		position: absolute;
+		top: 3.5rem;
+		right: 2.4rem;
+		font-size: 1.8rem;
+		color: $color-white;
 		cursor: pointer;
 	}
 
 	&__menu {
 		width: 100%;
 		height: 100%;
-		padding-left: 2rem;
+		padding-left: 3rem;
 
 		a {
 			color: $color-white;
+			font-size: $font-size-md;
 		}
 
 		&--items {
-			width: 100%;
-			height: 30%;
+			height: 100%;
 			flex-direction: column;
 			justify-content: space-around;
 			margin-top: 10rem;

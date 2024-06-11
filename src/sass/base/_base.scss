@@ -20,9 +20,6 @@ html {
 	@include respond(tab-port) {
 		font-size: 55%;
 	}
-	@include respond(phone) {
-		font-size: 50%;
-	}
 }
 
 body {
@@ -30,15 +27,16 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	hyphens: none;
-	font-family: 'nunito sans';
-	font-weight: 300;
+	font-family: 'Nunito Sans', sans-serif;
+	font-display: optional;
+	font-weight: $font-weight-thin;
 	line-height: 2.3rem;
 	font-size: $font-size-base;
 	hyphens: auto;
 }
 
 a {
-	font-family: 'nunito sans';
+	font-family: 'Nunito Sans', sans-serif;
 	color: $color-text-primary;
 	text-decoration: none;
 }
@@ -53,7 +51,7 @@ input {
 	outline: none; /* Remove default focus outline */
 	border-width: 0 0 1px;
 	padding: 0;
-	background: none;
+	// background: none;
 	line-height: 1.5em;
 	font-weight: 100;
 	&:valid {

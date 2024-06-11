@@ -42,12 +42,6 @@
 			margin-bottom: 2rem;
 		}
 	}
-	&__btn {
-		position: absolute;
-		bottom: 4rem;
-		left: 50%;
-		transform: translate(-50%);
-	}
 }
 
 #cards-prices-beauty,
@@ -65,8 +59,7 @@
 		}
 
 		.swiper-pagination-bullet-active {
-			color: #fff;
-			background: $color-primary;
+			background: $color-icons-active;
 		}
 	}
 }
