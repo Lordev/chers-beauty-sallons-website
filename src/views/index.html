@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('partials/head.html')
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<meta
+			name="description"
+			content="Make-up artist en hairstylist voor bruiloften, festivals, evenementen en meer. Boek nu jouw afspraak en laat je betoveren door onze professionele service."
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="preload"
+			href="../assets/img/_shared/logo@281w.png"
+			as="image"
+		/>
+		<link
+			href="../assets/img/banners/home-banner-slide-01@1600w.jpg"
+			rel="preload"
+			as="image"
+		/>
+		<link
+			href="../assets/img/banners/home-banner-slide-02@1600w.jpg"
+			rel="preload"
+			as="image"
+		/>
+		<link
+			href="../assets/img/banners/home-banner-slide-03@1600w.jpg"
+			rel="preload"
+			as="image"
+		/>
+		<link
+			href="../assets/img/banners/home-banner-slide-04@1600w.jpg"
+			as="image"
+			rel="preload"
+		/>
+		<link
+			href="../assets/img/home/home-model-card.jpg"
+			as="image"
+			rel="preload"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+			rel="stylesheet"
+			defer
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+			defer
+		/>
+		<link rel="stylesheet" href="../css/main.css" />
+		<script defer type="module" src="../../src/js/app.js"></script>
+		<title>Document</title>
+	</head>
+
 	<body>
 		@@include('partials/header.html') @@include('partials/nav.html')
 		<main class="home-wrapper">
@@ -42,26 +95,39 @@
 			<section class="s-home-promo">
 				<div class="three-col u-c-text">
 					<div
-						class="promo u-c-text-mobile u-max-width-xs u-centered"
+						class="s-home-promo__box-left u-c-text-mobile u-centered u-max-width-2xs"
 					>
-						<h2 class="heading-secondary">
-							Take your Make-up
-							<span
-								class="heading-secondary--italic heading-color--accent"
-							>
-								to the next level</span
-							>
-						</h2>
-						<hr class="sm-divider sm-divider--pink u-centered" />
-						<p class="paragraph">
-							Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Libero delectus consectetur dignissimos atque
-							placeat sapiente dolor
-						</p>
-
+						<div>
+							<h2 class="heading-secondary">
+								Take your Make-up
+								<span
+									class="heading-secondary--italic heading-color--accent"
+								>
+									to the next level</span
+								>
+							</h2>
+							<hr
+								class="sm-divider sm-divider--pink u-centered"
+							/>
+						</div>
+						<div class="s-home-promo__box-left__info">
+							<p class="paragraph u-centered u-m">
+								Onze salon biedt een uitgebreid assortiment aan
+								schoonheidsbehandelingen, waaronder
+								professionele bruidsmake-up voor je speciale
+								dag, feestmake-up om te schitteren op elk
+								evenement, en dagelijkse make-upoplossingen voor
+								een frisse en stralende look. e schitteren op
+								elk evenement, en dagelijkse make-upoplossingen
+								voor een frisse en stralende look.
+							</p>
+						</div>
 						<div class="btn-text">
-							<a href="./about-me.html" class="btn-text__link"
-								>learn more</a
+							<a
+								href="./about-me.html"
+								class="btn-text__link"
+								aria-label="Learn more about Cheryl Sallons"
+								>Ontdek ons aanbod</a
 							>
 						</div>
 					</div>
@@ -71,12 +137,9 @@
 					<div class="u-c-text promo--3">
 						<div class="time-table">
 							<div>
-								<h4
-									class="heading-uppercase heading-color--secondary"
-									>Werktijden</h4
-								>
+								<h3 class="heading-uppercase">Werktijden</h3>
 								<hr
-									class="sm-divider sm-divider--white u-centered"
+									class="sm-divider sm-divider--pink u-centered"
 								/>
 							</div>
 							<div class="time-table__info">
@@ -97,11 +160,13 @@
 										Wij hanteren ruime werktijden voor uw
 										gemak en zijn beschikbaar op afspraak.
 									</p>
-									<p>
-										Afspraak inplannen? Neem
-										<a href="tel:0123456789">contact</a>
-										met ons op.
-									</p>
+									<p> Afspraak inplannen? </p>
+									<a
+										Neem
+										href="tel:0123456789"
+										class="text-link"
+										>Neem contact met ons op.</a
+									>
 								</div>
 							</div>
 							<div class="time-table__bottom-section">
@@ -253,9 +318,9 @@
 							<hr
 								class="sm-divider sm-divider--black u-centered"
 							/>
-							<h5 class="cta-banner__text--paragraph heading-sub">
+							<h3 class="cta-banner__text--paragraph heading-sub">
 								Make-up Artist | Cheryl Sallons
-							</h5>
+							</h3>
 						</div>
 						<div>
 							<a
@@ -397,6 +462,8 @@
 												class="testimonials__reviewer__img"
 												src="https://placehold.co/100x100/jpg"
 												alt="slide-img"
+												width="100"
+												height="100"
 											/>
 											<span
 												class="testimonials__reviewer__name"
@@ -436,6 +503,8 @@
 												class="testimonials__reviewer__img"
 												src="https://placehold.co/100x100/jpg"
 												alt="slide-img"
+												width="100"
+												height="100"
 											/>
 											<span
 												class="testimonials__reviewer__name paragraph"
@@ -473,6 +542,8 @@
 												class="testimonials__reviewer__img"
 												src="https://placehold.co/100x100/jpg"
 												alt="slide-img"
+												width="100"
+												height="100"
 											/>
 											<span
 												class="testimonials__reviewer__name"

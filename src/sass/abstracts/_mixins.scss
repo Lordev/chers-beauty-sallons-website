@@ -88,7 +88,8 @@ $base-path: '../assets/img/';
 }
 
 @mixin generate-grid($columns...) {
-	max-width: $container-width-lg;
+	max-width: $container-width-md;
+	justify-content: center;
 	display: grid;
 	margin: 0 auto;
 	gap: $gutter-horizontal;
@@ -103,7 +104,7 @@ $base-path: '../assets/img/';
 		// width < 1500?
 		width: 95%;
 		gap: 3.2rem;
-		padding: 0 1.5rem;
+		// padding: 0 1.5rem;
 	}
 	@include respond(tab-land) {
 		// width < 1200?

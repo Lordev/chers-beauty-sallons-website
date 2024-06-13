@@ -1,0 +1,147 @@
+/* Text Alignment */
+.u-c-text {
+	text-align: center !important;
+}
+
+.u-centered-mobile {
+	@include respond(tab-port) {
+		margin: 0 auto !important;
+	}
+}
+
+.u-c-text-mobile {
+	@include respond(tab-port) {
+		text-align: center !important;
+	}
+}
+
+/* Margin Bottom */
+.u-margin-b-s {
+	margin-bottom: $margin-sm !important;
+}
+
+.u-margin-b-m {
+	margin-bottom: $margin-md !important;
+}
+
+.u-margin-b-l {
+	margin-bottom: $margin-lg !important;
+}
+
+/* Margin Top */
+.u-margin-t-s {
+	margin-top: $margin-sm !important;
+}
+
+.u-margin-t-m {
+	margin-top: $margin-md !important;
+}
+
+.u-margin-t-l {
+	margin-top: $margin-lg !important;
+}
+
+/* Margin Left */
+.u-margin-l-s {
+	margin-left: $margin-sm !important;
+}
+
+.u-margin-l-m {
+	margin-left: $margin-md !important;
+}
+
+/* Margin Right */
+
+.u-margin-r-s {
+	margin-right: $margin-sm !important;
+}
+
+.u-margin-r-m {
+	margin-right: $margin-md !important;
+}
+
+/* Centered */
+.u-centered {
+	margin: 0 auto !important;
+}
+
+/* Float */
+.right {
+	float: right !important;
+}
+
+/* Padding X-Axis */
+.u-padding-x-s {
+	padding: 0 2rem !important;
+}
+
+.u-padding-x-m {
+	padding: 0 4rem !important;
+}
+
+.u-padding-x-l {
+	padding: 0 8rem !important;
+}
+
+/* Max Width */
+.u-max-width-2xs {
+	max-width: 28rem !important; /* 280 */
+}
+
+.u-max-width-xs {
+	max-width: 32rem !important; /* 320px */
+}
+
+.u-max-width-sm {
+	max-width: 38.4rem !important; /* 384px */
+}
+
+.u-max-width-m {
+	max-width: 44.8rem !important; /* 448px */
+}
+
+.u-max-width-l {
+	max-width: 51.2rem !important; /* 512px */
+}
+
+.u-max-width-xl {
+	max-width: 57.6rem !important; /* 576px */
+}
+
+.u-max-width-2xl {
+	max-width: 67.2rem !important; /* 672px */
+}
+
+.u-max-width-3xl {
+	max-width: 76.8rem !important; /* 768px */
+}
+
+.u-max-width-4xl {
+	max-width: 89.6rem !important; /* 896px */
+}
+
+.u-max-width-5xl {
+	max-width: 102.4rem !important; /* 1024px */
+}
+
+.u-max-width-6xl {
+	max-width: 115.2rem !important; /* 1152px */
+}
+
+.u-max-width-7xl {
+	max-width: 128rem !important; /* 1280px */
+}
+
+// z-index
+
+.u-z-index-1 {
+	z-index: 1 !important;
+}
+
+.u-z-index-2 {
+	z-index: 2 !important;
+}
+
+.u-z-index-3 {
+	z-index: 3 !important;
+}

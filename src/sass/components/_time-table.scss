@@ -26,6 +26,7 @@
 			color: $color-icons-hover-black;
 		}
 	}
+
 	@include respond(tab-land) {
 		margin: 0 auto;
 	}

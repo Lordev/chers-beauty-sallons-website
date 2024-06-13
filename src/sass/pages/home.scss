@@ -23,6 +23,18 @@
 			background: none;
 		}
 	}
+
+	&__box-left {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		gap: 2rem;
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
 }
 
 .s-feature-box {
@@ -85,14 +97,16 @@
 
 .s-social-media-slider {
 	padding: $vertical-padding-large;
+	padding-left: 7rem;
+	position: relative;
+
 	@include respond(tab-port) {
 		padding: $vertical-padding-small;
 	}
-	position: relative;
 	&::after {
 		@include layer(1);
 		z-index: 5;
-		width: 5%;
+		width: 7rem;
 		background: linear-gradient(
 			to left,
 			$color-background-secondary 0%,

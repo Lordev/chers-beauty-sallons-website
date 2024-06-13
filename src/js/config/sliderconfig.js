@@ -7,6 +7,7 @@ import {
 	FreeMode,
 } from 'swiper/modules';
 
+import { LIMIT_FETCH_IG } from './_config';
 ///////////////////////////////////////
 
 //* fadeSlider settings
@@ -80,7 +81,7 @@ export const infiniteSlider = {
 	modules: [Autoplay, FreeMode],
 	loop: true,
 	freeMode: true,
-	spaceBetween: 0,
+	spaceBetween: 4,
 	grabCursor: true,
 	loop: true,
 	slidesPerView: 2,
@@ -90,8 +91,6 @@ export const infiniteSlider = {
 	},
 	freeMode: true,
 	speed: 5000,
-	freeModeMomentum: false,
-	allowTouchMove: false,
 
 	breakpoints: {
 		600: {

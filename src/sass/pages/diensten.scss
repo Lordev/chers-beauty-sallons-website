@@ -6,7 +6,6 @@
 .s-1-editorials,
 .s-1-lashes-en-brows {
 	position: relative;
-	padding: 10rem 0;
 	&::before {
 		content: '';
 		@include layer(-1);
@@ -20,22 +19,33 @@
 	}
 }
 
+.inner-container {
+	max-width: $container-width-md;
+	background-color: $color-background-muted;
+	margin: 0 auto;
+	padding: 10rem 4rem;
+
+	@include respond(tab-land) {
+		max-width: $container-width-sm;
+		padding: 10rem 9rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 10rem 2rem;
+	}
+}
+
 .s-1-bruiloft,
 .s-1-beauty-en-party,
 .s-1-festival,
 .s-1-editorials,
 .s-1-lashes-en-brows {
-	padding: $vertical-padding-large;
-	padding-left: 7rem;
-	@include respond(phone) {
-		padding-left: 0;
-	}
 	background-color: $color-background-primary;
 	@include respond(phone) {
 		padding-left: 0;
 	}
 	&::after {
-		@include layer(1);
+		@include layer(-1);
 		z-index: 5;
 		width: 7rem;
 		background: linear-gradient(
@@ -47,9 +57,6 @@
 			background: none;
 		}
 	}
-	&__img {
-		justify-self: end;
-	}
 }
 
 .s-2-bruiloft,
@@ -60,7 +67,7 @@
 	}
 
 	&::after {
-		@include layer(0);
+		@include layer(-1);
 		right: 0;
 		background: linear-gradient(
 			to right,

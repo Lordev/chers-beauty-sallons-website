@@ -1,43 +1,47 @@
 {
-    "name": "website_cheryl",
-    "version": "1.0.0",
-    "description": "",
-    "alias": {
-        "process": false
-    },
-    "scripts": {
-        "clean": "rm -rf dist",
-        "start": "concurrently \"parcel dist/views/index.html\" \"gulp\" ",
-        "build": "parcel dist/views/index.html --dist-dir ./dist"
-    },
-    "author": "Lorenzo Sallons",
-    "license": "ISC",
-    "devDependencies": {
-        "@parcel/transformer-sass": "^2.10.3",
-        "assert": "^2.1.0",
-        "buffer": "^6.0.3",
-        "concat": "^1.0.3",
-        "constants-browserify": "^1.0.0",
-        "core-js": "^3.34.0",
-        "domain-browser": "^3.5.0",
-        "events": "^3.3.0",
-        "gulp": "^4.0.2",
-        "gulp-concat": "^2.6.1",
-        "gulp-file-include": "^2.3.0",
-        "gulp-watch": "^5.0.1",
-        "os-browserify": "^0.3.0",
-        "parcel": "^2.10.3",
-        "path-browserify": "^1.0.1",
-        "regenerator-runtime": "^0.14.1",
-        "stream-browserify": "^3.0.0",
-        "util": "^0.12.5"
-    },
-    "dependencies": {
-        "@googlemaps/js-api-loader": "^1.16.2",
-        "concurrently": "^8.2.2",
-        "flexbin": "^0.2.0",
-        "gulp-replace": "^1.1.4",
-        "photoswipe": "^5.4.3",
-        "swiper": "^11.0.5"
-    }
+	"name": "website_cheryl",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"alias": {
+		"process": false
+	},
+	"scripts": {
+		"clean": "rm -rf dist .parcel-cache .cache",
+		"start": "parcel dist/views/index.html",
+		"build": "gulp && parcel dist/views/index.html --dist-dir ./dist --no-source-maps"
+	},
+	"author": "Lorenzo Sallons",
+	"license": "ISC",
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.10.3",
+		"assert": "^2.1.0",
+		"buffer": "^6.0.3",
+		"concat": "^1.0.3",
+		"concurrently": "^8.2.2",
+		"constants-browserify": "^1.0.0",
+		"core-js": "^3.34.0",
+		"domain-browser": "^3.5.0",
+		"events": "^3.3.0",
+		"gulp": "^4.0.2",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-file-include": "^2.3.0",
+		"gulp-imagemin": "^9.1.0",
+		"gulp-replace": "^1.1.4",
+		"gulp-sass": "^5.1.0",
+		"gulp-watch": "^5.0.1",
+		"os-browserify": "^0.3.0",
+		"parcel": "^2.10.3",
+		"path-browserify": "^1.0.1",
+		"regenerator-runtime": "^0.14.1",
+		"sass": "^1.77.5",
+		"stream-browserify": "^3.0.0",
+		"util": "^0.12.5"
+	},
+	"dependencies": {
+		"flexbin": "^0.2.0",
+		"photoswipe": "^5.4.3",
+		"swiper": "^11.0.5"
+	}
 }

@@ -12,12 +12,9 @@ html {
 		font-size: 70%;
 	}
 	@include respond(desktop) {
-		font-size: 65%;
-	}
-	@include respond(tab-land) {
 		font-size: 60%;
 	}
-	@include respond(tab-port) {
+	@include respond(tab-land) {
 		font-size: 55%;
 	}
 }

@@ -1,74 +1,72 @@
 .feature-box {
-    height: 70vh;
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: auto;
-    grid-auto-flow: column;
-    z-index: -5;
+	height: 70vh;
+	cursor: pointer;
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-flow: column;
+	z-index: -5;
 
-    @include respond(tab-port) {
-        grid-template-rows: auto;
-        grid-auto-flow: row;
-        height: 200vh;
-    }
+	@include respond(tab-port) {
+		grid-template-rows: auto;
+		grid-auto-flow: row;
+		height: 200vh;
+	}
 
+	&__block {
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
 
-    &__block {
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-    }
+	&__img {
+		height: 100%;
+		border-radius: 2px;
+		background-size: cover;
+		background-position: bottom;
+		transition: transform 1s ease;
+		filter: blur(2);
+		filter: brightness(0.35);
+		transform: scale(1.05);
 
-    &__img {
-        height: 100%;
-        border-radius: 2px;
-        background-size:cover;
-        background-position: bottom;
-        transition: transform 1s ease;
-        filter: blur(2);
-        filter: brightness(0.35);
-        transform: scale(1.05);
+		&-1 {
+			@include background-image('home/home-features-bridal.jpg');
+		}
 
-        &-1 {
-            @include background-image("home/home-features-bridal.jpg");
-        }
+		&-2 {
+			@include background-image('home/home-features-festival.jpg');
+		}
+		&-3 {
+			@include background-image('home/home-features-beauty.jpg');
+		}
 
-        &-2 {
-            @include background-image("home/home-features-festival.jpg");
-        }
-        &-3 {
-            @include background-image("home/home-features-beauty.jpg");
-        }
+		&-4 {
+			@include background-image('home/home-features-lashes.jpg');
+		}
 
-        &-4 {
-            @include background-image("home/home-features-lashes.jpg");
-        }
+		&-5 {
+			@include background-image('home/home-features-editorials.jpg');
+		}
+	}
 
-        &-5 {
-            @include background-image("home/home-features-editorials.jpg");
-        }
-    }
+	&__text {
+		@include center-horizontal-vertical;
+		color: $color-white;
+		opacity: 0.7;
+		transition: all 1s ease;
+		height: 50%;
+		width: 90%;
+		padding: 3rem;
+		background-color: rgba($color-white, 0.1);
+	}
 
-    &__text {
-        @include center-horizontal-vertical;
-        color: $color-white;
-        opacity: 0.7;
-        transition: all 1s ease;
-        height: 50%;
-        width: 90%;
-        padding: 3rem;
-        background-color: rgba($color-white, 0.1);
-    }
-
-    &__block:hover &__img {
-        filter: blur(0);
-        filter: brightness(0.8);
-        transform: scale(1.2);
-        background-color: rgba($color-white, 0.3);
-    }
-    &__block:hover &__text {
-        opacity: 1;
-    }
+	&__block:hover &__img {
+		filter: blur(0);
+		filter: brightness(0.8);
+		transform: scale(1.2);
+		background-color: rgba($color-white, 0.3);
+	}
+	&__block:hover &__text {
+		opacity: 1;
+	}
 }
-

@@ -3,7 +3,7 @@
 $color-blush-pink: #e4b9b4; //primary
 $color-coral-pink: #f79489; //secondary
 $color-dusty-rose: #ce9999;
-$color-deep-puce: #a56069;
+$color-deep-puce: #c68985;
 $color-black: #333;
 $color-gray: #aaaaaa;
 $color-gray-light: #dadada;
@@ -22,8 +22,11 @@ $color-icons-hover-secondary: $color-deep-puce;
 $color-icons-hover-black: $color-black;
 
 /* Link Colors */
+$color-links-primary: $color-deep-puce;
+
 $color-links-hover: $color-blush-pink;
 $color-links-hover-secondary: $color-coral-pink;
+$color-links-hover-white: $color-off-white;
 $color-links-active: $color-blush-pink;
 
 /* Background Colors */
@@ -60,7 +63,7 @@ $color-border-black: $color-black;
 $color-border-white: $color-white;
 
 //TYPOGRAPHY
-$font-base: 'Nunito sans';
+$font-base: inter, sans-serif;
 $font-headings: 'Playfair-display';
 $font-sub-headings: 'Old Standard TT';
 
@@ -75,7 +78,7 @@ $font-size-2xl: 2.8rem;
 $font-size-xl: 2.4rem;
 $font-size-lg: 2.2rem;
 $font-size-md: 1.8rem;
-$font-size-base: 1.5rem;
+$font-size-base: 1.4rem;
 $font-size-sm: 1.3rem;
 
 //SHADOWS
@@ -114,6 +117,7 @@ $flexbin-row-height-phone: 200px;
 $flexbin-space-phone: 4px;
 
 //MARGINS
+$margin-xl: 8rem;
 $margin-lg: 4rem;
 $margin-md: 2.2rem;
 $margin-sm: 1.3rem;

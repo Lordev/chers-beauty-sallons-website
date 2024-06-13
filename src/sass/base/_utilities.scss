@@ -28,6 +28,10 @@
 	margin-bottom: $margin-lg !important;
 }
 
+.u-margin-b-xl {
+	margin-bottom: $margin-xl !important;
+}
+
 /* Margin Top */
 .u-margin-t-s {
 	margin-top: $margin-sm !important;
@@ -93,7 +97,7 @@
 }
 
 .u-max-width-sm {
-	max-width: 38.4rem !important; /* 384px */
+	max-width: 40rem !important; /* 384px */
 }
 
 .u-max-width-m {
@@ -132,6 +136,7 @@
 	max-width: 128rem !important; /* 1280px */
 }
 
+
 // z-index
 
 .u-z-index-1 {
@@ -145,3 +150,10 @@
 .u-z-index-3 {
 	z-index: 3 !important;
 }
+
+// Position
+
+.u-self-end {
+	justify-self: end !important;
+}
+

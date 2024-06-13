@@ -45,14 +45,4 @@
 			text-align: right;
 		}
 	}
-
-	&__description {
-		& > * {
-			color: #666666;
-			font-size: 1.4rem;
-			font-style: italic;
-			text-align: left;
-			padding: 0 3rem;
-		}
-	}
 }

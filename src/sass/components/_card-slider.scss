@@ -15,19 +15,19 @@
 		box-shadow: $medium-shadow;
 		display: block;
 		&--1 {
-			@include background-image('/home/home-about-01.jpg');
+			@include background-image('home/home-about-01.jpg');
 		}
 		&--2 {
-			@include background-image('/home/home-about-02.jpg');
+			@include background-image('home/home-about-02.jpg');
 		}
 		&--3 {
-			@include background-image('/home/home-about-03.jpg');
+			@include background-image('home/home-about-03.jpg');
 		}
 		&--4 {
-			@include background-image('/home/home-about-04.jpg');
+			@include background-image('home/home-about-04.jpg');
 		}
 		&--5 {
-			@include background-image('/home/home-about-05.jpg');
+			@include background-image('home/home-about-05.jpg');
 		}
 	}
 }

@@ -35,12 +35,9 @@
 	}
 
 	&-sub {
-		font-family: $font-sub-headings;
-		@include heading(
-			$font-size-md,
-			$font-weight-normal,
-			$font-size-md * 1.2
-		);
+		font-family: $font-headings;
+		margin-bottom: $margin-sm;
+		@include heading(1.6rem, $font-weight-normal, 1.6rem * 1.2);
 	}
 
 	&-color {
@@ -73,7 +70,9 @@
 	// height: 0.8rem;
 	border: none;
 	border-top: 1px solid;
-	padding-bottom: $margin-md;
+	&:not(:last-child) {
+		padding-bottom: $margin-md;
+	}
 
 	&--black {
 		border-color: $color-border-black;
@@ -91,6 +90,7 @@
 // PARAGRAPHS
 
 .paragraph {
+	font-size: $font-size-base;
 	&:not(:last-child) {
 		margin-bottom: $margin-md;
 	}
@@ -104,13 +104,10 @@
 }
 
 .text-link {
-	color: $color-text-primary;
-	font-weight: $font-weight-normal;
+	color: #603e3a;
+	font-weight: $font-weight-bold;
 	text-decoration: none;
-	transition: all 0.2s;
-	&:hover {
-		color: $color-links-hover;
-	}
+	transition: color 0.3s ease;
 }
 
 .upper {

@@ -1,0 +1,102 @@
+*,
+*::after,
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	@include respond(big-desktop) {
+		font-size: 70%;
+	}
+	@include respond(desktop) {
+		font-size: 65%;
+	}
+	@include respond(tab-land) {
+		font-size: 60%;
+	}
+	@include respond(tab-port) {
+		font-size: 55%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	background-size: cover;
+	background-repeat: no-repeat;
+	hyphens: none;
+	font-family: 'Nunito Sans', sans-serif;
+	font-display: optional;
+	font-weight: $font-weight-thin;
+	line-height: 2.3rem;
+	font-size: $font-size-base;
+	hyphens: auto;
+}
+
+a {
+	font-family: 'Nunito Sans', sans-serif;
+	color: $color-text-primary;
+	text-decoration: none;
+}
+
+input[type='checkbox'],
+a {
+	cursor: pointer;
+}
+
+input {
+	font-size: 1.6rem;
+	outline: none; /* Remove default focus outline */
+	border-width: 0 0 1px;
+	padding: 0;
+	// background: none;
+	line-height: 1.5em;
+	font-weight: 100;
+	&:valid {
+		border-bottom: solid rgba($color-input-valid, 0.9);
+	}
+	&:invalid {
+		border-bottom: solid rgba($color-input-invalid, 0.5);
+	}
+}
+
+li {
+	list-style: none;
+}
+
+main {
+	overflow: hidden;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: pretty;
+	word-wrap: break-word;
+	hyphens: none;
+	overflow-wrap: break-word;
+	word-break: break-word;
+}
+
+.fa {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	line-height: 1 !important;
+	font-size-adjust: none;
+	font-stretch: normal;
+	-webkit-font-feature-settings: normal;
+	font-feature-settings: normal;
+	-webkit-font-language-override: normal;
+	font-language-override: normal;
+	-webkit-font-kerning: auto;
+	font-kerning: auto;
+	font-synthesis: weight style;
+	font-variant: normal;
+	text-rendering: auto;
+}

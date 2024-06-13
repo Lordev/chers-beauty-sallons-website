@@ -52,7 +52,7 @@
 			font-size: 1.3rem;
 			font-family: 'Nunito-sans';
 			font-weight: 600;
-			color: $color-button-primary;
+			color: $color-links-primary;
 		}
 	}
 	&::before {
@@ -62,7 +62,7 @@
 		bottom: 0;
 		left: 50%;
 		width: 1px;
-		background-color: $color-button-primary;
+		background-color: $color-links-primary;
 		transform: translateX(-50%);
 		transition: transform 0.4s, opacity 0.3s ease-in-out;
 		opacity: 0;
@@ -72,6 +72,6 @@
 	&:hover::before {
 		opacity: 1;
 		transform: scaleX(100);
-		background-color: $color-button-primary;
+		background-color: $color-links-primary;
 	}
 }

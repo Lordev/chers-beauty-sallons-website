@@ -1,4 +1,4 @@
-import { IG_URL, IG_KEY } from './config/_config';
+import { IG_URL, IG_KEY, LIMIT_FETCH_IG } from './config/_config';
 import {
 	homeBannerSlider,
 	aboutCardSlider,
@@ -28,7 +28,9 @@ if (path === '/index.html' || path === '/') {
 	homeBannerSlider.createHeaderSlider();
 	aboutCardSlider.createSlider();
 	testimonialSlider.createSlider();
-	// instagramSlider.fetchDataAndRenderSlider(`${IG_URL}${IG_KEY}`);
+	instagramSlider.fetchDataAndRenderSlider(
+		`${IG_URL}${IG_KEY}&limit=${LIMIT_FETCH_IG}`
+	);
 }
 
 if (
