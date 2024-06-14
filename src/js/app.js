@@ -11,6 +11,8 @@ import {
 	footerInnerLinks,
 	activeMenuLinks,
 	galleryObserver,
+	revealLeft,
+	revealRight,
 } from '../js/controller/controller.js';
 
 // Initialize menu active controller
@@ -22,6 +24,10 @@ headerScroll.init();
 // Initialize footer links controller
 const path = window.location.pathname;
 footerInnerLinks.init();
+
+// Initialize reveal animations
+revealLeft.observeElements();
+revealRight.observeElements();
 
 // Initialize sliders
 if (path === '/index.html' || path === '/') {
@@ -46,5 +52,5 @@ if (
 // Initialize gallery observer
 
 if (path === '/portfolio.html') {
-	galleryObserver.init();
+	galleryObserver.observeGallery();
 }

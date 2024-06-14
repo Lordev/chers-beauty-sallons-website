@@ -1,14 +1,17 @@
-export function handleScroll(threshold, header) {
+export function handleScroll(header) {
 	let scrolledPastThreshold = false;
 	let lastScrollPosition = 0;
+	let threshold = 0;
 
 	function scrollHandler() {
 		let scrollPosition = window.scrollY;
+		const headerInner = document.getElementById('header-sticky');
+		const headerHeight = headerInner.getBoundingClientRect().height;
+		threshold = headerHeight;
+		console.log(threshold);
 
 		if (!scrolledPastThreshold && scrollPosition > threshold) {
-			const headerInner = document.getElementById('header-sticky');
 			const header = document.querySelector('.header');
-			const headerHeight = headerInner.getBoundingClientRect().height;
 			header.style.height = `${headerHeight}px`;
 			scrolledPastThreshold = true;
 		}

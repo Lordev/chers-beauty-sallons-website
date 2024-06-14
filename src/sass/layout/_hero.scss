@@ -16,7 +16,7 @@
 
 //!HOME
 ////////////////////////////////////////////////////
-////////////////////////////////////////////////////
+///////////////////////////////////////////p/////////
 .home-banner-slider {
 	&__swiper {
 		&::after {
@@ -84,12 +84,12 @@
 }
 
 .beauty-en-party-banner {
-	&--top {
+	&--1 {
 		@extend %diensten-banner-height;
 		@include background-image('banners/beauty-banner@1600w.jpg');
 		top: 0;
 	}
-	&--middle {
+	&--2 {
 		@extend %diensten-banner-height;
 		@include background-image('banners/beauty-banner-middle@1600w.jpg');
 	}
@@ -102,9 +102,15 @@
 }
 
 .editorials-banner {
-	@extend %diensten-banner-height;
-	top: 0;
-	@include background-image('banners/editorials-banner@1600w.jpg');
+	&--1 {
+		@extend %diensten-banner-height;
+		@include background-image('banners/editorials-banner-01@2000w.jpg');
+		top: 0;
+	}
+	&--2 {
+		@extend %diensten-banner-height;
+		@include background-image('banners/editorials-banner-02@2000w.jpg');
+	}
 }
 
 //!PORTFOLIO

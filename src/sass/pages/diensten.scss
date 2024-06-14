@@ -13,21 +13,17 @@
 		width: 100%;
 		height: 100%;
 	}
-
-	&__img {
-		transform: translateY(0rem);
-	}
 }
 
 .inner-container {
 	max-width: $container-width-md;
 	background-color: $color-background-muted;
 	margin: 0 auto;
-	padding: 10rem 4rem;
+	padding: 10rem 10rem;
 
 	@include respond(tab-land) {
 		max-width: $container-width-sm;
-		padding: 10rem 9rem;
+		padding: 10rem 8rem;
 	}
 
 	@include respond(tab-port) {
@@ -95,5 +91,10 @@
 .s-bruidsmake-up-tarieven,
 .s-beauty-en-party-tarieven {
 	padding: 8rem 0 16rem 0;
+	background-color: $color-background-secondary;
+}
+
+.s-gallery {
+	padding: $vertical-padding-large;
 	background-color: $color-background-secondary;
 }

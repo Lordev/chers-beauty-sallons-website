@@ -27,51 +27,6 @@
 			height: 45rem;
 			@include background-image('home/home-model-card.jpg');
 		}
-		&--2 {
-			height: 70rem;
-
-			@extend %image-hover;
-			@include background-image('tarieven/tarieven-bridal.jpg');
-		}
-		&--3 {
-			height: 70rem;
-
-			@extend %image-hover;
-			@include background-image('tarieven/tarieven-beauty.jpg');
-		}
-		&--4 {
-			height: 40rem;
-
-			@extend %image-hover;
-			@include background-image(
-				'diensten/festival/festival-applying-make-up.jpg'
-			);
-		}
-		&--5 {
-			height: 40rem;
-
-			@extend %image-hover;
-			@include background-image(
-				'diensten/festival/festival-headshot-02.jpg'
-			);
-		}
-		&--6 {
-			height: 40rem;
-
-			@extend %image-hover;
-			@include background-image(
-				'diensten/editorials/editorials-headshot-01.jpg'
-			);
-		}
-
-		&--7 {
-			height: 40rem;
-
-			@extend %image-hover;
-			@include background-image(
-				'diensten/editorials/editorials-headshot-02.jpg'
-			);
-		}
 	}
 }
 
@@ -83,7 +38,6 @@
 	max-width: 40rem;
 	min-height: 62.5rem;
 	z-index: 1;
-
 	@include respond(tab-port) {
 		order: 1;
 	}
@@ -94,6 +48,12 @@
 	backface-visibility: hidden;
 	width: 100%;
 	height: 100%;
+	opacity: 1;
+	transition: all 0.6s ease;
+	&:hover {
+		scale: 1.05;
+	}
+
 	&__bridal {
 		&--1 {
 			@include background-image(
@@ -128,32 +88,49 @@
 		}
 	}
 
-	&--2 {
-		@include background-image('diensten/bridal/bridal-image-02@600w.jpg');
-		background-position: 0 10%;
+	&__beauty {
+		&--1 {
+			@include background-image(
+				'diensten/beauty/beauty-and-party-image-01@400x625.jpg'
+			);
+		}
+		&--2 {
+			@include background-image(
+				'diensten/beauty/beauty-and-party-image-02@400x625.jpg'
+			);
+		}
+		&--3 {
+			@include background-image(
+				'diensten/beauty/beauty-and-party-image-03@400x625.jpg'
+			);
+		}
+		&--4 {
+			@include background-image(
+				'diensten/beauty/beauty-and-party-image-04@400x625.jpg'
+			);
+		}
 	}
 
-	&--3 {
-		@include background-image('diensten/festival/festival-headshot-01.jpg');
-		background-position: bottom;
-	}
-
-	&--4 {
-		@include background-image('diensten/beauty/beauty-headshot-01.jpg');
-	}
-
-	&--5 {
-		background-position: center;
-		@include background-image('diensten/beauty/beauty-headshot-02.jpg');
-	}
-
-	&--6 {
-		background-position: center;
-		@include background-image('diensten/lashes/lashes-make-up-kit.jpg');
-	}
-
-	&--7 {
-		background-position: center;
-		@include background-image('diensten/editorials/editorials-catwalk.jpg');
+	&__editorials {
+		&--1 {
+			@include background-image(
+				'diensten/editorials/editorials-image-01@400x625.jpg'
+			);
+		}
+		&--2 {
+			@include background-image(
+				'diensten/editorials/editorials-image-02@400x625.jpg'
+			);
+		}
+		&--3 {
+			@include background-image(
+				'diensten/editorials/editorials-image-03@400x625.jpg'
+			);
+		}
+		&--4 {
+			@include background-image(
+				'diensten/editorials/editorials-image-04@400x625.jpg'
+			);
+		}
 	}
 }

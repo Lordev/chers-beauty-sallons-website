@@ -36,6 +36,14 @@
 	}
 }
 
+.five-col {
+	@include generate-grid(repeat(5, 1fr));
+	@include respond(tab-port) {
+		grid-template-columns: none;
+		grid-template-rows: repeat(5, auto);
+	}
+}
+
 footer .row .four-col {
 	@include respond(tab-port) {
 		gap: 0;

@@ -54,18 +54,6 @@ class HeaderButtonController {
 		this.init();
 	}
 
-	openMenu = () => {
-		if (this.parentElement && this.sideMenuWindow) {
-			this.parentElement.addEventListener('click', () => {
-				this.sideMenuWindow.style.transform = 'translateX(0%)';
-			});
-		} else {
-			console.error(
-				'Parent element or side menu window element is not defined'
-			);
-		}
-	};
-
 	renderButton = () => {
 		if (this.parentElement) {
 			const button = new ButtonHeaderView(
@@ -73,6 +61,9 @@ class HeaderButtonController {
 				this.breakPoint
 			);
 			button.init();
+			button.headerMenuButton = addEventListener('click', () => {
+				this.sideMenuWindow.style.transform = 'translateX(0%)';
+			});
 		} else {
 			console.error('Parent element is not defined');
 		}
@@ -80,7 +71,6 @@ class HeaderButtonController {
 
 	init = () => {
 		this.renderButton();
-		this.openMenu();
 	};
 }
 
@@ -116,8 +106,7 @@ class SliderController {
 }
 
 class HeaderScrollController {
-	constructor(threshold, header) {
-		this.threshold = threshold;
+	constructor(header) {
 		this.header = header;
 	}
 
@@ -132,7 +121,7 @@ class HeaderScrollController {
 
 	init() {
 		this.setHeaderHeight();
-		handleScroll(this.threshold, this.header);
+		handleScroll(this.header);
 	}
 }
 
@@ -184,9 +173,17 @@ class ImageObserverController {
 		);
 	}
 
-	init() {
+	observeElements() {
 		try {
 			this.imageObserver.observeElements();
+		} catch (err) {
+			console.error(`error observing images in the controller`, err);
+		}
+	}
+
+	observeGallery() {
+		try {
+			this.observeElements();
 			const lightbox = new PhotoSwipeLightbox({
 				gallery: '#gallery',
 				children: 'a',
@@ -256,7 +253,6 @@ export const beautyPriceCardSlider = new SliderController(
 
 // Header;
 export const headerScroll = new HeaderScrollController(
-	window.innerHeight * 0.5,
 	document.getElementById('header-sticky')
 );
 
@@ -292,7 +288,20 @@ export const activeMenuLinks = new MenuLinksActiveController(
 export const galleryObserver = new ImageObserverController(
 	0.2,
 	'.gallery-img',
-	'reveal-img'
+	'hidden'
+);
+
+// Image Observer
+export const revealLeft = new ImageObserverController(
+	0.1,
+	'.reveal-left',
+	'reveal-left--hidden'
+);
+
+export const revealRight = new ImageObserverController(
+	0.1,
+	'.reveal-right',
+	'reveal-right--hidden'
 );
 
 //Footer Links

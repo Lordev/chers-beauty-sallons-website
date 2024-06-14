@@ -31,7 +31,7 @@ export function processImages() {
 			imagemin(
 				[
 					gifsicle({ interlaced: true }),
-					mozjpeg({ quality: 95, progressive: true }),
+					mozjpeg({ quality: 80, progressive: true }),
 					optipng({ optimizationLevel: 5 }),
 				],
 				{
