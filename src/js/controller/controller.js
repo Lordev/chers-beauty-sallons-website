@@ -180,31 +180,40 @@ class ImageObserverController {
 			console.error(`error observing images in the controller`, err);
 		}
 	}
+}
 
-	observeGallery() {
-		try {
-			this.observeElements();
-			const lightbox = new PhotoSwipeLightbox({
-				gallery: '#gallery',
-				children: 'a',
+class lightBoxGalleryController {
+	constructor(gallery) {
+		this.gallery = gallery;
+		this.init();
+	}
 
-				initialZoomLevel: 'fit',
-				secondaryZoomLevel: 'fill',
+	init() {
+		{
+			try {
+				const lightbox = new PhotoSwipeLightbox({
+					gallery: this.gallery,
+					children: 'a',
 
-				imageClickAction: 'next',
-				tapAction: 'next',
+					initialZoomLevel: 'fit',
+					secondaryZoomLevel: 'fill',
 
-				// tap delay is removed if set to false
-				doubleTapAction: true,
-				pswpModule: () => import('photoswipe/dist/photoswipe.esm.js'),
-			});
+					imageClickAction: 'next',
+					tapAction: 'next',
 
-			lightbox.init();
-		} catch (err) {
-			console.error(
-				`error observing gallery image in the controller`,
-				err
-			);
+					// tap delay is removed if set to false
+					doubleTapAction: true,
+					pswpModule: () =>
+						import('photoswipe/dist/photoswipe.esm.js'),
+				});
+
+				lightbox.init();
+			} catch (err) {
+				console.error(
+					`error observing ${this.gallery} image in the controller`,
+					err
+				);
+			}
 		}
 	}
 }
@@ -285,23 +294,29 @@ export const activeMenuLinks = new MenuLinksActiveController(
 );
 
 // Gallery Observer
-export const galleryObserver = new ImageObserverController(
+
+export const portfolioGallery = new lightBoxGalleryController('gallery');
+
+// Image Observer
+export const galleryImageObserver = new ImageObserverController(
 	0.2,
 	'.gallery-img',
 	'hidden'
 );
-
-// Image Observer
 export const revealLeft = new ImageObserverController(
 	0.1,
 	'.reveal-left',
 	'reveal-left--hidden'
 );
-
 export const revealRight = new ImageObserverController(
 	0.1,
 	'.reveal-right',
 	'reveal-right--hidden'
+);
+export const revealBottom = new ImageObserverController(
+	0.1,
+	'.reveal-bottom',
+	'reveal-bottom--hidden'
 );
 
 //Footer Links

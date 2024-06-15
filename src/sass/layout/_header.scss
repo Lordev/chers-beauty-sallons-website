@@ -94,7 +94,6 @@
 			font-size: $font-size-sm;
 			font-weight: $font-weight-bold;
 			text-transform: uppercase;
-			transition: color 0.3s;
 
 			&--active {
 				color: $color-links-primary;
@@ -106,7 +105,8 @@
 		}
 
 		&__arrow-icon {
-			margin-top: 0.5rem;
+			height: 1rem;
+			margin-top: 1.3rem;
 			font-size: 2rem;
 			display: flex;
 			align-items: center;
@@ -114,12 +114,12 @@
 	}
 
 	&__logo {
-		width: 250px;
-		aspect-ratio: 250/67;
+		width: 263px;
+		aspect-ratio: 263/75;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 67px;
+		height: 75px;
 
 		@include respond(tab-land) {
 			max-width: 200px;

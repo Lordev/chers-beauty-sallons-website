@@ -10,9 +10,11 @@ import {
 	headerScroll,
 	footerInnerLinks,
 	activeMenuLinks,
-	galleryObserver,
+	galleryImageObserver,
+	portfolioGallery,
 	revealLeft,
 	revealRight,
+	revealBottom,
 } from '../js/controller/controller.js';
 
 // Initialize menu active controller
@@ -28,6 +30,7 @@ footerInnerLinks.init();
 // Initialize reveal animations
 revealLeft.observeElements();
 revealRight.observeElements();
+revealBottom.observeElements();
 
 // Initialize sliders
 if (path === '/index.html' || path === '/') {
@@ -52,5 +55,6 @@ if (
 // Initialize gallery observer
 
 if (path === '/portfolio.html') {
-	galleryObserver.observeGallery();
+	galleryImageObserver.observeElements();
+	portfolioGallery.init();
 }

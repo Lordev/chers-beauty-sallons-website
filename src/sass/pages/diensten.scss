@@ -36,18 +36,16 @@
 .s-1-festival,
 .s-1-editorials,
 .s-1-lashes-en-brows {
-	background-color: $color-background-primary;
 	@include respond(phone) {
 		padding-left: 0;
 	}
 	&::after {
 		@include layer(-1);
-		z-index: 5;
-		width: 7rem;
 		background: linear-gradient(
-			to left,
-			$color-background-secondary 0%,
-			$color-background-secondary 100%
+			to right,
+			$color-background-secondary 7rem,
+			$color-background-primary 7rem,
+			$color-background-primary 100%
 		);
 		@include respond(phone) {
 			background: none;
@@ -57,7 +55,7 @@
 
 .s-2-bruiloft,
 .s-2-beauty-en-party {
-	padding-right: 7rem;
+	border-top: 10rem solid $color-background-secondary;
 	@include respond(phone) {
 		padding-right: 0;
 	}
@@ -84,7 +82,7 @@
 
 .s-bruidsmake-up-cards,
 .s-beauty-en-party-cards {
-	height: 12rem;
+	height: 10rem;
 	background-color: $color-background-secondary;
 }
 
@@ -95,6 +93,6 @@
 }
 
 .s-gallery {
-	padding: $vertical-padding-large;
+	padding: $vertical-padding-medium;
 	background-color: $color-background-secondary;
 }

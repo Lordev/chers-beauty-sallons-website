@@ -75,17 +75,6 @@
 				'diensten/bridal/bridal-image-04@600w.jpg'
 			);
 		}
-		&--5 {
-			@include background-image(
-				'diensten/bridal/bridal-image-05@600w.jpg'
-			);
-		}
-		&--6 {
-			@include background-image(
-				'diensten/bridal/bridal-image-06@600w.jpg'
-			);
-			background-position: center;
-		}
 	}
 
 	&__beauty {
@@ -99,16 +88,16 @@
 				'diensten/beauty/beauty-and-party-image-02@400x625.jpg'
 			);
 		}
-		&--3 {
-			@include background-image(
-				'diensten/beauty/beauty-and-party-image-03@400x625.jpg'
-			);
-		}
-		&--4 {
-			@include background-image(
-				'diensten/beauty/beauty-and-party-image-04@400x625.jpg'
-			);
-		}
+		// &--3 {
+		// 	@include background-image(
+		// 		'diensten/beauty/beauty-and-party-image-03@400x625.jpg'
+		// 	);
+		// }
+		// &--4 {
+		// 	@include background-image(
+		// 		'diensten/beauty/beauty-and-party-image-04@400x625.jpg'
+		// 	);
+		// }
 	}
 
 	&__editorials {
@@ -132,5 +121,16 @@
 				'diensten/editorials/editorials-image-04@400x625.jpg'
 			);
 		}
+	}
+}
+
+.image-container {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+
+	&--rounded {
+		border-radius: 100%;
 	}
 }
