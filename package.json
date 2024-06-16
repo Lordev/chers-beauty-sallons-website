@@ -9,7 +9,7 @@
 	"scripts": {
 		"clean": "rm -rf dist .parcel-cache .cache",
 		"start": "parcel dist/views/index.html",
-		"build": "gulp && parcel dist/views/index.html --dist-dir ./dist --no-source-maps"
+		"build": "gulp build && parcel dist/views/index.html --dist-dir ./dist --no-source-maps"
 	},
 	"author": "Lorenzo Sallons",
 	"license": "ISC",

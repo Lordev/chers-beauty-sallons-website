@@ -192,7 +192,7 @@ class lightBoxGalleryController {
 		{
 			try {
 				const lightbox = new PhotoSwipeLightbox({
-					gallery: this.gallery,
+					gallery: `#${this.gallery}`,
 					children: 'a',
 
 					initialZoomLevel: 'fit',
@@ -296,27 +296,36 @@ export const activeMenuLinks = new MenuLinksActiveController(
 // Gallery Observer
 
 export const portfolioGallery = new lightBoxGalleryController('gallery');
+export const beautyGallery = new lightBoxGalleryController('gallery-beauty');
+export const editorialsGallery = new lightBoxGalleryController(
+	'gallery-editorials'
+);
 
 // Image Observer
 export const galleryImageObserver = new ImageObserverController(
 	0.2,
-	'.gallery-img',
-	'hidden'
+	'hidden',
+	'gallery-img'
 );
 export const revealLeft = new ImageObserverController(
 	0.1,
-	'.reveal-left',
-	'reveal-left--hidden'
+	'reveal-left--hidden',
+	'reveal-left'
 );
 export const revealRight = new ImageObserverController(
 	0.1,
-	'.reveal-right',
-	'reveal-right--hidden'
+	'reveal-right--hidden',
+	'reveal-right'
 );
 export const revealBottom = new ImageObserverController(
 	0.1,
-	'.reveal-bottom',
-	'reveal-bottom--hidden'
+	'reveal-bottom--hidden',
+	'reveal-bottom'
+);
+export const revealSection = new ImageObserverController(
+	0,
+	'reveal-section--hidden',
+	'reveal-section'
 );
 
 //Footer Links

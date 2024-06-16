@@ -9,11 +9,13 @@
 		)
 		left;
 	padding: $vertical-padding-large;
+	overflow: hidden;
 }
 
 .s2-tarieven {
 	background: $color-background-muted;
 	padding: 8rem 0;
+	overflow: hidden;
 }
 
 .s1-tarieven-tabel {

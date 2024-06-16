@@ -4,20 +4,29 @@
 	&--style {
 		display: inline-block;
 		text-transform: uppercase;
-		font-weight: $font-weight-normal;
+
 		transition: 0.2s;
-		border: none;
 		width: fit-content;
 		cursor: pointer;
-		border-radius: 5rem;
 	}
 
 	&__primary {
+		font-weight: $font-weight-normal;
 		padding: 2rem 3rem;
+		border-radius: 5rem;
 	}
 
 	&__secondary {
-		padding: 0.7rem 3rem;
+		font-weight: $font-weight-normal;
+		padding: 0.9rem 3rem;
+		border-radius: 5rem;
+	}
+
+	&__menu {
+		font-size: $font-size-xs;
+		font-weight: $font-weight-semi-bold;
+		letter-spacing: 0.2rem;
+		padding: 3.5rem 0.8rem;
 	}
 
 	&--pink {
@@ -37,6 +46,13 @@
 			background: $color-button-hover-white;
 			color: $color-text-primary;
 			box-shadow: $soft-shadow;
+		}
+	}
+
+	&--menu {
+		background: #ecd8d7;
+		&:hover {
+			background: $color-button-hover-primary;
 		}
 	}
 }

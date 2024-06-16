@@ -6,7 +6,6 @@
 	position: relative;
 	padding: $vertical-padding-large;
 	background: $color-background-primary;
-	padding-left: 7rem;
 	@include respond(phone) {
 		padding-left: 0;
 	}

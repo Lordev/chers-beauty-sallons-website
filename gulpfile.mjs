@@ -69,5 +69,6 @@ export function watch() {
 	gulp.watch(paths.images.src, gulp.series(processImages));
 	gulp.watch('src/sass/**/*.scss', gulp.series(processSass));
 }
+
 // Default task
-export default gulp.series(processHTML, processSass, processImages, watch);
+export default gulp.series(processHTML, processSass, watch);

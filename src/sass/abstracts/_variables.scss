@@ -26,6 +26,7 @@ $color-links-primary: $color-deep-puce;
 
 $color-links-hover: $color-blush-pink;
 $color-links-hover-secondary: $color-coral-pink;
+$color-links-hover-tertiary: $color-dusty-rose;
 $color-links-hover-white: $color-off-white;
 $color-links-active: $color-blush-pink;
 
@@ -53,12 +54,13 @@ $color-button-primary: $color-blush-pink;
 $color-button-secondary: $color-coral-pink;
 $color-button-black: $color-black;
 
+$color-button-hover-primary: $color-blush-pink;
 $color-button-hover-white: $color-white;
-$color-button-secondary-hover: $color-white;
 
 /* Border Colors */
-$color-border-primary: $color-dusty-rose;
+$color-border-primary: $color-blush-pink;
 $color-border-secondary: $color-coral-pink;
+$color-border-tertiary: $color-dusty-rose;
 $color-border-black: $color-black;
 $color-border-white: $color-white;
 
@@ -69,6 +71,7 @@ $font-sub-headings: 'Old Standard TT';
 
 /* Fon Weights */
 $font-weight-bold: 800;
+$font-weight-semi-bold: 700;
 $font-weight-normal: 500;
 $font-weight-light: 400;
 $font-weight-thin: 300;
@@ -80,6 +83,7 @@ $font-size-lg: 2.2rem;
 $font-size-md: 1.8rem;
 $font-size-base: 1.4rem;
 $font-size-sm: 1.3rem;
+$font-size-xs: 1.2rem;
 
 //SHADOWS
 $minimal-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);

@@ -10,7 +10,8 @@ export class ElementObserver {
 		const revealElement = (entries, observer) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					entry.target.classList.remove(this.observeClass);
+					entry.target.classList.add(this.observeClass);
+					entry.target.classList.remove(this.elementSelector);
 					observer.unobserve(entry.target);
 				}
 			});
@@ -21,7 +22,9 @@ export class ElementObserver {
 			threshold: this.threshold,
 		});
 
-		const allElements = document.querySelectorAll(this.elementSelector);
+		const allElements = Array.from(
+			document.getElementsByClassName(this.elementSelector)
+		);
 
 		allElements.forEach(element => {
 			this.observer.observe(element);

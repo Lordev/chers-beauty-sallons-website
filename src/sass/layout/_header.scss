@@ -18,11 +18,12 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid rgba($color-border-black, 0.1);
-		max-width: $container-width-lg;
+		max-width: $container-width-md;
 		margin: 0 auto;
-		padding: 1rem 2rem;
+		padding: 0.4rem 1rem;
 		position: relative;
-		margin-bottom: 1rem;
+		font-size: $font-size-xs;
+		letter-spacing: 0.1rem;
 
 		&__links {
 			display: flex;
@@ -35,9 +36,11 @@
 			display: flex;
 			justify-content: space-between;
 			gap: 0 2rem;
+			// font-size: 0.8rem;
 
 			&--icons {
 				color: $color-icons-muted;
+				font-size: 1.2rem;
 
 				&:hover {
 					color: $color-icons-hover-primary;
@@ -54,23 +57,18 @@
 
 	&__main {
 		height: 100%;
-		display: grid;
-		grid-template-columns: 1fr auto;
-		max-width: $container-width-lg;
+		display: flex;
+		justify-content: space-between;
+		max-width: $container-width-md;
 		margin: 0 auto;
-		padding: 1rem 3rem;
 		align-items: center;
-
-		@include respond(tab-port) {
-			padding: 2.1rem 1rem;
-		}
 	}
 
 	&__nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 0 2rem;
+		// gap: 0 2rem;
 
 		&__item {
 			display: flex;
@@ -79,24 +77,26 @@
 
 			&:hover > :first-child,
 			&.header__nav__item:hover > :nth-child(2) {
-				color: $color-links-hover;
+				color: $color-links-hover-tertiary;
 			}
 		}
 
 		&__links {
 			display: flex;
+			align-items: center;
 			gap: 0 2rem;
 		}
 
 		&__link {
 			display: flex;
 			gap: 0 0.5rem;
-			font-size: $font-size-sm;
-			font-weight: $font-weight-bold;
+			font-size: 1.2rem;
+			font-weight: $font-weight-semi-bold;
 			text-transform: uppercase;
+			letter-spacing: 0.2rem;
 
 			&--active {
-				color: $color-links-primary;
+				color: $color-links-hover-tertiary;
 			}
 		}
 
@@ -113,13 +113,15 @@
 		}
 	}
 
+	&__contact-button {
+		justify-self: end;
+	}
+
 	&__logo {
-		width: 263px;
-		aspect-ratio: 263/75;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 75px;
+		width: 219px;
+		height: 63px;
+		aspect-ratio: 219/63;
+		margin: 1rem 0;
 
 		@include respond(tab-land) {
 			max-width: 200px;
@@ -200,7 +202,7 @@
 	display: none;
 	text-align: center;
 	position: absolute;
-	top: 2.4rem;
+	top: 2.3rem;
 	left: -2rem;
 	height: fit-content;
 	z-index: 999;

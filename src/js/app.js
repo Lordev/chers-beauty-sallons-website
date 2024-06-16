@@ -12,9 +12,12 @@ import {
 	activeMenuLinks,
 	galleryImageObserver,
 	portfolioGallery,
+	beautyGallery,
 	revealLeft,
 	revealRight,
 	revealBottom,
+	editorialsGallery,
+	revealSection,
 } from '../js/controller/controller.js';
 
 // Initialize menu active controller
@@ -31,6 +34,7 @@ footerInnerLinks.init();
 revealLeft.observeElements();
 revealRight.observeElements();
 revealBottom.observeElements();
+revealSection.observeElements();
 
 // Initialize sliders
 if (path === '/index.html' || path === '/') {
@@ -52,7 +56,13 @@ if (
 	ctaCardSlider.createSlider();
 }
 
-// Initialize gallery observer
+if (path === '/bruidsmake-up.html') {
+	beautyGallery.init();
+}
+
+if (path === '/editorials.html') {
+	editorialsGallery.init();
+}
 
 if (path === '/portfolio.html') {
 	galleryImageObserver.observeElements();
