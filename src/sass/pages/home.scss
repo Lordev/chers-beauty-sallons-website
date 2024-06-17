@@ -6,6 +6,7 @@
 	position: relative;
 	padding: $vertical-padding-large;
 	background: $color-background-primary;
+	overflow: hidden;
 	@include respond(phone) {
 		padding-left: 0;
 	}
@@ -92,12 +93,14 @@
 .s-testimonials {
 	padding: $vertical-padding-large;
 	background: $color-background-secondary;
+	overflow: hidden;
 }
 
 .s-social-media-slider {
 	padding: $vertical-padding-large;
 	padding-left: 7rem;
 	position: relative;
+	overflow: hidden;
 
 	@include respond(tab-port) {
 		padding: $vertical-padding-small;

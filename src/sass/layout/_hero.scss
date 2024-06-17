@@ -79,8 +79,8 @@
 .festival-banner {
 	position: relative;
 	@extend %diensten-banner-height;
-	@include background-image('/banners/festival-banner@1600w.jpg');
-	top: 0;
+	@include background-image('/banners/festival-banner@1600x900.jpg');
+	background-position: 50% -30%;
 }
 
 .beauty-en-party-banner {

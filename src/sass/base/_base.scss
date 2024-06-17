@@ -23,9 +23,9 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	hyphens: none;
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: $font-base;
 	font-display: optional;
-	font-weight: $font-weight-thin;
+
 	line-height: 2.3rem;
 	font-size: $font-size-base;
 	hyphens: auto;
@@ -33,7 +33,7 @@ body {
 }
 
 a {
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: $font-base;
 	color: $color-text-primary;
 	text-decoration: none;
 }

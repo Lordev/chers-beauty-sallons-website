@@ -20,7 +20,6 @@
 	background-color: $color-background-muted;
 	margin: 0 auto;
 	padding: 10rem 10rem;
-
 	@include respond(tab-land) {
 		max-width: $container-width-sm;
 		padding: 10rem 8rem;
@@ -51,10 +50,6 @@
 			background: none;
 		}
 	}
-}
-
-.s-1-lashes-en-brows {
-	border-bottom: 10rem solid $color-background-secondary;
 }
 
 .s-2-bruiloft,
@@ -99,4 +94,5 @@
 .s-gallery {
 	padding: $vertical-padding-medium;
 	background-color: $color-background-secondary;
+
 }

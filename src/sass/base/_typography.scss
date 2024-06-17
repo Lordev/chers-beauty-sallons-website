@@ -3,7 +3,7 @@
 	&-primary {
 		@include heading(
 			$font-size-xl,
-			$font-weight-bold,
+			$font-weight-normal,
 			$font-size-xl * 1.15
 		);
 		&--italic {
@@ -13,31 +13,43 @@
 	}
 
 	&-secondary {
+		// font-style: italic;
 		@include heading(
-			$font-size-2xl,
-			$font-weight-bold,
-			$font-size-2xl * 1.15
+			$font-size-3xl,
+			$font-weight-normal,
+			$font-size-3xl * 1.2
 		);
 		&--italic {
-			font-style: italic;
 			font-weight: $font-weight-normal;
 			// margin-bottom: $margin-md;
 		}
 	}
 
 	&-tertiary {
-		@include heading($font-size-md, $font-weight-bold, $font-size-md * 1.3);
+		@include heading(
+			$font-size-md,
+			$font-weight-normal,
+			$font-size-md * 1.3
+		);
 	}
 
 	&-uppercase {
 		text-transform: uppercase;
-		@include heading($font-size-lg, $font-weight-bold, $font-size-lg * 1.3);
+		@include heading(
+			$font-size-lg,
+			$font-weight-normal,
+			$font-size-lg * 1.3
+		);
 	}
 
 	&-sub {
 		font-family: $font-headings;
 		margin-bottom: $margin-sm;
-		@include heading(1.6rem, $font-weight-normal, 1.6rem * 1.2);
+		@include heading(
+			$font-size-lg,
+			$font-weight-normal,
+			$font-size-lg * 1.2
+		);
 	}
 
 	&-color {
@@ -91,6 +103,7 @@
 
 .paragraph {
 	font-size: $font-size-base;
+	font-weight: $font-weight-thin;
 	&:not(:last-child) {
 		margin-bottom: $margin-md;
 	}
