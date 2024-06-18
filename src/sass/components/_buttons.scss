@@ -19,7 +19,6 @@
 	&__secondary {
 		font-weight: $font-weight-normal;
 		padding: 0.9rem 3rem;
-		border-radius: 5rem;
 	}
 
 	&__menu {
@@ -44,7 +43,7 @@
 		color: $color-text-secondary;
 		&:hover {
 			background: $color-button-hover-primary;
-			color: $color-text-primary;
+			color: $color-text-secondary;
 			box-shadow: $soft-shadow;
 		}
 	}

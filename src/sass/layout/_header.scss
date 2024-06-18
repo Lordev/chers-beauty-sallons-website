@@ -58,18 +58,17 @@
 	&__main {
 		height: 100%;
 		display: flex;
-		justify-content: space-between;
-		max-width: $container-width-md;
 		margin: 0 auto;
 		align-items: center;
+		max-width: $container-width-md;
+		justify-content: space-between;
+
+		@include respond(tab-port) {
+			justify-content: center;
+		}
 	}
 
 	&__nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		// gap: 0 2rem;
-
 		&__item {
 			display: flex;
 			gap: 0 0.3rem;
@@ -117,20 +116,13 @@
 	}
 
 	&__logo {
-		width: 219px;
-		height: 63px;
+		width: 263px;
+		height: 75px;
 		aspect-ratio: 219/63;
-		margin: 1rem 0;
-
-		@include respond(tab-land) {
-			max-width: 200px;
-			aspect-ratio: 200/67;
-		}
 
 		@include respond(tab-port) {
-			max-width: 100px;
-			height: 26.8px;
-			margin-top: 0.5rem;
+			max-width: 210px;
+			height: 59px;
 		}
 
 		&__image {
@@ -144,13 +136,13 @@
 
 	@include respond(tab-port) {
 		&__side-menu-icon {
-			margin-top: 3.6rem;
+			margin-top: 2.4rem;
 			position: absolute;
 
 			&,
 			&::before,
 			&::after {
-				width: 3rem;
+				width: 2.3rem;
 				height: 2px;
 				background-color: gray;
 				display: inline-block;
@@ -165,12 +157,12 @@
 			}
 
 			&::before {
-				top: -0.8rem;
+				top: -0.7rem;
 				// ANOTHER HELPFUL PROPERTY
 				// transform-origin: right;
 			}
 			&::after {
-				top: 0.8rem;
+				top: 0.7rem;
 			}
 		}
 

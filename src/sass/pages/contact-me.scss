@@ -1,7 +1,6 @@
 .heading-contact-me {
 	position: relative;
 	display: block;
-	// box-shadow: $minimal-shadow;
 	background: linear-gradient(
 				to right,
 				$color-background-secondary $border-thickness,
@@ -22,5 +21,5 @@
 .s-map {
 	padding: 8rem 0;
 	overflow: hidden;
-	background-color: $color-background-muted;
+	background-color: $color-background-secondary;
 }

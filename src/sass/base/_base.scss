@@ -43,19 +43,49 @@ a {
 	cursor: pointer;
 }
 
-input {
-	font-size: 1.6rem;
-	outline: none; /* Remove default focus outline */
+input,
+select {
 	border-width: 0 0 1px;
-	padding: 0;
-	// background: none;
-	line-height: 1.5em;
-	font-weight: 100;
-	&:valid {
-		border-bottom: solid rgba($color-input-valid, 0.9);
+	padding: 0.7rem 0;
+	&:focus {
+		border-bottom: 1px solid rgba($color-input-select, 0.9);
 	}
-	&:invalid {
-		border-bottom: solid rgba($color-input-invalid, 0.5);
+}
+
+input[type='date'],
+select {
+	width: fit-content;
+}
+
+input {
+	width: 100%;
+}
+
+textarea {
+	min-width: 100%;
+}
+
+select,
+input,
+textarea {
+	font-size: $font-size-base;
+	outline: none;
+	background: none;
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus {
+		background: none !important;
+		-webkit-box-shadow: 0 0 0px 1000px $color-background-muted inset;
+		box-shadow: 0 0 0px 1000px $color-background-muted inset;
+		transition: background-color 5000s ease-in-out 0s !important;
+	}
+	&:-moz-autofill {
+		background: none !important;
+		box-shadow: 0 0 0px 1000px white inset;
+	}
+	&:-ms-autofill {
+		background: none !important;
+		box-shadow: 0 0 0px 1000px white inset;
 	}
 }
 

@@ -2,7 +2,7 @@
 /* Base Colors */
 $color-blush-pink: #e4b9b4; //primary
 $color-coral-pink: #f79489; //secondary
-$color-dusty-rose: #ce9999;
+$color-dusty-rose: #e4b9b4;
 $color-deep-puce: #c68985;
 $color-black: #333;
 $color-gray: #aaaaaa;
@@ -32,7 +32,7 @@ $color-links-active: $color-blush-pink;
 
 /* Background Colors */
 $color-background-primary: $color-white;
-$color-background-secondary: $color-gray-light;
+$color-background-secondary: #e8cdca;
 $color-background-muted: $color-off-white;
 $color-background-footer: $color-gray-light;
 
@@ -46,8 +46,7 @@ $color-text-highlight: $color-coral-pink;
 $color-text-muted: $color-gray;
 
 /* Input Colors */
-$color-input-valid: $color-coral-pink;
-$color-input-invalid: $color-gray-light;
+$color-input-select: $color-coral-pink;
 
 /* Button Colors */
 $color-button-primary: $color-blush-pink;
@@ -55,7 +54,7 @@ $color-button-secondary: $color-coral-pink;
 $color-button-tertiary: $color-dusty-rose;
 $color-button-black: $color-black;
 
-$color-button-hover-primary: $color-blush-pink;
+$color-button-hover-primary: $color-deep-puce;
 $color-button-hover-white: $color-white;
 $color-button-hover-black: $color-black;
 
@@ -67,9 +66,8 @@ $color-border-black: $color-black;
 $color-border-white: $color-white;
 
 //TYPOGRAPHY
-$font-base: 'montserrat', sans-serif;
-$font-headings: 'Quintessential';
-$font-sub-headings: 'Old Standard TT';
+$font-base: 'Montserrat', sans-serif;
+$font-headings: 'Libre Baskerville', sans-serif;
 
 /* Fon Weights */
 $font-weight-bold: 800;
@@ -80,7 +78,7 @@ $font-weight-thin: 300;
 
 /* Font Sizes */
 $font-size-3xl: 3.6rem;
-$font-size-2xl: 3.3rem;
+$font-size-2xl: 3rem;
 $font-size-xl: 2.8rem;
 $font-size-lg: 2.2rem;
 $font-size-md: 1.8rem;
@@ -126,7 +124,7 @@ $flexbin-space-phone: 4px;
 //MARGINS
 $margin-xl: 8rem;
 $margin-lg: 4rem;
-$margin-md: 2.2rem;
+$margin-md: 2.8rem;
 $margin-sm: 1.3rem;
 
 //MAX WIDTHS

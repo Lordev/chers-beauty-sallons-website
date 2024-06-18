@@ -101,44 +101,21 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-appointment">
-				<div class="one-col">
-					<div class="cta-banner u-c-text">
-						<div class="cta-banner__socials">
-							<a
-								href="#0"
-								class="btn btn__primary cta-banner__btn btn--style btn--black"
-								>Vraag een offerte aan</a
-							>
-							<ul class="cta-banner__socials-list u-margin-t-m">
-								<li>
-									<a href="#">
-										<i
-											class="fa-brands fa-facebook-f icons icons--sm cta-banner__icons"
-										></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i
-											class="fa-brands fa-instagram icons icons--sm cta-banner__icons"
-										></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i
-											class="fa-brands fa-whatsapp icons icons--sm cta-banner__icons"
-										></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+
 			<section class="s-map">
 				<div class="reveal-section--hidden">
+					<div class="one-col u-margin-b-xl">
+						<div class="text-block u-c-text">
+							<h2 class="heading-secondary">
+								Let's
+								<span
+									class="heading-color--secondary heading-secondary--italic"
+								>
+									Connect</span
+								></h2
+							>
+						</div>
+					</div>
 					<div class="two-col">
 						<div class="map-container">
 							<div class="map" id="map">
@@ -184,6 +161,17 @@
 								required
 							/>
 
+							<!-- Locatie van de Dienst Input -->
+							<label for="service-location"
+								>Locatie van de Dienst:</label
+							>
+							<input
+								type="text"
+								id="service-location"
+								name="service-location"
+								required
+							/>
+
 							<!-- Datum van de Dienst Input -->
 							<label for="service-date"
 								>Datum van de Dienst:</label
@@ -211,17 +199,6 @@
 								<option value="anders">Anders...</option>
 							</select>
 
-							<!-- Locatie van de Dienst Input -->
-							<label for="service-location"
-								>Locatie van de Dienst:</label
-							>
-							<input
-								type="text"
-								id="service-location"
-								name="service-location"
-								required
-							/>
-
 							<!-- Extra Opmerkingen (Textarea) -->
 							<label for="comments">Extra Opmerkingen:</label>
 							<textarea
@@ -233,14 +210,14 @@
 							<!-- Submit Button -->
 							<button
 								type="submit"
-								class="btn btn--pink btn__secondary"
+								class="btn btn--black btn__secondary form-contact__button"
 							>
 								Aanvraag Versturen
 							</button>
 							<label for="terms" class="form-contact__policies">
 								<input
 									type="checkbox"
-									class="u-margin-r-s"
+									class="u-margin-r-s form-contact__policies--checkbox"
 									id="terms"
 									required
 								/>

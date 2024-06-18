@@ -6,18 +6,11 @@
 .s-1-editorials,
 .s-1-lashes-en-brows {
 	position: relative;
-	&::before {
-		content: '';
-		@include layer(-1);
-		background-color: $color-background-primary;
-		width: 100%;
-		height: 100%;
-	}
 }
 
 .inner-container {
 	max-width: $container-width-md;
-	background-color: $color-background-muted;
+	border-radius: 30px;
 	margin: 0 auto;
 	padding: 10rem 10rem;
 	@include respond(tab-land) {
@@ -35,42 +28,20 @@
 .s-1-festival,
 .s-1-editorials,
 .s-1-lashes-en-brows {
+	border-top: 10rem solid $color-background-secondary;
+	background-color: $color-background-muted;
 	@include respond(phone) {
 		padding-left: 0;
-	}
-	&::after {
-		@include layer(-1);
-		background: linear-gradient(
-			to right,
-			$color-background-secondary 7rem,
-			$color-background-primary 7rem,
-			$color-background-primary 100%
-		);
-		@include respond(phone) {
-			background: none;
-		}
 	}
 }
 
 .s-2-bruiloft,
 .s-2-beauty-en-party {
+	background-color: $color-background-muted;
+
 	border-top: 10rem solid $color-background-secondary;
 	@include respond(phone) {
 		padding-right: 0;
-	}
-
-	&::after {
-		@include layer(-1);
-		right: 0;
-		background: linear-gradient(
-			to right,
-			$color-background-primary 0%,
-			$color-background-primary calc(100% - 7rem),
-			$color-background-secondary 7rem
-		);
-		@include respond(phone) {
-			background: none;
-		}
 	}
 }
 
@@ -87,12 +58,17 @@
 
 .s-bruidsmake-up-tarieven,
 .s-beauty-en-party-tarieven {
-	padding: 8rem 0 16rem 0;
-	background-color: $color-background-secondary;
+	padding: $vertical-padding-medium;
+	background-color: $color-background-muted;
 }
 
 .s-gallery {
+	position: relative;
 	padding: $vertical-padding-medium;
 	background-color: $color-background-secondary;
+}
 
+.s-cooperations-editorials {
+	padding: $vertical-padding-medium;
+	background-color: $color-background-muted;
 }

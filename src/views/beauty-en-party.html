@@ -16,12 +16,12 @@
 							<h2
 								class="heading-secondary heading-secondary heading-secondary--lg text-block--left"
 							>
-								Feestelijke Make-up
+								Feestelijke make-up
 								<br />
 								<span
 									class="heading-secondary--italic heading-color--accent"
 								>
-									voor Elke Gelegenheid
+									voor elke gelegenheid
 								</span>
 							</h2>
 							<hr class="sm-divider" />
@@ -56,6 +56,10 @@
 						>
 							<h2 class="u-margin-t-m heading-secondary">
 								Stralend de nacht in
+								<span
+									class="heading-secondary--italic heading-color--accent"
+								>
+								</span>
 							</h2>
 							<hr class="sm-divider" />
 							<p class="paragraph">
@@ -239,14 +243,40 @@
 			<section class="s-gallery u-c-text">
 				<div class="u-margin-b-xl">
 					<h2 class="heading-secondary">
-						Beauty en party portfolio
+						Portfolio
+						<span
+							class="heading-color--secondary heading-secondary--italic"
+							>Beauty en Party
+						</span>
 					</h2>
 					<hr class="sm-divider sm-divider--black u-centered" />
 				</div>
 				<div
 					class="s-gallery__container u-margin-b-xl four-col u-max-width-7xl"
-					id="gallery-beauty"
+					id="gallery"
 				>
+					<a
+						class="image-container reveal-bottom--hidden"
+						href="../assets/img/diensten/beauty/gallery-beauty-image-01@1000x1562.jpg"
+						data-pswp-height="1562"
+						data-pswp-width="1000"
+					>
+						<img
+							class="image-card"
+							src="../assets/img/diensten/beauty/gallery-beauty-image-01@250x390.jpg"
+						/>
+					</a>
+					<a
+						class="image-container reveal-bottom--hidden"
+						href="../assets/img/diensten/beauty/gallery-beauty-image-02@1000x1562.jpg"
+						data-pswp-height="1562"
+						data-pswp-width="1000"
+					>
+						<img
+							class="image-card"
+							src="../assets/img/diensten/beauty/gallery-beauty-image-02@250x390.jpg"
+						/>
+					</a>
 					<a
 						class="image-container reveal-bottom--hidden"
 						href="../assets/img/diensten/beauty/gallery-beauty-image-03@1000x1562.jpg"
@@ -258,6 +288,7 @@
 							src="../assets/img/diensten/beauty/gallery-beauty-image-03@250x390.jpg"
 						/>
 					</a>
+
 					<a
 						class="image-container reveal-bottom--hidden"
 						href="../assets/img/diensten/beauty/gallery-beauty-image-04@1000x1562.jpg"
@@ -327,8 +358,12 @@
 					<div class="u-margin-b-l">
 						<div class="u-c-text">
 							<h2 class="heading-secondary"
-								>Prijzen Beauty en Party</h2
-							>
+								>Prijzen
+								<span
+									class="heading-color--accent heading-secondary--italic"
+									>Beauty en Party
+								</span>
+							</h2>
 							<hr class="sm-divider u-centered" />
 							<h2
 								class="heading-primary__sub heading-primary__sub--pink u-margin-b-m"
@@ -458,6 +493,18 @@
 			</section>
 			<section class="s-map">
 				<div class="reveal-section--hidden">
+					<div class="one-col u-margin-b-xl">
+						<div class="text-block u-c-text">
+							<h2 class="heading-secondary">
+								Let's
+								<span
+									class="heading-color--secondary heading-secondary--italic"
+								>
+									Connect</span
+								></h2
+							>
+						</div>
+					</div>
 					<div class="two-col">
 						<div class="map-container">
 							<div class="map" id="map">
@@ -503,6 +550,17 @@
 								required
 							/>
 
+							<!-- Locatie van de Dienst Input -->
+							<label for="service-location"
+								>Locatie van de Dienst:</label
+							>
+							<input
+								type="text"
+								id="service-location"
+								name="service-location"
+								required
+							/>
+
 							<!-- Datum van de Dienst Input -->
 							<label for="service-date"
 								>Datum van de Dienst:</label
@@ -530,17 +588,6 @@
 								<option value="anders">Anders...</option>
 							</select>
 
-							<!-- Locatie van de Dienst Input -->
-							<label for="service-location"
-								>Locatie van de Dienst:</label
-							>
-							<input
-								type="text"
-								id="service-location"
-								name="service-location"
-								required
-							/>
-
 							<!-- Extra Opmerkingen (Textarea) -->
 							<label for="comments">Extra Opmerkingen:</label>
 							<textarea
@@ -552,14 +599,14 @@
 							<!-- Submit Button -->
 							<button
 								type="submit"
-								class="btn btn--pink btn__secondary"
+								class="btn btn--black btn__secondary form-contact__button"
 							>
 								Aanvraag Versturen
 							</button>
 							<label for="terms" class="form-contact__policies">
 								<input
 									type="checkbox"
-									class="u-margin-r-s"
+									class="u-margin-r-s form-contact__policies--checkbox"
 									id="terms"
 									required
 								/>

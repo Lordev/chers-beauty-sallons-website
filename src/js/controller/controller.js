@@ -296,10 +296,6 @@ export const activeMenuLinks = new MenuLinksActiveController(
 // Gallery Observer
 
 export const portfolioGallery = new lightBoxGalleryController('gallery');
-export const beautyGallery = new lightBoxGalleryController('gallery-beauty');
-export const editorialsGallery = new lightBoxGalleryController(
-	'gallery-editorials'
-);
 
 // Image Observer
 export const galleryImageObserver = new ImageObserverController(

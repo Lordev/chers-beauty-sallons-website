@@ -1,17 +1,20 @@
 .form-contact {
-    padding: 0.8rem 2rem;
-    line-height: 3.3rem;
-    width: 100%;
-    @include respond(tab-port) {
-        padding: 0;
-    }
-    & > * {
-        margin-bottom: 1rem;
-        display: block;
-        width: 100%;
-    }
-    &__policies {
-        display: flex;
-        align-items: center;
-    }
+	padding: 2.4rem 2rem;
+	line-height: 3.3rem;
+	width: 100%;
+	background-color: $color-background-muted;
+	border-radius: 2rem;
+	& > * {
+		margin-bottom: 1rem;
+		display: block;
+	}
+	&__policies {
+		&--checkbox {
+			width: fit-content;
+			margin-right: 1rem;
+		}
+	}
+	&__button {
+		width: 100%;
+	}
 }
