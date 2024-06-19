@@ -35,3 +35,19 @@
 	color: $color-icons-secondary;
 	display: inline-block;
 }
+
+.icon {
+	color: $color-icons-primary;
+	&--instagram {
+		width: 20px;
+		height: 20px;
+	}
+	&--mail {
+		width: 20px;
+		height: 23px;
+	}
+	&--whatsapp {
+		width: 20px;
+		height: 20px;
+	}
+}

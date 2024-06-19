@@ -1,16 +1,17 @@
-.feature-box {
-	height: 70vh;
-	cursor: pointer;
-	display: grid;
-	grid-template-columns: auto;
-	grid-auto-flow: column;
-	z-index: -5;
+.feature-box-container {
+	max-width: $container-width-xl;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin: 0 auto;
+}
 
-	@include respond(tab-port) {
-		grid-template-rows: auto;
-		grid-auto-flow: row;
-		height: 200vh;
-	}
+.feature-box {
+	height: 50rem;
+	width: calc($container-width-xl / 5 - 2rem);
+	border-radius: 40px;
+	overflow: hidden;
 
 	&__block {
 		height: 100%;
@@ -24,8 +25,7 @@
 		border-radius: 2px;
 		background-size: cover;
 		background-position: bottom;
-		transition: transform 1s ease;
-		filter: blur(2);
+		transition: transform 1s, filter 1s ease, background-color 1s ease;
 		filter: brightness(0.35);
 		transform: scale(1.05);
 
@@ -48,7 +48,6 @@
 			@include background-image('home/home-features-editorials.jpg');
 		}
 	}
-
 	&__text {
 		@include center-horizontal-vertical;
 		color: $color-white;
@@ -57,7 +56,6 @@
 		height: 50%;
 		width: 90%;
 		padding: 3rem;
-		background-color: rgba($color-white, 0.1);
 	}
 
 	&__block:hover &__img {

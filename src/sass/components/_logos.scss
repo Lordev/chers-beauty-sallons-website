@@ -1,0 +1,17 @@
+.logos-container {
+	display: flex;
+	max-width: $container-width-sm;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	margin-top: 5rem;
+}
+
+.logo {
+	transition: transform 0.3s;
+
+	@include respond(phone) {
+	}
+}

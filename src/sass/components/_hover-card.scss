@@ -1,32 +1,5 @@
-.hover-card {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background-position: center;
-	&:hover {
-		transform: scale(1.02);
-	}
-	@include respond(tab-port) {
-		margin: 0 auto;
-	}
-
-	&__img-hover {
-		&--2 {
-			background-position: top;
-			height: 80rem;
-			@include background-image('tarieven/tarieven-image-01.jpg');
-		}
-		&--3 {
-			background-position: top;
-			height: 70rem;
-			@include background-image('tarieven/tarieven-image-02.jpg');
-		}
-	}
-}
-
 .image-card-container {
-	border-radius: 3rem;
+	border-radius: 30px;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
@@ -158,10 +131,15 @@
 .image-container {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
 	overflow: hidden;
 
 	&--rounded {
 		border-radius: 100%;
 	}
+}
+
+.image-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }

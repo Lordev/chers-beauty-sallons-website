@@ -2,92 +2,50 @@
 	background: $color-background-primary;
 }
 
-.s-home-promo {
-	position: relative;
+.s-home-heading {
+	background: $color-background-secondary;
+	padding: $vertical-padding-normal;
+}
+
+.s-home-about {
 	padding: $vertical-padding-large;
-	background: $color-background-primary;
-	overflow: hidden;
-	@include respond(phone) {
-		padding-left: 0;
-	}
-	&::after {
-		@include layer(1);
-		z-index: 5;
-		width: 7rem;
-		background: linear-gradient(
-			to left,
-			$color-background-secondary 0%,
-			$color-background-secondary 100%
-		);
-		@include respond(phone) {
-			background: none;
-		}
-	}
 
-	&__box-left {
-		display: grid;
-		grid-template-rows: auto 1fr auto;
-		gap: 2rem;
-
-		&__info {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
+	&__text-container {
+		display: flex;
+		align-items: center;
+		gap: 5rem;
+	}
+	&__socials {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.2rem;
 	}
 }
 
+.s-home-video {
+	background: $color-background-tertiary;
+}
+
+.s-home-cooperations {
+	padding: $vertical-padding-medium;
+	background: $color-background-muted;
+}
+
 .s-feature-box {
-	z-index: 0;
-	position: relative;
-	padding-left: 7rem;
+	background: $color-background-tertiary;
+	padding: $vertical-padding-large;
 	@include respond(phone) {
 		padding-left: 0;
 	}
-	background-color: $color-background-primary;
 	@include respond(phone) {
 		padding-left: 0;
-	}
-	&::after {
-		@include layer(1);
-		z-index: 5;
-		width: 7rem;
-		background: linear-gradient(
-			to left,
-			$color-background-secondary 0%,
-			$color-background-secondary 100%
-		);
-		@include respond(phone) {
-			background: none;
-		}
 	}
 }
 
 .s-appointment {
 	padding: $vertical-padding-medium;
 	background: $color-background-secondary;
-}
-
-.s-about-me {
-	position: relative;
-	padding: $vertical-padding-large;
-	padding-right: 7rem;
-	@include respond(phone) {
-		padding-right: 0;
-	}
-	&::after {
-		@include layer(0);
-		right: 0;
-		background: linear-gradient(
-			to right,
-			$color-background-primary 0%,
-			$color-background-primary calc(100% - 7rem),
-			$color-background-secondary 7rem
-		);
-		@include respond(phone) {
-			background: none;
-		}
-	}
 }
 
 .s-testimonials {
@@ -98,24 +56,10 @@
 
 .s-social-media-slider {
 	padding: $vertical-padding-large;
-	padding-left: 7rem;
 	position: relative;
 	overflow: hidden;
 
 	@include respond(tab-port) {
 		padding: $vertical-padding-small;
-	}
-	&::after {
-		@include layer(1);
-		z-index: 5;
-		width: 7rem;
-		background: linear-gradient(
-			to left,
-			$color-background-secondary 0%,
-			$color-background-secondary 100%
-		);
-		@include respond(phone) {
-			background: none;
-		}
 	}
 }

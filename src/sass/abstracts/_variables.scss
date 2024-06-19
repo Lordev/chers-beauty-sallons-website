@@ -7,10 +7,12 @@ $color-deep-puce: #c68985;
 $color-black: #333;
 $color-gray: #aaaaaa;
 $color-gray-light: #dadada;
-$color-white: #faf5f5;
+$color-white: #ffff;
+$color-vienna-dawn: #faf5f5;
 $color-off-white: #f3eeee;
 
 /* Icon Colors */
+$color-icons-primary: $color-deep-puce;
 $color-icons-secondary: $color-coral-pink;
 $color-icons-black: $color-black;
 $color-icons-muted: $color-gray;
@@ -31,14 +33,15 @@ $color-links-hover-white: $color-off-white;
 $color-links-active: $color-blush-pink;
 
 /* Background Colors */
-$color-background-primary: $color-white;
+$color-background-primary: $color-vienna-dawn;
 $color-background-secondary: #e8cdca;
+$color-background-tertiary: $color-blush-pink;
 $color-background-muted: $color-off-white;
 $color-background-footer: $color-gray-light;
 
 /* Text Colors */
 $color-text-primary: $color-black;
-$color-text-secondary: $color-off-white;
+$color-text-secondary: $color-white;
 
 $color-header-highlight: $color-blush-pink;
 
@@ -55,7 +58,7 @@ $color-button-tertiary: $color-dusty-rose;
 $color-button-black: $color-black;
 
 $color-button-hover-primary: $color-deep-puce;
-$color-button-hover-white: $color-white;
+$color-button-hover-white: $color-vienna-dawn;
 $color-button-hover-black: $color-black;
 
 /* Border Colors */
@@ -63,7 +66,7 @@ $color-border-primary: $color-blush-pink;
 $color-border-secondary: $color-coral-pink;
 $color-border-tertiary: $color-dusty-rose;
 $color-border-black: $color-black;
-$color-border-white: $color-white;
+$color-border-white: $color-vienna-dawn;
 
 //TYPOGRAPHY
 $font-base: 'Montserrat', sans-serif;
@@ -77,6 +80,7 @@ $font-weight-light: 400;
 $font-weight-thin: 300;
 
 /* Font Sizes */
+$font-size-4xl: 4rem;
 $font-size-3xl: 3.6rem;
 $font-size-2xl: 3rem;
 $font-size-xl: 2.8rem;
@@ -101,6 +105,7 @@ $border-thickness: 1rem;
 //PADDING VERTICAL
 $vertical-padding-large: 10rem 0;
 $vertical-padding-medium: 8rem 0;
+$vertical-padding-normal: 4rem 0;
 $vertical-padding-small: 1rem 0;
 
 //GUTTERS
