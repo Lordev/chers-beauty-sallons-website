@@ -29,10 +29,10 @@
 	}
 
 	&--pink {
-		background: $color-button-tertiary;
+		background: $color-button-primary;
 		color: $color-text-secondary;
 		&:hover {
-			background: $color-button-hover-black;
+			background: $color-button-hover-primary;
 			color: $color-text-secondary;
 			box-shadow: $soft-shadow;
 		}

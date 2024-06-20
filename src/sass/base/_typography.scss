@@ -97,6 +97,10 @@
 	&:not(:last-child) {
 		margin-bottom: $margin-md;
 	}
+
+	@include respond(phone) {
+		padding: 0 0.5rem;
+	}
 }
 
 .text-highlight {

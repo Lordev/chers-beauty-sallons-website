@@ -17,19 +17,18 @@ import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
 //* Controller Classes
 
 class mobileMenuController {
-	constructor(parentEl, exitButton, dropDown, breakPoint) {
-		this.parentEl = parentEl;
-		this.exitButton = exitButton;
-		this.dropDown = dropDown;
+	constructor(exitButton, dropDown, breakPoint) {
+		this.exitButton = document.getElementById(exitButton);
+		this.dropDown = document.getElementById(dropDown);
 		this.breakPoint = breakPoint;
 		this.dropDownOpen = false;
-
-		this.initEventListeners();
+		this.sideMenuWindow = document.getElementById('mobile-menu');
 	}
 
-	initEventListeners = () => {
+	init = () => {
 		this.exitButton.addEventListener('click', e => {
-			this.parentEl.style.transform = 'translateX(100%)';
+			e.stopPropagation();
+			this.sideMenuWindow.style.transform = 'translateX(100%)';
 		});
 
 		if (!this.dropDown) return;
@@ -61,7 +60,9 @@ class HeaderButtonController {
 				this.breakPoint
 			);
 			button.init();
-			button.headerMenuButton = addEventListener('click', () => {
+			button.headerMenuButton = addEventListener('click', e => {
+				e.stopPropagation();
+
 				this.sideMenuWindow.style.transform = 'translateX(0%)';
 			});
 		} else {
@@ -267,9 +268,8 @@ export const headerScroll = new HeaderScrollController(
 
 // Side Menu
 export const mobileMenu = new mobileMenuController(
-	document.getElementById('mobile-menu'),
-	document.getElementById('exit-button'),
-	document.getElementById('sidemenu-diensten'),
+	'exit-button',
+	'sidemenu-diensten',
 	900
 );
 

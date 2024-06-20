@@ -38,16 +38,9 @@
 
 .icon {
 	color: $color-icons-primary;
-	&--instagram {
-		width: 20px;
-		height: 20px;
-	}
-	&--mail {
-		width: 20px;
-		height: 23px;
-	}
-	&--whatsapp {
-		width: 20px;
-		height: 20px;
+	transition: color 0.3s;
+	cursor: pointer;
+	&:hover {
+		color: $color-icons-hover-black;
 	}
 }

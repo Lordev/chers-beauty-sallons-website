@@ -136,10 +136,11 @@
 }
 
 .swiper-scale-effect .swiper-slide-cover {
-	transition: 12s ease-out;
-	transform: scale(1.1);
+	transition: transform 0s linear 1.5s;
+	transform: scale(1.12);
 }
 
 .swiper-scale-effect .swiper-slide.swiper-slide-active .swiper-slide-cover {
+	transition: transform 12.5s ease-out;
 	transform: scale(1);
 }

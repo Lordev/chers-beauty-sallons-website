@@ -4,6 +4,7 @@
 	width: 100%;
 	background-color: $color-background-muted;
 	border-radius: 2rem;
+	box-shadow: $minimal-shadow;
 	& > * {
 		margin-bottom: 1rem;
 		display: block;

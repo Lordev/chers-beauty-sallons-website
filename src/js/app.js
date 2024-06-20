@@ -16,6 +16,7 @@ import {
 	revealRight,
 	revealBottom,
 	revealSection,
+	mobileMenu,
 } from '../js/controller/controller.js';
 
 // Initialize menu active controller
@@ -23,6 +24,7 @@ activeMenuLinks.initActiveMenuItems();
 
 // Initialize header scroll controller
 headerScroll.init();
+mobileMenu.init();
 
 // Initialize footer links controller
 const path = window.location.pathname;
