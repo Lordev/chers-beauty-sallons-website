@@ -8,7 +8,6 @@ export function handleScroll(header) {
 		const headerInner = document.getElementById('header-sticky');
 		const headerHeight = headerInner.getBoundingClientRect().height;
 		threshold = headerHeight;
-		console.log(threshold);
 
 		if (!scrolledPastThreshold && scrollPosition > threshold) {
 			const header = document.querySelector('.header');

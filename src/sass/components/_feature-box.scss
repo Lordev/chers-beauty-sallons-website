@@ -30,22 +30,22 @@
 		transform: scale(1.05);
 
 		&-1 {
-			@include background-image('home/home-features-bridal.jpg');
+			@include background-image('home/feature-image-bridal.jpg');
 		}
 
 		&-2 {
-			@include background-image('home/home-features-festival.jpg');
+			@include background-image('home/feature-image-festival.jpg');
 		}
 		&-3 {
-			@include background-image('home/home-features-beauty.jpg');
+			@include background-image('home/feature-image-lashes.jpg');
 		}
 
 		&-4 {
-			@include background-image('home/home-features-lashes.jpg');
+			@include background-image('home/feature-image-beauty.jpg');
 		}
 
 		&-5 {
-			@include background-image('home/home-features-editorials.jpg');
+			@include background-image('home/feature-image-editorials.jpg');
 		}
 	}
 	&__text {

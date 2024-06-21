@@ -2,20 +2,7 @@
 	position: relative;
 	display: block;
 	box-shadow: $minimal-shadow;
-	background: linear-gradient(
-				to right,
-				$color-background-secondary $border-thickness,
-				transparent 0,
-				transparent 100%
-			)
-			top,
-		linear-gradient(
-				to bottom,
-				$color-background-secondary $border-thickness,
-				$color-background-primary 0,
-				$color-background-primary 100%
-			)
-			left;
+	background-color: $color-background-primary;
 	padding: $vertical-padding-large;
 	padding-left: $border-thickness;
 }

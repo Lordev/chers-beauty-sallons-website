@@ -22,9 +22,9 @@
 
 	&-tertiary {
 		@include heading(
-			$font-size-lg,
+			$font-size-md,
 			$font-weight-normal,
-			$font-size-lg * 1.3
+			$font-size-md * 1.3
 		);
 	}
 

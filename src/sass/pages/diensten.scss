@@ -5,21 +5,20 @@
 .s-1-festival,
 .s-1-editorials,
 .s-1-lashes-en-brows {
+	padding: $vertical-padding-large;
 	position: relative;
 }
 
+.s-1-bruiloft {
+	border-bottom: 10rem solid $color-background-secondary;
+}
+
 .inner-container {
-	max-width: $container-width-md;
+	max-width: $container-width-sm;
 	border-radius: 30px;
 	margin: 0 auto;
-	padding: 10rem 10rem;
 	@include respond(tab-land) {
-		max-width: $container-width-sm;
 		padding: 10rem 8rem;
-	}
-
-	@include respond(tab-port) {
-		padding: 10rem 2rem;
 	}
 }
 
@@ -28,7 +27,6 @@
 .s-1-festival,
 .s-1-editorials,
 .s-1-lashes-en-brows {
-	border-top: 10rem solid $color-background-secondary;
 	background-color: $color-background-muted;
 	@include respond(phone) {
 		padding-left: 0;

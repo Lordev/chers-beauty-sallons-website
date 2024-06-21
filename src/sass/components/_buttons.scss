@@ -21,13 +21,6 @@
 		padding: 0.9rem 3rem;
 	}
 
-	&__menu {
-		font-size: $font-size-xs;
-		font-weight: $font-weight-semi-bold;
-		letter-spacing: 0.2rem;
-		padding: 3.5rem 0.8rem;
-	}
-
 	&--pink {
 		background: $color-button-primary;
 		color: $color-text-secondary;
@@ -45,13 +38,6 @@
 			background: $color-button-hover-primary;
 			color: $color-text-secondary;
 			box-shadow: $soft-shadow;
-		}
-	}
-
-	&--menu {
-		background: #ecd8d7;
-		&:hover {
-			background: $color-button-hover-primary;
 		}
 	}
 }

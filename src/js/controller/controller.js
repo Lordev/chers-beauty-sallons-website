@@ -35,7 +35,7 @@ class mobileMenuController {
 		this.dropDown.addEventListener('click', e => {
 			if (!this.dropDownOpen) {
 				this.dropDownOpen = true;
-				this.dropDown.style.height = '156px';
+				this.dropDown.style.height = '158px';
 			} else {
 				this.dropDownOpen = false;
 				this.dropDown.style.height = '20px';

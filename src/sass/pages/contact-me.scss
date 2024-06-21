@@ -15,11 +15,11 @@
 				$color-background-primary 100%
 			)
 			left;
-	padding: 4rem 0;
+	padding: $vertical-padding-large;
 }
 
 .s-map {
-	padding: 8rem 0;
+	padding: $vertical-padding-large;
 	overflow: hidden;
 	background-color: $color-background-secondary;
 }

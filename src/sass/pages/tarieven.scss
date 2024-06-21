@@ -1,13 +1,7 @@
 .s1-tarieven {
 	position: relative;
 	display: block;
-	background: linear-gradient(
-			to bottom,
-			$color-background-secondary $border-thickness,
-			$color-background-muted 0,
-			$color-background-muted 100%
-		)
-		left;
+	background-color: $color-background-muted;
 	padding: $vertical-padding-large;
 	overflow: hidden;
 }

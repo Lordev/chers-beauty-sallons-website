@@ -48,8 +48,20 @@
 }
 
 $base-path: '../assets/img/';
+
 @mixin background-image($filename) {
 	background-image: url('#{$base-path}#{$filename}');
+}
+
+@mixin banner-image($filename) {
+	background-image: url('#{$base-path}#{$filename}@1600x900.jpg');
+
+	@include respond(tab-land) {
+		background-image: url('#{$base-path}#{$filename}@1280x720.jpg');
+	}
+	@include respond(tab-port) {
+		background-image: url('#{$base-path}#{$filename}@640x360.jpg');
+	}
 }
 
 @mixin respond($breakpoint) {

@@ -30,17 +30,37 @@
 	}
 }
 
-.fa-map-marker,
-.fa-envelope {
-	color: $color-icons-secondary;
-	display: inline-block;
-}
-
 .icon {
-	color: $color-icons-primary;
-	transition: color 0.3s;
-	cursor: pointer;
-	&:hover {
-		color: $color-icons-hover-black;
+	&--sm {
+		height: 1.6rem;
+	}
+
+	&--md {
+		height: 2rem;
+	}
+
+	&--lg {
+		height: 3.2rem;
+	}
+
+	&--black {
+		transition: all 0.15s;
+
+		color: #555;
+		&:hover {
+			transform: translateY(-1px);
+
+			color: $color-icons-hover-secondary;
+		}
+
+		&:active,
+		&:focus {
+			outline: none;
+			transform: translateY(1px);
+		}
+	}
+
+	&--pink {
+		color: $color-icons-quaternary;
 	}
 }
