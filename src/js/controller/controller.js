@@ -49,29 +49,25 @@ class HeaderButtonController {
 	constructor(parentElement, breakPoint) {
 		this.parentElement = document.getElementById(parentElement);
 		this.breakPoint = breakPoint;
-		this.sideMenuWindow = document.getElementById('mobile-menu');
-		this.init();
+		this.button = new ButtonHeaderView(this.parentElement, this.breakPoint);
+		this.rendered = false;
 	}
 
-	renderButton = () => {
-		if (this.parentElement) {
-			const button = new ButtonHeaderView(
-				this.parentElement,
-				this.breakPoint
-			);
-			button.init();
-			button.headerMenuButton = addEventListener('click', e => {
-				e.stopPropagation();
+	checkWidth = () => {
+		const shouldRender = window.innerWidth <= this.breakPoint;
 
-				this.sideMenuWindow.style.transform = 'translateX(0%)';
-			});
-		} else {
-			console.error('Parent element is not defined');
+		if (shouldRender && !this.rendered) {
+			this.button.render();
+			this.rendered = true;
+		} else if (!shouldRender && this.rendered) {
+			this.button.remove();
+			this.rendered = false;
 		}
 	};
 
 	init = () => {
-		this.renderButton();
+		this.checkWidth();
+		window.addEventListener('resize', this.checkWidth);
 	};
 }
 
@@ -283,9 +279,9 @@ export const headerSideMenuButton = new HeaderButtonController(
 // Active Menu Links
 const path = window.location.pathname;
 let page = path.split('/').pop().split('.').shift();
-const menuItems = document.querySelectorAll('#nav-link');
+const menuItems = document.querySelectorAll('.header__nav__link');
 const diensten = document.querySelector('#diensten');
-const subMenuDiensten = document.querySelectorAll('#diensten-submenu-item');
+const subMenuDiensten = document.querySelectorAll('.diensten-submenu-item');
 export const activeMenuLinks = new MenuLinksActiveController(
 	page,
 	menuItems,

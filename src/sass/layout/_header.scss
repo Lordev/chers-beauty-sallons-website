@@ -35,7 +35,6 @@
 		&__socials {
 			display: flex;
 			gap: 0 1rem;
-
 			&--icons {
 				color: $color-icons-muted;
 				font-size: 1.2rem;
@@ -60,9 +59,10 @@
 		align-items: center;
 		max-width: $container-width-md;
 		justify-content: space-between;
+		padding: 1rem 0;
 
 		@include respond(tab-port) {
-			justify-content: center;
+			padding: 1rem 2rem;
 		}
 	}
 
@@ -114,9 +114,9 @@
 	}
 
 	&__logo {
-		width: 263px;
-		height: 75px;
-		aspect-ratio: 219/63;
+		width: 219px;
+		height: 63px;
+		aspect-ratio: 220/62;
 
 		@include respond(tab-port) {
 			max-width: 210px;

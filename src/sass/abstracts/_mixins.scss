@@ -125,7 +125,7 @@ $base-path: '../assets/img/';
 	}
 	@include respond(tab-port) {
 		// width < 900?
-		gap: 8rem;
+		gap: 3rem;
 		padding: 0 1rem;
 		grid-template-columns: none;
 		grid-template-rows: repeat(#{length($columns)}, auto);
