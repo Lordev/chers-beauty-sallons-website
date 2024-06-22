@@ -16,7 +16,7 @@ $color-icons-primary: $color-deep-puce;
 $color-icons-secondary: $color-coral-pink;
 $color-icons-tertiary: $color-dusty-rose;
 $color-icons-quaternary: $color-deep-puce;
-$color-icons-black: $color-black;
+$color-icons-black: $color-gray;
 $color-icons-muted: $color-gray;
 
 $color-icons-active: $color-blush-pink;
@@ -48,7 +48,7 @@ $color-text-secondary: $color-white;
 
 $color-header-highlight: $color-blush-pink;
 
-$color-text-highlight: $color-coral-pink;
+$color-text-highlight: $color-deep-puce;
 $color-text-muted: $color-gray;
 
 /* Input Colors */
@@ -116,13 +116,13 @@ $gutter-vertical: 1rem;
 $gutter-horizontal: 4rem;
 
 //FLEXBIN GALLERY
-$flexbin-row-height: 500px;
-$flexbin-space: 3px;
+$flexbin-row-height: 400px;
+$flexbin-space: 5px;
 
 /* Tablet */
 $flexbin-tablet-max: 800px;
 $flexbin-row-height-tablet: 300px;
-$flexbin-space-tablet: 8px;
+$flexbin-space-tablet: 5px;
 
 /* Phone */
 $flexbin-phone-max: 200px;

@@ -3,38 +3,35 @@ export class ButtonHeaderView {
 		this.parentElement = parentElement;
 		this.breakpoint = breakpoint;
 		this.rendered = false;
-		this.headerMenuButton = null;
+		this.renderedEL = null;
+		this.sideMenuWindow = document.getElementById('mobile-menu');
 	}
 
-	renderButton() {
+	render() {
 		const renderButton = `
-				<label for="navi-toggle" class="header__button" id="header-menu-button">
-					<span class="header__side-menu-icon">&nbsp;</span>
-				</label>
+			<label for="navi-toggle" class="header__button" id="header-menu-button">
+				<span class="header__side-menu-icon">&nbsp;</span>
+			</label>
 		`;
 		this.parentElement.insertAdjacentHTML('beforeend', renderButton);
+
 		this.rendered = true;
-		this.headerMenuButton = document.getElementById('header-menu-button');
+		this.renderedEL = document.getElementById('header-menu-button');
+
+		this.renderedEL.addEventListener('click', this.handleClick);
 	}
 
-	removeButton() {
-		const button = this.parentElement.querySelector('.header__button');
-		if (button) {
-			button.remove();
+	remove() {
+		if (this.renderedEL !== null) {
+			this.renderedEL.removeEventListener('click', this.handleClick);
+			this.renderedEL.remove();
+			this.renderedEL = null;
 		}
 		this.rendered = false;
 	}
 
-	checkBreakpoint = () => {
-		if (window.innerWidth <= this.breakpoint && !this.rendered) {
-			this.renderButton();
-		} else if (window.innerWidth > this.breakpoint && this.rendered) {
-			this.removeButton();
-		}
-	};
-
-	init = () => {
-		this.checkBreakpoint();
-		window.addEventListener('resize', this.checkBreakpoint);
+	handleClick = e => {
+		e.stopPropagation();
+		this.sideMenuWindow.style.transform = 'translateX(0)';
 	};
 }

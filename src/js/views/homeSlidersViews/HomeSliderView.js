@@ -45,11 +45,12 @@ class homeSliderView extends SliderView {
 			img.onload = () => {
 				// console.log(`Image loaded: ${item}`);
 				const slideHTML = `<div
+
+
                 class="swiper-slide infinite-slider__slide"
-                
                 data-swiper-slide-index="${index}"
             >
-                <a href="${link}" target="_blank aria-label="${caption}">
+                <a href="${link}" target="_blank aria-label="checkout my instagram photo with caption: ${caption}">
                     <div class="infinite-slider__img"
                         style="background-image: url(${item})">
                     </div> 

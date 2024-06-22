@@ -4,6 +4,7 @@ import imagemin, { gifsicle, mozjpeg, optipng } from 'gulp-imagemin';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
+import htmlmin from 'gulp-htmlmin';
 
 const sass = gulpSass(dartSass);
 
@@ -54,6 +55,7 @@ export function processHTML() {
 		)
 		.pipe(gulp.dest('./dist/views'));
 }
+
 // Define the HTML inclusion task
 export function processSass() {
 	return gulp
@@ -62,6 +64,25 @@ export function processSass() {
 		.pipe(cleanCSS())
 		.pipe(gulp.dest(paths.sass.dest, { sourcemaps: '../sourcemaps/' }));
 }
+
+// Minify HTML for production
+export function minifyHTML() {
+	return gulp
+		.src(paths.html.src)
+		.pipe(
+			fileInclude({
+				prefix: '@@',
+				basepath: 'src/views/',
+			})
+		)
+		.pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(gulp.dest(paths.html.dest));
+}
+
+// Define the production build task
+export const build = gulp.series(
+	gulp.parallel(minifyHTML, processSass, processImages)
+);
 
 // Define the watch task
 export function watch() {

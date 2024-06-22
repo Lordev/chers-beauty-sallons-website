@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	@@include('partials/head.html')
 		<meta
 			name="description"
-			content="Make-up artist en hairstylist voor bruiloften, festivals, evenementen en meer. Boek nu jouw afspraak en laat je betoveren door onze professionele service."
+			content="Make-up artist voor bruiloften, festivals, evenementen en meer. Boek nu jouw afspraak bij ons en laat je betoveren door onze professionele service."
 		/>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-			rel="stylesheet"
-		/>
+		<title>Cher's Beauty Sallons | Jouw bron voor schoonheid en verzorging </title>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 			defer
 		/>
-		<link rel="stylesheet" href="../css/main.css" />
-		<script defer type="module" src="../../src/js/app.js"></script>
-		<title>Document</title>
 	</head>
 
 	<body>
@@ -64,24 +54,24 @@
 			<section class="s-home-heading">
 				<div class="u-c-text one-col">
 					<div class="u-centered">
-						<h1 class="heading-primary">
-							Take your make-up
-							<span
-								class="heading-primary--italic heading-color--secondary"
-								>to the next level</span
-							>
+						<h1 class="heading-primary heading--flex">
+						Take your make-up
+						
+							<span class="heading-primary--italic heading-color--secondary">
+								to the next level
+							</span>
 						</h1>
 						<h5 class="heading-sub">
 							heb jij een visagiste nodig? bekijk hieronder mijn
-							diensten
-						</h5>
+							diensten </h5
+						>
 					</div>
 				</div>
 			</section>
 
 			<section class="s-feature-box">
 				<div class="feature-box-container">
-					<a href="./bruidsmake-up.html" class="feature-box">
+					<a href="./bruidsmake-up.html" class="feature-box" aria-label="klik hier voor de bruidsmake-up pagina">
 						<div class="feature-box__block">
 							<div class="feature-box__img feature-box__img-1">
 								&nbsp;
@@ -103,6 +93,7 @@
 					<a
 						href="./festival-en-evenementen.html"
 						class="feature-box"
+						aria-label="klik hier voor de festival en evenementen pagina"
 					>
 						<div class="feature-box__block">
 							<div
@@ -123,7 +114,8 @@
 						</div>
 					</a>
 
-					<a href="./lashes-en-brows.html" class="feature-box">
+					<a href="./lashes-en-brows.html" class="feature-box" 
+					aria-label="klik hier voor de lashes en brows pagina">
 						<div class="feature-box__block">
 							<div
 								class="feature-box__img feature-box__img-3"
@@ -142,7 +134,8 @@
 							</div>
 						</div>
 					</a>
-					<a href="./beauty-en-party.html" class="feature-box">
+					<a href="./beauty-en-party.html" class="feature-box"
+					aria-label="klik hier voor de beauty en party pagina">
 						<div class="feature-box__block">
 							<div
 								class="feature-box__img feature-box__img-4"
@@ -161,7 +154,8 @@
 							</div>
 						</div>
 					</a>
-					<a href="./editorials.html" class="feature-box">
+					<a href="./editorials.html" class="feature-box" 
+						aria-label="klik hier voor de editorials pagina">
 						<div class="feature-box__block">
 							<div
 								class="feature-box__img feature-box__img-5"
@@ -210,21 +204,32 @@
 
 							<ul class="cta-banner__socials-list">
 								<li>
-									<a href="#" class="facebook">
+									<a 
+									href="https://www.facebook.com/makeupbycherr" 
+									target="_blank" 
+									aria-label="Bezoek mijn Facebook"
+									>
 										<i
 											class="fa-brands fa-facebook-f cta-banner__icons icons icons--sm"
 										></i>
 									</a>
 								</li>
 								<li>
-									<a href="#" class="instagram">
+									<a 	
+									href="https://www.instagram.com/makeup_by_cherr" 
+									target="_blank" 
+									aria-label="Bezoek mijn Instagram"
+									>
 										<i
 											class="fa-brands fa-instagram cta-banner__icons icons icons--sm"
 										></i>
 									</a>
 								</li>
 								<li>
-									<a href="#" class="whatsapp">
+									<a 
+									href="https://www.facebook.com/makeupbycherr" 
+									target="_blank" 
+									aria-label="Stuur mij een bericht via whatsapp" class="whatsapp">
 										<i
 											class="fa-brands fa-whatsapp cta-banner__icons icons icons--sm"
 										></i>
@@ -298,7 +303,7 @@
 								Visagiste en passievolle
 								<br />
 								<span
-									class="heading-secondary--italic heading-color--accent"
+									class="heading-secondary--italic heading-color--accent " 
 									>make up artiest</span
 								>
 							</h2>
@@ -325,6 +330,8 @@
 						<img
 							class="image-cover"
 							src="../assets/img/home/image-home-about@400x350.jpg"
+							loading="lazy"
+							alt="Visagiste en passievolle make up artiest"
 						/>
 					</div>
 					<!-- <div class="">
@@ -429,20 +436,20 @@
 					<div class="s-home-latest-products__img-container">
 						<img
 							src="../assets/img/home/image-home-about-02@400x500.png"
-							alt="product"
+							alt="Visagiste en passievolle make up artiest"
 							class="s-home-latest-products__img reveal-left--hidden"
+							loading="lazy"
 						/>
 					</div>
 					<div
 						class="s-home-latest-products__text-container reveal-right--hidden"
 					>
 						<div class="u-max-width-xs u-c-text">
-							<h2 class="heading-secondary">
-								Visagiste en passievolle
-								<br />
+							<h2 class="heading-secondary heading--flex">
+								Laatste
 								<span
-									class="heading-secondary--italic heading-color--accent"
-									>make up artiest</span
+									class="heading-secondary--italic heading-color--accent "
+									>markt producten</span
 								>
 							</h2>
 							<hr class="sm-divider u-centered" />
