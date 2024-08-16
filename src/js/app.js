@@ -1,4 +1,3 @@
-import { IG_URL, IG_KEY, LIMIT_FETCH_IG } from './config/_config';
 import {
 	homeBannerSlider,
 	aboutCardSlider,
@@ -41,13 +40,15 @@ revealSection.observeElements();
 // gallery
 portfolioGallery.init();
 
+console.log(process.env.IG_URL);
+
 // Initialize sliders
 if (path === '/index.html' || path === '/') {
 	homeBannerSlider.createHeaderSlider();
 	aboutCardSlider.createSlider();
 	testimonialSlider.createSlider();
 	instagramSlider.fetchDataAndRenderSlider(
-		`${IG_URL}${IG_KEY}&limit=${LIMIT_FETCH_IG}`
+		`${process.env.IG_URL}&access_token=${process.env.IG_KEY}&limit=${process.env.LIMIT_FETCH_IG}`
 	);
 }
 

@@ -4,4 +4,5 @@ dist/
 .cache/
 gulpfile.js
 .vercel
-
+.env
+.env.local

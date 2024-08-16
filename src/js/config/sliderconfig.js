@@ -7,7 +7,6 @@ import {
 	FreeMode,
 } from 'swiper/modules';
 
-import { LIMIT_FETCH_IG } from './_config';
 ///////////////////////////////////////
 
 //* fadeSlider settings
